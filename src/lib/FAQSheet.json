@@ -1,0 +1,42 @@
+[
+    {
+        "question": "How do I create an account?",
+        "answer": "Click on the 'Sign Up' button at the top right corner of the homepage. Fill in your details and follow the instructions to verify your email."
+    },
+    {
+        "question": "What resources are available on the platform?",
+        "answer": "Our platform offers study notes, mind maps, syllabus analyses, past papers, and classroom recording videos tailored for IGCSE and A-Level students."
+    },
+    {
+        "question": "How do I purchase a membership?",
+        "answer": "Go to the 'Membership Plans' page, select the plan that suits you, and complete the payment process. Once completed, you’ll have immediate access to all resources."
+    },
+    {
+        "question": "Can I download resources without a membership?",
+        "answer": "No, downloading resources is available only for members. However, you can preview some materials before purchasing a membership."
+    },
+    {
+        "question": "How often are new resources added?",
+        "answer": "We update our resource library monthly, ensuring you have access to the most up-to-date study materials."
+    },
+    {
+        "question": "What should I do if I have trouble accessing a resource?",
+        "answer": "If you encounter any issues, please contact our support team using the 'Contact Us' form or email us at support@educationsite.com."
+    },
+    {
+        "question": "Do you offer personalized study plans?",
+        "answer": "Yes, our members can access personalized study plans tailored to their academic goals and learning pace."
+    },
+    {
+        "question": "Is my payment information secure?",
+        "answer": "Absolutely. We use industry-standard encryption and secure payment gateways to protect your financial information."
+    },
+    {
+        "question": "Can I cancel my membership anytime?",
+        "answer": "Yes, you can cancel your membership anytime through your account settings. Access to resources will remain until the end of your billing cycle."
+    },
+    {
+        "question": "Do you offer support for exam preparation?",
+        "answer": "Yes, we provide practice papers, syllabus analyses, and direct Q&A support from subject experts to help you prepare effectively for your exams."
+    }
+]
