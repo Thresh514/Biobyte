@@ -1,0 +1,83 @@
+[
+    {
+        "_comment": "目录页学科列表",
+        "name": "A-Level",
+        "subcategories": [
+            {
+                "name": "AS",
+                "subjects": [
+                    {
+                        "name": "Biology",
+                        "key": "A-Level AS Biology"
+                    },
+                    {
+                        "name": "Mathematics",
+                        "key": "A-Level AS Mathematics"
+                    },
+                    {
+                        "name": "Physics",
+                        "key": "A-Level AS Physics"
+                    },
+                    {
+                        "name": "Chemistry",
+                        "key": "A-Level AS Chemistry"
+                    }
+                ]
+            },
+            {
+                "name": "A2",
+                "subjects": [
+                    {
+                        "name": "Mathematics",
+                        "key": "A-Level A2 Mathematics"
+                    },
+                    {
+                        "name": "Physics",
+                        "key": "A-Level A2 Physics"
+                    },
+                    {
+                        "name": "Biology",
+                        "key": "A-Level A2 Biology"
+                    },
+                    {
+                        "name": "Economics",
+                        "key": "A-Level A2 Economics"
+                    },
+                    {
+                        "name": "Computer Science",
+                        "key": "A-Level A2 Computer Science"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "IGCSE",
+        "subcategories": [
+            {
+                "subjects": [
+                    {
+                        "name": "English",
+                        "key": "IGCSE English"
+                    },
+                    {
+                        "name": "Mathematics",
+                        "key": "IGCSE Mathematics"
+                    },
+                    {
+                        "name": "Biology",
+                        "key": "IGCSE Biology"
+                    },
+                    {
+                        "name": "Chemistry",
+                        "key": "IGCSE Chemistry"
+                    },
+                    {
+                        "name": "Physics",
+                        "key": "IGCSE Physics"
+                    }
+                ]
+            }
+        ]
+    }
+]

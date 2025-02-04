@@ -1,0 +1,39 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif; /* Set Lato as the default font */
+    line-height: 1.6; /* Optional for better readability */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Use bold for headings */
+}
+
+p {
+    font-weight: 400; /* Regular weight for body text */
+    margin-bottom: 1rem;
+}
+
+nav {
+    color: white; /* Ensures text is legible */
+    padding: 1rem; /* Add padding for better spacing */
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
