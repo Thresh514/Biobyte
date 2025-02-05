@@ -14,7 +14,7 @@ export default function HeroSection() {
         <div className="absolute top-0 left-0 w-full h-full z-0">
         {isClient && (
             <ReactPlayer
-                url="/sample_video.mp4" // replace with your video path or URL
+                url="#sample_video.mp4" // replace with your video path or URL
                 playing={true}
                 loop={true}
                 muted={true}
