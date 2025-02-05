@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
     return (
-        <footer className="relative bg-lightest text-darker p-8">
+        <footer className="relative bg-lightest text-darker p-8 mt-24">
             <div className="pl-36 pr-36 px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {/* 快速导航 */}

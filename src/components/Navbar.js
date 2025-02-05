@@ -1,21 +1,32 @@
-import Link from 'next/link';
-import { useState, useEffect } from 'react'; 
-import { useRouter } from 'next/router';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import router from "next/router";
 
-export default function Navbar(){
-    const [isVisible, setIsVisible] = useState(false); // 新增状态控制菜单显示隐藏
-    const [isLoggedIn, setIsLoggedIn] = useState(false); 
-    const router = useRouter();
+export default function Navbar() {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isDropdownHovered, setIsDropdownHovered] = useState(false); // 控制悬停状态
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-     // 从 localStorage 获取登录状态
     useEffect(() => {
+        let timeout;
         const userLoggedIn = localStorage.getItem("userLoggedIn");
+
         if (userLoggedIn) {
             setIsLoggedIn(true);
         }
-    }, []);
+        if (isDropdownHovered) {
+            timeout = setTimeout(() => setIsDropdownOpen(true), 200); // 延迟显示 200ms
+        } else {
+            timeout = setTimeout(() => setIsDropdownOpen(false), 200); // 延迟隐藏 200ms
+        }
 
-    // 处理登录（跳转到登录页面）
+        return () => clearTimeout(timeout); // 清除定时器，避免多次触发
+    }, [isDropdownHovered]);
+
+    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
     const handleLogin = () => {
         router.push('/login');  // 跳转到登录页面
     };
@@ -28,137 +39,122 @@ export default function Navbar(){
     }  
 
     const menuItems = {
-        "GCSE / IGCSE": ["Biology", "Chemistry", "Physics", "Maths"],
-        "A-Level": ["Biology", "Chemistry", "Physics", "Maths", "Computer Science"],
-};
-
-    const handleMouseEnter = () => {
-        setIsVisible(true);
+        "Mindmaps": ["Biology Mindmap", "Chemistry Mindmap", "Physics Mindmap"],
+        "Resources": ["Past Papers", "Video Tutorials", "Guides"],
+        "Other Tools": ["Exam Tips", "Time Management", "Study Planner"],
     };
 
-    const handleMouseLeave = () => {
-        setIsVisible(false);
-    };
-    
     return (
-    <nav className="fixed left-0 right-0 z-50 flex bg-white shadow-xl p-2 text-gray-600 justify-evenly ">
-        <div className="flex flex-row items-center">
-            <img src="/whiteicon.svg" alt="logo" className="w-14 h-14" />
-            <div>
-                <Link href="/" className="mr-12 ml-12 hover:text-black transition-colors">
-                    Home
-                </Link>
-            </div>
-
-          {/* Resource Categories 下拉菜单 */}
-                <div
-                    className="relative group"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                >
-                    <Link href="#categories" className="mr-12 ml-12 hover:text-black transition-colors">
-                        Mindmap
+        <nav className="fixed left-0 right-0 z-50 py-4 bg-white shadow-lg text-gray-600">
+            <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
+                {/* 左侧 LOGO 和 Home */}
+                <div className="flex items-center space-x-4">
+                    <img src="/whiteicon.svg" alt="logo" className="w-12 h-12" />
+                    <Link href="/" className="hover:text-black transition-colors">
+                        Home
                     </Link>
-                    {/* 下拉菜单 */}
-                    {isVisible && (
-                    <div 
-                        className={`absolute text-black bg-white shadow-lg rounded-lg p-4 w-[300px] transition-all duration-300 ease-out ${
-                            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                        }`}
-                    >
-                            <div className="flex flex-row space-x-8">
-                                {/* IGCSE */}
-                                <div className="p-3">
-                                    <a href="#igcse" className="font-bold text-xl cursor-pointer hover:underline">IGCSE</a>
-                                    <div className="">
-                                                {menuItems["GCSE / IGCSE"].map((subject, idx) => (
-                                                    <div key={idx} className="mt-2 mb-2">
-                                                        <a href={`#${subject.replace(/\s+/g, '-').toLowerCase()}`} className="hover:underline">{subject}</a>
-                                                    </div>
-                                                ))}
-                                        
-                                    </div>
-                                </div>
-
-                                {/* A-Level */}
-                                <div className="p-3">
-                                    <a href="#alevel" className="font-bold text-xl cursor-pointer hover:underline">A-Level</a>
-                                    <div className="">
-                                                {menuItems["A-Level"].map((subject, idx) => (
-                                                    <div key={idx} className="mt-2 mb-2">
-                                                        <a href={`#${subject.replace(/\s+/g, '-').toLowerCase()}`} className="hover:underline">{subject}</a>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                    )}
-                </div>
-            
-                <div
-                    className="relative group"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                >
-                    <Link href="#categories" className="mr-12 ml-12 hover:text-black transition-colors">
-                        Syllabus Analysis
-                    </Link>
-                    {/* 下拉菜单 */}
-                    {isVisible && (
-                    <div 
-                        className={`absolute text-black bg-white shadow-lg rounded-lg p-4 w-[300px] transition-all duration-300 ease-out ${
-                            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                        }`}
-                    >
-                            <div className="flex flex-row space-x-8">
-                                {/* IGCSE */}
-                                <div className="p-3">
-                                    <a href="#igcse" className="font-bold text-xl cursor-pointer hover:underline">IGCSE</a>
-                                    <div className="">
-                                                {menuItems["GCSE / IGCSE"].map((subject, idx) => (
-                                                    <div key={idx} className="mt-2 mb-2">
-                                                        <a href={`#${subject.replace(/\s+/g, '-').toLowerCase()}`} className="hover:underline">{subject}</a>
-                                                    </div>
-                                                ))}
-                                        
-                                    </div>
-                                </div>
-
-                                {/* A-Level */}
-                                <div className="p-3">
-                                    <a href="#alevel" className="font-bold text-xl cursor-pointer hover:underline">A-Level</a>
-                                    <div className="">
-                                                {menuItems["A-Level"].map((subject, idx) => (
-                                                    <div key={idx} className="mt-2 mb-2">
-                                                        <a href={`#${subject.replace(/\s+/g, '-').toLowerCase()}`} className="hover:underline">{subject}</a>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                    )}
                 </div>
 
-            <div>
-            <Link href="/about" className="mr-12 ml-12 hover:text-black transition-colors">
-                About Us
-            </Link>
-            </div>
-            
-            <div className="relative group">
-                {/* 根据登录状态显示 Login 或 Logout */}
-                <div>
-                    <button 
-                        onClick={isLoggedIn ? handleLogout : handleLogin} 
-                        className="mr-12 ml-12 hover:text-black transition-colors"
-                    >
-                        {isLoggedIn ? 'Logout' : 'Login'}
+                {/* 桌面端导航菜单 */}
+                <div
+                    className="hidden md:flex flex-col justify-center items-center h-full"
+                    onMouseEnter={() => setIsDropdownHovered(true)} // 鼠标悬停
+                    onMouseLeave={() => setIsDropdownHovered(false)} // 鼠标离开
+                >
+                    {/* Resources 按钮 */}
+                    <button className="hover:text-blue-600 transition-colors p-2 border border-gray-300 rounded-t-md">
+                        Resources
                     </button>
+
+                    {/* Mega Menu */}
+                    {isDropdownOpen && (
+                        <div className="absolute top-full left-0 right-0 w-full bg-gray-100 shadow-lg z-50 p-6 rounded-md border border-gray-300">
+                            <div className="grid grid-cols-3 gap-6">
+                                {Object.entries(menuItems).map(([category, items]) => (
+                                    <div key={category} className="relative">
+                                        {/* 分类标题 */}
+                                        <h3 className="font-bold text-lg text-gray-700 mb-4">
+                                            {category}
+                                        </h3>
+                                        {/* 子分类链接 */}
+                                        <ul className="space-y-2">
+                                            {items.map((item) => (
+                                                <li key={item}>
+                                                    <Link
+                                                        href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                                                        className="text-gray-600 hover:text-blue-600 transition-colors"
+                                                    >
+                                                        {item}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
+
+                {/* 右侧功能（桌面端显示） */}
+                <div className="hidden md:flex items-center space-x-6">
+                    <button
+                        onClick={isLoggedIn ? handleLogout : handleLogin}
+                        className="hover:text-black transition-colors p-2"
+                    >
+                        {isLoggedIn ? "Logout" : "Login"}
+                    </button>
+                    <Link href="/cart">
+                        <Image src="/cart.svg" alt="cart" width={28} height={28} />
+                    </Link>
+                </div>
+
+                {/* 移动端菜单按钮（Hamburger Menu） */}
+                <button
+                    className="md:hidden p-4 text-xl"
+                    onClick={toggleMobileMenu}
+                >
+                    ☰
+                </button>
             </div>
-        </div>
+
+            {/* 移动端下拉菜单 */}
+            {isMobileMenuOpen && (
+                <div className="md:hidden absolute top-20 left-0 w-full bg-gray-100 shadow-lg p-4">
+                    <div className="flex flex-col ml-8 space-y-4">
+                        {Object.entries(menuItems).map(([category, items]) => (
+                            <div key={category}>
+                                <h3 className="font-bold text-lg text-gray-700 mt-2 mb-2">{category}</h3>
+                                <ul className="space-y-2">
+                                    {items.map((item) => (
+                                        <li key={item}>
+                                            <Link
+                                                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                                                className="text-gray-600 hover:text-blue-600 transition-colors"
+                                            >
+                                                {item}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* 右侧功能（移动端） */}
+                    <div className="mt-6 mb-4 flex flex-col space-y-4 justify-center items-center">
+                        <button
+                            onClick={isLoggedIn ? handleLogout : handleLogin}
+                            className="hover:text-black transition-colors mb-2"
+                        >
+                            {isLoggedIn ? "Logout" : "Login"}
+                        </button>
+                        <Link href="/cart" className="mt-2">
+                            <Image src="/cart.svg" alt="cart" width={28} height={28} />
+                        </Link>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 }
