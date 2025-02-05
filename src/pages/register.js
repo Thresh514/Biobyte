@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import SimpleHeader from "../components/SimpleHeader";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -46,6 +47,8 @@ const Register = () => {
   };
 
   return (
+    <div>
+      <SimpleHeader />
     <div className="flex items-center justify-center min-h-screen bg-lightest">
       <div className="flex flex-col items-center w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
         <h2 className="text-center text-3xl font-semibold mb-6">Create Account</h2>
@@ -102,6 +105,7 @@ const Register = () => {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

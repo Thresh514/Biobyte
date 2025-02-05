@@ -17,17 +17,12 @@ export default function Home() {
         <title>Biomind Homepage</title>
         <meta name="description" content="A platform for educational resources." />
       </Head>
-      <Header/>
-      <div className='fixed top-20 left-0 right-0 z-50'><Navbar/></div>
+      <div><Navbar/></div>
       <main className="pt-16 flex flex-col items-center justify-center space-y-8">
         <div data-aos="fade-up"><HeroSection /></div>
-        <div data-aos="fade-up"><ResourceCard /></div>
-        <div data-aos="fade-up"><MembershipBenefits/></div>
-        <div data-aos="fade-up"><SuccessStories/></div>
-        <div data-aos="fade-up"><MembershipPlans/></div>
         <div data-aos="fade-up"><ResourceCategories/></div>
+        <div data-aos="fade-up"><SuccessStories/></div>
       </main>
-
       <Footer/>
     </div>
   );

@@ -41,22 +41,68 @@ export default function Navbar(){
     };
     
     return (
-    <nav className="fixed top-20 left-0 right-0 z-50 flex bg-gradient-to-b from-lightest to-white text-darkest space-x-16 p-6 justify-evenly">
+    <nav className="fixed left-0 right-0 z-50 flex bg-white shadow-xl p-2 text-gray-600 justify-evenly ">
         <div className="flex flex-row items-center">
+            <img src="/whiteicon.svg" alt="logo" className="w-14 h-14" />
             <div>
-            <Link href="/" className="p-4 ml-4 mr-4 font-semibold text-lg hover:underline">
-                Home
-            </Link>
+                <Link href="/" className="mr-12 ml-12 hover:text-black transition-colors">
+                    Home
+                </Link>
             </div>
 
           {/* Resource Categories 下拉菜单 */}
                 <div
-                    className="relative group ml-8 mr-8"
+                    className="relative group"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
-                    <Link href="/categories" className="font-semibold text-lg hover:underline">
-                        Resource Categories
+                    <Link href="#categories" className="mr-12 ml-12 hover:text-black transition-colors">
+                        Mindmap
+                    </Link>
+                    {/* 下拉菜单 */}
+                    {isVisible && (
+                    <div 
+                        className={`absolute text-black bg-white shadow-lg rounded-lg p-4 w-[300px] transition-all duration-300 ease-out ${
+                            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                        }`}
+                    >
+                            <div className="flex flex-row space-x-8">
+                                {/* IGCSE */}
+                                <div className="p-3">
+                                    <a href="#igcse" className="font-bold text-xl cursor-pointer hover:underline">IGCSE</a>
+                                    <div className="">
+                                                {menuItems["GCSE / IGCSE"].map((subject, idx) => (
+                                                    <div key={idx} className="mt-2 mb-2">
+                                                        <a href={`#${subject.replace(/\s+/g, '-').toLowerCase()}`} className="hover:underline">{subject}</a>
+                                                    </div>
+                                                ))}
+                                        
+                                    </div>
+                                </div>
+
+                                {/* A-Level */}
+                                <div className="p-3">
+                                    <a href="#alevel" className="font-bold text-xl cursor-pointer hover:underline">A-Level</a>
+                                    <div className="">
+                                                {menuItems["A-Level"].map((subject, idx) => (
+                                                    <div key={idx} className="mt-2 mb-2">
+                                                        <a href={`#${subject.replace(/\s+/g, '-').toLowerCase()}`} className="hover:underline">{subject}</a>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    )}
+                </div>
+            
+                <div
+                    className="relative group"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <Link href="#categories" className="mr-12 ml-12 hover:text-black transition-colors">
+                        Syllabus Analysis
                     </Link>
                     {/* 下拉菜单 */}
                     {isVisible && (
@@ -96,44 +142,22 @@ export default function Navbar(){
                 </div>
 
             <div>
-            <a href="#membership" className="p-4 ml-4 mr-4 font-semibold text-lg hover:underline">
-                Membership Zone
-            </a>
-            </div>
-
-            <div>
-            <Link href="/faq" className="p-4 ml-4 mr-4 font-semibold text-lg hover:underline">
-                FAQ
-            </Link>
-            </div>
-
-            <div>
-            <Link href="/about" className="p-4 ml-4 mr-4 font-semibold text-lg hover:underline">
+            <Link href="/about" className="mr-12 ml-12 hover:text-black transition-colors">
                 About Us
             </Link>
             </div>
             
-            <div className="absolute top-0 right-10 flex items-center space-x-4">
+            <div className="relative group">
                 {/* 根据登录状态显示 Login 或 Logout */}
                 <div>
                     <button 
                         onClick={isLoggedIn ? handleLogout : handleLogin} 
-                        className="p-4 font-semibold bg-darker rounded-lg text-white text-lg hover:underline"
+                        className="mr-12 ml-12 hover:text-black transition-colors"
                     >
                         {isLoggedIn ? 'Logout' : 'Login'}
                     </button>
                 </div>
-
-                <div>
-                    <a 
-                        href="#join" 
-                        className="p-5 font-semibold bg-darker rounded-lg text-white text-lg hover:underline"
-                    >
-                        Join Membership !
-                    </a>
-                </div>
             </div>
-
         </div>
         </nav>
     );

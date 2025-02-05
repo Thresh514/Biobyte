@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import SimpleHeader from "../components/SimpleHeader";
 
 const ResetPassword = () => {
   const router = useRouter();
@@ -38,6 +39,8 @@ const ResetPassword = () => {
   };
 
   return (
+    <div>
+      <SimpleHeader />
     <div className="flex items-center justify-center min-h-screen">
       <div className="p-6 bg-white rounded shadow-lg">
         <h2 className="text-2xl font-semibold mb-4">Reset Password</h2>
@@ -71,6 +74,7 @@ const ResetPassword = () => {
         </form>
         {message && <p className="mt-4 text-green-500">{message}</p>}
       </div>
+    </div>
     </div>
   );
 };
