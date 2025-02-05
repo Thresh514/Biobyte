@@ -45,33 +45,8 @@ const Login = () => {
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-lightest">
-            <div className="flex flex-row w-full max-w-7xl p-8">
-                {/* 左侧会员权益宣传语 */}
-                <div className="mr-24 w-1/2 bg-white rounded-lg shadow-lg p-8">
-                    <a href="#membership" className="text-2xl font-semibold block mt-4 mb-4 text-center">Why Become a Member?</a>
-                    <p className="text-md mb-4 text-center text-gray-700">Join millions of learners and unlock immediate access to:</p>
-                    <div className="space-y-6 text-md text-darker">
-                        <div>
-                            <h3 className="text-lg font-semibold">Document</h3>
-                            <p>The largest and best collection of online learning resources—guaranteed.</p>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold">Tutor</h3>
-                            <p>Hundreds of expert tutors available 24/7. Get answers and explanations in as little as 15 minutes.</p>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold">Study Plans</h3>
-                            <p>Personalized learning plans tailored to your academic needs and goals.</p>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold">Support</h3>
-                            <p>Access to exclusive Q&A sessions with experts to guide your studies.</p>
-                        </div>
-                    </div>
-                </div>
-
                 {/* 右侧登录框 */}
-                <div className="flex flex-col justify-center items-center ml-24 w-1/2 max-w-md p-8 bg-white rounded-lg shadow-lg">
+                <div className="flex flex-col justify-center items-center max-w-md p-8 bg-white rounded-lg shadow-lg">
                     <h2 className="text-center text-3xl font-semibold mb-6">Welcome back!</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
@@ -114,7 +89,6 @@ const Login = () => {
                 </div>
             </div>
         </div>
-    </div>
     );
 };
 

@@ -57,15 +57,6 @@ const AboutPage = () => {
                     </div>
                 </div>
             </section>
-            
-            {/* Call to Action */}
-            <section className="py-32 text-center">
-                <h2 className="text-3xl font-bold mb-6">Join Our Learning Community</h2>
-                <p className="text-lg mb-16">Start your journey with our exclusive resources and achieve academic success.</p>
-                <a href="#membership" className="bg-darker text-white font-bold p-6 mb-24 rounded-lg">
-                    Explore Membership Plans
-                </a>
-            </section>
         </div>
     );
 };
