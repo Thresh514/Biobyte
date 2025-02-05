@@ -1,18 +1,11 @@
-import '../styles/globals.css'; // 导入全局样式
-import "aos/dist/aos.css"; // 导入 AOS 样式
+import "../styles/globals.css"; // 引入 TailwindCSS 的全局样式
 import { useEffect } from "react";
-import AOS from "aos";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
     useEffect(() => {
-        AOS.init({ 
-            duration: 700, 
-            once: false, 
-            mirror: true,
-        }); // 初始化 AOS
+    // 这里可以添加一些初始化逻辑，例如:
+    console.log("应用已加载");
     }, []);
 
     return <Component {...pageProps} />;
 }
-
-export default MyApp;
