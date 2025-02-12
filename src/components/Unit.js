@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { addToCart } from "../lib/cart.js";
 
 const ProductDetail = ({ title, description, image, price, options}) => {
     const [quantity, setQuantity] = useState(1);
     const [selectedOption, setSelectedOption] = useState(options ? options[0] : "");
     const [totalPrice, setTotalPrice] = useState(price);
+
+    useEffect(() => {
+        setQuantity(1);
+    }, [title]); // title 变化时，重置 quantity
 
     const updateQuantity = (amount) => {
         const newQuantity = Math.max(1, quantity + amount);
@@ -12,7 +17,17 @@ const ProductDetail = ({ title, description, image, price, options}) => {
     };
     
     const handleAddToCart = () => {
-        alert(`已加入购物车: ${title}  ${selectedOption} x${quantity}`);
+        const product = {
+            id: title, // 这里的 id 可能需要从 props 传入
+            name: title,
+            price,
+            quantity,
+            option: selectedOption,
+            image,
+        };
+
+        addToCart(product);
+        alert(`已加入购物车: ${title} ${selectedOption} x${quantity}`);
     };
 
     const handleBuyNow = () => {
