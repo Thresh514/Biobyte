@@ -2,7 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 
 export default function ResourceCategories() {
-    const categoriesRef = useRef(null);
+    const ref = useRef(null);
     const categories = [
         {
             title: 'Mathematics',
