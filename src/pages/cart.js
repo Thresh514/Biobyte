@@ -1,65 +1,42 @@
-"use client";
+    "use client";
 
-import { useState, useEffect } from "react";
-import { getCartItems, removeFromCart, clearCart } from "../lib/cart";
-import Navbar from "../components/Navbar";
+    import { useState, useEffect } from "react";
+    import { getCart, updateQuantity, removeFromCart, clearCart } from "../lib/cart";
+    import Navbar from "../components/Navbar";
 
-const CartPage = () => {
-    const [cartItems, setCartItems] = useState([]);
+    export default function Cart() {
+    const [cart, setCart] = useState([]);
 
-    // 组件加载时读取购物车数据
     useEffect(() => {
-        setCartItems(getCartItems());
+        setCart(getCart());
     }, []);
 
-    // 移除资源
-    const handleRemove = (id) => {
-        removeFromCart(id);
-        setCartItems(getCartItems());
-    };
-
-    // 清空购物车
-    const handleClear = () => {
-        clearCart();
-        setCartItems([]);
-    };
-
     return (
-        <div className="">
-            <Navbar />
-            <div className="absolute top-32 left-0 w-full z-0 flex flex-col items-center justify-center text-center">
-                <h1 className="text-2xl font-bold mb-4">购物车</h1>
-                {cartItems.length > 0 ? (
-                    <div>
-                        <ul>
-                            {cartItems.map((item) => (
-                                <li key={item.id} className="flex justify-between border-b py-2">
-                                    <div>
-                                        <p className="font-medium">{item.name}</p>
-                                        <p className="text-gray-600">价格: ${item.price}</p>
-                                    </div>
-                                    <button
-                                        onClick={() => handleRemove(item.id)}
-                                        className="text-red-500"
-                                    >
-                                        移除
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                        <button
-                            onClick={handleClear}
-                            className="bg-red-500 text-white px-4 py-2 mt-4 rounded"
-                        >
-                            清空购物车
-                        </button>
-                    </div>
-                ) : (
-                    <p className="text-gray-500">购物车为空。</p>
-                )}
+    <div className="min-h-screen"><Navbar />
+        <div className="pt-32 p-6 max-w-2xl mx-auto">
+        <h1 className="text-2xl font-bold mb-4">🛒 Shopping Cart</h1>
+
+        {cart.length === 0 ? (
+            <p>Your cart is empty.</p>
+        ) : (
+            <div>
+            {cart.map((item) => (
+                <div key={`${item.id}-${item.option}`} className="flex justify-between items-center mb-4">
+                <span>{item.name} ({item.option}) x {item.quantity}</span>
+                <div className="flex items-center">
+                    <button onClick={() => setCart(updateQuantity(item.id, item.option, item.quantity - 1))}>-</button>
+                    <span className="mx-2">{item.quantity}</span>
+                    <button onClick={() => setCart(updateQuantity(item.id, item.option, item.quantity + 1))}>+</button>
+                    <button onClick={() => setCart(removeFromCart(item.id, item.option))} className="ml-4 text-red-500">Delete</button>
+                </div>
+                </div>
+            ))}
+            <h2 className="text-xl font-bold mt-4">Total: ${cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</h2>
+            <button onClick={() => setCart(clearCart())} className="mt-4 mr-4 bg-red-500 text-white p-2">Clear Cart</button>
+            <button className="mt-4 ml-4 bg-green-500 text-white p-2">Checkout</button>
             </div>
+        )}
+        </div>
         </div>
     );
-};
-
-export default CartPage;
+    }

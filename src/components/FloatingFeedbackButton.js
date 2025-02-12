@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect} from "react";
-import { FiMail } from "react-icons/fi"; // 邮件图标
+import { SlEnvolope } from "react-icons/sl"; // 邮件图标
 import { IoClose } from "react-icons/io5"; // 关闭按钮
 
 export default function FloatingFeedbackButton() {
@@ -61,7 +61,7 @@ export default function FloatingFeedbackButton() {
     };
 
     return (
-        <div className="fixed bottom-12 right-12 z-50 flex flex-col items-end">
+        <div className="flex flex-col items-end">
             {/* 反馈表单 */}
             {isOpen && (
                 <div ref={formRef} className="bg-white shadow-lg p-4 rounded-lg w-80 border border-gray-200">
@@ -111,7 +111,7 @@ export default function FloatingFeedbackButton() {
                 }}
                 className="bg-gray-100 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
             >
-                <FiMail size={28} />
+                <SlEnvolope size={24} />
             </button>
         </div>
     );
