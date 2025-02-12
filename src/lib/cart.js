@@ -1,44 +1,54 @@
-const CART_KEY = "cart";
-
-/**
- * 获取购物车中的资源
- * @returns {Array} - 购物车中的资源数组
- */
-export const getCartItems = () => {
-    if (typeof window !== "undefined") {
-        return JSON.parse(localStorage.getItem(CART_KEY)) || [];
-    }
-    return [];
-};
-
-/**
- * 添加资源到购物车
- */
-export const addToCart = (resource) => {
-    if (typeof window !== "undefined") {
-        let cart = getCartItems();
-        if (!cart.some((item) => item.id === resource.id)) {
-            cart.push(resource);
-            localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    // lib/cart.js
+    export const getCart = () => {
+        if (typeof window !== "undefined") {
+        const storedCart = localStorage.getItem("cart");
+        return storedCart ? JSON.parse(storedCart) : [];
         }
-    }
-};
-
-/**
- * 从购物车中移除指定资源
- */
-export const removeFromCart = (resourceId) => {
-    if (typeof window !== "undefined") {
-        let cart = getCartItems().filter((item) => item.id !== resourceId);
-        localStorage.setItem(CART_KEY, JSON.stringify(cart));
-    }
-};
-
-/**
- * 清空购物车
- */
-export const clearCart = () => {
-    if (typeof window !== "undefined") {
-        localStorage.removeItem(CART_KEY);
-    }
-};
+        return [];
+    };
+    
+    export const saveCart = (cart) => {
+        if (typeof window !== "undefined") {
+        localStorage.setItem("cart", JSON.stringify(cart));
+        }
+    };
+    
+    export const addToCart = (product) => {
+        let cart = getCart();
+        const existingItem = cart.find((item) => item.id === product.id && item.option === product.option);
+    
+        if (existingItem) {
+        cart = cart.map((item) =>
+            item.id === product.id && item.option === product.option
+            ? { ...item, quantity: item.quantity + product.quantity }
+            : item
+        );
+        } else {
+        cart.push(product);
+        }
+    
+        saveCart(cart);
+        return cart;
+    };
+    
+    export const updateQuantity = (id, option, quantity) => {
+        let cart = getCart();
+        cart = cart.map((item) =>
+        item.id === id && item.option === option ? { ...item, quantity: Math.max(1, quantity) } : item
+        );
+    
+        saveCart(cart);
+        return cart;
+    };
+    
+    export const removeFromCart = (id, option) => {
+        let cart = getCart().filter((item) => !(item.id === id && item.option === option));
+        saveCart(cart);
+        return cart;
+    };
+    
+    export const clearCart = () => {
+        saveCart([]);
+        return [];
+    };
+    
