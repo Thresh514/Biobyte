@@ -34,7 +34,6 @@ const ProductDetail = ({ title, description, image, price, options}) => {
                     <p className="text-gray-600 text-lg">{description}</p>
                     <p className="text-2xl font-semibold text-red-500">${totalPrice}</p>
                     
-
                     {/* 数量选择 */}
                     <div className="flex items-center space-x-3">
                         <label className="font-semibold">Amount:</label>

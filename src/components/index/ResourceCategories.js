@@ -1,6 +1,8 @@
 import React from 'react';
+import { useRef } from 'react';
 
 export default function ResourceCategories() {
+    const categoriesRef = useRef(null);
     const categories = [
         {
             title: 'Mathematics',
@@ -41,7 +43,7 @@ export default function ResourceCategories() {
     ];
 
     return (
-        <section className="py-16 bg-transparent">
+        <section id="resource-categories" className="py-16 bg-transparent">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold text-darker mb-12">Explore Our Resource Categories</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
