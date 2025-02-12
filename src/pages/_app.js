@@ -1,5 +1,6 @@
 import "../styles/globals.css"; // 引入 TailwindCSS 的全局样式
 import { useEffect } from "react";
+import FloatingFeedbackButton from "../components/FloatingFeedbackButton";
 
 export default function MyApp({ Component, pageProps }) {
     useEffect(() => {
@@ -7,5 +8,11 @@ export default function MyApp({ Component, pageProps }) {
     console.log("应用已加载");
     }, []);
 
-    return <Component {...pageProps} />;
+    return (
+        <>
+            <Component {...pageProps} />
+            <FloatingFeedbackButton />
+        </>
+    );
 }
+
