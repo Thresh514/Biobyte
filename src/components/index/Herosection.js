@@ -1,31 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player';
+import { useRef } from 'react';
 
 export default function HeroSection() {
     const [isClient, setIsClient] = useState(false);
-    
+    const nextSectionRef = useRef(null);
+
+    const scrollToNextSection = (e) => {
+        e.preventDefault();
+        if (nextSectionRef.current) {
+            nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     useEffect(() => {
         setIsClient(true);
     }, []);
 
     return (
-        <section className="relative bg-white text-darker h-screen">
-            {/* 背景视频 */}
-            <div className="absolute top-0 left-0 w-full h-full z-0">
-                {isClient && (
-                    <ReactPlayer
-                        url="#sample_video.mp4" // replace with your video path or URL
-                        playing={true}
-                        loop={true}
-                        muted={true}
-                        width="100%"
-                        height="100%"
-                        className="object-cover"
-                        style={{ opacity: 0.2 }} 
-                    />
-                )}
-            </div>
-
+        <section className="relative bg-transparent text-darker h-screen top-32">
             {/* 内容 */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
                 <h1 className="text-5xl font-bold text-darkest mb-8">
@@ -40,7 +32,17 @@ export default function HeroSection() {
                 >
                     Buy Now
                 </a>
+            
+                {/* 跳动的向下箭头 */}
+                <a 
+                    href="#resource-categories" 
+                    className="mt-48 animate-bounce"
+                    onClick={scrollToNextSection}
+                >
+                    <img src="/scrolldown.svg" alt="down arrow" className="w-16 h-16"/>
+                </a>
             </div>
+            <div ref={nextSectionRef} className="scroll-mt-44"></div>
         </section>
     );
 }
