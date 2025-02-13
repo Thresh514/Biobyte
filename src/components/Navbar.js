@@ -72,7 +72,7 @@ export default function Navbar() {
                         </button>
                     </div>
                 </div>
-                {isDropdownOpen && (
+                
                     <div 
                         className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
                             transition-all duration-1000 ease-out transform ${
@@ -103,7 +103,7 @@ export default function Navbar() {
                             ))}
                         </div>
                     </div>
-                )}
+                
 
                 {/* 右侧菜单和购物车 */}
                 <div className="hidden md:flex items-center space-x-6">
