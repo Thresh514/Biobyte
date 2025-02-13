@@ -2,11 +2,12 @@ import { useState, useRef, useEffect} from "react";
 import { SlEnvolope } from "react-icons/sl"; // 邮件图标
 import { IoClose } from "react-icons/io5"; // 关闭按钮
 
-export default function FloatingFeedbackButton() {
-    const [isOpen, setIsOpen] = useState(false);
+export default function FloatingFeedbackButton({ activeComponent, setActiveComponent }) {
+    const isOpen = activeComponent === "feedback";
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const formRef = useRef(null); // 用于检测点击区域
+    
 
     // 初始化时从 localStorage 读取数据
     useEffect(() => {
@@ -17,7 +18,7 @@ export default function FloatingFeedbackButton() {
     useEffect(() => {
         function handleClickOutside(event) {
             if (formRef.current && !formRef.current.contains(event.target)) {
-                setIsOpen(false);
+                setActiveComponent(null);
             }
         }
 
@@ -64,11 +65,11 @@ export default function FloatingFeedbackButton() {
         <div className="flex flex-col items-end">
             {/* 反馈表单 */}
             {isOpen && (
-                <div ref={formRef} className="bg-white shadow-lg p-4 rounded-lg w-80 border border-gray-200">
+                <div ref={formRef} className="bg-white shadow-lg p-4 mb-4 rounded-lg w-[350px] border border-gray-200">
                     <div className="flex justify-between items-center mb-2">
                         <h2 className="text-lg font-bold">Feedback</h2>
                         <button
-                            onClick={() => setIsOpen(false)}
+                            onClick={() => setActiveComponent(null)}
                             className="text-gray-500 hover:text-gray-600 transition duration-200"
                         >
                             <IoClose size={20} />
@@ -86,7 +87,7 @@ export default function FloatingFeedbackButton() {
                         />
                         <textarea
                             name="message"
-                            rows="5"
+                            rows="7"
                             value={message}
                             onChange={handleMessageChange}
                             className="w-full p-2 border rounded-md mt-2"
@@ -107,7 +108,7 @@ export default function FloatingFeedbackButton() {
             <button
                 onClick={(e) => {
                     e.stopPropagation(); // 防止点击按钮时关闭表单
-                    setIsOpen(!isOpen);
+                    setActiveComponent(isOpen ? null : "feedback"); // 只允许打开 feedback
                 }}
                 className="bg-gray-100 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
             >
