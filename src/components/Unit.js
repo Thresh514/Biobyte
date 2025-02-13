@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { addToCart } from "../lib/cart.js";
+import { useRouter } from "next/router";
+import { addToCart, saveCart } from "../lib/cart.js";
 
 const ProductDetail = ({ title, description, image, price, options}) => {
     const [quantity, setQuantity] = useState(1);
     const [selectedOption, setSelectedOption] = useState(options ? options[0] : "");
     const [totalPrice, setTotalPrice] = useState(price);
+    const router = useRouter();
 
     useEffect(() => {
         setQuantity(1);
@@ -32,6 +34,20 @@ const ProductDetail = ({ title, description, image, price, options}) => {
     };
 
     const handleBuyNow = () => {
+        const product = {
+            id: title, // 这里的 id 可能需要从 props 传入
+            name: title,
+            price,
+            quantity,
+            option: selectedOption,
+            image,
+        };
+
+        saveCart([product]);
+
+        // 跳转到 Checkout 页面
+        router.push("/checkout");
+        
         alert(`直接购买: ${title} ${selectedOption} x${quantity}`);
     };
 

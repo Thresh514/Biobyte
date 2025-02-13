@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { getCart, clearCart } from "../lib/cart";
 import { useRouter } from "next/navigation";
+import SimpleHeader from "../components/SimpleHeader";
 
 export default function Checkout() {
     const [cart, setCart] = useState([]);
@@ -64,7 +65,9 @@ export default function Checkout() {
     };
     
     return (
-        <div className="max-w-3xl mx-auto p-6">
+        <div className="min-h-screen">
+            <SimpleHeader />
+        <div className="pt-24 max-w-3xl mx-auto p-6">
             <h1 className="text-2xl font-bold mb-4">结算 Checkout</h1>
 
             {cart.length === 0 ? (
@@ -118,6 +121,7 @@ export default function Checkout() {
                     </form>
                 </>
             )}
+        </div>
         </div>
     );
 }
