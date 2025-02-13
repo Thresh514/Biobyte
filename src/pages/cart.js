@@ -13,6 +13,13 @@
         setCart(getCart());
     }, []);
 
+    useEffect(() => {
+        document.body.classList.add('fade-in');
+        return () => {
+            document.body.classList.remove('fade-in');
+        };
+    }, []);
+
     return (
     <div className="min-h-screen"><Navbar />
         <div className="pt-32 p-6 max-w-2xl mx-auto">

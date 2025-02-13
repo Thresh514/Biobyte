@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import Unit from "../../components/Unit";
 import Footer from "../../components/Footer";
@@ -62,7 +61,6 @@ export default function ChapterDetail() {
                 <title>{course.title}</title>
                 <meta name="description" content={course.description} />
             </Head>
-            <Header />
             <Navbar />
             <main className="pt-48 min-h-screen">
                 <Unit 

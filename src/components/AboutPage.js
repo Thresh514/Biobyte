@@ -1,6 +1,14 @@
 import React from "react";
+import { useEffect } from "react";
 
 const AboutPage = () => {
+    useEffect(() => {
+            document.body.classList.add('fade-in');
+            return () => {
+                document.body.classList.remove('fade-in');
+            };
+        }, []);
+
     return (
         <div className="min-h-screen bg-white text-darker max-w-5xl mx-auto">
             {/* Hero Section */}
