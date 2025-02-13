@@ -8,7 +8,8 @@ const ProductDetail = ({ title, description, image, price, options}) => {
 
     useEffect(() => {
         setQuantity(1);
-    }, [title]); // title 变化时，重置 quantity
+        setTotalPrice(price);  // 价格也需要更新
+    }, [title, price]); // 添加 price 依赖项
 
     const updateQuantity = (amount) => {
         const newQuantity = Math.max(1, quantity + amount);

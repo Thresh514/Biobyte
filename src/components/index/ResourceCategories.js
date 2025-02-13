@@ -38,7 +38,7 @@ export default function ResourceCategories() {
                     {categories.map((category, index) => (
                         <div
                             key={index}
-                            className={`max-w-[400px] max-h-[400px] bg-white p-12 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl cursor-pointer ${colors[index % colors.length]}`}
+                            className={`max-w-[400px] max-h-[400px] p-12 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl cursor-pointer ${colors[index % colors.length]}`}
                             onClick={() => window.location.href = category.link}
                         >
                             <img
