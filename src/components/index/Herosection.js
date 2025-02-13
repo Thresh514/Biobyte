@@ -26,12 +26,6 @@ export default function HeroSection() {
                 <p className="text-xl text-darker mb-6">
                     Download thousands of professional notes, access exclusive learning resources, and master new knowledge on the go.
                 </p>
-                <a
-                    href="#join"
-                    className="mt-4 p-4 px-20 rounded-lg hover:font-semibold transition duration-500"
-                >
-                    Buy Now
-                </a>
             
                 {/* 跳动的向下箭头 */}
                 <a 
