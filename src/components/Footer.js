@@ -8,21 +8,21 @@ export default function Footer() {
                     {/* 快速导航 */}
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-                        <ul className="space-y-2 text-darkest">
-                            <li><a href="#faq" className="hover:text-white">Frequently Asked Questions</a></li>
-                            <li><a href="#contact" className="hover:text-white">Contact Us</a></li>
-                            <li><a href="#privacy-policy" className="hover:text-white">Privacy Policy</a></li>
+                        <ul className="space-y-2 text-gray-600 ">
+                            <li><a href="#faq" className="hover:text-black">Frequently Asked Questions</a></li>
+                            <li><a href="#contact" className="hover:text-black">Contact Us</a></li>
+                            <li><a href="#privacy-policy" className="hover:text-black">Privacy Policy</a></li>
                         </ul>
                     </div>
 
                     {/* 联系我们 */}
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-                        <ul className="space-y-2 text-darkest">
-                            <li><a href="mailto:tonytudaodao@gmail.com" className="hover:text-white">tonytudaodao@gmail.com</a></li>
-                            <li><a href="tel:+1(857)205-2207" className="hover:text-white">+1 (857) 205-2207</a></li>
-                            <li><a href="https://www.instagram.com/example" className="hover:text-white" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                            <li><a href="https://www.facebook.com/example" className="hover:text-white" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <ul className="space-y-2 text-gray-600">
+                            <li><a href="mailto:tonytudaodao@gmail.com" className="hover:text-black">tonytudaodao@gmail.com</a></li>
+                            <li><a href="tel:+1(857)205-2207" className="hover:text-black">+1 (857) 205-2207</a></li>
+                            <li><a href="https://www.instagram.com/example" className="hover:text-black" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/example" className="hover:text-black" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                         </ul>
                     </div>
 

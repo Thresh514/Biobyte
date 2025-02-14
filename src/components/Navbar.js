@@ -18,9 +18,9 @@ export default function Navbar() {
             setIsLoggedIn(true);
         }
         if (isDropdownHovered) {
-            timeout = setTimeout(() => setIsDropdownOpen(true), 200); // 延迟显示 200ms
+            timeout = setTimeout(() => setIsDropdownOpen(true), 0); // 延迟显示 200ms
         } else {
-            timeout = setTimeout(() => setIsDropdownOpen(false), 800); // 延迟隐藏 200ms
+            timeout = setTimeout(() => setIsDropdownOpen(false), 1000); // 延迟隐藏 200ms
         }
 
         return () => clearTimeout(timeout); // 清除定时器，避免多次触发
@@ -76,7 +76,7 @@ export default function Navbar() {
                     <div 
                         className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
                             transition-all duration-1000 ease-out transform ${
-                                isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
+                                isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-12 pointer-events-none"
                             }`}
                     >
                         <div className="grid grid-cols-2 gap-6">

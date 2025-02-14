@@ -9,25 +9,25 @@ export default function ResourceCategories() {
             title: "AS Biology Mindmaps",
             description: "Structured mindmaps for AS Biology covering key concepts and topics.",
             icon: "/open-book.svg",
-            link: "#resources/mindmaps/as-biology"
+            link: "/unit/mindmaps-as-biology"
         },
         {
             title: "A2 Biology Mindmaps",
             description: "Detailed mindmaps for A2 Biology to enhance your understanding.",
             icon: "/open-book.svg",
-            link: "#resources/mindmaps/a2-biology"
+            link: "/unit/mindmaps-a2-biology"
         },
         {
             title: "AS Biology Syllabus Analysis",
             description: "Comprehensive syllabus breakdown for AS Biology.",
             icon: "/open-book.svg",
-            link: "#resources/syllabus-analysis/as-biology"
+            link: "/unit/syllabus-analysis-as-biology"
         },
         {
             title: "A2 Biology Syllabus Analysis",
             description: "In-depth syllabus analysis for A2 Biology.",
             icon: "/open-book.svg",
-            link: "#resources/syllabus-analysis/a2-biology"
+            link: "/unit/syllabus-analysis-a2-biology"
         }];
 
     return (
