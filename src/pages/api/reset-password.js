@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     const { token, newPassword } = req.body;
 
     // 检查 token 是否有效
-    const query = "SELECT * FROM users WHERE reset_token = ?";
+    const query = "SELECT * FROM users WHERE reset_token = ? AND reset_expires > NOW()";
     const [rows] = await pool.query(query, [token]);
 
     if (!rows.length) {
@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     // 更新用户密码
     const hashedPassword = await bcrypt.hash(newPassword, 10);
     const updateQuery =
-      "UPDATE users SET password = ?, reset_token = NULL WHERE reset_token = ?";
+      "UPDATE users SET password_hash = ?, reset_token = NULL, reset_expires = NULL WHERE reset_token = ?";
     await pool.query(updateQuery, [hashedPassword, token]);
 
     return res.status(200).json({ message: "Password reset successfully." });

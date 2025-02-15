@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router"; // 导入 useRouter hook
 
 const Login = () => {
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter();  // 使用 useRouter 创建 router 对象
 
@@ -19,7 +19,7 @@ const Login = () => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ email, password }),
         });
 
         if (response.ok) {
@@ -52,11 +52,11 @@ const Login = () => {
                         <div>
                             <label className="block text-sm font-semibold text-gray-700">Username</label>
                             <input
-                                type="text"
-                                name="username"
+                                type="email"
+                                name="email"
                                 className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                         </div>

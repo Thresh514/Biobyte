@@ -17,6 +17,7 @@ const forgotPassword = async (req, res) => {
 
     try {
       // 查找邮箱是否存在
+      console.log("Checking if email exists:", email);
       const query = "SELECT * FROM users WHERE email = ?";
       const [user] = await pool.query(query, [email]);
 
@@ -28,10 +29,15 @@ const forgotPassword = async (req, res) => {
       const token = crypto.randomBytes(20).toString("hex");
 
       // 设置令牌过期时间（例如 1 小时）
-      const tokenExpiration = Date.now() + 3600000; // 当前时间加 1 小时
+      const tokenExpiration = new Date(Date.now() + 3600000)  // 当前时间 + 1 小时
+      .toISOString()
+      .slice(0, 19)
+      .replace("T", " ");
+
+    console.log(`Generated token: ${token}, expires at: ${tokenExpiration}`);
 
       // 更新数据库，存储这个令牌和过期时间
-      const updateQuery = "UPDATE users SET reset_token = ?, reset_token_expiration = ? WHERE email = ?";
+      const updateQuery = "UPDATE users SET reset_token = ?, reset_expires = ? WHERE email = ?";
       await pool.query(updateQuery, [token, tokenExpiration, email]);
 
       // 发送重置链接到用户邮箱
