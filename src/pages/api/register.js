@@ -10,6 +10,9 @@ const register = async (req, res) => {
     }
 
     try{
+
+        const [dbCheck] = await pool.query("SELECT DATABASE();");
+        console.log("当前连接的数据库是:", dbCheck);
         //check if username exists
         const [usernameCheck] = await pool.query(
             "SELECT * FROM users WHERE username = ?",
@@ -34,7 +37,7 @@ const register = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         // 将数据插入到数据库
-        const insertQuery = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
+        const insertQuery = "INSERT INTO users (username, password_hash, email) VALUES (?, ?, ?)";
         const insertValues = [username, hashedPassword, email];
         await pool.query(insertQuery, insertValues);
 
