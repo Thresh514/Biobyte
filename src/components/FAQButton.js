@@ -5,7 +5,7 @@ export default function FAQButton() {
     return (
         <Link href="/faq">
         <button 
-            className="bg-gray-100 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
+            className="bg-gray-100/85 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
             title="FAQ"
         >
             <SlQuestion size={24} />

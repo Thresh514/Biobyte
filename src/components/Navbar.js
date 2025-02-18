@@ -127,7 +127,7 @@ export default function Navbar() {
             </div>
             {/* 移动端下拉菜单 */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-20 left-0 w-full bg-gray-100 shadow-lg p-4">
+                <div className="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg p-4">
                     <div className="flex flex-col ml-8 space-y-4">
                         {Object.entries(menuItems).map(([category, items]) => (
                             <div key={category}>
@@ -136,8 +136,8 @@ export default function Navbar() {
                                     {items.map((item) => (
                                         <li key={item}>
                                             <Link
-                                                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                                                className="text-gray-600 hover:text-blue-600 transition-colors"
+                                                href={`/unit/${category.toLowerCase().replace(/\s+/g, "-") + "-" + item.toLowerCase().replace(/\s+/g, "-")}`}
+                                                className="text-gray-600 hover:text-black transition-colors"
                                             >
                                                 {item}
                                             </Link>

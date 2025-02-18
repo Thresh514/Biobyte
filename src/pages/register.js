@@ -50,7 +50,7 @@ const Register = () => {
     <div>
       <SimpleHeader />
     <div className="flex items-center justify-center min-h-screen bg-lightest">
-      <div className="flex flex-col items-center w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+      <div className="flex flex-col items-center w-full max-w-md p-8 bg-white rounded-lg md:shadow-lg lg:shadow-lg">
         <h2 className="text-center text-3xl font-semibold mb-6">Create Account</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

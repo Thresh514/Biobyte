@@ -110,7 +110,7 @@ export default function FloatingFeedbackButton({ activeComponent, setActiveCompo
                     e.stopPropagation(); // 防止点击按钮时关闭表单
                     setActiveComponent(isOpen ? null : "feedback"); // 只允许打开 feedback
                 }}
-                className="bg-gray-100 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
+                className="bg-gray-100/85 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
             >
                 <SlEnvolope size={24} />
             </button>

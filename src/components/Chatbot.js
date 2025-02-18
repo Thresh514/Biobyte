@@ -107,7 +107,7 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {  // �
                     e.stopPropagation(); // 防止点击按钮时关闭窗口
                     setActiveComponent(isOpen ? null : "chatbot"); // 只允许打开 Chatbot
                 }}
-                className="bg-gray-100 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
+                className="bg-gray-100/85 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
             >
                 <MessageSquare className="w-6 h-6" />
             </button>
