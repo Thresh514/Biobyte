@@ -33,12 +33,12 @@ export default function ResourceCategories() {
     return (
         <section id="resource-categories" className="py-16 mb-8 bg-transparent scroll-mt-16 px-12 md:px-12">
             <div className="max-w-7xl mx-auto text-center">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-darker mb-16">Explore Our Resource Categories</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-darker mb-16">Explore Our Resource Categories</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-10 ">
                     {categories.map((category, index) => (
                         <div
                             key={index}
-                            className={`w-full max-w-[400px] h-auto p-8 md:p-12 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl cursor-pointer ${colors[index % colors.length]}`}
+                            className={`w-full max-w-lg h-auto p-8 md:p-12 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl cursor-pointer ${colors[index % colors.length]}`}
                             onClick={() => window.location.href = category.link}
                         >
                             <img

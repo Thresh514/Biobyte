@@ -68,22 +68,23 @@ export default function Checkout() {
         <div className="min-h-screen">
             <SimpleHeader />
         <div className="pt-24 max-w-3xl mx-auto p-6">
-            <h1 className="text-2xl font-bold mb-4">结算 Checkout</h1>
+            <h1 className="text-2xl font-bold mb-4">Checkout</h1>
 
             {cart.length === 0 ? (
-                <p>您的购物车是空的</p>
+                <p>Your cart is empty</p>
             ) : (
                 <>
                     {/* 商品信息 */}
                     <div className="border p-4 rounded-md mb-6">
-                        <h2 className="text-xl font-semibold mb-2">订单详情</h2>
+                        <h2 className="text-xl font-semibold mb-2">Order Details</h2>
                         {cart.map((item) => (
                             <div key={`${item.id}-${item.option}`} className="flex justify-between mb-2">
-                                <span>{item.name} ({item.option}) x {item.quantity}</span>
-                                <span>${(item.price * item.quantity).toFixed(2)}</span>
+                                <span>{item.name} {item.option}</span>
+                                <span>x {item.quantity}</span>
+                                <span>${(item.price * item.quantity)}</span>
                             </div>
                         ))}
-                        <h3 className="text-lg font-bold mt-4">总价: ${totalPrice.toFixed(2)}</h3>
+                        <h3 className="text-lg font-bold mt-4 text-end">Total: ${totalPrice.toFixed(2)}</h3>
                     </div>
 
                     {/* 结算表单 */}
@@ -114,7 +115,7 @@ export default function Checkout() {
                         />
                         <button
                             type="submit"
-                            className="w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 transition"
+                            className="w-full bg-black text-white font-semibold p-4 rounded-md transition"
                         >
                             Submit Order
                         </button>
