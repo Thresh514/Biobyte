@@ -18,7 +18,7 @@ export default function Navbar() {
             setIsLoggedIn(true);
         }
         if (isDropdownHovered) {
-            timeout = setTimeout(() => setIsDropdownOpen(true), 0); // 延迟显示 200ms
+            timeout = setTimeout(() => setIsDropdownOpen(true), 200); // 延迟显示 200ms
         } else {
             timeout = setTimeout(() => setIsDropdownOpen(false), 1000); // 延迟隐藏 200ms
         }
