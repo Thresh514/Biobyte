@@ -31,9 +31,9 @@ export default function ResourceCategories() {
         }];
 
     return (
-        <section id="resource-categories" className="py-16 mb-8 bg-transparent">
+        <section id="resource-categories" className="py-16 mb-8 bg-transparent scroll-mt-16">
             <div className="max-sw-7xl mx-auto text-center">
-                <h2 className="text-3xl font-semibold text-darker mb-20">Explore Our Resource Categories</h2>
+                <h2 className="text-3xl font-semibold text-darker mb-16">Explore Our Resource Categories</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10">
                     {categories.map((category, index) => (
                         <div

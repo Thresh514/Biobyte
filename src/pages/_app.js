@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import FloatingFeedbackButton from "../components/FloatingFeedbackButton";
 import FAQButton from "../components/FAQButton";
 import Chatbot from "../components/Chatbot";
+import Scrolldown from "../components/Scrolldown";
 
 export default function MyApp({ Component, pageProps }) {
     const [activeComponent, setActiveComponent] = useState(null); // 用于管理当前打开的组件
@@ -20,6 +21,7 @@ export default function MyApp({ Component, pageProps }) {
                 <FloatingFeedbackButton activeComponent={activeComponent} setActiveComponent={setActiveComponent}/>
                 <FAQButton />
             </div>
+            <Scrolldown />
         </>
     );
 }

@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function SuccessStories() {
     return (
-        <section className="py-16 bg-white">
+        <section id= "SuccessStories" className="py-16 bg-white">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold text-darker mb-12">User Reviews</h2>
         
