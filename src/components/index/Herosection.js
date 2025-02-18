@@ -17,26 +17,17 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative bg-transparent text-darker h-screen top-32">
+        <section id="herosection" className="relative bg-transparent text-darker h-screen px-6 md:px-12">
             {/* 内容 */}
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-                <h1 className="text-5xl font-bold text-darkest mb-8">
+            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 max-w-8xl">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-darkest mb-8">
                     Unlock quality study notes for an effective learning journey!
                 </h1>
-                <p className="text-xl text-darker mb-6">
-                    Download thousands of professional notes, access exclusive learning resources, and master new knowledge on the go.
+                <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-darker mb-6">
+                    Download thousands of professional notes, access exclusive learning resources,
+                    and master new knowledge on the go.
                 </p>
-            
-                {/* 跳动的向下箭头 */}
-                <a 
-                    href="#resource-categories" 
-                    className="mt-48 animate-bounce"
-                    onClick={scrollToNextSection}
-                >
-                    <img src="/scrolldown.svg" alt="down arrow" className="w-16 h-16"/>
-                </a>
             </div>
-            <div ref={nextSectionRef} className="scroll-mt-44"></div>
         </section>
     );
 }

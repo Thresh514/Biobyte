@@ -18,7 +18,7 @@ export default function Navbar() {
             setIsLoggedIn(true);
         }
         if (isDropdownHovered) {
-            timeout = setTimeout(() => setIsDropdownOpen(true), 200); // 延迟显示 200ms
+            timeout = setTimeout(() => setIsDropdownOpen(true), 100); // 延迟显示 200ms
         } else {
             timeout = setTimeout(() => setIsDropdownOpen(false), 1000); // 延迟隐藏 200ms
         }
@@ -76,7 +76,7 @@ export default function Navbar() {
                     <div 
                         className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
                             transition-all duration-1000 ease-out transform ${
-                                isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
+                                isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-12 pointer-events-none"
                             }`}
                     >
                         <div className="grid grid-cols-2 gap-6">
@@ -127,7 +127,7 @@ export default function Navbar() {
             </div>
             {/* 移动端下拉菜单 */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-20 left-0 w-full bg-gray-100 shadow-lg p-4">
+                <div className="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg p-4">
                     <div className="flex flex-col ml-8 space-y-4">
                         {Object.entries(menuItems).map(([category, items]) => (
                             <div key={category}>
@@ -136,8 +136,8 @@ export default function Navbar() {
                                     {items.map((item) => (
                                         <li key={item}>
                                             <Link
-                                                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                                                className="text-gray-600 hover:text-blue-600 transition-colors"
+                                                href={`/unit/${category.toLowerCase().replace(/\s+/g, "-") + "-" + item.toLowerCase().replace(/\s+/g, "-")}`}
+                                                className="text-gray-600 hover:text-black transition-colors"
                                             >
                                                 {item}
                                             </Link>

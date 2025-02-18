@@ -46,7 +46,7 @@ const Login = () => {
     return (
         <div className="flex items-center justify-center min-h-screen bg-lightest">
                 {/* 右侧登录框 */}
-                <div className="flex flex-col justify-center items-center max-w-md p-8 bg-white rounded-lg shadow-lg">
+                <div className="flex flex-col justify-center items-center max-w-md p-8 bg-white rounded-lg md:shadow-lg lg:shadow-lg">
                     <h2 className="text-center text-3xl font-semibold mb-6">Welcome back!</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>

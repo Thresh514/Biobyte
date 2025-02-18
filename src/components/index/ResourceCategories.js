@@ -9,36 +9,36 @@ export default function ResourceCategories() {
             title: "AS Biology Mindmaps",
             description: "Structured mindmaps for AS Biology covering key concepts and topics.",
             icon: "/open-book.svg",
-            link: "#resources/mindmaps/as-biology"
+            link: "/unit/mindmaps-as-biology"
         },
         {
             title: "A2 Biology Mindmaps",
             description: "Detailed mindmaps for A2 Biology to enhance your understanding.",
             icon: "/open-book.svg",
-            link: "#resources/mindmaps/a2-biology"
+            link: "/unit/mindmaps-a2-biology"
         },
         {
             title: "AS Biology Syllabus Analysis",
             description: "Comprehensive syllabus breakdown for AS Biology.",
             icon: "/open-book.svg",
-            link: "#resources/syllabus-analysis/as-biology"
+            link: "/unit/syllabus-analysis-as-biology"
         },
         {
             title: "A2 Biology Syllabus Analysis",
             description: "In-depth syllabus analysis for A2 Biology.",
             icon: "/open-book.svg",
-            link: "#resources/syllabus-analysis/a2-biology"
+            link: "/unit/syllabus-analysis-a2-biology"
         }];
 
     return (
-        <section id="resource-categories" className="py-16 mb-8 bg-transparent">
-            <div className="max-sw-7xl mx-auto text-center">
-                <h2 className="text-3xl font-semibold text-darker mb-20">Explore Our Resource Categories</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10">
+        <section id="resource-categories" className="py-16 mb-8 bg-transparent scroll-mt-16 px-12 md:px-12">
+            <div className="max-w-7xl mx-auto text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-darker mb-16">Explore Our Resource Categories</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-10 ">
                     {categories.map((category, index) => (
                         <div
                             key={index}
-                            className={`max-w-[400px] max-h-[400px] p-12 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl cursor-pointer ${colors[index % colors.length]}`}
+                            className={`w-full max-w-lg h-auto p-8 md:p-12 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl cursor-pointer ${colors[index % colors.length]}`}
                             onClick={() => window.location.href = category.link}
                         >
                             <img
@@ -46,8 +46,8 @@ export default function ResourceCategories() {
                                 alt={category.title}
                                 className="w-16 h-16 mx-auto mb-4"
                             />
-                            <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
-                            <p className="text-gray-600">{category.description}</p>
+                            <h3 className="font-semibold mb-4 text-lg sm:text-xl">{category.title}</h3>
+                            <p className="text-gray-600 text-sm sm:text-base">{category.description}</p>
                         </div>
                     ))}
                 </div>
