@@ -1,30 +1,14 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import testimonialsData from '../../lib/SuccessStoriesSheet.json';
 
-const testimonials = [
-    {
-        id: 1,
-        name: 'John Doe',
-        avatar: '/head.svg',
-        review: 'I used the platform’s A-Level math and physics notes, and it made a huge difference in my studies. The clear explanations and detailed examples helped me grasp difficult concepts and significantly improved my exam performance. I ended up raising my grades by 200 points, and I couldn’t be more grateful for the resources available!',
-        completedNotes: 30
-    },
-    {
-        id: 2,
-        name: 'Emily Smith',
-        avatar: '/head.svg',
-        review: 'The platform’s IGCSE chemistry and biology resources were a lifesaver for me. The study guides were comprehensive, and the practice questions gave me a great understanding of what to expect in the exams. Thanks to these materials, I was able to ace my IGCSEs and feel fully prepared for my next academic steps.',
-        completedNotes: 25
-    },
-    {
-        id: 3,
-        name: 'Michael Johnson',
-        avatar: '/head.svg',
-        review: 'I’ve been using the platform’s A-Level English literature notes and found them extremely helpful. The detailed analysis of the texts and themes, along with the exam tips, allowed me to improve my writing and critical thinking skills. My grade improved by 2 points, and I now feel much more confident in tackling A-Level exams.',
-        completedNotes: 18
-    }    
-];
+const SuccessStories = () => {
+    const [testimonials, setTestimonials] = useState([]);
 
-export default function SuccessStories() {
+    useEffect(() => {
+        // 只在客户端执行随机化
+        const shuffled = [...testimonialsData].sort(() => 0.5 - Math.random()).slice(0, 3);
+        setTestimonials(shuffled);
+    }, []);
     return (
         <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto text-center">
@@ -57,4 +41,7 @@ export default function SuccessStories() {
         </div>
     </section>
     );
-}
+};
+
+export default SuccessStories;
+    
