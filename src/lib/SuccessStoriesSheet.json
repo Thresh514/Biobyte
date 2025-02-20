@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "name": "John Doe",
+        "avatar": "/head.svg",
+        "review": "I used the platform’s A-Level math and physics notes, and it made a huge difference in my studies. The clear explanations and detailed examples helped me grasp difficult concepts and significantly improved my exam performance. I ended up raising my grades by 200 points, and I couldn’t be more grateful for the resources available!",
+        "completedNotes": "30"
+    },
+    {
+        "id": "2",
+        "name": "Emily Smith",
+        "avatar": "/head.svg",
+        "review": "The platform’s IGCSE chemistry and biology resources were a lifesaver for me. The study guides were comprehensive, and the practice questions gave me a great understanding of what to expect in the exams. Thanks to these materials, I was able to ace my IGCSEs and feel fully prepared for my next academic steps.",
+        "completedNotes": "25"
+    },
+    {
+        "id": "3",
+        "name": "Michael Johnson",
+        "avatar": "/head.svg",
+        "review": "I’ve been using the platform’s A-Level English literature notes and found them extremely helpful. The detailed analysis of the texts and themes, along with the exam tips, allowed me to improve my writing and critical thinking skills. My grade improved by 2 points, and I now feel much more confident in tackling A-Level exams.",
+        "completedNotes": "18"
+    },   
+    {
+        "id": "4",
+        "name": "Alexander Graham",
+        "avatar": "/head.svg",
+        "review": "The A-Level chemistry notes on the platform were incredibly well-structured and thorough. They broke down complex reactions into simple steps, making organic chemistry so much easier to understand. Thanks to these notes, I improved my predicted grade from a C to an A!",
+        "completedNotes": "35"
+    },    
+    {
+        "id": "5",
+        "name": "Charlotte Wells",
+        "avatar": "/head.svg",
+        "review": "I struggled with A-Level economics until I found this platform. The concise yet comprehensive summaries, along with real-world examples, made economic theories much clearer. I saw a dramatic improvement in my essay-writing skills and overall understanding!",
+        "completedNotes": "25"
+    },    
+    {
+        "id": "6",
+        "name": "Benjamin Carter",
+        "avatar": "/head.svg",
+        "review": "The A-Level biology resources here are top-notch! The diagrams and step-by-step explanations of cellular processes were a lifesaver. I finally understood genetics and respiration, and my grades improved beyond my expectations!",
+        "completedNotes": "16"
+    },    
+    {
+        "id": "7",
+        "name": "Ethan Harrison",
+        "avatar": "/head.svg",
+        "review": "Using the platform’s A-Level history notes was a game-changer. The structured timelines, key event analyses, and exam-style essay breakdowns helped me develop strong arguments and score highly in my exams!",
+        "completedNotes": "18"
+    },    
+    {
+        "id": "8",
+        "name": "Olivia Mitchell",
+        "avatar": "/head.svg",
+        "review": "I used the A-Level further math materials to prepare for my exams, and they were incredibly helpful. The detailed proofs and problem-solving techniques made even the toughest topics, like complex numbers and matrices, much more manageable!",
+        "completedNotes": "17"
+    },    
+    {
+        "id": "9",
+        "name": "Sophia Adams",
+        "avatar": "/head.svg",
+        "review": "The A-Level English literature analysis on this platform was a lifesaver! The in-depth breakdown of themes, characters, and literary techniques gave me a much stronger grasp of my texts and helped me write high-scoring essays!",
+        "completedNotes": "38"
+    },   
+    {
+        "id": "10",
+        "name": "Lucas Brooks",
+        "avatar": "/head.svg",
+        "review": "I found the A-Level computer science resources invaluable. The explanations of algorithms, data structures, and programming concepts were clear and practical. My confidence in coding and problem-solving skills grew tremendously!",
+        "completedNotes": "25"
+    }    
+]
