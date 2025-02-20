@@ -37,14 +37,14 @@ export default function ChapterDetail() {
             description: "这是一门关于AS生物的课程",
             image: "/images/mindmaps-as-biology.jpg",
             price: 10.99,
-            options: ["PDF"]},
+            },
 
         "syllabus-analysis-a2-biology": { 
             title: "A2 生物考纲解析", 
             description: "这是一门关于A2生物的课程",
             image: "/images/mindmaps-as-biology.jpg",
             price: 13.99,
-            options: ["PDF"]},
+            },
     };
 
     if (!finalId) {
