@@ -40,9 +40,16 @@ export default function Navbar() {
     }  
 
     const menuItems = {
-        "Mindmaps": ["AS Biology", "A2 Biology"],
-        "Syllabus Analysis": ["AS Biology", "A2 Biology"],
+        "Mindmaps": [
+            { title: "AS Biology", slug: "as-mindmap" },
+            { title: "A2 Biology", slug: "a2-mindmap" },
+        ],
+        "Syllabus Analysis": [
+            { title: "AS Biology", slug: "as-syllabus-analysis" }, 
+            { title: "A2 Biology", slug: "a2-syllabus-analysis" }, 
+        ],
     };
+    
 
     return (
         <nav className="fixed left-0 right-0 py-4 z-50 bg-white shadow-lg text-gray-600">
@@ -89,12 +96,12 @@ export default function Navbar() {
                                     {/* 子分类链接 */}
                                     <ul className="space-y-2">
                                         {items.map((item) => (
-                                            <li key={item}>
+                                            <li key={item.slug}>
                                                 <button
-                                                    onClick={() => router.push(`/unit/${category.toLowerCase().replace(/\s+/g, "-") + "-" + item.toLowerCase().replace(/\s+/g, "-")}`)}
+                                                    onClick={() => router.push(`/unit/${item.slug}`)}
                                                     className="text-gray-600 hover:text-black transition-colors"
                                                 >
-                                                    {item}
+                                                    {item.title}
                                                 </button>
                                             </li>
                                         ))}
@@ -134,12 +141,12 @@ export default function Navbar() {
                                 <h3 className="font-bold text-lg text-gray-700 mt-2 mb-2">{category}</h3>
                                 <ul className="space-y-2">
                                     {items.map((item) => (
-                                        <li key={item}>
+                                        <li key={item.slug}>
                                             <Link
-                                                href={`/unit/${category.toLowerCase().replace(/\s+/g, "-") + "-" + item.toLowerCase().replace(/\s+/g, "-")}`}
+                                                href={`/unit/${item.slug}`}
                                                 className="text-gray-600 hover:text-black transition-colors"
                                             >
-                                                {item}
+                                                {item.title}
                                             </Link>
                                         </li>
                                     ))}

@@ -4,43 +4,45 @@ import { addToCart, saveCart } from "../lib/cart.js";
 
 const ProductDetail = ({ title, description, image, price, options}) => {
     const [quantity, setQuantity] = useState(1);
-    const [selectedOption, setSelectedOption] = useState(options ? options[0] : "");
-    const [totalPrice, setTotalPrice] = useState(price);
+    const [selectedOption, setSelectedOption] = useState(options && options.length > 0 ? options[0] : null);
+    const [totalPrice, setTotalPrice] = useState(price || 0);
     const router = useRouter();
 
     useEffect(() => {
         setQuantity(1);
-        setTotalPrice(price);  // 价格也需要更新
+        setTotalPrice(selectedOption ? selectedOption.price : price);  // 价格也需要更新
     }, [title, price]); // 添加 price 依赖项
 
     const updateQuantity = (amount) => {
         const newQuantity = Math.max(1, quantity + amount);
         setQuantity(newQuantity);
-        setTotalPrice((newQuantity * price)); // 确保显示两位小数
+        setTotalPrice((newQuantity * (selectedOption ? selectedOption.price : price))); // 确保显示两位小数
     };
     
     const handleAddToCart = () => {
         const product = {
             id: title, // 这里的 id 可能需要从 props 传入
             name: title,
-            price,
+            price: selectedOption ? selectedOption.price : price,
             quantity,
-            option: selectedOption,
-            image,
+            option: selectedOption ? selectedOption.chapter : "No Option",
+            image: selectedOption ? selectedOption.image : image,
+            file_path: selectedOption ? selectedOption.file_path : file_path
         };
 
         addToCart(product);
-        alert(`已加入购物车: ${title} ${selectedOption} x${quantity}`);
+        alert(`已加入购物车: ${title} ${selectedOption ? selectedOption.chapter : ""} x${quantity}`);
     };
 
     const handleBuyNow = () => {
         const product = {
             id: title, // 这里的 id 可能需要从 props 传入
             name: title,
-            price,
+            price: selectedOption ? selectedOption.price : price,
             quantity,
-            option: selectedOption,
-            image,
+            option: selectedOption ? selectedOption.chapter : "No Option",
+            image: selectedOption ? selectedOption.image : image,
+            file_path: selectedOption ? selectedOption.file_path : file_path
         };
 
         saveCart([product]);
@@ -57,14 +59,14 @@ const ProductDetail = ({ title, description, image, price, options}) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-b pb-10">
                 {/* 左侧商品图片 */}
                 <div className="flex justify-center">
-                    <img src={image} alt={title} className="w-full max-w-md rounded-lg shadow-lg" width={102} height={102} />
+                    <img src={selectedOption ? selectedOption.image : image} alt={title} className="w-full max-w-md rounded-lg shadow-lg" width={102} height={102} />
                 </div>
 
                 {/* 右侧商品详情 */}
                 <div className="space-y-12">
                     <h1 className="text-3xl font-bold">{title}</h1>
                     <p className="text-gray-600 text-lg">{description}</p>
-                    <p className="text-2xl font-semibold text-red-500">${totalPrice}</p>
+                    <p className="text-2xl font-semibold text-red-500">${typeof totalPrice === "number" ? totalPrice.toFixed(2) : "0.00"}</p>
                     
                     {/* 数量选择 */}
                     <div className="flex items-center space-x-3">
@@ -91,11 +93,14 @@ const ProductDetail = ({ title, description, image, price, options}) => {
                             <select
                                 className="border p-2 rounded-md w-full"
                                 value={selectedOption}
-                                onChange={(e) => setSelectedOption(e.target.value)}
+                                onChange={(e) => {
+                                    const selected = options.find((opt) => opt.chapter === e.target.value);
+                                    setSelectedOption(selected);
+                                }}
                             >
-                                {options.map((option) => (
-                                    <option key={option} value={option}>
-                                        {option}
+                                {options.map((option, index) => (
+                                    <option key={index} value={option.chapter}>
+                                        {option.chapter}
                                     </option>
                                 ))}
                             </select>
@@ -123,7 +128,7 @@ const ProductDetail = ({ title, description, image, price, options}) => {
             {/* 第二部分：商品大图 & 更多描述 */}
             <div className="py-10">
                 <h2 className="text-2xl font-bold mb-4">Product Description</h2>
-                <img src={image} alt={title} className="w-full rounded-lg shadow-md" height={500} width={500}/>
+                <img src={selectedOption ? selectedOption.image : image} alt={title} className="w-full rounded-lg shadow-md" height={500} width={500}/>
                 <p className="text-gray-700 mt-4 text-lg">{description}</p>
             </div>
         </div>

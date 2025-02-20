@@ -9,25 +9,31 @@ export default function ResourceCategories() {
             title: "AS Biology Mindmaps",
             description: "Structured mindmaps for AS Biology covering key concepts and topics.",
             icon: "/open-book.svg",
-            link: "/unit/mindmaps-as-biology"
+            link: "/unit/mindmaps-as-biology",
+            type: "Mindmap",
+            options: 12
         },
         {
             title: "A2 Biology Mindmaps",
             description: "Detailed mindmaps for A2 Biology to enhance your understanding.",
             icon: "/open-book.svg",
-            link: "/unit/mindmaps-a2-biology"
+            link: "/unit/mindmaps-a2-biology",
+            type: "Mindmap",
+            options: 8
         },
         {
             title: "AS Biology Syllabus Analysis",
             description: "Comprehensive syllabus breakdown for AS Biology.",
             icon: "/open-book.svg",
-            link: "/unit/syllabus-analysis-as-biology"
+            link: "/unit/syllabus-analysis-as-biology",
+            type: "Syllabus" 
         },
         {
             title: "A2 Biology Syllabus Analysis",
             description: "In-depth syllabus analysis for A2 Biology.",
             icon: "/open-book.svg",
-            link: "/unit/syllabus-analysis-a2-biology"
+            link: "/unit/A2 Syllabus Analysis",
+            type: "Syllabus" 
         }];
 
     return (
@@ -39,7 +45,15 @@ export default function ResourceCategories() {
                         <div
                             key={index}
                             className={`w-full max-w-lg h-auto p-8 md:p-12 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl cursor-pointer ${colors[index % colors.length]}`}
-                            onClick={() => window.location.href = category.link}
+                            onClick={() => {
+                                if (category.type === "Mindmap") {
+                                    // ✅ 如果是 Mindmap，跳转到第一页 Chapter
+                                    router.push(`${category.link}?chapter=1`);
+                                } else {
+                                    // ✅ Syllabus 直接跳转
+                                    router.push(category.link);
+                                }
+                            }}
                         >
                             <img
                                 src={category.icon}
