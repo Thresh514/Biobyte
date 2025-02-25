@@ -12,8 +12,11 @@ export default async function handler(req, res) {
     }
 
     try {
+        console.log("Fetching resource with id:", id);
         // 查询数据库
-        const [rows] = await pool.query("SELECT * FROM study_resources WHERE type = ? OR id = ?", [id, id]);
+        const [rows] = await pool.query("SELECT * FROM study_resources WHERE LOWER(REPLACE(title, ' ', '-')) = LOWER(?) OR id = ?", [id, id]);
+
+        console.log("Resource lookup result:", rows);
 
         if (rows.length === 0) {
             return res.status(404).json({ error: "找不到该课程" });
@@ -21,16 +24,16 @@ export default async function handler(req, res) {
 
         let options = [];
         if (rows[0].type === "Mindmap") {
-            const [chapters] = await pool.query("SELECT chapter, file_path, image, price FROM study_resources WHERE type = ? AND level = ?", [rows[0].type, rows[0].level]);
+            const [chapters] = await pool.query("SELECT title, chapter, file_path, image, price FROM study_resources WHERE type = ? AND level = ? ORDER BY FIELD(id, 46, 47) DESC, id", [rows[0].type, rows[0].level]);
             options = chapters.map((row) => ({
-                chapter: `Chapter ${row.chapter}`,
+                chapter: row.chapter.startsWith("Chapter") ? row.chapter : `Chapter ${row.chapter}`,
+                title: row.title,
                 file_path: row.file_path,
                 image: row.image,
-                price: row.price,
+                price: row.price ? parseFloat(row.price) : 0.00,
             }));
+            console.log("Fetched Options:", options); // ✅ Debug 确保 title 正确
         }
-        console.log("Fetched Resource:", rows[0]);  // ✅ Debug 检查是否返回数据
-        console.log("Options:", options);
 
         res.status(200).json({
             id: rows[0].id,
@@ -38,11 +41,11 @@ export default async function handler(req, res) {
             description: rows[0].description,
             type: rows[0].type,
             level: rows[0].level,
-            image: rows[0].image,
-            file_path: rows[0].file_path,
-            price: rows[0].price,
+            file_path: rows[0].file_path || "No file available",
+            image: rows[0].image || "/default.jpg",
+            price: rows[0].price ? parseFloat(rows[0].price) : 0.00,
             options: options || [],
-          });
+        });
 
     } catch (error) {
         console.error("数据库查询出错:", error);

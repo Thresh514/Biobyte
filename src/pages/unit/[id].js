@@ -7,20 +7,21 @@ import Footer from "../../components/Footer";
 
 export default function ChapterDetail() {
     const router = useRouter();
-    const { id } = router.query;
+    const { id, chapter } = router.query;
     const [course, setCourse] = useState(null);
     const [selectedOption, setSelectedOption] = useState(null);
     
     useEffect(() => {
         if (id) {
             fetch(`/api/getResource?id=${id}`)
-              .then((res) => res.json())
-              .then((data) => {
+                .then((res) => res.json())
+                .then((data) => {
                 console.log("Fetched Data:", data);
                 if (data.message) {
-                  console.error("Error fetching resource:", data.message);
+                    console.error("Error fetching resource:", data.message);
                 } else {
-                  setCourse(data);
+                    setCourse(data);
+
                     if (Array.isArray(data.options) && data.options.length > 0) {
                         // ✅ 如果 URL 里有 `chapter`，找到对应章节
                         const initialOption = data.options.find(opt => opt.chapter === `Chapter ${chapter}`) || data.options[0];
@@ -29,14 +30,14 @@ export default function ChapterDetail() {
                         setSelectedOption(null);
                     }
                 }
-              })
-              .catch((error) => console.error("Error:", error));
+                })
+                .catch((error) => console.error("Error:", error));
         }
-    }, [id]);
+    }, [id, chapter]);
 
     if (!course) {
         return <div>加载中...</div>;
-      }
+    }
 
     return (
         <div>
@@ -53,7 +54,11 @@ export default function ChapterDetail() {
                 price={selectedOption ? selectedOption.price : course.price}
                 options={course.options}
                 file_path={selectedOption ? selectedOption.file_path : course.file_path}
-                onSelectOption={(option) => setSelectedOption(option)}
+                onSelectOption={(option) => {
+                    // ✅ 切换章节时，更新 URL（不会刷新页面）
+                    router.push(`/unit/${id}?chapter=${option.chapter.split(" ")[1]}`, undefined, { shallow: true });
+                    setSelectedOption(option);
+                }}
                 />
             </main>
             <Footer />
