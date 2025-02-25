@@ -7,53 +7,37 @@ import Footer from "../../components/Footer";
 
 export default function ChapterDetail() {
     const router = useRouter();
-    const { id } = router.query;
-    const [finalId, setFinalId] = useState(null);
+    const { id, chapter } = router.query;
+    const [course, setCourse] = useState(null);
+    const [selectedOption, setSelectedOption] = useState(null);
     
     useEffect(() => {
         if (id) {
-            console.log("当前 id:", id);
-            setFinalId(id);
+            fetch(`/api/getResource?id=${id}`)
+                .then((res) => res.json())
+                .then((data) => {
+                console.log("Fetched Data:", data);
+                if (data.message) {
+                    console.error("Error fetching resource:", data.message);
+                } else {
+                    setCourse(data);
+
+                    if (Array.isArray(data.options) && data.options.length > 0) {
+                        // ✅ 如果 URL 里有 `chapter`，找到对应章节
+                        const initialOption = data.options.find(opt => opt.chapter === `Chapter ${chapter}`) || data.options[0];
+                        setSelectedOption(initialOption);
+                    } else {
+                        setSelectedOption(null);
+                    }
+                }
+                })
+                .catch((error) => console.error("Error:", error));
         }
-    }, [id]);
+    }, [id, chapter]);
 
-    const file_name = {
-        "mindmaps-as-biology": { 
-            title: "AS 生物思维导图", 
-            description: "这是一门关于 AS 生物的课程" ,
-            image: "/images/mindmaps-as-biology.jpg",
-            price: 9.99,
-            options: ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8", "Chapter 9", "Chapter 10", "Chapter 11", "Chapter 12"], },
-
-        "mindmaps-a2-biology": { 
-            title: "A2 生物思维导图", 
-            description: "这是一门关于 A2 生物的课程",
-            image: "/images/mindmaps-as-biology.jpg",
-            price: 12.99,
-            options: ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8"]},
-
-        "syllabus-analysis-as-biology": { 
-            title: "AS 生物考纲解析", 
-            description: "这是一门关于AS生物的课程",
-            image: "/images/mindmaps-as-biology.jpg",
-            price: 10.99,
-            },
-
-        "syllabus-analysis-a2-biology": { 
-            title: "A2 生物考纲解析", 
-            description: "这是一门关于A2生物的课程",
-            image: "/images/mindmaps-as-biology.jpg",
-            price: 13.99,
-            },
-    };
-
-    if (!finalId) {
+    if (!course) {
         return <div>加载中...</div>;
     }
-
-    const course = file_name[finalId];
-
-    if (!course) return <div>找不到该课程:{finalId}</div>;
 
     return (
         <div>
@@ -66,9 +50,15 @@ export default function ChapterDetail() {
                 <Unit 
                 title={course.title} 
                 description={course.description}
-                image={course.image}
-                price={course.price}
+                image={selectedOption ? selectedOption.image : course.image}
+                price={selectedOption ? selectedOption.price : course.price}
                 options={course.options}
+                file_path={selectedOption ? selectedOption.file_path : course.file_path}
+                onSelectOption={(option) => {
+                    // ✅ 切换章节时，更新 URL（不会刷新页面）
+                    router.push(`/unit/${id}?chapter=${option.chapter.split(" ")[1]}`, undefined, { shallow: true });
+                    setSelectedOption(option);
+                }}
                 />
             </main>
             <Footer />
