@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { addToCart, saveCart } from "../lib/cart.js";
+import { SiCoursera } from "react-icons/si";
 
-const ProductDetail = ({ title, description, image, price, options, file_path, onSelectOption }) => {
+const ProductDetail = ({ title, description, image, price, type, options, file_path, onSelectOption }) => {
     const router = useRouter();
     const { chapter } = router.query;
     const [quantity, setQuantity] = useState(1);
     const [selectedOption, setSelectedOption] = useState(options && options.length > 0 ? options[0] : null);
     const [totalPrice, setTotalPrice] = useState(price || 0);
     const [currentTitle, setCurrentTitle] = useState(title || "");
+    const shouldShowOptions = type && type.trim().toLowerCase() !== "syllabus analysis";
+    console.log("Unit.js received title:", title);
 
     useEffect(() => {
         setQuantity(1); // ✅ 每次切换商品，数量重置为 1
@@ -16,10 +19,8 @@ const ProductDetail = ({ title, description, image, price, options, file_path, o
         if (options && options.length > 0) {
             // ✅ 如果 URL 里有 `chapter`，选择对应章节
             const initialOption = options.find(opt => opt.chapter === `Chapter ${chapter}`) || options[0];
-            setSelectedOption(initialOption);
-            if (initialOption && initialOption.title) { // ✅ title 是 props.title，而 props 不会随着 selectedOption 变化自动更新：需要手动更新
-                setCurrentTitle(initialOption.title);
-            }
+            setSelectedOption({ ...initialOption });
+            
         }
     }, [options,chapter]); // ✅ 监听 `options` 和 `chapter`，确保选项正确更新
     
@@ -30,6 +31,11 @@ const ProductDetail = ({ title, description, image, price, options, file_path, o
         }
     }, [selectedOption]);
 
+    useEffect(() => {
+        console.log("Unit.js useEffect triggered, title:", title);
+    }, [title]);
+
+    
     const updateQuantity = (amount) => {
         const newQuantity = Math.max(1, quantity + amount);
         setQuantity(newQuantity);
@@ -50,7 +56,7 @@ const ProductDetail = ({ title, description, image, price, options, file_path, o
         addToCart(product);
         alert(`已加入购物车: ${title} ${selectedOption ? selectedOption.chapter : ""} x${quantity}`);
     };
-
+    
     const handleBuyNow = () => {
         const product = {
             id: title, // 这里的 id 可能需要从 props 传入
@@ -70,6 +76,10 @@ const ProductDetail = ({ title, description, image, price, options, file_path, o
         alert(`直接购买: ${title} ${selectedOption} x${quantity}`);
     };
 
+    if (!title) {  
+        return <div>加载中...</div>;
+    }
+
     return (
         <div className="max-w-7xl mx-auto p-6">
             {/* 第一部分：商品主要信息 */}
@@ -81,7 +91,7 @@ const ProductDetail = ({ title, description, image, price, options, file_path, o
 
                 {/* 右侧商品详情 */}
                 <div className="space-y-12">
-                    <h1 className="text-3xl font-bold">{currentTitle}</h1>
+                <h1 key={title} className="text-3xl font-bold">{selectedOption ? selectedOption.title : title}</h1>
                     <p className="text-gray-600 text-lg">{description}</p>
                     <p className="text-2xl font-semibold text-red-500">${typeof totalPrice === "number" ? totalPrice.toFixed(2) : "0.00"}</p>
                     
@@ -104,7 +114,7 @@ const ProductDetail = ({ title, description, image, price, options, file_path, o
                     </div>
 
                     {/* 款式选择 */}
-                    {options && (
+                    {options && shouldShowOptions && (
                         <div className="space-y-2">
                             <label className="font-semibold">Choose an option:</label>
                             <select

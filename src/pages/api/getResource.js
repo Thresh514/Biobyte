@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     try {
         console.log("Fetching resource with id:", id);
         // 查询数据库
-        const [rows] = await pool.query("SELECT * FROM study_resources WHERE LOWER(REPLACE(title, ' ', '-')) = LOWER(?) OR id = ?", [id, id]);
+        const [rows] = await pool.query("SELECT * FROM study_resources WHERE (LOWER(REPLACE(title, ' ', '-')) = LOWER(?) OR id = ?)", [id, id]);
 
         console.log("Resource lookup result:", rows);
 
@@ -35,6 +35,10 @@ export default async function handler(req, res) {
             console.log("Fetched Options:", options); // ✅ Debug 确保 title 正确
         }
 
+        if (rows[0].type === "Syllabus Analysis") {
+            options= [];
+        }
+
         res.status(200).json({
             id: rows[0].id,
             title: rows[0].title,
@@ -44,7 +48,7 @@ export default async function handler(req, res) {
             file_path: rows[0].file_path || "No file available",
             image: rows[0].image || "/default.jpg",
             price: rows[0].price ? parseFloat(rows[0].price) : 0.00,
-            options: options || [],
+            options: options,
         });
 
     } catch (error) {
