@@ -98,7 +98,7 @@ export default function Navbar() {
                                         {items.map((item) => (
                                             <li key={item.slug}>
                                                 <button
-                                                    onClick={() => router.push(`/unit/${item.slug}`)}
+                                                    onClick={() => router.push(`/unit/${item.slug}`, undefined, { shallow: false})}
                                                     className="text-gray-600 hover:text-black transition-colors"
                                                 >
                                                     {item.title}
