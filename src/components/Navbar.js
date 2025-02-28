@@ -6,17 +6,24 @@ import { useRouter } from "next/router";
 export default function Navbar() {
     const router = useRouter();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isUserDropdownOpen, setUserIsDropdownOpen] = useState(false);
     const [isDropdownHovered, setIsDropdownHovered] = useState(false); // 控制悬停状态
+    const [isUserHovered, setIsUserHovered] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState(null);
+
+    useEffect(() => {
+        const storedUsername = localStorage.getItem("username");
+        const token = localStorage.getItem("token");
+        if (token) {
+            setIsLoggedIn(true);
+            setUsername(storedUsername);
+        }
+    }, []);
 
     useEffect(() => {
         let timeout;
-        const userLoggedIn = localStorage.getItem("userLoggedIn");
-
-        if (userLoggedIn) {
-            setIsLoggedIn(true);
-        }
         if (isDropdownHovered) {
             timeout = setTimeout(() => setIsDropdownOpen(true), 100); // 延迟显示 200ms
         } else {
@@ -26,6 +33,18 @@ export default function Navbar() {
         return () => clearTimeout(timeout); // 清除定时器，避免多次触发
     }, [isDropdownHovered]);
 
+    useEffect(() => {
+        let timeout;
+        if (isUserHovered) {
+            timeout = setTimeout(() => setUserIsDropdownOpen(true), 100); // 延迟显示 200ms
+        } else {
+            timeout = setTimeout(() => setUserIsDropdownOpen(false), 100); // 延迟隐藏 200ms
+        }
+
+        return () => clearTimeout(timeout); // 清除定时器，避免多次触发
+    }, [isUserHovered]);
+    
+
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     const handleLogin = () => {
@@ -34,8 +53,10 @@ export default function Navbar() {
 
     // 处理登出（跳转到主页）
     const handleLogout = () => {
-        setIsLoggedIn(false);  // 更新状态
-        localStorage.removeItem("userLoggedIn");  // 清除登录状态
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+        setUsername(null);
+        setIsLoggedIn(false);
         router.push('/');  // 跳转回主页
     }  
 
@@ -67,11 +88,11 @@ export default function Navbar() {
                 </div>
 
                 {/* 中间 Resources 按钮 */}
-                <div className="mx-auto flex justify-center items-center px-4 bg-transparent">
+                <div className="mx-auto flex justify-center items-center px-4 bg-transparent"
+                onMouseEnter={() => setIsDropdownHovered(true)}
+                onMouseLeave={() => setIsDropdownHovered(false)}>
                     <div
                         className="hidden md:flex flex-col justify-center items-center h-full"
-                        onMouseEnter={() => setIsDropdownHovered(true)} // 鼠标悬停
-                        onMouseLeave={() => setIsDropdownHovered(false)} // 鼠标离开
                     >
                         {/* Resources 按钮 */} 
                         <button className="hover:text-black transition-colors p-2">
@@ -114,12 +135,42 @@ export default function Navbar() {
 
                 {/* 右侧菜单和购物车 */}
                 <div className="hidden md:flex items-center space-x-6">
-                    <button
-                        onClick={isLoggedIn ? handleLogout : handleLogin}
-                        className="hover:text-black transition-colors p-2"
-                    >
-                        {isLoggedIn ? "Logout" : "Login"}
-                    </button>
+                    {isLoggedIn ? (
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setIsUserHovered(true)}
+                            onMouseLeave={() => setIsUserHovered(false)}
+                        >
+                            <button className="hover:text-black transition-colors p-2">
+                                {username || "User"}
+                            </button>
+                            {isUserDropdownOpen && (
+                                <div className="absolute top-full right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg"
+                                onMouseEnter={() => setIsUserHovered(true)}
+                                onMouseLeave={() => setIsUserHovered(false)}>
+                                    <button
+                                        onClick={() => router.push("/dashboard")}
+                                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        Dashboard
+                                    </button>
+                                    <button
+                                        onClick={handleLogout}
+                                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <button
+                            onClick={handleLogin}
+                            className="hover:text-black transition-colors p-2"
+                        >
+                            Login
+                        </button>
+                    )}
                     <Link href="/cart">
                         <Image src="/cart.svg" alt="cart" width={28} height={28} />
                     </Link>
@@ -156,12 +207,30 @@ export default function Navbar() {
                     </div>
                     {/* 右侧功能（移动端） */}
                     <div className="mt-6 mb-4 flex flex-col space-y-4 justify-center items-center">
-                        <button
-                            onClick={isLoggedIn ? handleLogout : handleLogin}
-                            className="hover:text-black transition-colors mb-2"
-                        >
-                            {isLoggedIn ? "Logout" : "Login"}
-                        </button>
+                        {isLoggedIn ? (
+                            <div className="flex flex-col items-center space-y-2">
+                                <span className="font-semibold">{username || "User"}</span>
+                                <button
+                                    onClick={() => router.push("/dashboard")}
+                                    className="hover:text-black transition-colors"
+                                >
+                                    Dashboard
+                                </button>
+                                <button
+                                    onClick={handleLogout}
+                                    className="hover:text-black transition-colors"
+                                >
+                                    Logout
+                                </button>
+                            </div>
+                        ) : (
+                            <button
+                                onClick={handleLogin}
+                                className="hover:text-black transition-colors mb-2"
+                            >
+                                Login
+                            </button>
+                        )}
                         <Link href="/cart" className="mt-2">
                             <Image src="/cart.svg" alt="cart" width={28} height={28} />
                         </Link>
