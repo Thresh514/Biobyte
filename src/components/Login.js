@@ -24,7 +24,10 @@ const Login = () => {
 
         if (response.ok) {
             // 登录成功，跳转到主页
+            const data = await response.json(); // 解析 JSON 响应
             localStorage.setItem("userLoggedIn", true);
+            localStorage.setItem("token", data.token);  // 存 JWT
+            localStorage.setItem("username", data.username);  // 存 username
             router.push("/");
         } else {
             // 登录失败，显示错误信息
@@ -56,7 +59,8 @@ const Login = () => {
                                 name="email"
                                 className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                onChange={(e) => setEmail
+                                    (e.target.value)}
                                 required
                             />
                         </div>
