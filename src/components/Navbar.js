@@ -36,9 +36,9 @@ export default function Navbar() {
     useEffect(() => {
         let timeout;
         if (isUserHovered) {
-            timeout = setTimeout(() => setUserIsDropdownOpen(true), 100); // 延迟显示 200ms
+            timeout = setTimeout(() => setUserIsDropdownOpen(true), 200); // 延迟显示 200ms
         } else {
-            timeout = setTimeout(() => setUserIsDropdownOpen(false), 100); // 延迟隐藏 200ms
+            timeout = setTimeout(() => setUserIsDropdownOpen(false), 200); // 延迟隐藏 200ms
         }
 
         return () => clearTimeout(timeout); // 清除定时器，避免多次触发
@@ -99,8 +99,8 @@ export default function Navbar() {
                 
                     <div 
                         className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
-                            transition-all duration-1000 ease-out transform ${
-                                isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-12 pointer-events-none"
+                            transition-all duration-500 ease-out transform ${
+                                isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
                             }`}
                     >
                         <div className="grid grid-cols-2 gap-6">
@@ -141,24 +141,28 @@ export default function Navbar() {
                             <button className="hover:text-black transition-colors p-2">
                                 {username || "User"}
                             </button>
-                            {isUserDropdownOpen && (
-                                <div className="absolute top-full right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg"
+                           
+                            <div className={`absolute top-full right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg 
+                            transition-all duration-300 ease-out transform ${
+                                isUserDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+                            }`}
                                 onMouseEnter={() => setIsUserHovered(true)}
-                                onMouseLeave={() => setIsUserHovered(false)}>
-                                    <button
-                                        onClick={() => router.push("/dashboard")}
-                                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-                                    >
-                                        Dashboard
-                                    </button>
-                                    <button
-                                        onClick={handleLogout}
-                                        className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-                                    >
-                                        Logout
-                                    </button>
-                                </div>
-                            )}
+                                onMouseLeave={() => setIsUserHovered(false)}
+                            >
+                                <button
+                                    onClick={() => router.push("/dashboard")}
+                                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                                >
+                                    Dashboard
+                                </button>
+                                <button
+                                    onClick={handleLogout}
+                                    className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                                >
+                                    Logout
+                                </button>
+                            </div>
+                            
                         </div>
                     ) : (
                         <button
