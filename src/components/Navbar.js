@@ -27,7 +27,7 @@ export default function Navbar() {
         if (isDropdownHovered) {
             timeout = setTimeout(() => setIsDropdownOpen(true), 100); // 延迟显示 200ms
         } else {
-            timeout = setTimeout(() => setIsDropdownOpen(false), 1000); // 延迟隐藏 200ms
+            timeout = setTimeout(() => setIsDropdownOpen(false), 200); // 延迟隐藏 200ms
         }
 
         return () => clearTimeout(timeout); // 清除定时器，避免多次触发
@@ -91,15 +91,11 @@ export default function Navbar() {
                 <div className="mx-auto flex justify-center items-center px-4 bg-transparent"
                 onMouseEnter={() => setIsDropdownHovered(true)}
                 onMouseLeave={() => setIsDropdownHovered(false)}>
-                    <div
-                        className="hidden md:flex flex-col justify-center items-center h-full"
-                    >
+                    
                         {/* Resources 按钮 */} 
                         <button className="hover:text-black transition-colors p-2">
                             Resources
                         </button>
-                    </div>
-                </div>
                 
                     <div 
                         className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
@@ -131,6 +127,7 @@ export default function Navbar() {
                             ))}
                         </div>
                     </div>
+                </div>
                 
 
                 {/* 右侧菜单和购物车 */}
