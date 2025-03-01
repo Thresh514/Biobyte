@@ -5,8 +5,10 @@ import FloatingFeedbackButton from "../components/FloatingFeedbackButton";
 import FAQButton from "../components/FAQButton";
 import Chatbot from "../components/Chatbot";
 import Scrolldown from "../components/Scrolldown";
+import { TranslationProvider } from "../../context/TranslationContext";
 
-export default function MyApp({ Component, pageProps }) {
+
+function MyApp({ Component, pageProps }) {
     const [activeComponent, setActiveComponent] = useState(null); // 用于管理当前打开的组件
     const router = useRouter();
 
@@ -16,7 +18,7 @@ export default function MyApp({ Component, pageProps }) {
     }, []);
 
     return (
-        <>
+        <TranslationProvider>
             <Component {...pageProps} />
             <div className="fixed bottom-8 lg:bottom-16 right-4 lg:right-16 z-50 flex flex-col items-end space-y-4">
                 <Chatbot activeComponent={activeComponent} setActiveComponent={setActiveComponent} />
@@ -24,7 +26,8 @@ export default function MyApp({ Component, pageProps }) {
                 <FAQButton />
             </div>
             {router.pathname === "/" && <Scrolldown />}
-        </>
+        </TranslationProvider>
     );
 }
+export default (MyApp);
 
