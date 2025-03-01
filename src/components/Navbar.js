@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useTranslation } from "../../context/TranslationContext";
+import { AiOutlineTranslation } from "react-icons/ai";
 
 export default function Navbar() {
     const router = useRouter();
@@ -12,6 +14,7 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState(null);
+    const { language, changeLanguage } = useTranslation();
 
     useEffect(() => {
         const storedUsername = localStorage.getItem("username");
@@ -70,7 +73,6 @@ export default function Navbar() {
             { title: "A2 Biology", slug: "a2-syllabus-analysis" }, 
         ],
     };
-    
 
     return (
         <nav className="fixed left-0 right-0 py-4 z-50 bg-white shadow-lg text-gray-600">
@@ -132,6 +134,17 @@ export default function Navbar() {
 
                 {/* 右侧菜单和购物车 */}
                 <div className="hidden md:flex items-center space-x-6">
+                    {/* 语言切换按钮 */}
+                    <div className="flex">
+                        <button
+                            className= "p-2"
+                            onClick={() => changeLanguage(language === "en" ? "zh" : "en")}
+                        >
+                            <AiOutlineTranslation size={28}/>
+                        </button>
+                    </div>
+
+                    {/* 用户登录按钮 */}
                     {isLoggedIn ? (
                         <div
                             className="relative"
@@ -141,7 +154,7 @@ export default function Navbar() {
                             <button className="hover:text-black transition-colors p-2">
                                 {username || "User"}
                             </button>
-                           
+                            
                             <div className={`absolute top-full right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg 
                             transition-all duration-300 ease-out transform ${
                                 isUserDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
@@ -150,7 +163,7 @@ export default function Navbar() {
                                 onMouseLeave={() => setIsUserHovered(false)}
                             >
                                 <button
-                                    onClick={() => router.push("/dashboard")}
+                                    onClick={() => router.push("#dashboard")}
                                     className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                                 >
                                     Dashboard
@@ -176,6 +189,7 @@ export default function Navbar() {
                         <Image src="/cart.svg" alt="cart" width={28} height={28} />
                     </Link>
                 </div>
+
                 {/* 移动端菜单按钮（Hamburger Menu） */}
                 <button
                     className="md:hidden p-4 text-xl"
@@ -184,6 +198,7 @@ export default function Navbar() {
                     ☰
                 </button>
             </div>
+
             {/* 移动端下拉菜单 */}
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg p-4">
@@ -206,13 +221,14 @@ export default function Navbar() {
                             </div>
                         ))}
                     </div>
+
                     {/* 右侧功能（移动端） */}
                     <div className="mt-6 mb-4 flex flex-col space-y-4 justify-center items-center">
                         {isLoggedIn ? (
                             <div className="flex flex-col items-center space-y-2">
                                 <span className="font-semibold">{username || "User"}</span>
                                 <button
-                                    onClick={() => router.push("/dashboard")}
+                                    onClick={() => router.push("#dashboard")}
                                     className="hover:text-black transition-colors"
                                 >
                                     Dashboard

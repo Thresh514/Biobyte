@@ -34,6 +34,7 @@ const ResourceCategories = () => {
     ];
 
     return (
+        <section id= "resource-categories" className="py-16 bg-white px-16 md:px-12 scroll-mt-16">
         <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-darker mb-16">
                 Explore Our Resource Categories
@@ -57,6 +58,7 @@ const ResourceCategories = () => {
             </div>
             <h3 className="text-xl text-gray-700 mt-12">...and more to come!</h3>
         </div>
+    </section>
     );
 };
 

@@ -6,6 +6,7 @@ import HeroSection from '../components/index/Herosection';
 import SuccessStories from '../components/index/SuccessStories';
 import ResourceCategories from '../components/index/ResourceCategories';
 
+
 export default function Home() {
   useEffect(() => {
           document.body.classList.add('fade-in');

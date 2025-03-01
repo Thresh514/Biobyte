@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { addToCart, saveCart } from "../lib/cart.js";
-import { SiCoursera } from "react-icons/si";
+
 
 const ProductDetail = ({ title, description, image, price, type, options, file_path, onSelectOption }) => {
     const router = useRouter();
@@ -9,9 +9,10 @@ const ProductDetail = ({ title, description, image, price, type, options, file_p
     const [quantity, setQuantity] = useState(1);
     const [selectedOption, setSelectedOption] = useState(options && options.length > 0 ? options[0] : null);
     const [totalPrice, setTotalPrice] = useState(price || 0);
-    const [currentTitle, setCurrentTitle] = useState(title || "");
     const shouldShowOptions = type && type.trim().toLowerCase() !== "syllabus analysis";
-    console.log("Unit.js received title:", title);
+    const [toastMessage, setToastMessage] = useState(""); // ✅ Toast 消息状态
+    const [showToast, setShowToast] = useState(false); // ✅ 控制 Toast 显示
+    const [fadeOut, setFadeOut] = useState(false); // ✅ 控制加载状态
 
     useEffect(() => {
         setQuantity(1); // ✅ 每次切换商品，数量重置为 1
@@ -54,7 +55,14 @@ const ProductDetail = ({ title, description, image, price, type, options, file_p
         };
 
         addToCart(product);
-        alert(`已加入购物车: ${title} ${selectedOption ? selectedOption.chapter : ""} x${quantity}`);
+        setToastMessage(`${title} ${selectedOption ? selectedOption.chapter : ""} x${quantity} is added to cart!`);
+        setShowToast(true);
+        setFadeOut(false);
+
+        setTimeout(() => {
+            setFadeOut(true); // 2秒后开始淡出
+            setTimeout(() => setShowToast(false), 500);
+        },2500); // 2.5秒后完全消失
     };
     
     const handleBuyNow = () => {
@@ -72,8 +80,6 @@ const ProductDetail = ({ title, description, image, price, type, options, file_p
 
         // 跳转到 Checkout 页面
         router.push("/checkout");
-        
-        alert(`直接购买: ${title} ${selectedOption} x${quantity}`);
     };
 
     if (!title) {  
@@ -117,22 +123,25 @@ const ProductDetail = ({ title, description, image, price, type, options, file_p
                     {options && shouldShowOptions && (
                         <div className="space-y-2">
                             <label className="font-semibold">Choose an option:</label>
-                            <select
-                                className="border p-2 rounded-md w-full"
-                                value={selectedOption ? selectedOption.chapter : ""}
-                                onChange={(e) => {
-                                    const selected = options.find((opt) => opt.chapter === e.target.value);
-                                    setSelectedOption(selected);
-                                    router.push(`/unit/${router.query.id}?chapter=${selected.chapter.split(" ")[1]}`); // ✅ 更新 URL
-                                    onSelectOption(selected); // 调用父组件传递的回调函数，以触发 URL 更新
-                                }}
-                            >
+                            <div className="flex flex-wrap gap-2">
                                 {options.map((option) => (
-                                    <option key={option.chapter} value={option.chapter}>
+                                    <button
+                                        key={option.chapter}
+                                        className={`px-2 py-2 rounded-md border transition ${
+                                            selectedOption?.chapter === option.chapter
+                                                ? "bg-gray-400 text-sm text-white font-semibold"
+                                                : "bg-white text-sm text-gray-700 border-gray-300 hover:bg-gray-100"
+                                        }`}
+                                        onClick={() => {
+                                            setSelectedOption(option);
+                                            router.push(`/unit/${router.query.id}?chapter=${option.chapter.split(" ")[1]}`, undefined, { shallow: true }); // ✅ 更新 URL
+                                            onSelectOption(option);
+                                        }}
+                                    >
                                         {option.chapter}
-                                    </option>
+                                    </button>
                                 ))}
-                            </select>
+                            </div>
                         </div>
                     )}
 
@@ -160,6 +169,16 @@ const ProductDetail = ({ title, description, image, price, type, options, file_p
                 <img src={selectedOption ? selectedOption.image : image} alt={title} className="w-full rounded-lg shadow-md" height={500} width={500}/>
                 <p className="text-gray-700 mt-4 text-lg">{description}</p>
             </div>
+
+            {/* Toast 通知 */}
+            {showToast && (
+                <div className={`fixed top-1/2 right-1/3 text-white bg-gray-600 bg-opacity-75 z-20 p-6 text-sm rounded-lg shadow-md transition-all duration-200" ${
+                fadeOut ? "opacity-0" : "opacity-100"
+                    }`}
+                >
+                    {toastMessage}
+                </div>
+            )}
         </div>
     );
 };
