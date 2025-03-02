@@ -40,6 +40,7 @@ const ForgotPassword = () => {
             <input
               type="email"
               name="email"
+              placeholder="Email"
               className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -48,7 +49,7 @@ const ForgotPassword = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-16 py-3 bg-darker text-white text-lg font-bold rounded-md hover:bg-middle transition duration-300"
+            className="w-full px-12 py-2.5 bg-gray-500 text-white text-lg font-semibold rounded-md hover:bg-gray-600 transition duration-300"
           >
             Send Reset Link
           </button>

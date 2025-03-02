@@ -17,7 +17,7 @@ export default function Navbar() {
     const { language, changeLanguage } = useTranslation();
 
     useEffect(() => {
-        const storedUsername = localStorage.getItem("username");
+        const storedUsername = localStorage.getItem("email");
         const token = localStorage.getItem("token");
         if (token) {
             setIsLoggedIn(true);
@@ -47,6 +47,14 @@ export default function Navbar() {
         return () => clearTimeout(timeout); // 清除定时器，避免多次触发
     }, [isUserHovered]);
     
+    const getDisplayName = (email) => {
+        if (!email) return "User";  // 处理 null 或 undefined
+        if (email.length > 10) {
+            return email.substring(0, 5) + "...";  // 取前 5 个字符，后面加省略号
+        }
+        return email;
+    };
+    
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -57,7 +65,7 @@ export default function Navbar() {
     // 处理登出（跳转到主页）
     const handleLogout = () => {
         localStorage.removeItem("token");
-        localStorage.removeItem("username");
+        localStorage.removeItem("email");
         setUsername(null);
         setIsLoggedIn(false);
         router.push('/');  // 跳转回主页
@@ -75,12 +83,12 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed left-0 right-0 py-4 z-50 bg-white shadow-lg text-gray-600">
+        <nav className="fixed left-0 right-0 px-10 py-2.5 z-50 bg-white shadow-lg text-gray-600">
             {/* 桌面端导航菜单 */}
             <div className="mx-screen mx-auto flex items-center justify-between">
                 {/* 左侧 LOGO 和 Home */}
                 <div className="flex items-center space-x-4">
-                    <Image src="/whiteicon.svg" alt="logo" width={48} height={48} />
+                    <Image src="/whiteicon.svg" alt="logo" width={58} height={58} />
                     <Link href="/">
                         Home
                     </Link>
@@ -105,7 +113,7 @@ export default function Navbar() {
                                 isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
                             }`}
                     >
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 gap-8 px-24 py-2">
                             {Object.entries(menuItems).map(([category, items]) => (
                                 <div key={category} className="relative">
                                     {/* 分类标题 */}
@@ -152,7 +160,7 @@ export default function Navbar() {
                             onMouseLeave={() => setIsUserHovered(false)}
                         >
                             <button className="hover:text-black transition-colors p-2">
-                                {username || "User"}
+                                { getDisplayName(username) || "User" }
                             </button>
                             
                             <div className={`absolute top-full right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg 
