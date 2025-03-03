@@ -49,7 +49,7 @@ const ProductDetail = ({ title, description, image, price, type, options, file_p
             name: title,
             price: selectedOption ? selectedOption.price : price,
             quantity,
-            option: selectedOption ? selectedOption.chapter : "No Option",
+            option: selectedOption ? selectedOption.chapter : "Full",
             image: selectedOption ? selectedOption.image : image,
             file_path: selectedOption ? selectedOption.file_path : file_path
         };
@@ -71,7 +71,7 @@ const ProductDetail = ({ title, description, image, price, type, options, file_p
             name: title,
             price: selectedOption ? selectedOption.price : price,
             quantity,
-            option: selectedOption ? selectedOption.chapter : "No Option",
+            option: selectedOption ? selectedOption.chapter : "Full",
             image: selectedOption ? selectedOption.image : image,
             file_path: selectedOption ? selectedOption.file_path : file_path
         };

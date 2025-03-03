@@ -19,7 +19,7 @@ export default function Checkout() {
 
     // 计算总价
     const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-
+    
     // 处理订单提交
     const handleSubmit = async (e) => {
         e.preventDefault();

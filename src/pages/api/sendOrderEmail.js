@@ -1,4 +1,6 @@
 import nodemailer from "nodemailer";
+import path from "path";
+import fs from "fs";
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -10,6 +12,8 @@ export default async function handler(req, res) {
     if (!email || !name || !address || !cart.length) {
         return res.status(400).json({ message: "Invalid order data" });
     }
+
+    const uploadsDir = path.join(process.cwd(), "uploads");
 
     // 创建邮件发送器
     const transporter = nodemailer.createTransport({
@@ -25,6 +29,33 @@ export default async function handler(req, res) {
         `${item.name} (${item.option}) x ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`
     ).join("\n");
 
+    
+
+    // 生成附件
+    const attachments = cart.flatMap((item) => {
+        if (item.option === "Chapter All") {
+            // 直接匹配已经打包好的 ZIP 文件
+            const zipFilePath = path.join(uploadsDir, `${item.name} Chapter All.zip`);
+    
+            if (fs.existsSync(zipFilePath)) {
+                console.log(`Found pre-packed ZIP: ${zipFilePath}`);
+                return [{ filename: `${item.name} Chapter All.zip`, path: zipFilePath }];
+            } else {
+                console.error(`ZIP file not found: ${zipFilePath}`);
+                return [];
+            }
+        } else {
+            // 发送单个 PDF
+            const filePath = path.join(uploadsDir, `${item.name} ${item.option}.pdf`);
+            if (fs.existsSync(filePath)) {
+                return [{ filename: `${item.name} ${item.option}.pdf`, path: filePath }];
+            } else {
+                console.error("File not found:", filePath);
+                return [];
+            }
+        }
+    });    
+    
     // 邮件内容
     const mailOptions = {
         from: process.env.EMAIL_USER,
@@ -48,6 +79,7 @@ export default async function handler(req, res) {
         Best regards,
         BioByte Team
         `,
+        attachments,
     };
 
     try {
