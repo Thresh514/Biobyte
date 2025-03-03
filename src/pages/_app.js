@@ -6,6 +6,7 @@ import FAQButton from "../components/FAQButton";
 import Chatbot from "../components/Chatbot";
 import Scrolldown from "../components/Scrolldown";
 import { TranslationProvider } from "../../context/TranslationContext";
+import TranslatorButton from "../components/TranslatorButton";
 
 
 function MyApp({ Component, pageProps }) {
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }) {
                 <Chatbot activeComponent={activeComponent} setActiveComponent={setActiveComponent} />
                 <FloatingFeedbackButton activeComponent={activeComponent} setActiveComponent={setActiveComponent}/>
                 <FAQButton />
+                <TranslatorButton />
             </div>
             {router.pathname === "/" && <Scrolldown />}
         </TranslationProvider>

@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useTranslation } from "../../context/TranslationContext";
-import { AiOutlineTranslation } from "react-icons/ai";
 
 export default function Navbar() {
     const router = useRouter();
@@ -14,7 +12,6 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState(null);
-    const { language, changeLanguage } = useTranslation();
 
     useEffect(() => {
         const storedUsername = localStorage.getItem("email");
@@ -124,13 +121,8 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                {/* Language Switcher */}
+
                 <div className="hidden md:flex items-center space-x-6">
-                    <div className="flex">
-                        <button className="p-2" onClick={() => changeLanguage(language === "en" ? "zh" : "en")}>
-                            <AiOutlineTranslation size={28} />
-                        </button>
-                    </div>
                     {/* User Dropdown */}
                     {isLoggedIn ? (
                         <div
