@@ -3,9 +3,9 @@ import { pool } from "../../lib/db"; // 引入数据库连接池
 
 const register = async (req, res) => {
   if (req.method === "POST") {
-    const { username, email, password } = req.body;
+    const { email, password } = req.body;
 
-    if (!username || !email || !password) {
+    if (!email || !password) {
         return res.status(400).json({ message: "All fields are required." });
     }
 
@@ -13,15 +13,6 @@ const register = async (req, res) => {
 
         const [dbCheck] = await pool.query("SELECT DATABASE();");
         console.log("当前连接的数据库是:", dbCheck);
-        //check if username exists
-        const [usernameCheck] = await pool.query(
-            "SELECT * FROM users WHERE username = ?",
-            [username]
-        );
-
-        if (usernameCheck.length > 0) {
-            return res.status(400).json({ message: "Username already exists. Try another." });
-        }
 
         // 检查邮箱是否已经存在
         const [emailCheck] = await pool.query(
@@ -37,8 +28,8 @@ const register = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         // 将数据插入到数据库
-        const insertQuery = "INSERT INTO users (username, password_hash, email) VALUES (?, ?, ?)";
-        const insertValues = [username, hashedPassword, email];
+        const insertQuery = "INSERT INTO users (password_hash, email) VALUES (?, ?)";
+        const insertValues = [hashedPassword, email];
         await pool.query(insertQuery, insertValues);
 
         return res.status(201).json({ message: "User registered successfully." });

@@ -27,7 +27,7 @@ const Login = () => {
             const data = await response.json(); // 解析 JSON 响应
             localStorage.setItem("userLoggedIn", true);
             localStorage.setItem("token", data.token);  // 存 JWT
-            localStorage.setItem("username", data.username);  // 存 username
+            localStorage.setItem("email", email);  // 存 email
             router.push("/");
         } else {
             // 登录失败，显示错误信息
@@ -48,15 +48,16 @@ const Login = () => {
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-lightest">
-                {/* 右侧登录框 */}
+                {/* 登录框 */}
                 <div className="flex flex-col justify-center items-center max-w-md p-8 bg-white rounded-lg md:shadow-lg lg:shadow-lg">
                     <h2 className="text-center text-3xl font-semibold mb-6">Welcome back!</h2>
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
-                            <label className="block text-sm font-semibold text-gray-700">Username</label>
+                            <label className="block text-sm font-semibold text-gray-700">Email</label>
                             <input
                                 type="email"
                                 name="email"
+                                placeholder="Email"
                                 className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 value={email}
                                 onChange={(e) => setEmail
@@ -69,6 +70,7 @@ const Login = () => {
                         <input
                             type="password"
                             name="password"
+                            placeholder="Password"
                             className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
@@ -77,15 +79,15 @@ const Login = () => {
                     </div>
                     <button
                         type="submit"
-                        className="w-full px-16 py-3 bg-darker text-white text-lg font-bold rounded-md hover:bg-middle transition duration-300"
+                        className="w-full px-12 py-2.5 bg-gray-500 text-white text-lg font-bold rounded-md hover:bg-gray-600 transition duration-300"
                     >
                         Login
                     </button>
                 </form>
                 <div className="mt-4 text-center">
-                    <a href="#" className="text-sm text-lighter font-semibold hover:underline" onClick={handleForgotPasswordClick}>Forgot Password?</a>
+                    <a href="#" className="text-sm text-gray-600 font-semibold hover:underline" onClick={handleForgotPasswordClick}>Forgot Password?</a>
                     <p className="mt-2 text-sm text-gray-600">
-                    Need an account? <button onClick={handleSignupClick} className="text-lighter font-semibold hover:underline">Sign Up</button>
+                    Need an account? <button onClick={handleSignupClick} className="text-gray-600 font-semibold hover:underline">Sign Up</button>
                     </p>
                     <p className="mt-2 text-xs text-gray-500">
                         By logging in, you agree with Biomind Logic's <a href="#" className="text-lighter font-semibold hover:underline">Service Terms</a> and <a href="#" className="text-lighter font-semibold hover:underline">Honor Code</a> and have read our <a href="#" className="text-lighter font-semibold hover:underline">Privacy Policy</a>.

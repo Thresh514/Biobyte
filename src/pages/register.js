@@ -6,7 +6,6 @@ import SimpleHeader from "../components/SimpleHeader";
 
 const Register = () => {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -25,7 +24,7 @@ const Register = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, email, password }),
+      body: JSON.stringify({ email, password }),
     });
 
     const data = await response.json();
@@ -35,9 +34,7 @@ const Register = () => {
       alert("Registration successful! Redirecting to login...");
       router.push('/login');
     } else {
-        if (data.message === "Username already exists. Try another.") {
-            alert("This username is already taken. Please try a different one.");
-        } else if (data.message === "Email already registered. Please log in.") {
+        if (data.message === "Email already registered. Please log in.") {
             alert("This email is already registered. Redirecting to login...");
             router.push("/login"); // 跳转到登录页面
         } else {
@@ -58,20 +55,10 @@ const Register = () => {
             <input
               type="email"
               name="email"
+              placeholder="Email"
               className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-gray-700">Username</label>
-            <input
-              type="text"
-              name="username"
-              className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
@@ -80,6 +67,7 @@ const Register = () => {
             <input
               type="password"
               name="password"
+              placeholder="Password"
               className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -91,6 +79,7 @@ const Register = () => {
             <input
               type="password"
               name="confirmPassword"
+              placeholder="Confirm Password"
               className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
@@ -99,7 +88,7 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-16 py-3 bg-darker text-white text-lg font-bold rounded-md hover:bg-middle transition duration-300"
+            className="w-full px-16 py-3 bg-gray-500 text-white text-white text-lg font-bold rounded-md hover:bg-gray-600 transition duration-300"
           >
             Sign Up
           </button>

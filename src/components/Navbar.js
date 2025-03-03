@@ -2,22 +2,19 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useTranslation } from "../../context/TranslationContext";
-import { AiOutlineTranslation } from "react-icons/ai";
 
 export default function Navbar() {
     const router = useRouter();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isUserDropdownOpen, setUserIsDropdownOpen] = useState(false);
-    const [isDropdownHovered, setIsDropdownHovered] = useState(false); // 控制悬停状态
+    const [isDropdownHovered, setIsDropdownHovered] = useState(false);
     const [isUserHovered, setIsUserHovered] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState(null);
-    const { language, changeLanguage } = useTranslation();
 
     useEffect(() => {
-        const storedUsername = localStorage.getItem("username");
+        const storedUsername = localStorage.getItem("email");
         const token = localStorage.getItem("token");
         if (token) {
             setIsLoggedIn(true);
@@ -28,40 +25,46 @@ export default function Navbar() {
     useEffect(() => {
         let timeout;
         if (isDropdownHovered) {
-            timeout = setTimeout(() => setIsDropdownOpen(true), 100); // 延迟显示 200ms
+            timeout = setTimeout(() => setIsDropdownOpen(true), 100);
         } else {
-            timeout = setTimeout(() => setIsDropdownOpen(false), 200); // 延迟隐藏 200ms
+            timeout = setTimeout(() => setIsDropdownOpen(false), 200);
         }
 
-        return () => clearTimeout(timeout); // 清除定时器，避免多次触发
+        return () => clearTimeout(timeout);
     }, [isDropdownHovered]);
 
     useEffect(() => {
         let timeout;
         if (isUserHovered) {
-            timeout = setTimeout(() => setUserIsDropdownOpen(true), 200); // 延迟显示 200ms
+            timeout = setTimeout(() => setUserIsDropdownOpen(true), 200);
         } else {
-            timeout = setTimeout(() => setUserIsDropdownOpen(false), 200); // 延迟隐藏 200ms
+            timeout = setTimeout(() => setUserIsDropdownOpen(false), 200);
         }
 
-        return () => clearTimeout(timeout); // 清除定时器，避免多次触发
+        return () => clearTimeout(timeout);
     }, [isUserHovered]);
-    
+
+    const getDisplayName = (email) => {
+        if (!email) return "User";
+        if (email.length > 10) {
+            return email.substring(0, 5) + "...";
+        }
+        return email;
+    };
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     const handleLogin = () => {
-        router.push('/login');  // 跳转到登录页面
+        router.push('/login');
     };
 
-    // 处理登出（跳转到主页）
     const handleLogout = () => {
         localStorage.removeItem("token");
-        localStorage.removeItem("username");
+        localStorage.removeItem("email");
         setUsername(null);
         setIsLoggedIn(false);
-        router.push('/');  // 跳转回主页
-    }  
+        router.push('/');
+    };
 
     const menuItems = {
         "Mindmaps": [
@@ -69,50 +72,38 @@ export default function Navbar() {
             { title: "A2 Biology", slug: "a2-mindmap" },
         ],
         "Syllabus Analysis": [
-            { title: "AS Biology", slug: "as-syllabus-analysis" }, 
-            { title: "A2 Biology", slug: "a2-syllabus-analysis" }, 
+            { title: "AS Biology", slug: "as-syllabus-analysis" },
+            { title: "A2 Biology", slug: "a2-syllabus-analysis" },
         ],
     };
 
     return (
-        <nav className="fixed left-0 right-0 py-4 z-50 bg-white shadow-lg text-gray-600">
-            {/* 桌面端导航菜单 */}
+        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-2.5 z-50 bg-white shadow-lg text-gray-600">
             <div className="mx-screen mx-auto flex items-center justify-between">
-                {/* 左侧 LOGO 和 Home */}
-                <div className="flex items-center space-x-4">
-                    <Image src="/whiteicon.svg" alt="logo" width={48} height={48} />
-                    <Link href="/">
-                        Home
-                    </Link>
-                    <Link href="/about">
-                        About
-                    </Link>
+                <div className="flex items-center space-x-2.5 md:space-x-4">
+                    <Image src="/whiteicon.svg" alt="logo" width={48} height={48} className="w-12 h-12 md:w-14 md:h-14" />
+                    <Link href="/">Home</Link>
+                    <Link href="/about">About</Link>
                 </div>
-
-                {/* 中间 Resources 按钮 */}
-                <div className="mx-auto flex justify-center items-center px-4 bg-transparent"
-                onMouseEnter={() => setIsDropdownHovered(true)}
-                onMouseLeave={() => setIsDropdownHovered(false)}>
-                    
-                        {/* Resources 按钮 */} 
-                        <button className="hover:text-black transition-colors p-2">
-                            Resources
-                        </button>
-                
-                    <div 
-                        className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
-                            transition-all duration-500 ease-out transform ${
-                                isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
-                            }`}
+                {/* Dropdown button */}
+                <div className="mx-auto flex justify-center hidden md:flex items-center px-4 bg-transparent"
+                    onMouseEnter={() => setIsDropdownHovered(true)}
+                    onMouseLeave={() => setIsDropdownHovered(false)}>
+                    <button className="hover:text-black transition-colors p-2">
+                        Resources
+                    </button>
+                    {/* Dropdown */}
+                    <div className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
+                        transition-all duration-500 ease-out transform ${
+                            isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
+                        }`}
                     >
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 gap-8 px-24 py-2">
                             {Object.entries(menuItems).map(([category, items]) => (
                                 <div key={category} className="relative">
-                                    {/* 分类标题 */}
                                     <h3 className="font-bold text-lg text-gray-700 mb-4">
                                         {category}
                                     </h3>
-                                    {/* 子分类链接 */}
                                     <ul className="space-y-2">
                                         {items.map((item) => (
                                             <li key={item.slug}>
@@ -130,21 +121,9 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                
 
-                {/* 右侧菜单和购物车 */}
                 <div className="hidden md:flex items-center space-x-6">
-                    {/* 语言切换按钮 */}
-                    <div className="flex">
-                        <button
-                            className= "p-2"
-                            onClick={() => changeLanguage(language === "en" ? "zh" : "en")}
-                        >
-                            <AiOutlineTranslation size={28}/>
-                        </button>
-                    </div>
-
-                    {/* 用户登录按钮 */}
+                    {/* User Dropdown */}
                     {isLoggedIn ? (
                         <div
                             className="relative"
@@ -152,13 +131,13 @@ export default function Navbar() {
                             onMouseLeave={() => setIsUserHovered(false)}
                         >
                             <button className="hover:text-black transition-colors p-2">
-                                {username || "User"}
+                                {getDisplayName(username) || "User"}
                             </button>
-                            
+
                             <div className={`absolute top-full right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg 
-                            transition-all duration-300 ease-out transform ${
-                                isUserDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
-                            }`}
+                                transition-all duration-300 ease-out transform ${
+                                    isUserDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+                                }`}
                                 onMouseEnter={() => setIsUserHovered(true)}
                                 onMouseLeave={() => setIsUserHovered(false)}
                             >
@@ -175,7 +154,6 @@ export default function Navbar() {
                                     Logout
                                 </button>
                             </div>
-                            
                         </div>
                     ) : (
                         <button
@@ -190,16 +168,12 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* 移动端菜单按钮（Hamburger Menu） */}
-                <button
-                    className="md:hidden p-4 text-xl"
-                    onClick={toggleMobileMenu}
-                >
+                {/* Mobile menu button */}
+                <button className="md:hidden p-4 text-xl" onClick={toggleMobileMenu}>
                     ☰
                 </button>
             </div>
-
-            {/* 移动端下拉菜单 */}
+            {/* Mobile menu */}
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg p-4">
                     <div className="flex flex-col ml-8 space-y-4">
@@ -221,9 +195,8 @@ export default function Navbar() {
                             </div>
                         ))}
                     </div>
-
-                    {/* 右侧功能（移动端） */}
-                    <div className="mt-6 mb-4 flex flex-col space-y-4 justify-center items-center">
+                    
+                    <div className="mt-6 mb-4 flex flex-col space-y-4 justify-center items-center bg-gray-100 py-3 rounded-xl">
                         {isLoggedIn ? (
                             <div className="flex flex-col items-center space-y-2">
                                 <span className="font-semibold">{username || "User"}</span>
