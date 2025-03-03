@@ -24,7 +24,7 @@
             : item
         );
         } else {
-        cart.push(product);
+        cart.push({...product, title: product.title});
         }
     
         saveCart(cart);
