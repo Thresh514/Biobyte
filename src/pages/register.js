@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import SimpleHeader from "../components/SimpleHeader";
+import Footer from "../components/Footer";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -163,6 +164,7 @@ const Register = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

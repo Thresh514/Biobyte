@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SimpleHeader from "../components/SimpleHeader";
+import Footer from "../components/Footer";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -59,6 +60,7 @@ const ForgotPassword = () => {
         )}
       </div>
     </div>
+    <Footer />
     </div>
   );
 };

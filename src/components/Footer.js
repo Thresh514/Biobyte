@@ -7,8 +7,8 @@ export default function Footer() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 lg:gap-32">
                     {/* 快速导航 */}
                     <div>
-                        <h3 className="text-lg sm:text-xl font-semibold mb-4">Quick Links</h3>
-                        <ul className="space-y-2 text-gray-600 text-sm sm:text-base md:text-md lg:text-lg ">
+                        <h3 className="text-sm md:text-md lg:text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul className="space-y-2 text-gray-600 text-xs sm:text-sm md:text-md lg:text-md ">
                             <li><a href="/faq" className="hover:text-black">Frequently Asked Questions</a></li>
                             <li><a href="#privacy-policy" className="hover:text-black">Privacy Policy</a></li>
                         </ul>
@@ -16,8 +16,8 @@ export default function Footer() {
 
                     {/* 联系我们 */}
                     <div>
-                        <h3 className="text-lg sm:text-xl font-semibold mb-4">Contact Us</h3>
-                        <ul className="space-y-2 text-gray-600 text-sm sm:text-base md:text-md lg:text-lg">
+                        <h3 className="text-sm md:text-md lg:text-lg font-semibold mb-4">Contact Us</h3>
+                        <ul className="space-y-2 text-gray-600 text-xs sm:text-sm md:text-md lg:text-md">
                             <li><a href="mailto:tonytudaodao@gmail.com" className="hover:text-black">tonytudaodao@gmail.com</a></li>
                             <li><a href="tel:+1(857)205-2207" className="hover:text-black">+1 (857) 205-2207</a></li>
                             <li><a href="https://www.xiaohongshu.com/user/profile/6492ef0c00000000100361ce?xhsshare=CopyLink&appuid=6492ef0c00000000100361ce&apptime=1741060009&share_id=4a31ae389fb4473ebb8a09fe9af8d01f" className="hover:text-black" target="_blank">Rednote</a></li>
@@ -27,9 +27,9 @@ export default function Footer() {
 
                     {/* 版权声明 */}
                     <div className='text-darkest'>
-                        <h3 className="text-md md:text-lg lg:text-xl text-darker font-semibold mb-4">Legal</h3>
-                        <p className='text-sm sm:text-base md:text-md lg:text-lg'>© 2025 Biomind Logic. All rights reserved.</p>
-                        <p className="text-sm sm:text-base md:text-md lg:text-lg">Disclaimer: The content on this platform is for educational purposes only and is not affiliated with any official exam boards.</p>
+                        <h3 className="text-sm md:text-md lg:text-lg text-darker font-semibold mb-4">Legal</h3>
+                        <p className='text-xs sm:text-sm md:text-md lg:text-md'>© 2025 Biomind Logic. All rights reserved.</p>
+                        <p className="text-xs sm:text-sm md:text-md lg:text-md">Disclaimer: The content on this platform is for educational purposes only and is not affiliated with any official exam boards.</p>
                     </div>
                 </div>
             </div>

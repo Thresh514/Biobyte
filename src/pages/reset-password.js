@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import SimpleHeader from "../components/SimpleHeader";
+import Footer from "../components/Footer";
 
 const ResetPassword = () => {
   const router = useRouter();
@@ -113,6 +114,7 @@ const ResetPassword = () => {
           {message && <p className="mt-4 font-semibold text-red-500">{message}</p>}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
