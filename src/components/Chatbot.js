@@ -53,7 +53,7 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {
     useEffect(() => {
         if (isOpen&&messages.length===0) {
             setMessages([{ role: "assistant", 
-                content: "您好！我是 BioByte 客服 AI 🤖，欢迎咨询！我们提供 A-Level 生物学习资料。下单后 10 分钟内通过邮件发送PDF文件哦📩 如果有其他问题可以随时问我哦！😊"
+                content: "您好！我是 BioByte AI 客服，欢迎咨询！我们提供 A-Level 生物学习资料。下单后 10 分钟内通过邮件发送PDF文件哦～如果有其他问题可以随时问我哦！😊"
             }]);
         }
     }
