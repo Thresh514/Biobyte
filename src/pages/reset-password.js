@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import SimpleHeader from "../components/SimpleHeader";
+import Footer from "../components/Footer";
 
 const ResetPassword = () => {
   const router = useRouter();
@@ -70,47 +71,52 @@ const ResetPassword = () => {
   return (
     <div>
       <SimpleHeader />
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="p-6 bg-white rounded shadow-lg">
-        <h2 className="text-2xl font-semibold mb-4">Reset Password</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label className="block text-sm font-medium">New Password</label>
-            <input
-              type="password"
-              className="w-full p-2 border border-gray-300 rounded"
-              value={newPassword}
-              onChange={(e) => setNewPassword(e.target.value)}
-              required
+      <div className="flex items-center justify-center min-h-screen bg-lightest">
+        <div className="flex flex-col items-center w-full max-w-md p-8 bg-white rounded-lg md:shadow-lg lg:shadow-lg">
+          <h2 className="text-center text-3xl font-semibold mb-6">Reset Password</h2>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700">New Password</label>
+              <input
+                type="password"
+                name="newPassword"
+                placeholder="Enter new password"
+                className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                required
+                disabled={isSubmitting}
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700">Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm new password"
+                className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+                disabled={isSubmitting}
+              />
+            </div>
+            <button
+              type="submit"
+              className={`w-full px-16 py-2.5 text-white text-lg font-bold rounded-md transition duration-300 ${
+                isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-gray-500 hover:bg-gray-600"
+              }`}
               disabled={isSubmitting}
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Confirm Password</label>
-            <input
-              type="password"
-              className="w-full p-2 border border-gray-300 rounded"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-              disabled={isSubmitting}
-            />
-          </div>
-          <button
-            type="submit"
-            className={`w-full p-2 text-white rounded mt-4 ${
-              isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500"
-            }`}
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Resetting..." : "Reset Password"}
-          </button>
-        </form>
-        {message && <p className="mt-4 text-green-500">{message}</p>}
+            >
+              {isSubmitting ? "Resetting..." : "Reset Password"}
+            </button>
+          </form>
+          {message && <p className="mt-4 font-semibold text-red-500">{message}</p>}
+        </div>
       </div>
-    </div>
+      <Footer />
     </div>
   );
-};
+}
 
 export default ResetPassword;
