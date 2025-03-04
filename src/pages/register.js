@@ -10,11 +10,14 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [verificationCode, setVerificationCode] = useState("");
   const [isCodeSent, setIsCodeSent] = useState(false);
+  const [countdown, setCountdown] = useState(0);
   
 
   const router = useRouter(); 
 
   const handleSendCode = async () => {
+    if (countdown > 0) return; // 如果倒计时未结束，不允许点击
+    
     const response = await fetch ("/api/send-verification-code", {
       method: "POST",
       headers: {
@@ -28,6 +31,17 @@ const Register = () => {
     if (response.ok) {
       alert("Verification code sent to your email.");
       setIsCodeSent(true);
+      setCountdown(60);
+
+      const timer = setInterval(() => {
+        setCountdown((prev) => {
+          if (prev === 0) {
+            clearInterval(timer);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
     }else{
       alert(`Failed to send verification code. Please try again. Reason: ${data.message || "Unknown error."}`);
     }
@@ -59,11 +73,11 @@ const Register = () => {
     if (response.ok) {
       // 注册成功后的操作，如跳转到登录页面
       alert("Registration successful! Redirecting to login...");
-      router.push('/login');
+      await router.push('/login');
     } else {
         if (data.message === "Email already registered. Please log in.") {
           alert("This email is already registered. Redirecting to login...");
-          router.push("/login"); // 跳转到登录页面
+          await router.push("/login"); // 跳转到登录页面
         } else {
           alert(`Registration failed. Reason: ${data.message || "Unknown error."}`);
         }
@@ -125,15 +139,19 @@ const Register = () => {
                   onChange={(e) => setVerificationCode(e.target.value)}
                   required
                 />
-                {!isCodeSent && (
-                  <button
+                {/*Send Code 按钮*/}
+                <button
                     type="button"
-                    className="px-6 py-2 bg-gray-400 text-white font-semibold rounded-md hover:bg-gray-500 transition duration-300"
+                    className={`px-6 py-2 w-[85px] font-semibold rounded-md transition duration-300 ${
+                      countdown > 0
+                        ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                        : "bg-gray-400 text-white hover:bg-gray-500"
+                    }`}
                     onClick={handleSendCode}
+                    disabled={countdown > 0} // 倒计时期间禁用按钮
                   >
-                    Send
+                    {countdown > 0 ? `${countdown}s` : "Send"}
                   </button>
-                )}
               </div>
             </div>
             <button
