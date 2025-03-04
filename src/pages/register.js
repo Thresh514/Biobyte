@@ -51,7 +51,7 @@ const Register = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password, verificationCode }),
+      body: JSON.stringify({ email, password, verificationCode: String(verificationCode).trim(), }),
     });
 
     const data = await response.json();
@@ -62,10 +62,10 @@ const Register = () => {
       router.push('/login');
     } else {
         if (data.message === "Email already registered. Please log in.") {
-            alert("This email is already registered. Redirecting to login...");
-            router.push("/login"); // 跳转到登录页面
+          alert("This email is already registered. Redirecting to login...");
+          router.push("/login"); // 跳转到登录页面
         } else {
-            alert("Registration failed. Please try again.");
+          alert(`Registration failed. Reason: ${data.message || "Unknown error."}`);
         }
     }
   };
