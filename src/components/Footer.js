@@ -9,8 +9,7 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg sm:text-xl font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2 text-gray-600 text-sm sm:text-base md:text-md lg:text-lg ">
-                            <li><a href="#faq" className="hover:text-black">Frequently Asked Questions</a></li>
-                            <li><a href="#contact" className="hover:text-black">Contact Us</a></li>
+                            <li><a href="/faq" className="hover:text-black">Frequently Asked Questions</a></li>
                             <li><a href="#privacy-policy" className="hover:text-black">Privacy Policy</a></li>
                         </ul>
                     </div>
@@ -21,8 +20,8 @@ export default function Footer() {
                         <ul className="space-y-2 text-gray-600 text-sm sm:text-base md:text-md lg:text-lg">
                             <li><a href="mailto:tonytudaodao@gmail.com" className="hover:text-black">tonytudaodao@gmail.com</a></li>
                             <li><a href="tel:+1(857)205-2207" className="hover:text-black">+1 (857) 205-2207</a></li>
-                            <li><a href="https://www.instagram.com/example" className="hover:text-black" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                            <li><a href="https://www.facebook.com/example" className="hover:text-black" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                            <li><a href="https://www.xiaohongshu.com/user/profile/6492ef0c00000000100361ce?xhsshare=CopyLink&appuid=6492ef0c00000000100361ce&apptime=1741060009&share_id=4a31ae389fb4473ebb8a09fe9af8d01f" className="hover:text-black" target="_blank">Rednote</a></li>
+                            <li><a href="#" className="hover:text-black" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                         </ul>
                     </div>
 
