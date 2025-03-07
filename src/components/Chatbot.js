@@ -75,9 +75,16 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {
         setMessages(newMessages);
         setInput("");
 
+        // 显示 "正在等待" 消息
+        setMessages((prevMessages) => [
+            ...prevMessages,
+            { role: "assistant", content: "正在处理中..." },
+        ]);
+
+
         try {
             const response = await axios.post("/api/chat", { message: input });
-            setMessages([...newMessages, { role: "assistant", content: response.data.reply }]);
+            setMessages([...newMessages, { role: "assistant", content: response.data.message }]);
         } catch (error) {
             console.error("Chatbot error:", error);
         }
