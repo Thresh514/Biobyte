@@ -5,6 +5,10 @@ import path from "path";
 const openai = new OpenAI({
     baseURL: "https://api.deepseek.com",  // 使用 DeepSeek 的 API 地址
     apiKey: process.env.DEEPSEEK_API_KEY,  // 你的 DeepSeek API key
+    defaultHeaders: { 
+        "Authorization": `Bearer ${process.env.DEEPSEEK_API_KEY}`,
+        "Content-Type": "application/json" 
+    }
     });
 
 export default async function handler(req, res) {
