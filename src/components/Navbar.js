@@ -81,7 +81,9 @@ export default function Navbar() {
         <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-2.5 z-50 bg-white shadow-lg text-gray-600">
             <div className="mx-screen mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2.5 md:space-x-4">
-                    <Image src="/whiteicon.svg" alt="logo" width={48} height={48} className="w-12 h-12 md:w-14 md:h-14" />
+                    <Link href="/">
+                        <Image src="/whiteicon.svg" alt="logo" width={48} height={48} className="w-12 h-12 md:w-14 md:h-14" />
+                    </Link>
                     <Link href="/">Home</Link>
                     <Link href="/about">About</Link>
                 </div>
@@ -142,7 +144,7 @@ export default function Navbar() {
                                 onMouseLeave={() => setIsUserHovered(false)}
                             >
                                 <button
-                                    onClick={() => router.push("#dashboard")}
+                                    onClick={() => router.push("/dashboard")}
                                     className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                                 >
                                     Dashboard
@@ -201,7 +203,7 @@ export default function Navbar() {
                             <div className="flex flex-col items-center space-y-2">
                                 <span className="font-semibold">{username || "User"}</span>
                                 <button
-                                    onClick={() => router.push("#dashboard")}
+                                    onClick={() => router.push("/dashboard")}
                                     className="hover:text-black transition-colors"
                                 >
                                     Dashboard

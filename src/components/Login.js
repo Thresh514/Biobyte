@@ -27,6 +27,7 @@ const Login = () => {
             const data = await response.json(); // 解析 JSON 响应
             localStorage.setItem("userLoggedIn", true);
             localStorage.setItem("token", data.token);  // 存 JWT
+            localStorage.setItem("token_exp", data.token_exp);  // 存 token 过期时间
             localStorage.setItem("email", email);  // 存 email
             router.push("/");
         } else {
