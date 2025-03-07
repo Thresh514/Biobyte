@@ -6,8 +6,6 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { email, password } = req.body;
 
-    console.log("Received requst body:",req.body);
-
     if (!email || !password) {
       return res.status(400).json({ message: 'Email and password are required.' });
     }
@@ -18,8 +16,6 @@ export default async function handler(req, res) {
       const values = [email];
 
       const [rows] = await pool.query(query, values);
-
-      console.log("User lookup result:",rows);
       
       if (rows.length === 0) {
         return res.status(400).json({ message: 'Invalid email or password' });
@@ -27,24 +23,28 @@ export default async function handler(req, res) {
 
       const user = rows[0]; // 获取第一个匹配的用户
 
-      console.log("User found:", user);
-
       // 比较密码
       const isPasswordValid = await bcrypt.compare(password, user.password_hash);
-      console.log("Password validation result:", isPasswordValid);
 
       if (!isPasswordValid) {
         return res.status(400).json({ message: 'Invalid email or password' });
       }
 
+      // 生成 JWT Token
       const token = jwt.sign(
         { id: user.id, email: user.email, role: user.role },
         process.env.JWT_SECRET,
-        { expiresIn: '1h' } // Token 1小时后过期
+        { expiresIn: '12h' } // Token 12小时后过期
       );
 
+      const tokenExp = Date.now() + 12 * 60 * 60 * 1000; // 过期时间
+
       // 登录成功，返回用户信息
-      return res.status(200).json({ message: 'Login successful', token, username: user.username });
+      return res.status(200).json({ 
+        message: 'Login successful', 
+        token, 
+        token_exp: tokenExp, // 过期时间
+        username: user.username });
     } catch (error) {
       console.error('Database error:', error);
       return res.status(500).json({ message: 'Internal server error' });
