@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 import { getCart, clearCart } from "../lib/cart";
 import { useRouter } from "next/navigation";
 import SimpleHeader from "../components/SimpleHeader";
+import Image from "next/image";
 
 export default function Checkout() {
     const [cart, setCart] = useState([]);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [address, setAddress] = useState("");
+    const [paymentMethod, setPaymentMethod] = useState("wechat"); // 默认支付方式为 WeChat Pay
     const router = useRouter();
 
     // 读取购物车数据
@@ -24,7 +25,7 @@ export default function Checkout() {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        if (!name || !email || !address) {
+        if (!name || !email) {
             alert("请填写所有字段");
             return;
         }
@@ -33,7 +34,6 @@ export default function Checkout() {
         const orderData = {
             name,
             email,
-            address,
             cart,
             totalPrice,
         };
@@ -62,6 +62,41 @@ export default function Checkout() {
     
         // 跳转到订单确认页面
         router.push("/order-success");
+    };
+
+    const handlePayment = async () => {
+        if (paymentMethod === "wechat") {
+            await handleWeChatPay();
+        } else {
+            alert("Alipay 支付暂未开放");
+        }
+    };
+
+    const handleWeChatPay = async () => {
+        const orderData = {
+            orderId: `order_${Date.now()}`, // 生成唯一订单号
+            totalFee: totalPrice * 100, // 微信支付以"分"为单位
+            description: "Study Resources Order",
+        };
+
+        try {
+            const res = await fetch("/api/wechatPay", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(orderData),
+            });
+
+            const data = await res.json();
+            if (data.code_url) {
+                window.open(data.code_url, "_blank"); // 打开微信支付二维码
+            } else {
+                alert("支付失败");
+            }
+        } catch (error) {
+            console.error("支付请求失败:", error);
+        }
     };
     
     return (
@@ -105,20 +140,54 @@ export default function Checkout() {
                             className="w-full p-2 border rounded-md"
                             required
                         />
-                        <textarea
-                            placeholder="Address"
-                            value={address}
-                            onChange={(e) => setAddress(e.target.value)}
-                            className="w-full p-2 border rounded-md"
-                            rows="3"
-                            required
-                        />
-                        <button
-                            type="submit"
-                            className="w-full bg-black text-white font-semibold p-4 rounded-md transition"
-                        >
-                            Submit Order
-                        </button>
+                        {/* 选择支付方式 */}
+                        <div className="border p-4 rounded-md mb-6">
+                                <h2 className="text-xl font-semibold mb-2">Payment Method</h2>
+                                <div className="grid grid-cols-2 p-4">
+                                <label className="flex items-center">
+                                    <input
+                                        type="radio"
+                                        name="paymentMethod"
+                                        value="wechat"
+                                        checked={paymentMethod === "wechat"}
+                                        onChange={() => setPaymentMethod("wechat")}
+                                        className="w-4 h-4 mr-8"
+                                    />
+                                    <Image src="/wechatpay.svg" alt="WeChat" width={120} height={120} />
+                                </label>
+                                <label className="flex items-center">
+                                    <input
+                                        type="radio"
+                                        name="paymentMethod"
+                                        value="alipay"
+                                        checked={paymentMethod === "alipay"}
+                                        onChange={() => setPaymentMethod("alipay")}
+                                        className="w-4 h-4 mr-8"
+                                    />
+                                    <Image src="/alipay.svg" alt="Alipay" width={120} height={120} />
+                                </label>
+                                </div>
+                            </div>
+
+                            {/* 根据选择的支付方式显示相应的支付按钮 */}
+                            {paymentMethod === "wechat" && (
+                                <button
+                                    onClick={handlePayment}
+                                    type="button"
+                                    className="w-full bg-green-500 text-white font-semibold p-4 rounded-md transition"
+                                >
+                                    Submit Order
+                                </button>
+                            )}
+                            {paymentMethod === "alipay" && (
+                                <button
+                                    type="button"
+                                    className="w-full bg-blue-500 text-white font-semibold p-4 rounded-md transition"
+                                    onClick={handlePayment}
+                                >
+                                    Submit Order
+                                </button>
+                            )}
                     </form>
                 </>
             )}

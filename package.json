@@ -1,11 +1,13 @@
 {
   "dependencies": {
-    "axios": "^1.7.9",
+    "axios": "^1.8.2",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "crypto": "^1.0.1",
     "css-loader": "^7.1.2",
     "i18next": "^24.2.2",
     "jsonwebtoken": "^9.0.2",
+    "jsrsasign": "^11.1.0",
     "lucide": "^0.475.0",
     "lucide-react": "^0.475.0",
     "moment": "^2.30.1",

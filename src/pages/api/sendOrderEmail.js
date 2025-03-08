@@ -7,9 +7,9 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: "Method Not Allowed" });
     }
 
-    const { name, email, address, cart, totalPrice } = req.body;
+    const { name, email, cart, totalPrice } = req.body;
 
-    if (!email || !name || !address || !cart.length) {
+    if (!email || !name || !cart.length) {
         return res.status(400).json({ message: "Invalid order data" });
     }
 
@@ -68,9 +68,6 @@ export default async function handler(req, res) {
 
         Order Details:
         ${orderDetails}
-
-        Shipping Address:
-        ${address}
 
         Total Price: $${totalPrice.toFixed(2)}
 
