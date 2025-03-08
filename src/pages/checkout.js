@@ -4,17 +4,35 @@ import { useState, useEffect } from "react";
 import { getCart, clearCart } from "../lib/cart";
 import { useRouter } from "next/navigation";
 import SimpleHeader from "../components/SimpleHeader";
+import { jwtDecode } from "jwt-decode";
+
 
 export default function Checkout() {
     const [cart, setCart] = useState([]);
     const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState(""); // ✅ 添加 email 状态
     const [address, setAddress] = useState("");
+    const [loading, setLoading] = useState(false); // 处理支付中的状态
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // ✅ 记录用户是否已登录
     const router = useRouter();
 
     // 读取购物车数据
     useEffect(() => {
         setCart(getCart());
+
+        // **检查 localStorage 里是否有 JWT**
+        const token = localStorage.getItem("token");
+        if (token) {
+            try {
+                const decoded = jwtDecode(token); // ✅ 解析 JWT
+                setEmail(decoded.email); // ✅ 自动填充 email
+                setIsLoggedIn(true);
+            } catch (error) {
+                console.error("Invalid token:", error);
+                localStorage.removeItem("token"); // **JWT 失效，清除**
+                setIsLoggedIn(false);
+            }
+        }
     }, []);
 
     // 计算总价
@@ -24,44 +42,54 @@ export default function Checkout() {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        if (!name || !email || !address) {
+        if (!name || !address || (!isLoggedIn && !email)) {
             alert("请填写所有字段");
             return;
         }
+
+        setLoading(true); // 显示加载状态
     
         // 订单数据
         const orderData = {
             name,
-            email,
+            email,  // ✅ 传入自动获取的 email（登录用户）或用户输入的 email（未登录）
             address,
             cart,
             totalPrice,
         };
-    
+
         try {
-            // 发送邮件
-            const response = await fetch("/api/sendOrderEmail", {
+            const headers = { "Content-Type": "application/json" };
+
+            // **如果用户已登录，添加 Token 认证**
+            const token = localStorage.getItem("token");
+            if (token) {
+                headers["Authorization"] = `Bearer ${token}`;
+            }
+
+            // 发送订单请求
+            const response = await fetch("/api/checkout", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: headers, // ✅ 现在包含 `Authorization` 头
                 body: JSON.stringify(orderData),
             });
-    
+
+            const result = await response.json();
+
             if (response.ok) {
                 alert(`订单已提交！确认邮件已发送至 ${email}`);
+                clearCart(); // **支付成功才清空购物车**
+                setCart([]);
+                router.push("/order-success");
             } else {
-                alert("订单提交成功，但邮件发送失败");
+                alert(`支付失败：${result.message}`);
             }
         } catch (error) {
-            console.error("Error sending email:", error);
-            alert("订单提交成功，但邮件发送失败");
+            console.error("Checkout error:", error);
+            alert("订单提交失败，请稍后再试");
         }
-    
-        // 清空购物车
-        clearCart();
-        setCart([]);
-    
-        // 跳转到订单确认页面
-        router.push("/order-success");
+
+        setLoading(false); // 结束加载状态
     };
     
     return (
@@ -97,14 +125,19 @@ export default function Checkout() {
                             className="w-full p-2 border rounded-md"
                             required
                         />
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full p-2 border rounded-md"
-                            required
-                        />
+
+                        {/* **未登录用户需要输入邮箱** */}
+                        {!isLoggedIn && (
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    className="w-full p-2 border rounded-md"
+                                    required
+                                />
+                        )}
+                        
                         <textarea
                             placeholder="Address"
                             value={address}
@@ -117,7 +150,7 @@ export default function Checkout() {
                             type="submit"
                             className="w-full bg-black text-white font-semibold p-4 rounded-md transition"
                         >
-                            Submit Order
+                            {loading ? "Processing..." : "Submit Order"}
                         </button>
                     </form>
                 </>

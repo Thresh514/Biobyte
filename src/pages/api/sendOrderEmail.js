@@ -2,13 +2,7 @@ import nodemailer from "nodemailer";
 import path from "path";
 import fs from "fs";
 
-export default async function handler(req, res) {
-    if (req.method !== "POST") {
-        return res.status(405).json({ message: "Method Not Allowed" });
-    }
-
-    const { name, email, address, cart, totalPrice } = req.body;
-
+export async function sendOrderEmail(name, email, address, cart, totalPrice) {
     if (!email || !name || !address || !cart.length) {
         return res.status(400).json({ message: "Invalid order data" });
     }
@@ -84,9 +78,9 @@ export default async function handler(req, res) {
 
     try {
         await transporter.sendMail(mailOptions);
-        return res.status(200).json({ message: "Email sent successfully" });
+        console.log("Email sent successfully to", email);
     } catch (error) {
         console.error("Email send error:", error);
-        return res.status(500).json({ message: "Email sending failed" });
+        throw new Error("Email sending failed");
     }
 }
