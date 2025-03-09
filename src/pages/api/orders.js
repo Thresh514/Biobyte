@@ -23,7 +23,7 @@ try {
         SELECT 
             usr.study_resource_id, 
             sr.title AS product,  
-            sr.price AS amount, 
+            sr.price AS amount,
             usr.purchase_date AS date
         FROM user_study_resources usr
         JOIN study_resources sr ON usr.study_resource_id = sr.id  

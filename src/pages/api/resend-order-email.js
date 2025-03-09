@@ -64,11 +64,10 @@ export default async function handler(req, res) {
 
         console.log("Cart Data:", cart); // **确保数据正确**
 
-        const address = "Digital Download"; // **没有实体地址**
         const totalPrice = Number(order.amount);
 
         // 调用 `sendOrderEmail`
-        await sendOrderEmail("Customer", userEmail, address, cart, totalPrice);
+        await sendOrderEmail("Customer", userEmail, cart, totalPrice);
 
         return res.status(200).json({ message: "Order email resent successfully" });
     } catch (error) {

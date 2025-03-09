@@ -2,8 +2,8 @@ import nodemailer from "nodemailer";
 import path from "path";
 import fs from "fs";
 
-export async function sendOrderEmail(name, email, address, cart, totalPrice) {
-    if (!email || !name || !address || !cart.length) {
+export async function sendOrderEmail(name, email, cart, totalPrice) {
+    if (!email || !name || !cart.length) {
         return res.status(400).json({ message: "Invalid order data" });
     }
 
@@ -62,9 +62,6 @@ export async function sendOrderEmail(name, email, address, cart, totalPrice) {
 
         Order Details:
         ${orderDetails}
-
-        Shipping Address:
-        ${address}
 
         Total Price: $${totalPrice.toFixed(2)}
 

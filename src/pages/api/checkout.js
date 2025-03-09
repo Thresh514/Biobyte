@@ -8,13 +8,13 @@ export default async function handler(req, res) {
     }
 
     try {
-        const { name, email:inputEmail, address, cart, totalPrice } = req.body;
+        const { name, email:inputEmail, cart, totalPrice } = req.body;
 
         if (!cart || cart.length === 0) {
             return res.status(400).json({ message: "Cart is empty" });
         }
 
-        if (!name || !address || cart.length === 0) {
+        if (!name || cart.length === 0) {
             return res.status(400).json({ message: "Missing required fields" });
         }
 
@@ -87,7 +87,7 @@ export default async function handler(req, res) {
 
 
         // **发送订单邮件**
-        await sendOrderEmail(name, userEmail, address, cart, totalPrice);
+        await sendOrderEmail(name, userEmail, cart, totalPrice);
 
         return res.status(200).json({ message: "Order processed successfully" });
 

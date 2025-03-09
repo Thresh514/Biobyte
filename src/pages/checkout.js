@@ -11,7 +11,6 @@ export default function Checkout() {
     const [cart, setCart] = useState([]);
     const [name, setName] = useState("");
     const [email, setEmail] = useState(""); // ✅ 添加 email 状态
-    const [address, setAddress] = useState("");
     const [loading, setLoading] = useState(false); // 处理支付中的状态
     const [isLoggedIn, setIsLoggedIn] = useState(false); // ✅ 记录用户是否已登录
     const router = useRouter();
@@ -42,7 +41,7 @@ export default function Checkout() {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        if (!name || !address || (!isLoggedIn && !email)) {
+        if (!name || (!isLoggedIn && !email)) {
             alert("请填写所有字段");
             return;
         }
@@ -53,11 +52,10 @@ export default function Checkout() {
         const orderData = {
             name,
             email,  // ✅ 传入自动获取的 email（登录用户）或用户输入的 email（未登录）
-            address,
             cart,
             totalPrice,
         };
-
+        console.log("📦 Order Data being sent:", orderData); // 🔍 打印订单数据
         try {
             const headers = { "Content-Type": "application/json" };
 
@@ -137,15 +135,7 @@ export default function Checkout() {
                                     required
                                 />
                         )}
-                        
-                        <textarea
-                            placeholder="Address"
-                            value={address}
-                            onChange={(e) => setAddress(e.target.value)}
-                            className="w-full p-2 border rounded-md"
-                            rows="3"
-                            required
-                        />
+
                         <button
                             type="submit"
                             className="w-full bg-black text-white font-semibold p-4 rounded-md transition"
