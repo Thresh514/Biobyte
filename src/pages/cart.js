@@ -7,6 +7,7 @@
 
     export default function Cart() {
         const [cart, setCart] = useState([]);
+        const [isLoggedIn, setIsLoggedIn] = useState(false);
         const router = useRouter();
 
         useEffect(() => {
@@ -18,6 +19,11 @@
             return () => {
                 document.body.classList.remove('fade-in');
             };
+        }, []);
+
+        useEffect(() => {
+            const token = localStorage.getItem("token"); // 读取 JWT 令牌
+            setIsLoggedIn(!!token); // 如果有 token，设置 isLoggedIn 为 true
         }, []);
 
         return (
@@ -86,13 +92,16 @@
                                         >
                                             Checkout
                                         </button>
-                                        <button
-                                            onClick={() => router.push("/login")}
-                                            className="bg-white border border-black text-gray-800 p-3 w-full transition"
-                                        >
-                                            Sign in
-                                        </button>    
-                                </div>
+                                        {/* 只有未登录时才显示 Sign in 按钮 */}
+                                        {!isLoggedIn && (
+                                            <button
+                                                onClick={() => router.push("/login")}
+                                                className="bg-white border border-black text-gray-800 p-3 w-full transition"
+                                            >
+                                                Sign in
+                                            </button>
+                                        )}  
+                                    </div>
                             </div>
                         </div>
                     )}
