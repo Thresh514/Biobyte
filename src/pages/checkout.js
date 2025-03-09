@@ -35,7 +35,7 @@ export default function Checkout() {
     }, []);
 
     // 计算总价
-    const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const totalPrice = cart.reduce((total, item) => total + item.price, 0);
     
     // 处理订单提交
     const handleSubmit = async (e) => {
@@ -106,8 +106,7 @@ export default function Checkout() {
                         {cart.map((item) => (
                             <div key={`${item.id}-${item.option}`} className="flex justify-between mb-2">
                                 <span>{item.name} {item.option}</span>
-                                <span>x {item.quantity}</span>
-                                <span>${(item.price * item.quantity)}</span>
+                                <span>${(item.price)}</span>
                             </div>
                         ))}
                         <h3 className="text-lg font-bold mt-4 text-end">Total: ${totalPrice.toFixed(2)}</h3>

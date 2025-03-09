@@ -78,7 +78,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-2.5 z-50 bg-white shadow-lg text-gray-600">
+        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-2.5 z-50 bg-white shadow-lg text-gray-800 font-normal">
             <div className="mx-screen mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2.5 md:space-x-4">
                     <Link href="/">

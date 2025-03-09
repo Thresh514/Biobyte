@@ -24,11 +24,12 @@ export default async function handler(req, res) {
 
         let options = [];
         if (rows[0].type === "Mindmap") {
-            const [chapters] = await pool.query("SELECT title, chapter, file_path, image, price FROM study_resources WHERE type = ? AND level = ? ORDER BY FIELD(id, 46, 47) DESC, id", [rows[0].type, rows[0].level]);
+            const [chapters] = await pool.query("SELECT title, description, chapter, file_path, image, price FROM study_resources WHERE type = ? AND level = ? ORDER BY FIELD(id, 46, 47) DESC, id", [rows[0].type, rows[0].level]);
             options = chapters.map((row) => ({
                 chapter: row.chapter.startsWith("Chapter") ? row.chapter : `Chapter ${row.chapter}`,
                 title: row.title,
                 file_path: row.file_path,
+                description: row.description,
                 image: row.image,
                 price: row.price ? parseFloat(row.price) : 0.00,
             }));
