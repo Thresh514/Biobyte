@@ -47,6 +47,32 @@ const Login = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // 检查 token 是否过期
+        const checkTokenExpiration = () => {
+            const tokenExp = localStorage.getItem("token_exp");
+            if (tokenExp && Date.now() > parseInt(tokenExp, 10)) {
+                logout();
+            } else {
+                // 设置定时器，在 token 过期时登出
+                const timeout = parseInt(tokenExp, 10) - Date.now();
+                if (timeout > 0) {
+                    setTimeout(logout, timeout);
+                }
+            }
+        };
+
+        checkTokenExpiration();
+    }, []);
+
+    const logout = () => {
+        localStorage.removeItem("userLoggedIn");
+        localStorage.removeItem("token");
+        localStorage.removeItem("token_exp");
+        localStorage.removeItem("email");
+        router.push("/login");
+    };
+    
     return (
         <div className="flex items-center justify-center min-h-screen bg-lightest">
                 {/* 登录框 */}

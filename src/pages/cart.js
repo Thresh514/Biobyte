@@ -23,48 +23,77 @@
         return (
             <div className="min-h-screen flex">
                 <Navbar />
-                <div className="pt-32 p-6 max-w-6xl mx-auto flex-grow">
-                    <h1 className="text-2xl font-bold mb-4">🛒 Shopping Cart</h1>
-
+                <div className="pt-32 p-6 max-w-6xl mx-auto flex-grow space-y-12">
+                    <h1 className="text-5xl font-light mb-4">SHOPPING CART</h1>
+                    <div>
+                        
+                    </div>
                     {cart.length === 0 ? (
-                        <p>Your cart is empty.</p>
+                        <p className="font-semibold">YOUR SHOPPING CART IS EMPTY!</p>
+                        
                     ) : (
-                        <div className="flex flex-col h-full">
-                        {/* 购物车商品列表 */}
-                        <div className="flex-grow">
-                            {cart.map((item) => (
-                                <div key={`${item.id}-${item.option}`} className="flex justify-between items-center mb-4">
-                                    <span>{item.name} - {item.option}</span>
-                                    <div className="flex items-center">
-                                        <button onClick={() => setCart(updateQuantity(item.id, item.option, item.quantity - 1))}>-</button>
-                                        <span className="mx-2 ml-4 mr-4">{item.quantity}</span>
-                                        <button onClick={() => setCart(updateQuantity(item.id, item.option, item.quantity + 1))}>+</button>
-                                        <span className="mx-2 ml-4 mr-4">${(item.price * item.quantity)}</span>
-                                        <button onClick={() => setCart(removeFromCart(item.id, item.option))} className="ml-4 text-red-500 hover:underline">Delete</button>
+                        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12">
+                            {/* 购物车商品列表 */}
+                            <div className="bg-white w-full p-8">
+                                {cart.map((item) => (
+                                    <div key={`${item.id}-${item.option}`} className="grid grid-cols-3 gap-2 items-center border-b py-8">
+                                    {/* 商品图片 */}
+                                    <img 
+                                        src={item.image} 
+                                        alt={item.name} 
+                                        className="w-[150px] h-[200px] object-cover"
+                                    />
+                                
+                                    {/* 商品信息 */}
+                                    <div className="flex flex-col space-y-2">
+                                        <span className="text-lg">{item.name}</span>
+                                        <span className="font-light">{item.option}</span>
+                                        <button 
+                                            onClick={() => setCart(removeFromCart(item.id, item.option))} 
+                                            className="flex justify-start font-light text-gray-400 hover:underline text-sm"
+                                        >
+                                            Remove
+                                        </button>
+                                    </div>
+                                
+                                    {/* 价格 & 删除按钮 */}
+                                    <div className="flex justify-end items-center">
+                                        <span className="text-lg font-semibold">${item.price.toFixed(2)}</span>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-
-                            {cart.length > 0 && (
-                                <div className="bg-white p-6 w-full max-w-7xl mx-auto sticky bottom-0">
-                                    <h2 className="text-xl font-bold text-end">Total: ${cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</h2>
-                                    <div className="flex justify-between items-center gap-8 lg:gap-60">
-                                        <button 
-                                            onClick={() => setCart(clearCart())} 
-                                            className="mt-4 bg-gray-300 text-black p-4 w-full rounded-md transition"
-                                        >
-                                            Clear Cart
-                                        </button>
+                                ))}
+                            </div>
+                            <div className="bg-white w-full border border-black p-8 space-y-4">
+                                <h2 className="text-2xl font-light ">Order Summary</h2>
+                                <div className="flex justify-between items-center text-gray-800">
+                                    <span className="">Subtotal</span>
+                                    <span className="font-semibold">${cart.reduce((total, item) => total + item.price, 0).toFixed(2)}</span>
+                                </div>
+                                <div className="flex justify-between items-center text-gray-800">
+                                    <span>Estimated Tax</span>
+                                    <span className="font-semibold">$0.00</span>
+                                </div>
+                                
+                                <hr className="my-2 border-gray-400" />
+                                <div className="flex justify-between items-center text-gray-800">
+                                    <span>TOTAL</span>
+                                        <span className="font-semibold">${cart.reduce((total, item) => total + item.price, 0).toFixed(2)}</span>
+                                    </div>
+                                    <div className="flex flex-col items-center space-y-4">
                                         <button
                                             onClick={() => router.push("/checkout")}
-                                            className="mt-4 bg-black text-white p-4 w-full rounded-md transition"
+                                            className="bg-black text-white p-3 w-full transition"
                                         >
                                             Checkout
                                         </button>
-                                    </div>
+                                        <button
+                                            onClick={() => router.push("/login")}
+                                            className="bg-white border border-black text-gray-800 p-3 w-full transition"
+                                        >
+                                            Sign in
+                                        </button>    
                                 </div>
-                            )}
+                            </div>
                         </div>
                     )}
                 </div>
