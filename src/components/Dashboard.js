@@ -10,11 +10,11 @@ const DashboardComponent = () => {
     const [newPassword, setNewPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [message, setMessage] = useState("");
-    
     const router = useRouter();
 
     useEffect(() => {
         const token = localStorage.getItem("token");
+        console.log("Token:", token);
         const tokenExp = localStorage.getItem("token_exp");
 
         // 检查 token 是否存在，是否过期
@@ -42,9 +42,19 @@ const DashboardComponent = () => {
         .catch(err => console.error("User Fetch Error:", err));
 
         // 获取用户订单
-        fetch("/api/orders")
-            .then(res => res.json())
-            .then(data => setOrders(data));
+        fetch("/api/orders", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log("Orders Data:", data);
+            setOrders(data);
+        })
+        .catch(err => console.error("Order Fetch Error:", err));
 
         // 获取用户优惠券
         fetch("/api/coupons")
@@ -90,6 +100,37 @@ const DashboardComponent = () => {
         }
     };
 
+    const handleResendEmail = async (study_resource_id) => {
+        const token = localStorage.getItem("token");
+    
+        if (!token) {
+            alert("You are not logged in!");
+            return;
+        }
+    
+        try {
+            const response = await fetch("/api/resend-order-email", {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ study_resource_id }),
+            });
+    
+            const data = await response.json();
+            if (response.ok) {
+                alert("Order email resent successfully!");
+            } else {
+                alert(`Failed to resend email: ${data.message}`);
+            }
+        } catch (error) {
+            console.error("Resend Email Error:", error);
+            alert("Error resending order email. Please try again later.");
+        }
+    };
+
+    
     return (
         <div className="px-12 mx-auto max-w-5xl">
             <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
@@ -139,8 +180,17 @@ const DashboardComponent = () => {
                             {orders.map(order => (
                                 <li key={order.id} className="border-b py-2">
                                     <p><strong>Order Number：</strong>{order.id}</p>
-                                    <p><strong>购买时间：</strong>{order.date}</p>
-                                    <p><strong>状态：</strong>{order.status}</p>
+                                    <p><strong>Product：</strong>{order.product}</p>
+                                    <p><strong>Amount：</strong>${order.amount}</p>
+                                    <p><strong>Payment Method：</strong>{order.payment_method}</p>
+                                    <p><strong>Purchase Time：</strong>{order.date}</p>
+                                    <p><strong>Status：</strong>{order.status}</p>
+                                    <button
+                                        onClick={() => handleResendEmail(order.study_resource_id)}
+                                        className="mt-2 px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                    >
+                                        Resend Order Email
+                                    </button>
                                 </li>
                             ))}
                         </ul>

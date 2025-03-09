@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+Grund:wght@100..400&display=swap');
 
 body {
-    font-family: 'Lato', sans-serif; /* Set Lato as the default font */
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.6; /* Optional for better readability */
     margin: 0;
     padding: 0;
