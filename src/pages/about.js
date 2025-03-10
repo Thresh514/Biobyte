@@ -11,7 +11,7 @@ export default function About() {
             <meta name="description" content="about us" />
         </Head>
         <Navbar/>
-        <main className="pt-32 min-h-screen">
+        <main className="pt-28 min-h-screen">
         <AboutPage/>
         </main>
         <Footer />

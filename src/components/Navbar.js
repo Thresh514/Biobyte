@@ -84,15 +84,15 @@ export default function Navbar() {
                     <Link href="/">
                         <Image src="/whiteicon.svg" alt="logo" width={48} height={48} className="w-12 h-12 md:w-14 md:h-14" />
                     </Link>
-                    <Link href="/">Home</Link>
-                    <Link href="/about">About</Link>
+                    <Link href="/">HOME</Link>
+                    <Link href="/about">ABOUT</Link>
                 </div>
                 {/* Dropdown button */}
                 <div className="mx-auto flex justify-center hidden md:flex items-center px-4 bg-transparent"
                     onMouseEnter={() => setIsDropdownHovered(true)}
                     onMouseLeave={() => setIsDropdownHovered(false)}>
                     <button className="hover:text-black transition-colors p-2">
-                        Resources
+                        RESOURCES
                     </button>
                     {/* Dropdown */}
                     <div className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
@@ -103,7 +103,7 @@ export default function Navbar() {
                         <div className="grid grid-cols-2 gap-8 px-24 py-2">
                             {Object.entries(menuItems).map(([category, items]) => (
                                 <div key={category} className="relative">
-                                    <h3 className="font-bold text-lg text-gray-700 mb-4">
+                                    <h3 className="font-light text-xl text-gray-700 mb-4 tracking-wider">
                                         {category}
                                     </h3>
                                     <ul className="space-y-2">
@@ -111,7 +111,9 @@ export default function Navbar() {
                                             <li key={item.slug}>
                                                 <button
                                                     onClick={() => router.push(`/unit/${item.slug}`)}
-                                                    className="text-gray-600 hover:text-black transition-colors"
+                                                    className="relative text-gray-600 font-light tracking-wider hover:text-black transition-colors 
+                                                    before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-full before:h-[1.5px] before:bg-gray-600 
+                                                    before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
                                                 >
                                                     {item.title}
                                                 </button>
@@ -162,7 +164,7 @@ export default function Navbar() {
                             onClick={handleLogin}
                             className="hover:text-black transition-colors p-2"
                         >
-                            Login
+                            LOGIN
                         </button>
                     )}
                     <Link href="/cart">
