@@ -72,54 +72,75 @@ const Login = () => {
         localStorage.removeItem("email");
         router.push("/login");
     };
-    
+
     return (
         <div className="flex items-center justify-center min-h-screen bg-lightest">
-                {/* 登录框 */}
-                <div className="flex flex-col justify-center items-center max-w-md p-8 bg-white rounded-lg md:shadow-lg lg:shadow-lg">
-                    <h2 className="text-center text-3xl font-semibold mb-6">Welcome back!</h2>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700">Email</label>
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                value={email}
-                                onChange={(e) => setEmail
-                                    (e.target.value)}
-                                required
-                            />
-                        </div>
-                    <div>
-                        <label className="block text-sm font-semibold text-gray-700">Password</label>
+            {/* 登录框 */}
+            <div className="flex flex-col justify-center items-center max-w-lg p-12 bg-white">
+                <h2 className="text-center text-3xl font-light mb-8">LOG IN</h2>
+                <form onSubmit={handleSubmit} className="space-y-8">
+                    <div className="relative w-[400px]">
+                        {/* 输入框 */}
                         <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            type="email"
+                            id="email"
+                            value={email}
+                            className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                                bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                            placeholder="EMAIL"
+                            onChange={(e) => setEmail(e.target.value)}
                             required
                         />
+                        {/* Label 作为 Placeholder */}
+                        <label
+                            htmlFor="email"
+                            className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                                peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                                peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                                peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
+                            >
+                            EMAIL
+                        </label>
                     </div>
-                    <button
-                        type="submit"
-                        className="w-full px-12 py-2.5 bg-gray-500 text-white text-lg font-bold rounded-md hover:bg-gray-600 transition duration-300"
-                    >
-                        Login
-                    </button>
+                    <div className="flex flex-col">
+                        <div className="relative w-[400px]">
+                            <input
+                                type="password"
+                                name="password"
+                                className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                                bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                                placeholder="PASSWORD"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                            <label
+                                htmlFor="password"
+                                className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                                peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                                peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                                peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
+                            >
+                                PASSWORD
+                            </label>
+                        </div>
+                        <a className="text-sm text-gray-600 mt-2" onClick={handleForgotPasswordClick}>Forgot your password?</a>
+                    </div>
+                    <div className="flex flex-col w-1/2 space-y-4 pt-6">
+                        <button
+                            type="submit"
+                            className="w-auto px-16 py-2 text-white bg-black text-xs tracking-wider font-light border-black border hover:bg-opacity-[75%] transition duration-200"
+                        >
+                            LOG IN
+                        </button>
+                        <button 
+                            onClick={handleSignupClick} 
+                            className="w-auto px-16 py-2 text-gray-500 text-xs tracking-wider font-light border-black border hover:text-gray-300 transition duration-200"
+                        >
+                            SIGN UP
+                        </button>
+                    </div>
                 </form>
-                <div className="mt-4 text-center">
-                    <a href="#" className="text-sm text-gray-600 font-semibold hover:underline" onClick={handleForgotPasswordClick}>Forgot Password?</a>
-                    <p className="mt-2 text-sm text-gray-600">
-                    Need an account? <button onClick={handleSignupClick} className="text-gray-600 font-semibold hover:underline">Sign Up</button>
-                    </p>
-                    <p className="mt-2 text-xs text-gray-500">
-                        By logging in, you agree with Biomind Logic's <a href="#" className="text-lighter font-semibold hover:underline">Service Terms</a> and <a href="#" className="text-lighter font-semibold hover:underline">Honor Code</a> and have read our <a href="#" className="text-lighter font-semibold hover:underline">Privacy Policy</a>.
-                    </p>
-                </div>
             </div>
         </div>
     );
