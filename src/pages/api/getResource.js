@@ -5,18 +5,18 @@ export default async function handler(req, res) {
         return res.status(405).json({ error: "请求方法不被允许" });
     }
 
-    const { id } = req.query;
+    const { title } = req.query;
 
-    if (!id) {
-        return res.status(400).json({ error: "缺少 id 参数" });
+    if (!title) {
+        return res.status(400).json({ error: "缺少 title 参数" });
     }
 
     try {
-        console.log("Fetching resource with id:", id);
+        console.log("🔍 Fetching resource with title:", title);
         // 查询数据库
-        const [rows] = await pool.query("SELECT * FROM study_resources WHERE (LOWER(REPLACE(title, ' ', '-')) = LOWER(?) OR id = ?)", [id, id]);
+        const [rows] = await pool.query("SELECT * FROM study_resources WHERE title = ?", [title]); 
 
-        console.log("Resource lookup result:", rows);
+        console.log("✅Resource lookup result:", rows);
 
         if (rows.length === 0) {
             return res.status(404).json({ error: "找不到该课程" });

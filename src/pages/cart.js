@@ -14,6 +14,7 @@
             setCart(getCart());
         }, []);
 
+        
         useEffect(() => {
             document.body.classList.add('fade-in');
             return () => {

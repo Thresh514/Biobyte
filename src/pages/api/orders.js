@@ -31,7 +31,6 @@ try {
         ORDER BY usr.purchase_date DESC;
     `;
     const [orders] = await pool.query(query, [userId]);
-
     return res.status(200).json(orders);
     } catch (error) {
     console.error("Order Fetch Error:", error);

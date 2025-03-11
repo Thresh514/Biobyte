@@ -27,7 +27,7 @@ export async function sendOrderEmail(name, email, cart, totalPrice) {
 
     // 生成附件
     const attachments = cart.flatMap((item) => {
-        if (item.option === "Chapter All") {
+        if (item.option === "Full") {
             // 直接匹配已经打包好的 ZIP 文件
             const zipFilePath = path.join(uploadsDir, `${item.name} Chapter All.zip`);
     
@@ -40,9 +40,9 @@ export async function sendOrderEmail(name, email, cart, totalPrice) {
             }
         } else {
             // 发送单个 PDF
-            const filePath = path.join(uploadsDir, `${item.name} ${item.option}.pdf`);
+            const filePath = path.join(uploadsDir, `${item.name}.pdf`);
             if (fs.existsSync(filePath)) {
-                return [{ filename: `${item.name} ${item.option}.pdf`, path: filePath }];
+                return [{ filename: `${item.name}.pdf`, path: filePath }];
             } else {
                 console.error("File not found:", filePath);
                 return [];
