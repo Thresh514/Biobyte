@@ -105,8 +105,8 @@ export default function Checkout() {
                         <h2 className="text-xl font-semibold mb-2">Order Details</h2>
                         {cart.map((item) => (
                             <div key={`${item.id}-${item.option}`} className="flex justify-between mb-2">
-                                <span>{item.name} {item.option}</span>
-                                <span>${(item.price)}</span>
+                                <span>{item.name} {item.option !== "Full" && item.option}</span>
+                                <span>${item.price.toFixed(2)}</span>
                             </div>
                         ))}
                         <h3 className="text-lg font-bold mt-4 text-end">Total: ${totalPrice.toFixed(2)}</h3>

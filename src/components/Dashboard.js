@@ -176,26 +176,30 @@ const DashboardComponent = () => {
                 <div className="mb-8 p-6 bg-white shadow-md rounded-lg">
                     <h2 className="text-xl font-semibold mb-4">Order History</h2>
                     {orders.length > 0 ? (
-                        <ul>
-                            {orders.map(order => (
-                                <li key={order.id} className="border-b py-2">
-                                    <p><strong>Order Number：</strong>{order.id}</p>
-                                    <p><strong>Product：</strong>{order.product}</p>
-                                    <p><strong>Amount：</strong>${order.amount}</p>
-                                    <p><strong>Payment Method：</strong>{order.payment_method}</p>
-                                    <p><strong>Purchase Time：</strong>{order.date}</p>
-                                    <p><strong>Status：</strong>{order.status}</p>
-                                    <button
-                                        onClick={() => handleResendEmail(order.study_resource_id)}
-                                        className="mt-2 px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
-                                    >
-                                        Resend Order Email
-                                    </button>
+                        <ul className="space-y-4">
+                            {orders.map((order, index) => (
+                                <li key={`${order.study_resource_id}-${index}`} className="border-b py-4">
+                                    <div className="flex flex-col space-y-2">
+                                        <p className="text-lg font-medium">{order.title}</p>
+                                        <div className="text-sm text-gray-600">
+                                            <p>Type: {order.type}</p>
+                                            <p>Level: {order.level}</p>
+                                            <p>Chapter: {order.chapter || 'Full Version'}</p>
+                                            <p>Price: ${order.price}</p>
+                                            <p>Purchase Date: {new Date(order.purchase_date).toLocaleString()}</p>
+                                        </div>
+                                        <button
+                                            onClick={() => handleResendEmail(order.study_resource_id)}
+                                            className="mt-2 px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 w-fit"
+                                        >
+                                            Resend Order Email
+                                        </button>
+                                    </div>
                                 </li>
                             ))}
                         </ul>
                     ) : (
-                        <p>No order record in the system </p>
+                        <p>No order record in the system</p>
                     )}
                 </div>
 

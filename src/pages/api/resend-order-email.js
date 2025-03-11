@@ -1,6 +1,6 @@
 import { pool } from "../../lib/db";
 import jwt from "jsonwebtoken";
-import { sendOrderEmail } from "../api/sendOrderEmail"; // 引入邮件发送函数
+import { sendOrderEmail } from "../api/sendOrderEmail";
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -25,53 +25,50 @@ export default async function handler(req, res) {
             return res.status(400).json({ message: "Missing study_resource_id" });
         }
 
-        // 查询订单详情（确保获取所有需要的变量）
+        console.log(`🔄 准备重发邮件:
+            - userId: ${userId}
+            - userEmail: ${userEmail}
+            - study_resource_id: ${study_resource_id}
+        `);
+
+        // 查询资源详情
         const query = `
             SELECT 
-                sr.title AS product, 
-                sr.price AS amount, 
-                sr.format AS file_format,
-                sr.chapter AS chapter,
-                usr.purchase_date AS date
+                sr.*,
+                usr.purchase_date
             FROM user_study_resources usr
             JOIN study_resources sr ON usr.study_resource_id = sr.id
             WHERE usr.user_id = ? AND usr.study_resource_id = ?
         `;
-        const [orders] = await pool.query(query, [userId, study_resource_id]);
+        
+        const [resources] = await pool.query(query, [userId, study_resource_id]);
+        console.log("📝 查询结果:", JSON.stringify(resources, null, 2));
 
-        if (orders.length === 0) {
-            return res.status(404).json({ message: "Order not found" });
+        if (resources.length === 0) {
+            return res.status(404).json({ message: "Resource not found" });
         }
 
-        const order = orders[0];
+        const resource = resources[0];
 
-        console.log("Resending order email for:", order);
-
-        // **确定 `option` 值**
-        let option = "Chapter All"; // 默认是完整章节
-        if (order.chapter) {
-            option = `Chapter ${order.chapter}`; // 如果数据库里有 `chapter` 字段，就使用具体章节
-        }
-
-        // **构造 `cart` 数据**
+        // 构造购物车数据
         const cart = [{
-            name: order.product,    // 产品名称
-            option: option,         // 章节或完整课程
-            quantity: 1,            // 固定数量
-            price: order.amount,    // 价格
-            format: order.file_format // 文件格式（pdf）
+            id: study_resource_id,
+            name: resource.title,
+            option: resource.chapter === 'All' ? 'Chapter All' : `Chapter ${resource.chapter}`,
+            price: parseFloat(resource.price),
+            image: resource.image || "/default.jpg",
+            file_path: resource.file_path
         }];
 
-        console.log("Cart Data:", cart); // **确保数据正确**
+        console.log("📦 构造的购物车数据:", JSON.stringify(cart, null, 2));
 
-        const totalPrice = Number(order.amount);
-
-        // 调用 `sendOrderEmail`
-        await sendOrderEmail("Customer", userEmail, cart, totalPrice);
+        // 调用 sendOrderEmail 重发邮件
+        await sendOrderEmail("Customer", userEmail, cart, parseFloat(resource.price));
+        console.log("✅ 邮件重发成功");
 
         return res.status(200).json({ message: "Order email resent successfully" });
     } catch (error) {
-        console.error("Resend Order Email Error:", error.message, error.stack);
+        console.error("❌ 重发邮件失败:", error);
         return res.status(500).json({ message: "Internal Server Error", error: error.message });
     }
 }
