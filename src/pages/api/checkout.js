@@ -52,7 +52,6 @@ export default async function handler(req, res) {
             console.log("✅ 查询成功，userId:", userId);
         }
 
-
         // **模拟支付（90% 成功）**
         const paymentSuccess = Math.random() > 0.1;
 
@@ -62,29 +61,34 @@ export default async function handler(req, res) {
 
         // **如果用户已登录，存入 user_study_resources**
         if (userId) {
+            console.log("🔄 开始处理购物车:", JSON.stringify(cart, null, 2));
+            
+            // 设置时区为东八区
+            await pool.query("SET time_zone = '+08:00'");
+            
             for (const item of cart) {
-                console.log(`📌 尝试存入数据库: userId=${userId}, study_resource_id=${item.id}`);
+                try {
+                    console.log(`📌 准备存入数据:
+                        - userId: ${userId}
+                        - studyResourceId: ${item.id}
+                    `);
 
-                // **查询 study_resources 表，获取正确的 id**
-                const [resource] = await pool.query("SELECT id FROM study_resources WHERE title = ?", [item.name]);
+                    // 直接使用购物车中的 id 作为 study_resource_id，使用 CONVERT_TZ 转换时区
+                    const result = await pool.query(
+                        "INSERT INTO user_study_resources (user_id, study_resource_id, purchase_date) VALUES (?, ?, NOW()) ON DUPLICATE KEY UPDATE purchase_date = NOW()",
+                        [userId, item.id]
+                    );
+                    console.log(`✅ SQL执行结果:`, JSON.stringify(result, null, 2));
 
-                if (resource.length === 0) {
-                    console.warn(`⚠️ 资源未找到: ${item.name}，跳过插入`);
-                    continue;
+                } catch (error) {
+                    console.error(`❌ 记录购买失败:`, error);
+                    throw error;
                 }
-                const studyResourceId = resource[0].id; // ✅ 获取 study_resources.id
-                console.log(`✅ 资源匹配成功，study_resource_id: ${studyResourceId}`);
-
-                await pool.query(
-                    "INSERT INTO user_study_resources (user_id, study_resource_id) VALUES (?, ?) ON DUPLICATE KEY UPDATE purchase_date = NOW()",
-                    [userId, studyResourceId]
-                );
             }
-            console.log("✅ 数据存入完成！");
-        }else{
-            console.warn("⚠️ userId 为空，未存入数据库！");
+            console.log("✅ 所有购买记录处理完成");
+        } else {
+            console.warn("⚠️ 未登录用户，跳过记录购买历史");
         }
-
 
         // **发送订单邮件**
         await sendOrderEmail(name, userEmail, cart, totalPrice);

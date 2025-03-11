@@ -21,17 +21,21 @@ try {
     // 查询用户的订单（购买的学习资源）
     const query = `
         SELECT 
-            usr.study_resource_id, 
-            sr.title AS product,  
-            sr.price AS amount,
-            usr.purchase_date AS date
+            usr.study_resource_id,
+            sr.title,
+            sr.price,
+            sr.type,
+            sr.level,
+            sr.chapter,
+            usr.purchase_date
         FROM user_study_resources usr
-        JOIN study_resources sr ON usr.study_resource_id = sr.id  
+        JOIN study_resources sr ON usr.study_resource_id = sr.id
         WHERE usr.user_id = ?
-        ORDER BY usr.purchase_date DESC;
+        ORDER BY usr.purchase_date DESC
     `;
+    
     const [orders] = await pool.query(query, [userId]);
-
+    console.log("查询到的订单:", orders);
     return res.status(200).json(orders);
     } catch (error) {
     console.error("Order Fetch Error:", error);
