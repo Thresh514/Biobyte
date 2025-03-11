@@ -9,7 +9,7 @@
     
     export const saveCart = (cart) => {
         if (typeof window !== "undefined") {
-        localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("cart", JSON.stringify(cart));
         }
     };
     
@@ -28,6 +28,9 @@
         }
     
         saveCart(cart);
+
+        window.dispatchEvent(new Event("cartAddUpdate"));
+
         return cart;
     };
     
@@ -44,6 +47,9 @@
     export const removeFromCart = (id, option) => {
         let cart = getCart().filter((item) => !(item.id === id && item.option === option));
         saveCart(cart);
+        
+        window.dispatchEvent(new Event("cartRemoveUpdate"));
+
         return cart;
     };
     

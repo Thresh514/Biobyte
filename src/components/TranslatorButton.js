@@ -5,8 +5,10 @@ import { useTranslation } from "../../context/TranslationContext";
 const TranslatorButton = () => {
     const { language, changeLanguage } = useTranslation();
     return (
-        <button className="bg-gray-100/85 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out" onClick={() => changeLanguage(language === "en" ? "zh" : "en")}>
-            <AiOutlineTranslation size={24} />
+        <button 
+            className="bg-gray-400 text-white p-4 rounded-full hover:scale-110 transition duration-300 ease-out" 
+            onClick={() => changeLanguage(language === "en" ? "zh" : "en")}>
+                <AiOutlineTranslation size={24} />
         </button>
     );
 };
