@@ -117,7 +117,7 @@ export default function Navbar() {
                         RESOURCES
                     </button>
                     {/* Dropdown */}
-                    <div className={`absolute top-full right-0 left-0 w-screen z-50 py-2 bg-white 
+                    <div className={`absolute top-full right-0 left-0 w-screen z-50 bg-white 
                         transition-all duration-500 ease-out transform ${
                             isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
                         }`}
@@ -159,8 +159,7 @@ export default function Navbar() {
                             <button className="hover:text-black transition-colors p-2">
                                 {getDisplayName(username) || "User"}
                             </button>
-
-                            <div className={`absolute top-full right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg 
+                            <div className={`absolute top-full right-0 mt-2 w-40 bg-white 
                                 transition-all duration-300 ease-out transform ${
                                     isUserDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
                                 }`}
@@ -171,13 +170,13 @@ export default function Navbar() {
                                     onClick={() => router.push("/dashboard")}
                                     className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                                 >
-                                    Dashboard
+                                    DASHBOARD
                                 </button>
                                 <button
                                     onClick={handleLogout}
                                     className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                                 >
-                                    Logout
+                                    LOGOUT
                                 </button>
                             </div>
                         </div>
