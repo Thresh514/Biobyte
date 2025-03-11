@@ -10,9 +10,9 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {
     const [feedbackOpen, setFeedbackOpen] = useState(false); // 反馈表单的开关状态
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const chatRef = useRef(null);
     const endOfMessagesRef = useRef(null);
     const isOpen = activeComponent === "chatbot"; // 只在 activeComponent === 'chatbot' 时打开
+    const chatRef = useRef(null); 
     const formRef = useRef(null); // 用于检测点击区域
 
     // 监听点击外部关闭聊天框 & 反馈表单
@@ -234,7 +234,7 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {
                     e.stopPropagation();
                     setActiveComponent(isOpen ? null : "chatbot");
                 }}
-                className="bg-gray-100/85 text-black p-4 rounded-full shadow-lg hover:scale-110 transition duration-300 ease-out"
+                className="bg-gray-400 text-white p-4 rounded-full hover:scale-110 transition duration-300 ease-out"
             >
                 <MessageSquare className="w-6 h-6" />
             </button>

@@ -27,7 +27,7 @@ export default function Scrolldown() {
     return (
         <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
             <button 
-                className="bg-white/85 rounded-full p-2 animate-bounce"
+                className="bg-transparent rounded-full p-2 animate-bounce"
                 onClick={scrollToNextSection}
             >
                 <HiOutlineChevronDoubleDown size={40} />

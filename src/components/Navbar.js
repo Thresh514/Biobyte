@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { getCart } from "../lib/cart";
 
 export default function Navbar() {
     const router = useRouter();
@@ -12,6 +13,27 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState(null);
+    const [cartCount, setCartCount] = useState(0);
+    
+    useEffect(() => {
+        const updateCartCount = () => {
+            const cart = getCart() || [];
+            const totalCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            setCartCount(totalCount);
+        };
+    
+        // **监听 `cartAddUpdate` 和 `cartRemoveUpdate` 事件**
+        window.addEventListener("cartAddUpdate", updateCartCount);
+        window.addEventListener("cartRemoveUpdate", updateCartCount);
+    
+        updateCartCount(); // 初始化获取数据
+    
+        return () => {
+            window.removeEventListener("cartAddUpdate", updateCartCount);
+            window.removeEventListener("cartRemoveUpdate", updateCartCount);
+        };
+    }, []);
+    
 
     useEffect(() => {
         const storedUsername = localStorage.getItem("email");
@@ -78,32 +100,32 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-2.5 z-50 bg-white shadow-lg text-gray-800 font-normal">
+        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-2.5 z-30 bg-white text-gray-800 font-normal">
             <div className="mx-screen mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2.5 md:space-x-4">
                     <Link href="/">
-                        <Image src="/whiteicon.svg" alt="logo" width={48} height={48} className="w-12 h-12 md:w-14 md:h-14" />
+                        <Image src="/whiteicon.svg" alt="logo" width={62} height={62} className="w-12 h-12 md:w-20 md:h-20" />
                     </Link>
                     <Link href="/">HOME</Link>
                     <Link href="/about">ABOUT</Link>
                 </div>
                 {/* Dropdown button */}
-                <div className="mx-auto flex justify-center hidden md:flex items-center px-4 bg-transparent"
+                <div className="mx-auto flex justify-center hidden md:flex items-center bg-transparent"
                     onMouseEnter={() => setIsDropdownHovered(true)}
                     onMouseLeave={() => setIsDropdownHovered(false)}>
-                    <button className="hover:text-black transition-colors p-2">
+                    <button className="hover:text-black transition-colors">
                         RESOURCES
                     </button>
                     {/* Dropdown */}
-                    <div className={`absolute top-full right-0 left-0 w-screen z-50 p-6 rounded-md border-b bg-white shadow-xl
+                    <div className={`absolute top-full right-0 left-0 w-screen z-50 py-2 bg-white 
                         transition-all duration-500 ease-out transform ${
                             isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
                         }`}
                     >
-                        <div className="grid grid-cols-2 gap-8 px-24 py-2">
+                        <div className="grid grid-cols-2 gap-8 px-24 pb-6 border-b border-gray-500">
                             {Object.entries(menuItems).map(([category, items]) => (
                                 <div key={category} className="relative">
-                                    <h3 className="font-light text-xl text-gray-700 mb-4 tracking-wider">
+                                    <h3 className="font-light text-lg text-gray-700 mb-4 tracking-wider">
                                         {category}
                                     </h3>
                                     <ul className="space-y-2">
@@ -169,6 +191,9 @@ export default function Navbar() {
                     )}
                     <Link href="/cart">
                         <Image src="/cart.svg" alt="cart" width={28} height={28} />
+                        <span className="absolute top-6 right-6 z-50 text-black text-xs px-2 py-1 rounded-full">
+                            {cartCount}
+                        </span>
                     </Link>
                 </div>
 
@@ -225,7 +250,7 @@ export default function Navbar() {
                                 Login
                             </button>
                         )}
-                        <Link href="/cart" className="mt-2">
+                        <Link href="/cart" className="relative mt-2 block">
                             <Image src="/cart.svg" alt="cart" width={28} height={28} />
                         </Link>
                     </div>

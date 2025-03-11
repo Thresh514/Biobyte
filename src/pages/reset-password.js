@@ -12,7 +12,6 @@ const ResetPassword = () => {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-
   //检查 token 是否存在
   useEffect(() => {
     if (router.isReady && !token) {
@@ -24,7 +23,6 @@ const ResetPassword = () => {
   const isPasswordStrong = (password) => {
     return password.length >= 8 && /[A-Z]/.test(password) && /[0-9]/.test(password);
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,51 +70,71 @@ const ResetPassword = () => {
     <div>
       <SimpleHeader />
       <div className="flex items-center justify-center min-h-screen bg-lightest">
-        <div className="flex flex-col items-center w-full max-w-md p-8 bg-white rounded-lg md:shadow-lg lg:shadow-lg">
-          <h2 className="text-center text-3xl font-semibold mb-6">Reset Password</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block text-sm font-semibold text-gray-700">New Password</label>
+        <div className="flex flex-col items-center w-full max-w-md p-8">
+          <h2 className="text-center text-3xl font-light mb-8">Reset Password</h2>
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="relative w-[350px]">
               <input
                 type="password"
                 name="newPassword"
-                placeholder="Enter new password"
-                className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                id="newPassword"
+                placeholder="New password"
+                className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                            bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 required
                 disabled={isSubmitting}
               />
+              <label
+                htmlFor="newPassword"
+                className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                          peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                          peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                          peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600">
+                NEW PASSWORD
+              </label>
             </div>
-            <div>
-              <label className="block text-sm font-semibold text-gray-700">Confirm Password</label>
+
+            <div className="relative w-[350px]">
               <input
                 type="password"
                 name="confirmPassword"
+                id="confirmPassword"
                 placeholder="Confirm new password"
-                className="w-[300px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                value={confirmPassword}
+                className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                          bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 disabled={isSubmitting}
               />
+              <label
+                htmlFor="confirmPassword"
+                className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                  peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                  peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                  peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600">
+                CONFIRM PASSWORD
+              </label>
             </div>
-            <button
-              type="submit"
-              className={`w-full px-16 py-2.5 text-white text-lg font-bold rounded-md transition duration-300 ${
-                isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-gray-500 hover:bg-gray-600"
-              }`}
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Resetting..." : "Reset Password"}
-            </button>
           </form>
-          {message && <p className="mt-4 font-semibold text-red-500">{message}</p>}
+          <div className="flex justify-center mt-10">
+              <button
+                type="submit"
+                className={`w-auto px-16 py-2 text-white tracking-wider text-xs tracking-widest font-light border-black border hover:bg-opacity-[75%] transition duration-200" ${
+                  isSubmitting ? "bg-opacity-[75%] bg-black cursor-not-allowed" : "bg-black hover:bg-opacity-[75%]"
+                }`}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+              </button>
+          </div>
+          {message && <p className="mt-4 font-light text-sm tracking-wider text-gray-800">{message}</p>}
         </div>
       </div>
       <Footer />
     </div>
   );
-}
+};
 
 export default ResetPassword;
