@@ -100,7 +100,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-2.5 z-30 bg-white text-gray-800 font-normal">
+        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-0 z-30 bg-white bg-opacity-[75%] text-gray-800 font-normal">
             <div className="mx-screen mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2.5 md:space-x-4">
                     <Link href="/">
@@ -117,15 +117,15 @@ export default function Navbar() {
                         RESOURCES
                     </button>
                     {/* Dropdown */}
-                    <div className={`absolute top-full right-0 left-0 w-screen z-50 py-2 bg-white 
+                    <div className={`absolute top-full right-0 left-0 w-screen z-50 bg-white 
                         transition-all duration-500 ease-out transform ${
-                            isDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
+                            isDropdownOpen ? "opacity-75" : "opacity-0 pointer-events-none"
                         }`}
                     >
                         <div className="grid grid-cols-2 gap-8 px-24 pb-6 border-b border-gray-500">
                             {Object.entries(menuItems).map(([category, items]) => (
                                 <div key={category} className="relative">
-                                    <h3 className="font-light text-lg text-gray-700 mb-4 tracking-wider">
+                                    <h3 className="font-normal text-lg text-gray-700 mb-4 tracking-wider">
                                         {category}
                                     </h3>
                                     <ul className="space-y-2">
@@ -133,7 +133,7 @@ export default function Navbar() {
                                             <li key={item.slug}>
                                                 <button
                                                     onClick={() => router.push(`/unit/${item.slug}`)}
-                                                    className="relative text-gray-600 font-light tracking-wider hover:text-black transition-colors 
+                                                    className="relative text-gray-800 font-light tracking-wider hover:text-black transition-colors 
                                                     before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-full before:h-[1.5px] before:bg-gray-600 
                                                     before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
                                                 >
@@ -159,8 +159,7 @@ export default function Navbar() {
                             <button className="hover:text-black transition-colors p-2">
                                 {getDisplayName(username) || "User"}
                             </button>
-
-                            <div className={`absolute top-full right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg 
+                            <div className={`absolute top-full right-0 mt-2 w-40 bg-white 
                                 transition-all duration-300 ease-out transform ${
                                     isUserDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
                                 }`}
@@ -171,13 +170,13 @@ export default function Navbar() {
                                     onClick={() => router.push("/dashboard")}
                                     className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                                 >
-                                    Dashboard
+                                    DASHBOARD
                                 </button>
                                 <button
                                     onClick={handleLogout}
                                     className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                                 >
-                                    Logout
+                                    LOGOUT
                                 </button>
                             </div>
                         </div>

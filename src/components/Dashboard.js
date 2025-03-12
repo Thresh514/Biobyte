@@ -23,23 +23,23 @@ const DashboardComponent = () => {
             localStorage.removeItem("token");
             localStorage.removeItem("token_exp");
             window.location.href = "/login"; // 自动跳转到登录页面
-            return
+            return;
         }
 
         // 获取用户信息
         fetch("/api/user", {
-            method:"GET",
-            headers:{
-                "Authorization":`Bearer ${token}`,
-                "Content-Type":"application/json",
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
             },
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log("User Data:", data);
-            setUser(data);
-        })
-        .catch(err => console.error("User Fetch Error:", err));
+            .then((res) => res.json())
+            .then((data) => {
+                console.log("User Data:", data);
+                setUser(data);
+            })
+            .catch((err) => console.error("User Fetch Error:", err));
 
         // 获取用户订单
         fetch("/api/orders", {
@@ -49,17 +49,17 @@ const DashboardComponent = () => {
                 "Content-Type": "application/json",
             },
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log("Orders Data:", data);
-            setOrders(data);
-        })
-        .catch(err => console.error("Order Fetch Error:", err));
+            .then((res) => res.json())
+            .then((data) => {
+                console.log("Orders Data:", data);
+                setOrders(data);
+            })
+            .catch((err) => console.error("Order Fetch Error:", err));
 
         // 获取用户优惠券
         fetch("/api/coupons")
-            .then(res => res.json())
-            .then(data => setCoupons(data));
+            .then((res) => res.json())
+            .then((data) => setCoupons(data));
 
         // 定时检查 token 是否过期
         const interval = setInterval(() => {
@@ -84,9 +84,9 @@ const DashboardComponent = () => {
         const response = await fetch("/api/change-password", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email: user.email, oldPassword, newPassword })
+            body: JSON.stringify({ email: user.email, oldPassword, newPassword }),
         });
 
         const data = await response.json();
@@ -102,12 +102,12 @@ const DashboardComponent = () => {
 
     const handleResendEmail = async (study_resource_id) => {
         const token = localStorage.getItem("token");
-    
+
         if (!token) {
             alert("You are not logged in!");
             return;
         }
-    
+
         try {
             const response = await fetch("/api/resend-order-email", {
                 method: "POST",
@@ -117,7 +117,7 @@ const DashboardComponent = () => {
                 },
                 body: JSON.stringify({ study_resource_id }),
             });
-    
+
             const data = await response.json();
             if (response.ok) {
                 alert("Order email resent successfully!");
@@ -130,58 +130,44 @@ const DashboardComponent = () => {
         }
     };
 
-    
     return (
-        <div className="px-12 mx-auto max-w-5xl">
-            <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
-            <div className="grid grid-cols-1 md:grid-col-2 gap-4">
-                {/* 个人信息管理 */}
-                <div className="mb-8 p-6 bg-white shadow-md rounded-lg">
-                    <h2 className="text-xl font-semibold mb-4">Personal Information</h2>
-                    {user ? (
-                        <div className="">
-                            <p className="font-semibold text-gray-700">Email Address</p>
-                            <p className="text-gray-500">{user.email}</p>
-                            <div className="flex justify-end items-center">
-                                <button className=" px-3 py-1.5 bg-gray-500 hover:bg-gray-600 text-white rounded" onClick={() => setShowChangePassword(true)}>Change Password</button>
-                            </div>
-                        </div>
-                    ) : (
-                        <p>Loading...</p>
-                    )}
-                </div>
+        <div className="w-full">
+            <div className="relative">
+                <img src="/dashboardbg4.jpg" alt="dashboardbg"></img>
+                <p className="absolute bottom-0 left-8 text-4xl text-black md:text-7xl tracking-wide">DASHBOARD</p>
+            </div>
 
-                {/* 修改密码模态框 */}
-                {showChangePassword && (
-                    <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center p-12">
-                        <div className="bg-white rounded-lg shadow-lg max-w-lg w-auto px-12 py-8">
-                            <h2 className="text-xl font-semibold mb-4">Change Password</h2>
-                            <label className="text-sm text-gray-600 font-semibold">Current password</label>
-                                <input type="password" placeholder="Enter current password" className="w-full p-2 border rounded mb-2" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} />
-                            <label className="text-sm text-gray-600 font-semibold">New password</label>
-                                <input type="password" placeholder="Must be at least 6 Characters" className="w-full p-2 border rounded mb-2" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
-                            <label className="text-sm text-gray-600 font-semibold">Confirm new password</label>
-                                <input type="password" placeholder="Must match password above" className="w-full p-2 border rounded mb-2" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-                            {message && <p className="text-center text-red-500 mt-4">{message}</p>}
-                            <div className="flex justify-end space-x-4 mt-4">
-                                <button className="px-4 py-2 border rounded" onClick={() => { setShowChangePassword(false); setMessage(null); }}>Dismiss</button>
-                                <button className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded" onClick={handleChangePassword}>Confirm</button>
-                            </div>
-                            
+            {/* 修改密码模态框 */}
+            {showChangePassword && (
+                <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center p-12">
+                    <div className="bg-white rounded-lg shadow-lg max-w-lg w-auto px-12 py-8">
+                        <h2 className="text-xl font-semibold mb-4">Change Password</h2>
+                        <label className="text-sm text-gray-600 font-semibold">Current password</label>
+                        <input type="password" placeholder="Enter current password" className="w-full p-2 border rounded mb-2" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} />
+                        <label className="text-sm text-gray-600 font-semibold">New password</label>
+                        <input type="password" placeholder="Must be at least 6 Characters" className="w-full p-2 border rounded mb-2" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
+                        <label className="text-sm text-gray-600 font-semibold">Confirm new password</label>
+                        <input type="password" placeholder="Must match password above" className="w-full p-2 border rounded mb-2" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                        {message && <p className="text-center text-red-500 mt-4">{message}</p>}
+                        <div className="flex justify-end space-x-4 mt-4">
+                            <button className="px-4 py-2 border rounded" onClick={() => { setShowChangePassword(false); setMessage(null); }}>Dismiss</button>
+                            <button className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded" onClick={handleChangePassword}>Confirm</button>
                         </div>
                     </div>
-                )}
-                
-                {/* 订单管理 */}
-                <div className="mb-8 p-6 bg-white shadow-md rounded-lg">
-                    <h2 className="text-xl font-semibold mb-4">Order History</h2>
+                </div>
+            )}
+
+            {/* 订单管理 */}
+            <div className="flex px-24 m-24 space-x-24 items-start">
+                <div className="w-2/3">
+                    <h2 className="text-xl font-light tracking-wider mb-8">Order History</h2>
                     {orders.length > 0 ? (
-                        <ul className="space-y-4">
+                        <div className="grid grid-cols-2 gap-16 w-full">
                             {orders.map((order, index) => (
-                                <li key={`${order.study_resource_id}-${index}`} className="border-b py-4">
-                                    <div className="flex flex-col space-y-2">
-                                        <p className="text-lg font-medium">{order.title}</p>
-                                        <div className="text-sm text-gray-600">
+                                <div key={`${order.study_resource_id}-${index}`} className="">
+                                    <div className="flex flex-col border border-black p-8">
+                                        <p className="text-md font-base tracking-wide">{order.title}</p>
+                                        <div className="text-sm font-light leading-[0.5rem] mt-4">
                                             <p>Type: {order.type}</p>
                                             <p>Level: {order.level}</p>
                                             <p>Chapter: {order.chapter || 'Full Version'}</p>
@@ -190,38 +176,54 @@ const DashboardComponent = () => {
                                         </div>
                                         <button
                                             onClick={() => handleResendEmail(order.study_resource_id)}
-                                            className="mt-2 px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 w-fit"
+                                            className="w-3/5 mt-6 px-3 py-1 bg-black text-white text-sm tracking-wider font-light hover:bg-opacity-[75%] "
                                         >
-                                            Resend Order Email
+                                            RESEND ORDER EMAIL
                                         </button>
                                     </div>
-                                </li>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     ) : (
-                        <p>No order record in the system</p>
+                        <p className="text-sm font-light mt-2">No order record in the system</p>
                     )}
                 </div>
 
-                {/* 优惠券功能 */}
-                <div className="mb-8 p-6 bg-white shadow-md rounded-lg">
-                    <h2 className="text-xl font-semibold mb-4">My Coupon</h2>
-                    {coupons.length > 0 ? (
-                        <ul>
-                            {coupons.map(coupon => (
-                                <li key={coupon.id} className="border-b py-2">
-                                    <p><strong>优惠码：</strong>{coupon.code}</p>
-                                    <p><strong>折扣：</strong>{coupon.discount}</p>
-                                    <p><strong>有效期：</strong>{coupon.expiry_date}</p>
-                                    <p><strong>状态：</strong>{coupon.status}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <p>No available coupon right now</p>
-                    )}
+                <div className="flex flex-col w-1/3 space-y-24">
+                    {/* 个人信息管理 */}
+                    <div className="bg-white">
+                        <h2 className="text-xl font-light tracking-wider">Personal Information</h2>
+                        {user ? (
+                            <div className="space-y-4">
+                                <p className="font-light text-md text-gray-700 mt-2">Email Address</p>
+                                <p className="text-black font-light text-sm">{user.email}</p>
+                                <div className="flex justify-start items-center pt-6">
+                                    <button className="px-3 py-1.5 bg-black font-light tracking-wide text-sm hover:bg-opacity-[75%] text-white" onClick={() => setShowChangePassword(true)}>CHANGE PASSWORD</button>
+                                </div>
+                            </div>
+                        ) : (
+                            <p>Loading...</p>
+                        )}
+                    </div>
+                    {/* Coupon */}
+                    <div className="bg-white space-y-2">
+                        <h2 className="text-xl font-light tracking-wider">My Coupon</h2>
+                        {coupons.length > 0 ? (
+                            <ul>
+                                {coupons.map((coupon) => (
+                                    <li key={coupon.id} className="border-b py-2">
+                                        <p><strong>优惠码：</strong>{coupon.code}</p>
+                                        <p><strong>折扣：</strong>{coupon.discount}</p>
+                                        <p><strong>有效期：</strong>{coupon.expiry_date}</p>
+                                        <p><strong>状态：</strong>{coupon.status}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className="text-sm font-light">No available coupon right now</p>
+                        )}
+                    </div>
                 </div>
-
             </div>
         </div>
     );
