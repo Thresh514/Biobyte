@@ -12,9 +12,9 @@ export default function HeroSection() {
                 <h1 className="absolute top-1/3 text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-darkest">
                     {t("welcome")}
                 </h1>
-                <div className='flex justify-center py-20 bg-black w-full'>
-                    <p className='w-1/3 text-red-600 text-3xl'>picture</p>
-                    <p className="w-2/3 px-8 text-md font-light text-white sm:text-lg md:text-xl lg:text-2xl text-darker mb-6">
+                <div className='flex py-20 bg-black w-full'>
+                    <p className='w-1/4 text-red-600 text-3xl justify-center'>picture</p>
+                    <p className="w-3/4 text-start px-8 text-md font-light text-white sm:text-lg md:text-xl lg:text-2xl text-darker mb-6">
                         {t("description")}
                     </p>
                 </div>

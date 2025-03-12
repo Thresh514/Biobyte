@@ -134,7 +134,7 @@ const DashboardComponent = () => {
         <div className="w-full">
             <div className="relative">
                 <img src="/dashboardbg4.jpg" alt="dashboardbg"></img>
-                <p className="absolute bottom-0 left-8 text-4xl text-white md:text-7xl tracking-wide">DASHBOARD</p>
+                <p className="absolute bottom-0 left-8 text-4xl text-black md:text-7xl tracking-wide">DASHBOARD</p>
             </div>
 
             {/* 修改密码模态框 */}
