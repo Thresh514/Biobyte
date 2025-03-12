@@ -22,8 +22,8 @@ export default function Home() {
         <meta name="description" content="A platform for educational resources." />
       </Head>
       <div><Navbar/></div>
-      <main className="pt-16 flex flex-col items-center justify-center space-y-8">
-        <div><HeroSection /></div>
+      <main className="flex flex-col items-center justify-center space-y-32">
+        <div><HeroSection/></div>
         <div><ResourceCategories/></div>
         <div className="hidden sm:block"><SuccessStories/></div>
       </main>

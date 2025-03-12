@@ -34,12 +34,12 @@ const ResourceCategories = () => {
     ];
 
     return (
-        <section id= "resource-categories" className="py-16 bg-white px-16 md:px-12 scroll-mt-16">
-        <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-darker mb-16">
-                Explore Our Resource Categories
+        <section id= "resource-categories" className="bg-white scroll-mt-12">
+        <div className="flex justify-center items-center">
+            <h2 className="w-2/5 text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-normal tracking-wider text-darker mb-16">
+                BEST SELLERS
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-10 w-3/5">
                 {categories.map((category, index) => (
                     <div
                         key={index}
@@ -56,7 +56,6 @@ const ResourceCategories = () => {
                     </div>
                 ))}
             </div>
-            <h3 className="text-xl text-gray-700 mt-12">...and more to come!</h3>
         </div>
     </section>
     );
