@@ -1,8 +1,8 @@
-import { useEffect, useState, memo, useCallback } from "react";
+import { useEffect, useState, memo, useCallback, useRef } from "react";
 import { useRouter } from "next/router";
 import { addToCart, saveCart, getCart } from "../lib/cart.js";
 
-const ProductDetail = memo(({ title, description, image, price, type, options, file_path, currentUrl }) => {
+const ProductDetail = memo(({ title, description, image, image1, image2, price, type, options, file_path, currentUrl }) => {
     const router = useRouter();
     const [selectedOption, setSelectedOption] = useState(null);
     const [totalPrice, setTotalPrice] = useState(price || 0);
@@ -11,6 +11,100 @@ const ProductDetail = memo(({ title, description, image, price, type, options, f
     const [showToast, setShowToast] = useState(false);
     const [fadeOut, setFadeOut] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const scrollContainerRef = useRef(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+    const resetTimerRef = useRef(null);
+
+    // 创建图片数组
+    const images = [
+        image || '/default-product.jpg',
+        image1 || image || '/default-product.jpg',
+        image2 || image || '/default-product.jpg'
+    ].filter(Boolean);
+
+    // 重置到第一张图片
+    const resetToFirstImage = useCallback(() => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTo({
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+    }, []);
+
+    // 重置计时器
+    const resetTimer = useCallback(() => {
+        if (resetTimerRef.current) {
+            clearTimeout(resetTimerRef.current);
+        }
+        resetTimerRef.current = setTimeout(() => {
+            resetToFirstImage();
+        }, 5000);
+    }, [resetToFirstImage]);
+
+    // 处理用户交互
+    const handleUserInteraction = useCallback(() => {
+        resetTimer();
+    }, [resetTimer]);
+
+    // 初始化重置计时器
+    useEffect(() => {
+        resetTimer();
+        return () => {
+            if (resetTimerRef.current) {
+                clearTimeout(resetTimerRef.current);
+            }
+        };
+    }, [resetTimer]);
+
+    // 处理鼠标按下事件
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+        setScrollLeft(scrollContainerRef.current.scrollLeft);
+        handleUserInteraction();
+    };
+
+    // 处理鼠标移动事件
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - scrollContainerRef.current.offsetLeft;
+        const walk = (x - startX) * 2;
+        scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+        handleUserInteraction();
+    };
+
+    // 处理鼠标释放事件
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    // 处理滚轮滚动
+    const handleWheel = useCallback((e) => {
+        handleUserInteraction();
+    }, [handleUserInteraction]);
+
+    // 监听滚轮事件
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+        if (container) {
+            container.addEventListener('wheel', handleWheel, { passive: true });
+            return () => {
+                container.removeEventListener('wheel', handleWheel);
+            };
+        }
+    }, [handleWheel]);
+
+    // 初始化滚动位置
+    useEffect(() => {
+        if (scrollContainerRef.current) {
+            // 设置初始位置为第一张图片
+            scrollContainerRef.current.scrollLeft = 0;
+        }
+    }, []);
 
     // 初始化选项
     useEffect(() => {
@@ -187,15 +281,52 @@ const ProductDetail = memo(({ title, description, image, price, type, options, f
     return (
         <div className="max-w-7xl mx-auto p-4 md:p-0">
             {/* 第一部分：商品主要信息 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pb-32">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pb-32">
                 {/* 左侧商品图片 */}
-                <div className="flex justify-center p-6">
-                    <div className="relative">
-                        <img 
-                            src={selectedOption ? selectedOption.image : image} 
-                            alt={title} 
-                            className={`w-[500px] h-[530px] transition-opacity duration-300 ${isLoading ? 'opacity-50' : 'opacity-100'}`}
-                        />
+                <div className="flex items-center justify-center">
+                    <div className="relative w-[580px] h-[770px] bg-white overflow-hidden">
+                        <div 
+                            ref={scrollContainerRef}
+                            className="overflow-x-scroll scrollbar-hide absolute inset-0"
+                            onMouseDown={handleMouseDown}
+                            onMouseMove={handleMouseMove}
+                            onMouseUp={handleMouseUp}
+                            onMouseLeave={handleMouseUp}
+                            onTouchStart={handleUserInteraction}
+                            onTouchMove={handleUserInteraction}
+                            style={{
+                                cursor: isDragging ? 'grabbing' : 'grab',
+                                userSelect: 'none',
+                                scrollBehavior: 'smooth',
+                                '-webkit-overflow-scrolling': 'touch',
+                                scrollbarWidth: 'none',  /* Firefox */
+                                '-ms-overflow-style': 'none',  /* IE and Edge */
+                            }}
+                        >
+                            <style jsx global>{`
+                                .scrollbar-hide::-webkit-scrollbar {
+                                    display: none;
+                                }
+                                .scrollbar-hide {
+                                    -ms-overflow-style: none;
+                                    scrollbar-width: none;
+                                }
+                            `}</style>
+                            <div className="flex" style={{ width: `${images.length * 580}px` }}>
+                                {images.map((img, index) => (
+                                    <img
+                                        key={index}
+                                        src={img}
+                                        alt={`${title} view ${index + 1}`}
+                                        className="w-[580px] h-[770px] object-contain flex-shrink-0"
+                                        draggable="false"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 font-light tracking-wide text-gray-600">
+                            Swipe Image to View Details
+                        </p>
                         {isLoading && (
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
@@ -205,7 +336,7 @@ const ProductDetail = memo(({ title, description, image, price, type, options, f
                 </div>
 
                 {/* 右侧商品详情 */}
-                <div className="mt-16">
+                <div className="mt-32">
                     <p key={selectedOption?.title || title} className="text-2xl font-normal">
                         {selectedOption?.title || title}
                     </p>
@@ -257,12 +388,6 @@ const ProductDetail = memo(({ title, description, image, price, type, options, f
                     </div>
                     
                 </div>
-            </div>
-
-            {/* 第二部分：商品大图 & 更多描述 */}
-            <div className="py-10">
-                <h2 className="text-2xl font-bold mb-4 border-b border-gray-300">Product Description</h2>
-                
             </div>
 
             {/* Toast 通知 */}

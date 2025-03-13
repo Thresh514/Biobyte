@@ -9,25 +9,52 @@ export default function ChapterDetail() {
     const router = useRouter();
     const { id } = router.query;
     const [course, setCourse] = useState(null);
+    const [currentPath, setCurrentPath] = useState("");
+
+    // 获取资源类型的辅助函数
+    const getResourceType = (path) => {
+        if (path.includes('syllabus-analysis')) return 'Syllabus Analysis';
+        if (path.includes('mindmap')) return 'Mindmap';
+        return null;
+    };
 
     useEffect(() => {
         if (!router.isReady) return;
 
-        // 如果是通过 shallow routing 切换章节，不重新获取数据
-        if (router._shallow) {
-            console.log("🔄 Shallow routing, 跳过数据获取");
+        const title = decodeURIComponent(id || "");
+        console.log("🔍 当前 URL:", title);
+        console.log("🔄 当前路径:", router.asPath);
+
+        // 检查资源类型是否改变
+        const currentType = getResourceType(currentPath);
+        const newType = getResourceType(router.asPath);
+
+        // 如果类型改变，强制刷新页面
+        if (currentType && newType && currentType !== newType) {
+            console.log("🔄 资源类型改变，强制刷新页面");
+            window.location.href = router.asPath;
             return;
         }
-        
-        const title = decodeURIComponent(id || "");
-        console.log("🔍 原始 URL:", title);
 
+        // 检查路径是否改变
+        if (currentPath === router.asPath) {
+            console.log("🔄 路径未改变，跳过数据获取");
+            return;
+        }
+
+        // 更新当前路径
+        setCurrentPath(router.asPath);
+        
         // 处理 URL 格式
         let queryTitle = title;
         if (title === 'as-syllabus-analysis') {
             queryTitle = 'AS Syllabus Analysis';
         } else if (title === 'a2-syllabus-analysis') {
             queryTitle = 'A2 Syllabus Analysis';
+        } else if (title === 'as-mindmap') {
+            queryTitle = 'AS Mindmap';
+        } else if (title === 'a2-mindmap') {
+            queryTitle = 'A2 Mindmap';
         }
 
         console.log("🔍 处理后的资源标题:", queryTitle);
@@ -47,8 +74,9 @@ export default function ChapterDetail() {
             })
             .catch((error) => {
                 console.error("❌ 错误:", error);
+                // 错误处理：可以设置一个错误状态或显示错误消息
             });
-    }, [router.isReady, id]);
+    }, [router.isReady, id, router.asPath]);
 
     // 使用 useMemo 缓存渲染内容
     const content = useMemo(() => {
@@ -64,6 +92,7 @@ export default function ChapterDetail() {
                         <Unit 
                             {...course}
                             currentUrl={router.asPath}
+                            key={router.asPath} // 添加 key 属性以强制组件重新渲染
                         />
                     )}
                 </main>

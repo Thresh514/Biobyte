@@ -104,7 +104,10 @@ export default async function handler(req, res) {
                 title: row.title,
                 type: row.type,
                 level: row.level,
-                chapter: row.chapter
+                chapter: row.chapter,
+                image: row.image,
+                image1: row.image1,
+                image2: row.image2
             })), null, 2));
         }
 
@@ -145,6 +148,8 @@ export default async function handler(req, res) {
                 file_path: row.file_path || "",
                 description: row.description || "",
                 image: row.image || "/default.jpg",
+                image1: row.image1 || row.image || "/default.jpg",
+                image2: row.image2 || row.image || "/default.jpg",
                 price: row.price ? parseFloat(row.price) : 0.00,
             }));
         }
@@ -158,6 +163,8 @@ export default async function handler(req, res) {
             level: rows[0].level,
             file_path: rows[0].file_path || "No file available",
             image: rows[0].image || "/default.jpg",
+            image1: rows[0].image1 || rows[0].image || "/default.jpg",
+            image2: rows[0].image2 || rows[0].image || "/default.jpg",
             price: rows[0].price ? parseFloat(rows[0].price) : 0.00,
             options: options,
         };
