@@ -83,7 +83,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
                         <div className="flex flex-col justify-center tracking-wider p-20 mr-32 space-y-8">
                             <h3 className="text-2xl font-light ">Kunyu Zheng</h3>
                             <p className="text-sm mt-2 font-light italic">Backend Developer</p>
-                            <p className="text-sm font-light">Email: tonytudaodao@gmail.com</p>
+                            <p className="text-sm font-light">Email: zzzzky999@gmail.com</p>
                             <div className="flex space-x-8">
                                 <a href="/" target="_blank">
                                     <img src="linkedin.svg" alt="linkedin" className="bg-white w-12 h-12 rounded-lg hover:scale-105 transition duration-300"></img>

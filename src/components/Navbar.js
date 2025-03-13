@@ -190,7 +190,7 @@ export default function Navbar() {
                     )}
                     <Link href="/cart">
                         <Image src="/cart.svg" alt="cart" width={28} height={28} />
-                        <span className="absolute top-6 right-6 z-50 text-black text-xs px-2 py-1 rounded-full">
+                        <span className="absolute top-4 right-6 z-50 text-black text-xs px-2 py-1 rounded-full">
                             {cartCount}
                         </span>
                     </Link>

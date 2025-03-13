@@ -10,7 +10,7 @@ const SuccessStories = () => {
         setTestimonials(shuffled);
     }, []);
     return (
-        <section id= "SuccessStories" className="py-16 bg-white px-16 md:px-12 scroll-mt-16">
+        <section id= "SuccessStories" className="hidden py-16 bg-white px-16 md:px-12 scroll-mt-16">
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-3xl font-semibold text-darker mb-12">User Reviews</h2>
         

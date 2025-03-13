@@ -44,14 +44,14 @@ const ResourceCategories = () => {
 
     return (
         <section id="resource-categories" className="bg-white scroll-mt-12 py-40 px-16">
-            <div className="flex">
-                <div className='w-1/2 flex-col space-y-12'>
+            <div className="flex space-x-24">
+                <div className='w-1/3 flex-col space-y-12'>
                     <h2 className="text-2xl mt-12 sm:text-3xl md:text-4xl lg:text-7xl items-start justify-start font-normal tracking-wide text-darker">
                         Best Sellers
                     </h2>
                     <p>Transform your home or office with our gorgeous <br></br> best selling seasonal arrangements.</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 md:gap-10 w-1/2">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 md:gap-12 w-2/3">
                     {products.map((product, index) => (
                         <div
                             key={product.id}
@@ -61,7 +61,7 @@ const ResourceCategories = () => {
                             <img
                                 src={product.image || '/default-product.jpg'}
                                 alt={product.title}
-                                className="w-full w-[300px] h-[450px] object-cover mb-4"
+                                className="w-full w-[400px] h-[400px] object-cover mb-3 object-contain border border-black"
                             />
                             <button
                                 className='absolute bottom-24 left-16 bg-black text-xs text-white font-normal tracking-wide hidden group-hover:block transition-opacity duration-300 p-4'
