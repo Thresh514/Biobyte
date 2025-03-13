@@ -1,6 +1,7 @@
 import { useEffect, useState, memo, useCallback, useRef } from "react";
 import { useRouter } from "next/router";
 import { addToCart, saveCart, getCart } from "../lib/cart.js";
+import Image from 'next/image';
 
 const ProductDetail = memo(({ title, description, image, image1, image2, price, type, options, file_path, currentUrl }) => {
     const router = useRouter();
@@ -314,13 +315,17 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
                             `}</style>
                             <div className="flex" style={{ width: `${images.length * 580}px` }}>
                                 {images.map((img, index) => (
-                                    <img
-                                        key={index}
-                                        src={img}
-                                        alt={`${title} view ${index + 1}`}
-                                        className="w-[580px] h-[770px] object-contain flex-shrink-0"
-                                        draggable="false"
-                                    />
+                                    <div key={index} className="relative w-[580px] h-[770px] flex-shrink-0">
+                                        <Image
+                                            src={img}
+                                            alt={`${title} view ${index + 1}`}
+                                            fill
+                                            quality={80}
+                                            priority={index === 0}
+                                            className="object-contain"
+                                            draggable={false}
+                                        />
+                                    </div>
                                 ))}
                             </div>
                         </div>

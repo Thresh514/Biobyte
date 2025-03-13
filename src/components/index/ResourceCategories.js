@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const ResourceCategories = () => {
     const router = useRouter();
@@ -43,8 +44,8 @@ const ResourceCategories = () => {
     };
 
     return (
-        <section id="resource-categories" className="bg-white scroll-mt-12 py-40 px-16">
-            <div className="flex space-x-24">
+        <section id="resource-categories" className="bg-white scroll-mt-12 py-24">
+            <div className="flex space-x-48">
                 <div className='w-1/3 flex-col space-y-12'>
                     <h2 className="text-2xl mt-12 sm:text-3xl md:text-4xl lg:text-7xl items-start justify-start font-normal tracking-wide text-darker">
                         Best Sellers
@@ -55,16 +56,20 @@ const ResourceCategories = () => {
                     {products.map((product, index) => (
                         <div
                             key={product.id}
-                            className="relative w-full h-auto cursor-pointer bg-white group"
+                            className="relative cursor-pointer bg-white group"
                             onClick={() => handleProductClick(product)}
                         >
-                            <img
-                                src={product.image || '/default-product.jpg'}
-                                alt={product.title}
-                                className="w-full w-[400px] h-[400px] object-cover mb-3 object-contain border border-black"
-                            />
+                            <div className="w-full h-full object-cover mb-3 object-contain">
+                                <Image
+                                    src={product.image || '/default-product.jpg'}
+                                    alt={product.title}
+                                    fill
+                                    quality={80}
+                                    className="object-contain"
+                                />
+                            </div>
                             <button
-                                className='absolute bottom-24 left-16 bg-black text-xs text-white font-normal tracking-wide hidden group-hover:block transition-opacity duration-300 p-4'
+                                className='absolute bottom-6 left-12 bg-black text-xs text-white font-normal tracking-wide hidden group-hover:block transition-opacity duration-300 p-3'
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     handleProductClick(product);

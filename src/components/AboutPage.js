@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import Image from 'next/image';
 
 const AboutPage = () => {
     useEffect(() => {
@@ -52,44 +53,92 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
                 <p className="text-4xl md:text-7xl mb-4 ml-8">Our Team</p>
                 <div className="bg-black bg-opacity-[88%] py-32 flex flex-col">
                     <motion.div
-                        initial={{ opacity: 0, x: 500 }} // 初始位置（右侧）
-                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: 500 }} // 结束位置（滑入）
+                        initial={{ opacity: 0, x: 500 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: 500 }}
                         transition={{ duration: 1.5, ease: "easeOut" }}
                         className="flex items-center justify-center text-white"
                     >
-                        <img src="team1.jpg" alt="Team Member1" className="w-64 h-64 object-cover rounded-sm" />
+                        <div className="relative w-64 h-64">
+                            <Image 
+                                src="/team1.jpg" 
+                                alt="Team Member1" 
+                                fill
+                                quality={80}
+                                className="object-cover rounded-sm"
+                            />
+                        </div>
                         <div className="flex flex-col justify-center tracking-wider p-20 ml-32 space-y-8">
                             <h3 className="text-2xl font-light ">Jiayong Tu</h3>
                             <p className="text-sm mt-2 font-light italic">Frontend Developer</p>
                             <p className="text-sm mt-2 font-light">Email: tonytudaodao@gmail.com</p>
                             <div className="flex space-x-8">
                                 <a href="https://www.linkedin.com/in/jiayongtu/" target="_blank">
-                                    <img src="linkedin.svg" alt="linkedin" className="bg-white w-12 h-12 rounded-lg hover:scale-105 transition duration-300"></img>
+                                    <div className="relative w-12 h-12">
+                                        <Image 
+                                            src="/linkedin.svg" 
+                                            alt="linkedin" 
+                                            fill
+                                            quality={80}
+                                            className="bg-white rounded-lg hover:scale-105 transition duration-300"
+                                        />
+                                    </div>
                                 </a>
                                 <a href="https://github.com/Thresh514" target="_blank">
-                                    <img src="github.svg" alt="github" className="bg-white w-12 h-12 rounded-lg hover:scale-105 transition duration-300"></img>
+                                    <div className="relative w-12 h-12">
+                                        <Image 
+                                            src="/github.svg" 
+                                            alt="github" 
+                                            fill
+                                            quality={80}
+                                            className="bg-white rounded-lg hover:scale-105 transition duration-300"
+                                        />
+                                    </div>
                                 </a>
                             </div>
                         </div>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: -500 }} // 初始位置（左侧）
-                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: -500 }} // 结束位置（滑入）
+                        initial={{ opacity: 0, x: -500 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: -500 }}
                         transition={{ duration: 1.5, ease: "easeOut" }}
                         className="flex items-center justify-center text-white flex-row-reverse"
                     >
-                        <img src="team2.jpg" alt="Team Member2" className="w-64 h-64 object-cover rounded-sm" />
+                        <div className="relative w-64 h-64">
+                            <Image 
+                                src="/team2.jpg" 
+                                alt="Team Member2" 
+                                fill
+                                quality={80}
+                                className="object-cover rounded-sm"
+                            />
+                        </div>
                         <div className="flex flex-col justify-center tracking-wider p-20 mr-32 space-y-8">
                             <h3 className="text-2xl font-light ">Kunyu Zheng</h3>
                             <p className="text-sm mt-2 font-light italic">Backend Developer</p>
                             <p className="text-sm font-light">Email: zzzzky999@gmail.com</p>
                             <div className="flex space-x-8">
                                 <a href="/" target="_blank">
-                                    <img src="linkedin.svg" alt="linkedin" className="bg-white w-12 h-12 rounded-lg hover:scale-105 transition duration-300"></img>
+                                    <div className="relative w-12 h-12">
+                                        <Image 
+                                            src="/linkedin.svg" 
+                                            alt="linkedin" 
+                                            fill
+                                            quality={80}
+                                            className="bg-white rounded-lg hover:scale-105 transition duration-300"
+                                        />
+                                    </div>
                                 </a>
                                 <a href="/" target="_blank">
-                                    <img src="github.svg" alt="github" className="bg-white w-12 h-12 rounded-lg hover:scale-105 transition duration-300"></img>
+                                    <div className="relative w-12 h-12">
+                                        <Image 
+                                            src="/github.svg" 
+                                            alt="github" 
+                                            fill
+                                            quality={80}
+                                            className="bg-white rounded-lg hover:scale-105 transition duration-300"
+                                        />
+                                    </div>
                                 </a>
                             </div>
                         </div>

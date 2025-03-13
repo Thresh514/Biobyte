@@ -4,6 +4,7 @@
     import { useRouter } from "next/router";
     import { getCart, updateQuantity, removeFromCart, clearCart } from "../lib/cart";
     import Navbar from "../components/Navbar";
+    import Image from 'next/image';
 
     export default function Cart() {
         const [cart, setCart] = useState([]);
@@ -45,11 +46,15 @@
                                 {cart.map((item) => (
                                     <div key={`${item.id}-${item.option}`} className="grid grid-cols-3 gap-2 items-center border-b py-8">
                                     {/* 商品图片 */}
-                                    <img 
-                                        src={item.image} 
-                                        alt={item.name} 
-                                        className="w-[150px] h-[200px] object-cover"
-                                    />
+                                    <div className="relative w-[150px] h-[200px]">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.name}
+                                            fill
+                                            quality={80}
+                                            className="object-contain"
+                                        />
+                                    </div>
                                 
                                     {/* 商品信息 */}
                                     <div className="flex flex-col space-y-2">

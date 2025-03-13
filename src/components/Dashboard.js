@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Image from 'next/image';
 
 const DashboardComponent = () => {
     const [user, setUser] = useState(null);
@@ -132,8 +133,15 @@ const DashboardComponent = () => {
 
     return (
         <div className="w-full">
-            <div className="relative">
-                <img src="/dashboardbg4.jpg" alt="dashboardbg"></img>
+            <div className="relative h-[500px]">
+                <Image 
+                    src="/dashboardbg4.jpg" 
+                    alt="dashboardbg" 
+                    fill
+                    quality={80}
+                    priority
+                    className="object-cover"
+                />
                 <p className="absolute bottom-0 left-8 text-4xl text-black md:text-7xl tracking-wide">DASHBOARD</p>
             </div>
 
