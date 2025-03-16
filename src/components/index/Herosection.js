@@ -8,7 +8,7 @@ export default function HeroSection() {
         <section id="herosection" className="relative bg-transparent text-darker h-screen mb-40 scroll-mt-16">
             {/* 内容 */}
             <div className="mt-32 relative z-10 flex flex-col items-center justify-center h-full text-center w-full">
-                <img src="/indexbg.jpeg" alt='indexbg' className='bg-opacity-[40%] bg-gray-300'></img>
+                <img src="/indexbg-compress.jpeg" alt='indexbg' className='bg-opacity-[40%] bg-gray-300'></img>
                 <h1 className="absolute top-1/3 text-black tracking-wider font-normal text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-bold text-darkest">
                     {t("welcome")}
                 </h1>

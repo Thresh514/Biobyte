@@ -19,7 +19,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
             {/* Hero Section */}
             <section className="text-darkest sm:py-32">
                 <p className="text-4xl md:text-7xl mb-4 ml-8">About Us</p>
-                <img src="aboutbg.jpg" alt="About Background" />
+                <img src="aboutbg-compress.jpg" alt="About Background" />
             </section>
 
             {/* Our Mission Section */}
