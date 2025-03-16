@@ -135,7 +135,7 @@ const DashboardComponent = () => {
         <div className="w-full">
             <div className="relative h-[500px]">
                 <Image 
-                    src="/dashboardbg4.jpg" 
+                    src="/dashboardbg4-compress.jpg" 
                     alt="dashboardbg" 
                     fill
                     quality={80}
