@@ -139,10 +139,12 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
 
     // 更新价格
     useEffect(() => {
-        if (selectedOption && selectedOption.price !== totalPrice) {
+        if (selectedOption) {
             setTotalPrice(selectedOption.price);
+        } else {
+            setTotalPrice(price || 0);
         }
-    }, [selectedOption, totalPrice]);
+    }, [selectedOption, price]);
 
     // 处理选项切换
     const handleOptionChange = useCallback(async (option) => {
