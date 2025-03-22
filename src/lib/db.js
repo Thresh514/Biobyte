@@ -9,6 +9,5 @@ export const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   connectTimeout: 10000, // 设置连接超时为10秒
-  acquireTimeout: 10000, // 设置获取连接的超时为10秒
   queueLimit: 10
 });

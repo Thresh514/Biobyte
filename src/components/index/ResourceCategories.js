@@ -50,7 +50,7 @@ const ResourceCategories = () => {
                     <h2 className="text-2xl mt-12 sm:text-3xl md:text-4xl lg:text-7xl items-start justify-start font-normal tracking-wide text-darker">
                         Best Sellers
                     </h2>
-                    <p>Transform your home or office with our gorgeous <br></br> best selling seasonal arrangements.</p>
+                    <p>Transform your home or office with our gorgeous best selling seasonal arrangements.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 md:gap-12 w-2/3">
                     {products.map((product, index) => (
@@ -69,7 +69,7 @@ const ResourceCategories = () => {
                                 />
                             </div>
                             <button
-                                className='absolute bottom-6 left-12 bg-black text-xs text-white font-normal tracking-wide hidden group-hover:block transition-opacity duration-300 p-3'
+                                className='absolute bottom-6 left-16 bg-black text-xs text-white font-normal tracking-wide hidden group-hover:block transition-opacity duration-300 p-3'
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     handleProductClick(product);
