@@ -113,11 +113,11 @@ export default function Navbar() {
                 <div className="mx-auto flex justify-center hidden md:flex items-center bg-transparent"
                     onMouseEnter={() => setIsDropdownHovered(true)}
                     onMouseLeave={() => setIsDropdownHovered(false)}>
-                    <button className="hover:text-black transition-colors">
+                    <button className="hover:text-black transition-colors py-7">
                         RESOURCES
                     </button>
                     {/* Dropdown */}
-                    <div className={`absolute top-full right-0 left-0 w-screen z-50 bg-white 
+                    <div className={`absolute top-full right-0 left-0 w-screen z-30 bg-white
                         transition-all duration-500 ease-out transform ${
                             isDropdownOpen ? "opacity-75" : "opacity-0 pointer-events-none"
                         }`}

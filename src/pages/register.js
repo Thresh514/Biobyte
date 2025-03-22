@@ -12,6 +12,7 @@ const Register = () => {
   const [verificationCode, setVerificationCode] = useState("");
   const [isCodeSent, setIsCodeSent] = useState(false);
   const [countdown, setCountdown] = useState(0);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const router = useRouter();
 
@@ -49,6 +50,11 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!agreedToTerms) {
+      alert("Please agree to the Terms & Privacy Policy to continue.");
+      return;
+    }
+    
     if (password !== confirmPassword) {
       alert("Passwords do not match");
       return;
@@ -201,6 +207,28 @@ const Register = () => {
                 {countdown > 0 ? `${countdown}s` : "Send"}
               </button>
             </div>
+
+            {/* Terms & Privacy Policy Checkbox */}
+            <div className="flex items-start space-x-2 w-[400px]">
+              <input
+                type="checkbox"
+                id="terms"
+                checked={agreedToTerms}
+                onChange={(e) => setAgreedToTerms(e.target.checked)}
+                className="mt-1"
+              />
+              <label htmlFor="terms" className="text-sm text-gray-600">
+                I agree to the{" "}
+                <a href="/terms" className="underline hover:text-gray-900" target="_blank">
+                  Terms
+                </a>{" "}
+                &{" "}
+                <a href="/privacy" className="underline hover:text-gray-900" target="_blank">
+                  Privacy Policy
+                </a>
+              </label>
+            </div>
+
             <div className="flex w-1/2 pt-2">
               <button
                 type="submit"

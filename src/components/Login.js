@@ -87,7 +87,7 @@ const Login = () => {
                             value={email}
                             className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
                                 bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
-                            placeholder="EMAIL"
+                            placeholder=""
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
@@ -106,10 +106,11 @@ const Login = () => {
                         <div className="relative w-[400px]">
                             <input
                                 type="password"
+                                id="password"
                                 name="password"
                                 className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
-                                bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
-                                placeholder="PASSWORD"
+                                    bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                                placeholder=""
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
@@ -117,14 +118,14 @@ const Login = () => {
                             <label
                                 htmlFor="password"
                                 className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
-                                peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
-                                peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
-                                peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
+                                    peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                                    peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                                    peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
                             >
                                 PASSWORD
                             </label>
                         </div>
-                        <a className="text-sm text-gray-600 mt-2" onClick={handleForgotPasswordClick}>Forgot your password?</a>
+                        <a className="text-sm text-gray-600 mt-2 cursor-pointer hover:underline" onClick={handleForgotPasswordClick}>Forgot your password?</a>
                     </div>
                     <div className="flex flex-col w-1/2 space-y-4 pt-6">
                         <button

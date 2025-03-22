@@ -152,9 +152,12 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
         console.log("🔄 切换到章节:", option.title);
 
         try {
+            // 从当前标题中提取 level（AS 或 A2）
+            const currentLevel = title.startsWith('AS') ? 'as' : 'a2';
+            
             // 构建新的 URL
             const newUrl = option.chapter === "Chapter All"
-                ? `/unit/as-mindmap`
+                ? `/unit/${currentLevel}-mindmap`  // 使用当前 level 构建 URL
                 : `/unit/${option.title}`;
 
             // 同步更新状态和 URL
@@ -172,7 +175,7 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
         } finally {
             setIsLoading(false);
         }
-    }, [isLoading, selectedOption, router]);
+    }, [isLoading, selectedOption, router, title]);
 
     // **查询 study_resources 表，获取正确的 id**
     const getStudyResourceId = async (title) => {
