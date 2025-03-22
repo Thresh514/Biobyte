@@ -215,7 +215,8 @@ const Register = () => {
                 id="terms"
                 checked={agreedToTerms}
                 onChange={(e) => setAgreedToTerms(e.target.checked)}
-                className="mt-1"
+                className="mt-1 accent-black focus:ring-black"
+                required
               />
               <label htmlFor="terms" className="text-sm text-gray-600">
                 I agree to the{" "}
