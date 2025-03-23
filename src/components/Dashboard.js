@@ -13,6 +13,11 @@ const DashboardComponent = () => {
     const [message, setMessage] = useState("");
     const router = useRouter();
 
+    // 添加密码强度验证
+    const isPasswordStrong = (password) => {
+        return password.length >= 8 && /[A-Z]/.test(password) && /[0-9]/.test(password);
+    };
+
     useEffect(() => {
         const token = localStorage.getItem("token");
         console.log("Token:", token);
@@ -77,27 +82,42 @@ const DashboardComponent = () => {
     }, []);
 
     const handleChangePassword = async () => {
-        if (newPassword !== confirmPassword) {
-            setMessage("Two passwords do not match.");
+        setMessage("");
+
+        if (!isPasswordStrong(newPassword)) {
+            setMessage("Password must be at least 8 characters long, including a number and a capital letter.");
             return;
         }
 
-        const response = await fetch("/api/change-password", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email: user.email, oldPassword, newPassword }),
-        });
+        if (newPassword !== confirmPassword) {
+            setMessage("两次输入的密码不匹配。");
+            return;
+        }
 
-        const data = await response.json();
-        setMessage(data.message);
+        try {
+            const response = await fetch("/api/change-password", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email: user.email, oldPassword, newPassword }),
+            });
 
-        if (response.ok) {
-            setTimeout(() => {
-                setShowChangePassword(false);
-                setMessage("");
-            }, 2000);
+            const data = await response.json();
+            setMessage(data.message);
+
+            if (response.ok) {
+                setTimeout(() => {
+                    setShowChangePassword(false);
+                    setMessage("");
+                    setOldPassword("");
+                    setNewPassword("");
+                    setConfirmPassword("");
+                }, 2000);
+            }
+        } catch (error) {
+            console.error("Change password error:", error);
+            setMessage("网络错误，请稍后重试。");
         }
     };
 
@@ -147,19 +167,93 @@ const DashboardComponent = () => {
 
             {/* 修改密码模态框 */}
             {showChangePassword && (
-                <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center p-12">
+                <div className="fixed inset-0 bg-gray-300 bg-opacity-50 flex justify-center items-center p-12">
                     <div className="bg-white rounded-lg shadow-lg max-w-lg w-auto px-12 py-8">
-                        <h2 className="text-xl font-semibold mb-4">Change Password</h2>
-                        <label className="text-sm text-gray-600 font-semibold">Current password</label>
-                        <input type="password" placeholder="Enter current password" className="w-full p-2 border rounded mb-2" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} />
-                        <label className="text-sm text-gray-600 font-semibold">New password</label>
-                        <input type="password" placeholder="Must be at least 6 Characters" className="w-full p-2 border rounded mb-2" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
-                        <label className="text-sm text-gray-600 font-semibold">Confirm new password</label>
-                        <input type="password" placeholder="Must match password above" className="w-full p-2 border rounded mb-2" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-                        {message && <p className="text-center text-red-500 mt-4">{message}</p>}
-                        <div className="flex justify-end space-x-4 mt-4">
-                            <button className="px-4 py-2 border rounded" onClick={() => { setShowChangePassword(false); setMessage(null); }}>Dismiss</button>
-                            <button className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded" onClick={handleChangePassword}>Confirm</button>
+                        <h2 className="text-xl font-light tracking-wider mb-8">Change Password</h2>
+                        <div className="space-y-8">
+                            <div className="relative w-[350px]">
+                                <input 
+                                    type="password"
+                                    id="oldPassword"
+                                    value={oldPassword}
+                                    className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                                    bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                                    placeholder="Current Password"
+                                    onChange={(e) => setOldPassword(e.target.value)}
+                                />
+                                <label
+                                    htmlFor="oldPassword"
+                                    className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                                    peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                                    peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                                    peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
+                                >
+                                    Current Password
+                                </label>
+                            </div>
+
+                            <div className="relative w-[350px]">
+                                <input 
+                                    type="password"
+                                    id="newPassword"
+                                    value={newPassword}
+                                    className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                                    bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                                    placeholder="New Password"
+                                    onChange={(e) => setNewPassword(e.target.value)}
+                                />
+                                <label
+                                    htmlFor="newPassword"
+                                    className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                                    peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                                    peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                                    peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
+                                >
+                                    New Password
+                                </label>
+                            </div>
+
+                            <div className="relative w-[350px]">
+                                <input 
+                                    type="password"
+                                    id="confirmPassword"
+                                    value={confirmPassword}
+                                    className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                                    bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                                    placeholder="Confirm New Password"
+                                    onChange={(e) => setConfirmPassword(e.target.value)}
+                                />
+                                <label
+                                    htmlFor="confirmPassword"
+                                    className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                                    peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                                    peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                                    peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
+                                >
+                                    Confirm New Password
+                                </label>
+                            </div>
+                        </div>
+                        {message && <p className="text-center text-red-500 mt-4 text-sm">{message}</p>}
+                        <div className="flex justify-end space-x-4 mt-8">
+                            <button 
+                                className="px-4 py-2 border border-black text-sm font-light tracking-wider hover:bg-gray-100" 
+                                onClick={() => { 
+                                    setShowChangePassword(false); 
+                                    setMessage(""); 
+                                    setOldPassword("");
+                                    setNewPassword("");
+                                    setConfirmPassword("");
+                                }}
+                            >
+                                Cancel
+                            </button>
+                            <button 
+                                className="px-4 py-2 bg-black hover:bg-opacity-75 text-white tracking-wider text-sm font-light" 
+                                onClick={handleChangePassword}
+                            >
+                                Confirm Change
+                            </button>
                         </div>
                     </div>
                 </div>

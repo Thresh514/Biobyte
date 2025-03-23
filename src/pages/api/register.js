@@ -30,19 +30,39 @@ const register = async (req, res) => {
         // 将密码哈希加密
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        // 检查验证码是否匹配
+        // 检查验证码是否存在
         const cleanVerificationCode = String(verificationCode).trim();
         const [verificationCheck] = await pool.query(
+          "SELECT * FROM verification_codes WHERE email = ?",
+          [email]
+        );
+
+        if (verificationCheck.length === 0) {
+          console.log("No verification code found for email:", email);
+          return res.status(400).json({ message: "Please request a verification code first." });
+        }
+
+        // 检查验证码是否正确
+        const [codeCheck] = await pool.query(
+          "SELECT * FROM verification_codes WHERE email = ? AND code = ?",
+          [email, cleanVerificationCode]
+        );
+
+        if (codeCheck.length === 0) {
+          console.log("Invalid verification code for email:", email);
+          return res.status(400).json({ message: "Incorrect verification code." });
+        }
+
+        // 检查验证码是否过期
+        const [expiredCheck] = await pool.query(
           "SELECT * FROM verification_codes WHERE email = ? AND code = ? AND expires_at > NOW()",
           [email, cleanVerificationCode]
         );
 
-        if (verificationCheck.length === 0) {
-          console.log("Verification query result:", verificationCheck);
-          return res.status(400).json({ message: "Invalid or expired verification code." });
+        if (expiredCheck.length === 0) {
+          console.log("Expired verification code for email:", email);
+          return res.status(400).json({ message: "Verification code has expired. Please request a new one." });
         }
-        console.log("Verification Check:", verificationCheck);
-
 
         // 将数据插入到数据库
         const insertQuery = "INSERT INTO users (email, password_hash, role) VALUES (?, ?, ?)";

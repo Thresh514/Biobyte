@@ -16,14 +16,28 @@ export default function Footer() {
                     </div>
 
                     {/* 联系我们 */}
-                    <div className='tracking-wider'>
+                    <div className='tracking-wider space-y-2'>
                         <h3 className="text-sm md:text-md lg:text-lg font-normal mb-2">Contact Us</h3>
                         <ul className="space-y-1 font-light text-gray-600 text-xs sm:text-sm md:text-md lg:text-md">
                             <li><a href="mailto:tonytudaodao@gmail.com" className="hover:text-black">tonytudaodao@gmail.com</a></li>
                             <li><a href="tel:+1(857)205-2207" className="hover:text-black">+1 (857) 205-2207</a></li>
-                            <li><a href="https://www.xiaohongshu.com/user/profile/6492ef0c00000000100361ce?xhsshare=CopyLink&appuid=6492ef0c00000000100361ce&apptime=1741060009&share_id=4a31ae389fb4473ebb8a09fe9af8d01f" className="hover:text-black" target="_blank">Rednote</a></li>
-                            <li><a href="#" className="hover:text-black" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                         </ul>
+                        <div className="flex items-center gap-2">
+                                <a href="https://www.xiaohongshu.com/user/profile/6492ef0c00000000100361ce?xhsshare=CopyLink&appuid=6492ef0c00000000100361ce&apptime=1741060009&share_id=4a31ae389fb4473ebb8a09fe9af8d01f" 
+                                    className="hover:text-black flex items-center gap-2" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    <img src="/xiaohongshu.svg" alt="小红书" className="w-12 h-12 opacity-90" />
+                                </a>
+                                <a href="https://www.instagram.com/biobytegroup/" 
+                                    className="hover:text-black flex items-center gap-2" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    <img src="/instagram.svg" alt="Instagram" className="w-12 h-12 opacity-90" />
+                                </a>
+                        </div>
                     </div>
 
                     {/* 版权声明 */}
