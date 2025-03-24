@@ -3,8 +3,20 @@ import axios from "axios";
 import { MessageSquare, Send } from "lucide-react";
 import { SlEnvolope } from "react-icons/sl"; // 邮件图标
 import { IoClose } from "react-icons/io5"; // 关闭按钮
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import DOMPurify from 'dompurify';
 
-export default function Chatbot({ activeComponent, setActiveComponent }) {
+// XSS防护：清理用户输入
+const sanitizeInput = (input) => {
+    if (typeof input !== 'string') return '';
+    return DOMPurify.sanitize(input.trim(), {
+        ALLOWED_TAGS: [], // 不允许任何HTML标签
+        ALLOWED_ATTR: [] // 不允许任何HTML属性
+    });
+};
+
+export default function Chatbot({ activeComponent, setActiveComponent, user, orderHistory }) {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
     const [feedbackOpen, setFeedbackOpen] = useState(false); // 反馈表单的开关状态
@@ -49,15 +61,19 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {
         }
     }, [messages]);
 
-    // 初始化欢迎消息
+    // 初始化欢迎消息，包含用户名
     useEffect(() => {
-        if (isOpen&&messages.length===0) {
-            setMessages([{ role: "assistant", 
-                content: "您好！我是 BioByte AI 客服，欢迎咨询！我们提供 A-Level 生物学习资料。下单后 10 分钟内通过邮件发送PDF文件哦～如果有其他问题可以随时问我哦！😊"
+        if (isOpen && messages.length === 0) {
+            const welcomeMessage = user ? 
+                `Hi ${user.name}! 👋 Welcome back to BioByte! I can help you with your study materials or answer any questions about your orders. Is there anything specific you'd like to know? 📚` :
+                "Hi! I'm BioByte Agent, happy to help you! 👋 I can tell you about our A-Level biology study materials or answer any other questions you might have.";
+            
+            setMessages([{ 
+                role: "assistant",
+                content: welcomeMessage
             }]);
         }
-    }
-    , [isOpen]);
+    }, [isOpen, user]);
 
     // 监听键盘事件
     const handleKeyDown = (e) => {
@@ -69,36 +85,90 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {
 
     // 发送聊天消息
     const sendMessage = async () => {
-        if (!input.trim()) return;
+        const sanitizedInput = sanitizeInput(input);
+        if (!sanitizedInput) return;
 
-        const newMessages = [...messages, { role: "user", content: input }];
+        const newMessages = [...messages, { role: "user", content: sanitizedInput }];
         setMessages(newMessages);
         setInput("");
 
-        // 显示 "正在等待" 消息
+        // 添加 "Processing..." 消息
         setMessages((prevMessages) => [
             ...prevMessages,
-            { role: "assistant", content: "正在处理中..." },
+            { role: "assistant", content: "Processing..." },
         ]);
 
-
         try {
-            const response = await axios.post("/api/chat", { message: input });
-            setMessages([...newMessages, { role: "assistant", content: response.data.message }]);
+            // 检查是否是询问订单历史的消息
+            const isOrderHistoryQuery = sanitizedInput.toLowerCase().includes('order') && sanitizedInput.toLowerCase().includes('history');
+
+            if (isOrderHistoryQuery && user && orderHistory && orderHistory.length > 0) {
+                // 移除 "Processing..." 消息
+                const filteredMessages = newMessages.filter(msg => msg.content !== "Processing...");
+                
+                // 使用 Markdown 格式化订单历史信息
+                const orderSummary = orderHistory.map(order => 
+                    `### Order Details\n\n` +
+                    `**Product:** ${order.products.join(", ")}\n\n` +
+                    `**Type:** ${order.type}\n\n` +
+                    `**Level:** ${order.level}\n\n` +
+                    `${order.chapter ? `**Chapter:** ${order.chapter}\n\n` : ''}` +
+                    `**Purchase Date:** ${new Date(order.date).toLocaleDateString()}\n\n` +
+                    `**Price:** $${order.price}\n\n` +
+                    `---\n`
+                ).join("\n");
+
+                const response = `### Your Order History 📚\n\n${orderSummary}\nIs there anything specific about these orders you'd like to know? 😊`;
+                
+                setMessages([...filteredMessages, { 
+                    role: "assistant", 
+                    content: response
+                }]);
+            } else {
+                // 发送常规请求
+                const response = await axios.post("/api/chat", { 
+                    message: sanitizedInput,
+                    user: user ? {
+                        id: user.id,
+                        email: sanitizeInput(user.email)
+                    } : null,
+                    orderHistory: orderHistory || []
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-XSS-Protection': '1; mode=block'
+                    }
+                });
+                
+                // 移除 "Processing..." 消息并添加新回复
+                setMessages(messages => {
+                    const filteredMessages = messages.filter(msg => msg.content !== "Processing...");
+                    return [...filteredMessages, { role: "assistant", content: response.data.message }];
+                });
+            }
         } catch (error) {
             console.error("Chatbot error:", error);
+            setMessages(messages => {
+                const filteredMessages = messages.filter(msg => msg.content !== "Processing...");
+                return [...filteredMessages, { 
+                    role: "assistant", 
+                    content: "I apologize, but I encountered an error. Please try again or contact our support team. 😔" 
+                }];
+            });
         }
     };
 
     // 处理反馈表单输入
     const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-        localStorage.setItem("feedback_email", e.target.value);
+        const sanitizedEmail = sanitizeInput(e.target.value);
+        setEmail(sanitizedEmail);
+        localStorage.setItem("feedback_email", sanitizedEmail);
     };
 
     const handleMessageChange = (e) => {
-        setMessage(e.target.value);
-        localStorage.setItem("feedback_message", e.target.value);
+        const sanitizedMessage = sanitizeInput(e.target.value);
+        setMessage(sanitizedMessage);
+        localStorage.setItem("feedback_message", sanitizedMessage);
     };
 
     // 处理反馈提交
@@ -122,111 +192,128 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {
     return (
         <div className="flex flex-col items-end">
             {/* 聊天窗口 */}
-            {isOpen && (
+            <div className={`transform transition-all duration-300 ease-in-out ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-[30px] opacity-0 pointer-events-none'}`}>
                 <div
                     ref={chatRef}
-                    className="bg-white shadow-lg p-4 rounded-lg border border-gray-200 w-[450px] max-w-[92vw] h-[600px] max-h-[65vh] mb-4 flex flex-col overflow-hidden"
+                    className="bg-white p-4 border border-gray-200 w-[450px] max-w-[92vw] h-[600px] max-h-[65vh] mb-4 flex flex-col"
                 >
-                    {/* 标题栏 & 关闭按钮 */}
-                    <div className="flex justify-between items-center pb-2">
-                        <p className="text font-semibold">24/7 Support - Powered by OpenAI</p>
+                    {/* 标题栏 */}
+                    <div className="flex items-center justify-between h-8 mb-4 pb-2">
+                        <h2 className="text-md font-light tracking-wider">24/7 Support - BioByte</h2>
                         <button
                             onClick={() => setActiveComponent(null)}
-                            className="text-gray-500 hover:text-gray-600 transition duration-200"
+                            className="text-black hover:text-gray-600 transition duration-200 flex items-center justify-center h-8 w-8"
                         >
-                            <IoClose size={20} />
+                            <IoClose size={18} />
                         </button>
                     </div>
 
-                    {/* 聊天内容区域 (滚动) */}
-                    <div className="flex-1 overflow-y-auto border-b p-2">
+                    {/* 聊天内容区域 */}
+                    <div className="flex-1 overflow-y-auto py-4 space-y-4">
                         {messages.map((msg, index) => (
-                            <div key={index} className={`flex mb-4 mt-4 ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+                            <div key={index} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                                 <div
-                                    className={`p-3 max-w-[75%] break-words rounded-lg shadow ${
+                                    className={`p-3 max-w-[75%] break-words rounded-lg border tracking-wider ${
                                         msg.role === "user"
-                                            ? "bg-gray-500 text-white text-end self-end"
-                                            : "bg-gray-100 text-black text-start self-start"
-                                    }`}
+                                            ? "bg-black text-white border-black"
+                                            : "bg-white text-black border-black"
+                                    } text-sm font-light markdown-content`}
                                 >
-                                    {msg.content}
+                                    <ReactMarkdown 
+                                        remarkPlugins={[remarkGfm]}
+                                        components={{
+                                            p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
+                                            a: ({node, ...props}) => <a className="text-blue-500 hover:underline" {...props} />,
+                                            ul: ({node, ...props}) => <ul className="list-disc ml-4 mb-2" {...props} />,
+                                            ol: ({node, ...props}) => <ol className="list-decimal ml-4 mb-2" {...props} />,
+                                            li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                                            code: ({node, inline, ...props}) => 
+                                                inline 
+                                                    ? <code className="bg-gray-100 px-1 rounded" {...props} />
+                                                    : <code className="block bg-gray-100 p-2 rounded my-2" {...props} />,
+                                            blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-gray-300 pl-4 my-2" {...props} />,
+                                        }}
+                                    >
+                                        {msg.content}
+                                    </ReactMarkdown>
                                 </div>
                             </div>
                         ))}
                         <div ref={endOfMessagesRef} />
                     </div>
 
-                    {/* 反馈表单 (放入聊天框内部) */}
-                    {feedbackOpen && (
-                        <div
-                            ref={formRef}
-                            className="bg-white p-2.5 rounded-lg w-auto "
-                        >
-                            <div className="flex justify-between items-center mb-2">
-                                <h2 className="text-lg font-semibold">Feedback</h2>
-                                <button
-                                    onClick={() => setFeedbackOpen(false)}
-                                    className="text-gray-500 hover:text-gray-600 transition duration-200"
-                                >
-                                    <IoClose size={20} />
-                                </button>
+                    {/* 固定在底部的输入区域 */}
+                    <div className="mt-auto pt-2 border-t border-black">
+                        {/* 反馈表单 */}
+                        <div className={`transform transition-all duration-1000 ease-in-out overflow-hidden ${feedbackOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                            <div className="mb-4 p-2">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h2 className="text-md font-light tracking-wider">Contact Us</h2>
+                                    <button
+                                        onClick={() => setFeedbackOpen(false)}
+                                        className="text-black hover:text-gray-600 transition duration-200"
+                                    >
+                                        <IoClose size={18} />
+                                    </button>
+                                </div>
+                                <form onSubmit={handleSubmit} className="space-y-3">
+                                    <input
+                                        type="email"
+                                        name="customer_email"
+                                        value={email}
+                                        onChange={handleEmailChange}
+                                        className="w-full p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
+                                        placeholder="Your email address..."
+                                        required
+                                    />
+                                    <textarea
+                                        name="message"
+                                        rows="3"
+                                        value={message}
+                                        onChange={handleMessageChange}
+                                        className="w-full p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
+                                        placeholder="Your message..."
+                                        required
+                                    ></textarea>
+                                    <button
+                                        type="submit"
+                                        className="w-full py-2 border border-black text-sm font-light hover:bg-black hover:text-white transition-all duration-300"
+                                    >
+                                        Send Message
+                                    </button>
+                                </form>
                             </div>
-                            <form onSubmit={handleSubmit}>
-                                <input
-                                    type="email"
-                                    name="customer_email"
-                                    value={email}
-                                    onChange={handleEmailChange}
-                                    className="w-full p-2 border rounded-md"
-                                    placeholder="Your email address..."
-                                    required
-                                />
-                                <textarea
-                                    name="message"
-                                    rows="3"
-                                    value={message}
-                                    onChange={handleMessageChange}
-                                    className="w-full p-2 border rounded-md mt-2"
-                                    placeholder="Leave your feedback here..."
-                                    required
-                                ></textarea>
-                                <button
-                                    type="submit"
-                                    className="bg-gray-500 text-white w-full py-2 rounded-md mt-2 hover:bg-gray-600 transition duration-300"
-                                >
-                                    Send Feedback
-                                </button>
-                            </form>
                         </div>
-                    )}
 
-                    {/* 输入框区域 */}
-                    <div className="flex border-t pt-2 flex-shrink-0 bg-white space-x-2 relative">
-                        {/* 反馈按钮 (放入聊天框左侧) */}
-                        <button
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                setFeedbackOpen(!feedbackOpen);
-                            }}
-                            className="bg-gray-100 hover:bg-gray-200 text-black p-3 rounded-lg"
-                        >
-                            <SlEnvolope className="w-6 h-6" />
-                        </button>
-
-                        <input
-                            type="text"
-                            className="flex-grow p-2 border rounded-md"
-                            value={input}
-                            onChange={(e) => setInput(e.target.value)}
-                            onKeyDown={handleKeyDown}
-                            placeholder="Enter your question..."
-                        />
-                        <button onClick={sendMessage} className="ml-2 bg-gray-500 hover:bg-gray-600 text-white p-3 rounded-md">
-                            <Send className="w-6 h-6" />
-                        </button>
+                        {/* 输入框和按钮 */}
+                        <div className="flex items-center space-x-2">
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setFeedbackOpen(!feedbackOpen);
+                                }}
+                                className="p-2 border border-black hover:bg-black hover:text-white transition-all duration-300"
+                            >
+                                <SlEnvolope className="w-5 h-5" />
+                            </button>
+                            <input
+                                type="text"
+                                className="flex-1 p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
+                                value={input}
+                                onChange={(e) => setInput(e.target.value)}
+                                onKeyDown={handleKeyDown}
+                                placeholder="Enter your question..."
+                            />
+                            <button 
+                                onClick={sendMessage} 
+                                className="p-2 border border-black hover:bg-black hover:text-white transition-all duration-300"
+                            >
+                                <Send className="w-5 h-5" />
+                            </button>
+                        </div>
                     </div>
                 </div>
-            )}
+            </div>
 
             {/* 悬浮按钮 */}
             <button
@@ -234,7 +321,7 @@ export default function Chatbot({ activeComponent, setActiveComponent }) {
                     e.stopPropagation();
                     setActiveComponent(isOpen ? null : "chatbot");
                 }}
-                className="bg-gray-400 text-white p-4 rounded-full hover:scale-110 transition duration-300 ease-out"
+                className="bg-black text-white p-3 rounded-full hover:bg-black hover:text-white transition-all duration-300"
             >
                 <MessageSquare className="w-6 h-6" />
             </button>
