@@ -9,4 +9,3 @@ pm2 restart biobyte       # 重新启动 pm2
 pm2 save                  # 保存 pm2 状态
 nginx -t && systemctl restart nginx  # 确保 Nginx 运行正常
 ```
-`"start": "next start -H 0.0.0.0 -p 3100",`在`var/www/biobyte/package.json`中加上。
