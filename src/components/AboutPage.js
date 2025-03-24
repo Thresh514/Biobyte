@@ -60,7 +60,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
                     >
                         <div className="relative w-64 h-64">
                             <Image 
-                                src="/team1.jpg" 
+                                src="/team11.jpg" 
                                 alt="Team Member1" 
                                 fill
                                 quality={80}
@@ -106,7 +106,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
                     >
                         <div className="relative w-64 h-64">
                             <Image 
-                                src="/team2.jpg" 
+                                src="/team2.jpeg" 
                                 alt="Team Member2" 
                                 fill
                                 quality={80}
@@ -118,7 +118,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
                             <p className="text-sm mt-2 font-light italic">Backend Developer</p>
                             <p className="text-sm font-light">Email: zzzzky999@gmail.com</p>
                             <div className="flex space-x-8">
-                                <a href="/" target="_blank">
+                                <a href="https://www.linkedin.com/in/kunyu-zheng-0153ba348/" target="_blank">
                                     <div className="relative w-12 h-12">
                                         <Image 
                                             src="/linkedin.svg" 
@@ -129,7 +129,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
                                         />
                                     </div>
                                 </a>
-                                <a href="/" target="_blank">
+                                <a href="https://github.com/kyu-z" target="_blank">
                                     <div className="relative w-12 h-12">
                                         <Image 
                                             src="/github.svg" 
