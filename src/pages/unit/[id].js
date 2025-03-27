@@ -87,7 +87,7 @@ export default function ChapterDetail() {
                     <meta name="description" content={course?.description || ""} />
                 </Head>
                 <Navbar />
-                <main className="pt-48 min-h-screen">
+                <main className="pt-32 md:pt-48 min-h-screen">
                     {course && (
                         <Unit 
                             {...course}
