@@ -19,7 +19,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
             {/* Hero Section */}
             <section className="text-darkest relative">
                 <div className="flex items-start">
-                    <h1 className="text-4xl md:text-7xl mb-4 font-normal ml-8 tracking-wide">About Us</h1>
+                    <h1 className="text-4xl md:text-7xl md:mb-4 mb-2 font-normal md:mt-32 md:ml-12 ml-4 tracking-wide">About Us</h1>
                 </div>
                 <div className="relative h-[500px] md:h-screen w-full overflow-hidden">
                     <Image 
@@ -109,7 +109,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
                         <div className="flex flex-col items-center justify-center text-white space-y-8">
                             <div className="relative w-48 h-48">
                                 <Image 
-                                    src="/team2.jpeg" 
+                                    src="/team21.jpg" 
                                     alt="Team Member2" 
                                     fill
                                     quality={80}
@@ -204,7 +204,7 @@ const isInView = useInView(teamRef, { once: true, margin: "-100px 0px" });
                         >
                             <div className="relative w-64 h-64">
                                 <Image 
-                                    src="/team2.jpeg" 
+                                    src="/team21.jpg" 
                                     alt="Team Member2" 
                                     fill
                                     quality={80}
