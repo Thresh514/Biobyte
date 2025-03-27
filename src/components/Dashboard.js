@@ -152,7 +152,7 @@ const DashboardComponent = () => {
     };
 
     return (
-        <div className="w-full">
+        <div className="w-full h-full">
             <div className="relative h-[500px]">
                 <Image 
                     src="/dashboardbg4-compress.jpg" 

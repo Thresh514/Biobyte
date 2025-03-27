@@ -13,7 +13,7 @@ export default function Dashboard() {
     return(
         <div>
             <Navbar />
-            <div className=" min-h-screen">
+            <div className="min-h-screen pb-24">
                 <DashboardComponent />
             </div>
             <Footer />
