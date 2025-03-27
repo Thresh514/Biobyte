@@ -26,43 +26,56 @@ const ResetPassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMessage(""); // 清除之前的消息
 
     if (!token) {
-      setMessage("Invalid or expired reset link.");
+      setMessage("无效或已过期的重置链接。");
       return;
     }
 
     if (newPassword !== confirmPassword) {
-      setMessage("Passwords do not match");
+      setMessage("两次输入的密码不匹配。");
       return;
     }
 
     if (!isPasswordStrong(newPassword)) {
-      setMessage(
-        "Password must be at least 8 characters long and include a number and an uppercase letter."
-      );
+      setMessage("密码必须至少8个字符，包含一个数字和一个大写字母。");
       return;
     }
 
-    setIsSubmitting(true);
+    try {
+      setIsSubmitting(true);
+      setMessage("正在重置密码...");
 
-    // 发送新密码到后端 API
-    const response = await fetch("/api/reset-password", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ token, newPassword }),
-    });
+      // 发送新密码到后端 API
+      const response = await fetch("/api/reset-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token, newPassword }),
+      });
 
-    if (response.ok) {
-      setMessage("Password reset successfully! Redirecting to login...");
-      setTimeout(() => {
-        router.push("/login"); // 重定向到登录页面
-      }, 2000); // 2秒后跳转
-    } else {
-      const errorData = await response.json();
-      setMessage(errorData.message || "Error resetting password");
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage("密码重置成功！正在跳转到登录页面...");
+        setTimeout(() => {
+          router.push("/login");
+        }, 2000);
+      } else {
+        setMessage(data.message || "密码重置失败，请重试。");
+        // 如果是token过期，清空输入框
+        if (data.message.includes("expired")) {
+          setNewPassword("");
+          setConfirmPassword("");
+        }
+      }
+    } catch (error) {
+      console.error("Reset password error:", error);
+      setMessage("网络错误，请稍后重试。");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -104,6 +117,7 @@ const ResetPassword = () => {
                 placeholder="Confirm new password"
                 className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
                           bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 disabled={isSubmitting}
@@ -117,19 +131,20 @@ const ResetPassword = () => {
                 CONFIRM PASSWORD
               </label>
             </div>
-          </form>
-          <div className="flex justify-center mt-10">
+
+            <div className="flex justify-center mt-10">
               <button
                 type="submit"
-                className={`w-auto px-16 py-2 text-white tracking-wider text-xs tracking-widest font-light border-black border hover:bg-opacity-[75%] transition duration-200" ${
+                className={`w-auto px-16 py-2 text-white tracking-wider text-xs tracking-widest font-light border-black border hover:bg-opacity-[75%] transition duration-200 ${
                   isSubmitting ? "bg-opacity-[75%] bg-black cursor-not-allowed" : "bg-black hover:bg-opacity-[75%]"
                 }`}
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
               </button>
-          </div>
-          {message && <p className="mt-4 font-light text-sm tracking-wider text-gray-800">{message}</p>}
+            </div>
+            {message && <p className="mt-4 font-light text-sm tracking-wider text-gray-800">{message}</p>}
+          </form>
         </div>
       </div>
       <Footer />

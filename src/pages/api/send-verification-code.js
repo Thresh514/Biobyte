@@ -38,7 +38,25 @@ const sendVerificationCode = async (req, res) => {
         from: "your-email@gmail.com",
         to: email,
         subject: "Verification Code",
-        text: `Your verification code is: ${verificationCode}. It will expire in 10 minutes.`,
+        html: `
+        <div style="background-color:#f9f9f9;padding:30px 0;">
+            <div style="max-width:600px;margin:auto;background:white;padding:40px;border-radius:8px;font-family:Arial,sans-serif;color:#333;">
+                <h2 style="color:#1a1a1a;">
+                Here is your verification code
+                </h2>
+                <div style="color:#555;font-size:16px;">
+                  Your verification code is: ${verificationCode}. It will expire in 10 minutes.
+                </div>
+                <p style="color:#333;font-size:14px;margin-top:20px;">Best regards,<br/>The BioByte Team</p>
+                
+                <hr style="margin:40px 0;border:none;border-top:1px solid #eee;">
+                <p style="font-size:12px;color:#888;text-align:center;">
+                    © 2025 BioByte. All rights reserved.<br/>
+                    Contact: biomindbot@gmail.com
+                </p>
+            </div>
+        </div>
+        `
       };
 
       await transporter.sendMail(mailOptions);
