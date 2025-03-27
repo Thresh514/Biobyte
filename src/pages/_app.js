@@ -6,6 +6,7 @@ import Scrolldown from "../components/Scrolldown";
 import { TranslationProvider } from "../../context/TranslationContext";
 import TranslatorButton from "../components/TranslatorButton";
 
+// 确保使用纯客户端渲染，不要添加 getStaticProps 或 getServerSideProps
 function MyApp({ Component, pageProps }) {
     const [activeComponent, setActiveComponent] = useState(null); // 用于管理当前打开的组件
     const [currentUser, setCurrentUser] = useState(null);
@@ -14,6 +15,9 @@ function MyApp({ Component, pageProps }) {
 
     // 获取用户数据的函数
     const fetchUserData = async () => {
+        // 确保所有数据获取都在客户端进行
+        if (typeof window === 'undefined') return;
+        
         const token = localStorage.getItem("token");
         if (!token) {
             setCurrentUser(null);
