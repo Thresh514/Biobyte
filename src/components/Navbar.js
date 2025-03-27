@@ -294,27 +294,27 @@ export default function Navbar() {
                         </div>
 
                         <motion.div 
-                            className="mt-6 mb-4 flex flex-col space-y-4 justify-center items-center py-3 border-t border-gray-200"
+                            className="mt-6 mb-4 flex flex-col space-y-2 justify-center items-center py-3 border-t border-gray-200"
                             variants={menuItemVariants}
                         >
                             {isLoggedIn ? (
                                 <div className="flex flex-col items-center space-y-2">
                                     <motion.span 
-                                        className="font-semibold"
+                                        className="font-light tracking-wider"
                                         variants={menuItemVariants}
                                     >
                                         {username || "User"}
                                     </motion.span>
                                     <motion.button
                                         onClick={() => router.push("/dashboard")}
-                                        className="hover:text-black transition-colors"
+                                        className="font-light tracking-wider hover:text-black transition-colors"
                                         variants={menuItemVariants}
                                     >
                                         Dashboard
                                     </motion.button>
                                     <motion.button
                                         onClick={handleLogout}
-                                        className="hover:text-black transition-colors"
+                                        className="font-light tracking-wider hover:text-black transition-colors"
                                         variants={menuItemVariants}
                                     >
                                         Logout
@@ -323,7 +323,7 @@ export default function Navbar() {
                             ) : (
                                 <motion.button
                                     onClick={handleLogin}
-                                    className="hover:text-black mb-2"
+                                    className="hover:text-black mb-2 font-light tracking-wider"
                                     variants={menuItemVariants}
                                 >
                                     Login
@@ -334,6 +334,9 @@ export default function Navbar() {
                             >
                                 <Link href="/cart" className="relative mt-2 block">
                                     <Image src="/cart.svg" alt="cart" width={28} height={28} />
+                                    <span className="absolute bottom-4 left-6 z-50 text-black text-xs px-2 py-1">
+                                        {cartCount}
+                                    </span>
                                 </Link>
                             </motion.div>
                         </motion.div>
