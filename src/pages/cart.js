@@ -44,15 +44,18 @@
         }, []);
 
         return (
-            <div className="min-h-screen flex">
+            <div className="min-h-screen flex flex-col">
                 <Navbar />
-                <div className="pt-32 p-6 max-w-6xl mx-auto flex-grow space-y-12">
+                <div className="pt-32 p-6 max-w-6xl mx-auto w-full flex-grow">
                     <h1 className="text-4xl md:text-5xl font-light mb-4">SHOPPING CART</h1>
                     <div>
                         
                     </div>
                     {cart.length === 0 ? (
-                        <p className="font-semibold">YOUR SHOPPING CART IS EMPTY!</p>
+                        <div className="min-h-[40vh] flex flex-col">
+                            <p className="font-semibold mt-8 ml-1 md:ml-0">YOUR SHOPPING CART IS EMPTY!</p>
+                            <div className="flex-grow"></div>
+                        </div>
                         
                     ) : (
                         <>
@@ -202,6 +205,8 @@
                             </div>
                         </>
                     )}
+                </div>
+                <div className="w-full mt-auto">
                     <Footer />
                 </div>
             </div>
