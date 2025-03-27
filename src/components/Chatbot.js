@@ -190,132 +190,134 @@ export default function Chatbot({ activeComponent, setActiveComponent, user, ord
     };
 
     return (
-        <div className="flex flex-col items-end">
-            {/* 聊天窗口 */}
-            <div className={`transform transition-all duration-300 ease-in-out ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-[30px] opacity-0 pointer-events-none'}`}>
-                <div
-                    ref={chatRef}
-                    className="bg-white p-4 border border-gray-200 w-[450px] max-w-[92vw] h-[600px] max-h-[65vh] mb-4 flex flex-col"
-                >
-                    {/* 标题栏 */}
-                    <div className="flex items-center justify-between h-8 mb-4 pb-2">
-                        <h2 className="text-md font-light tracking-wider">24/7 Support - BioByte</h2>
-                        <button
-                            onClick={() => setActiveComponent(null)}
-                            className="text-black hover:text-gray-600 transition duration-200 flex items-center justify-center h-8 w-8"
-                        >
-                            <IoClose size={18} />
-                        </button>
-                    </div>
-
-                    {/* 聊天内容区域 */}
-                    <div className="flex-1 overflow-y-auto py-4 space-y-4">
-                        {messages.map((msg, index) => (
-                            <div key={index} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
-                                <div
-                                    className={`p-3 max-w-[75%] break-words rounded-lg border tracking-wider ${
-                                        msg.role === "user"
-                                            ? "bg-black text-white border-black"
-                                            : "bg-white text-black border-black"
-                                    } text-sm font-light markdown-content`}
-                                >
-                                    <ReactMarkdown 
-                                        remarkPlugins={[remarkGfm]}
-                                        components={{
-                                            p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
-                                            a: ({node, ...props}) => <a className="text-blue-500 hover:underline" {...props} />,
-                                            ul: ({node, ...props}) => <ul className="list-disc ml-4 mb-2" {...props} />,
-                                            ol: ({node, ...props}) => <ol className="list-decimal ml-4 mb-2" {...props} />,
-                                            li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                                            code: ({node, inline, ...props}) => 
-                                                inline 
-                                                    ? <code className="bg-gray-100 px-1 rounded" {...props} />
-                                                    : <code className="block bg-gray-100 p-2 rounded my-2" {...props} />,
-                                            blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-gray-300 pl-4 my-2" {...props} />,
-                                        }}
-                                    >
-                                        {msg.content}
-                                    </ReactMarkdown>
-                                </div>
-                            </div>
-                        ))}
-                        <div ref={endOfMessagesRef} />
-                    </div>
-
-                    {/* 固定在底部的输入区域 */}
-                    <div className="mt-auto pt-2 border-t border-black">
-                        {/* 反馈表单 */}
-                        <div className={`transform transition-all duration-1000 ease-in-out overflow-hidden ${feedbackOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                            <div className="mb-4 p-2">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h2 className="text-md font-light tracking-wider">Contact Us</h2>
-                                    <button
-                                        onClick={() => setFeedbackOpen(false)}
-                                        className="text-black hover:text-gray-600 transition duration-200"
-                                    >
-                                        <IoClose size={18} />
-                                    </button>
-                                </div>
-                                <form onSubmit={handleSubmit} className="space-y-3">
-                                    <input
-                                        type="email"
-                                        name="customer_email"
-                                        value={email}
-                                        onChange={handleEmailChange}
-                                        className="w-full p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
-                                        placeholder="Your email address..."
-                                        required
-                                    />
-                                    <textarea
-                                        name="message"
-                                        rows="3"
-                                        value={message}
-                                        onChange={handleMessageChange}
-                                        className="w-full p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
-                                        placeholder="Your message..."
-                                        required
-                                    ></textarea>
-                                    <button
-                                        type="submit"
-                                        className="w-full py-2 border border-black text-sm font-light hover:bg-black hover:text-white transition-all duration-300"
-                                    >
-                                        Send Message
-                                    </button>
-                                </form>
-                            </div>
+        <div className="fixed bottom-8 lg:bottom-16 right-4 lg:right-16 z-50 flex flex-col items-end space-y-4">
+            {/* 聊天窗口 - 只有在 isOpen 时才显示 */}
+            {isOpen && (
+                <div className="transform transition-all duration-300 ease-in-out translate-y-0 opacity-100">
+                    <div
+                        ref={chatRef}
+                        className="bg-white p-4 border border-gray-200 w-[450px] max-w-[92vw] h-[600px] max-h-[65vh] mb-4 flex flex-col"
+                    >
+                        {/* 标题栏 */}
+                        <div className="flex items-center justify-between h-8 mb-4 pb-2">
+                            <h2 className="text-md font-light tracking-wider">24/7 Support - BioByte</h2>
+                            <button
+                                onClick={() => setActiveComponent(null)}
+                                className="text-black hover:text-gray-600 transition duration-200 flex items-center justify-center h-8 w-8"
+                            >
+                                <IoClose size={18} />
+                            </button>
                         </div>
 
-                        {/* 输入框和按钮 */}
-                        <div className="flex items-center space-x-2">
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setFeedbackOpen(!feedbackOpen);
-                                }}
-                                className="p-2 border border-black hover:bg-black hover:text-white transition-all duration-300"
-                            >
-                                <SlEnvolope className="w-5 h-5" />
-                            </button>
-                            <input
-                                type="text"
-                                className="flex-1 p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
-                                value={input}
-                                onChange={(e) => setInput(e.target.value)}
-                                onKeyDown={handleKeyDown}
-                                placeholder="Enter your question..."
-                            />
-                            <button 
-                                onClick={sendMessage} 
-                                className="p-2 border border-black hover:bg-black hover:text-white transition-all duration-300"
-                            >
-                                <Send className="w-5 h-5" />
-                            </button>
+                        {/* 聊天内容区域 */}
+                        <div className="flex-1 overflow-y-auto py-4 space-y-4">
+                            {messages.map((msg, index) => (
+                                <div key={index} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+                                    <div
+                                        className={`p-3 max-w-[75%] break-words rounded-lg border tracking-wider ${
+                                            msg.role === "user"
+                                                ? "bg-black text-white border-black"
+                                                : "bg-white text-black border-black"
+                                        } text-sm font-light markdown-content`}
+                                    >
+                                        <ReactMarkdown 
+                                            remarkPlugins={[remarkGfm]}
+                                            components={{
+                                                p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
+                                                a: ({node, ...props}) => <a className="text-blue-500 hover:underline" {...props} />,
+                                                ul: ({node, ...props}) => <ul className="list-disc ml-4 mb-2" {...props} />,
+                                                ol: ({node, ...props}) => <ol className="list-decimal ml-4 mb-2" {...props} />,
+                                                li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                                                code: ({node, inline, ...props}) => 
+                                                    inline 
+                                                        ? <code className="bg-gray-100 px-1 rounded" {...props} />
+                                                        : <code className="block bg-gray-100 p-2 rounded my-2" {...props} />,
+                                                blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-gray-300 pl-4 my-2" {...props} />,
+                                            }}
+                                        >
+                                            {msg.content}
+                                        </ReactMarkdown>
+                                    </div>
+                                </div>
+                            ))}
+                            <div ref={endOfMessagesRef} />
+                        </div>
+
+                        {/* 固定在底部的输入区域 */}
+                        <div className="mt-auto pt-2 border-t border-black">
+                            {/* 反馈表单 */}
+                            <div className={`transform transition-all duration-1000 ease-in-out overflow-hidden ${feedbackOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <div className="mb-4 p-2">
+                                    <div className="flex justify-between items-center mb-4">
+                                        <h2 className="text-md font-light tracking-wider">Contact Us</h2>
+                                        <button
+                                            onClick={() => setFeedbackOpen(false)}
+                                            className="text-black hover:text-gray-600 transition duration-200"
+                                        >
+                                            <IoClose size={18} />
+                                        </button>
+                                    </div>
+                                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-3">
+                                        <input
+                                            type="email"
+                                            name="customer_email"
+                                            value={email}
+                                            onChange={handleEmailChange}
+                                            className="w-full p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
+                                            placeholder="Your email address..."
+                                            required
+                                        />
+                                        <textarea
+                                            name="message"
+                                            rows="3"
+                                            value={message}
+                                            onChange={handleMessageChange}
+                                            className="w-full p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
+                                            placeholder="Your message..."
+                                            required
+                                        ></textarea>
+                                        <button
+                                            type="submit"
+                                            className="w-full py-2 border border-black text-sm font-light hover:bg-black hover:text-white transition-all duration-300"
+                                        >
+                                            Send Message
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            {/* 输入框和按钮 */}
+                            <div className="flex items-center space-x-2">
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setFeedbackOpen(!feedbackOpen);
+                                    }}
+                                    className="p-2 border border-black hover:bg-black hover:text-white transition-all duration-300"
+                                >
+                                    <SlEnvolope className="w-5 h-5" />
+                                </button>
+                                <input
+                                    type="text"
+                                    className="flex-1 p-2 border border-black text-sm font-light focus:outline-none focus:border-2"
+                                    value={input}
+                                    onChange={(e) => setInput(e.target.value)}
+                                    onKeyDown={handleKeyDown}
+                                    placeholder="Enter your question..."
+                                />
+                                <button 
+                                    onClick={sendMessage} 
+                                    className="p-2 border border-black hover:bg-black hover:text-white transition-all duration-300"
+                                >
+                                    <Send className="w-5 h-5" />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            )}
 
-            {/* 悬浮按钮 */}
+            {/* 悬浮按钮 - 总是显示 */}
             <button
                 onClick={(e) => {
                     e.stopPropagation();
