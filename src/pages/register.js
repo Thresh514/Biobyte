@@ -16,6 +16,11 @@ const Register = () => {
 
   const router = useRouter();
 
+  // 添加密码强度验证
+  const isPasswordStrong = (password) => {
+    return password.length >= 8 && /[A-Z]/.test(password) && /[0-9]/.test(password);
+  };
+
   const handleSendCode = async () => {
     if (countdown > 0) return; // 如果倒计时未结束，不允许点击
 
@@ -30,7 +35,7 @@ const Register = () => {
     const data = await response.json();
 
     if (response.ok) {
-      alert("Verification code sent to your email.");
+      alert("验证码已发送到您的邮箱。");
       setIsCodeSent(true);
       setCountdown(60);
 
@@ -44,49 +49,66 @@ const Register = () => {
         });
       }, 1000);
     } else {
-      alert(`Failed to send verification code. Please try again. Reason: ${data.message || "Unknown error."}`);
+      alert(`发送验证码失败，请重试。原因：${data.message || "未知错误。"}`);
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!agreedToTerms) {
-      alert("Please agree to the Terms & Privacy Policy to continue.");
+      alert("请同意服务条款和隐私政策以继续。");
       return;
     }
     
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      alert("两次输入的密码不匹配。");
+      return;
+    }
+
+    if (!isPasswordStrong(password)) {
+      alert("密码必须至少8个字符，包含一个数字和一个大写字母。");
       return;
     }
 
     if (!verificationCode) {
-      alert("Please enter the verification code.");
+      alert("请输入验证码。");
       return;
     }
 
-    // 发送注册请求到后端 API
-    const response = await fetch("/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password, verificationCode: String(verificationCode).trim() }),
-    });
+    try {
+      // 发送注册请求到后端 API
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password, verificationCode: String(verificationCode).trim() }),
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (response.ok) {
-      // 注册成功后的操作，如跳转到登录页面
-      alert("Registration successful! Redirecting to login...");
-      await router.push('/login');
-    } else {
-      if (data.message === "Email already registered. Please log in.") {
-        alert("This email is already registered. Redirecting to login...");
-        await router.push("/login"); // 跳转到登录页面
+      if (response.ok) {
+        alert("注册成功！正在跳转到登录页面...");
+        await router.push('/login');
       } else {
-        alert(`Registration failed. Reason: ${data.message || "Unknown error."}`);
+        if (data.message === "Email already registered. Please log in") {
+          alert("该邮箱已注册。正在跳转到登录页面...");
+          await router.push("/login");
+        } else if (data.message === "Please request a verification code first.") {
+          alert("请先点击 发送 按钮获取验证码。");
+        } else if (data.message === "Incorrect verification code.") {
+          alert("验证码不正确，请检查后重试。");
+        } else if (data.message === "Verification code has expired. Please request a new one.") {
+          alert("验证码已过期，请重新获取。");
+          setVerificationCode("");
+          setCountdown(0);
+        } else {
+          alert(`注册失败：${data.message || "未知错误。"}`);
+        }
       }
+    } catch (error) {
+      console.error("Registration error:", error);
+      alert("网络错误，请稍后重试。");
     }
   };
 

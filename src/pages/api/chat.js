@@ -16,13 +16,29 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: "Method Not Allowed" });
     }
 
-    const { message } = req.body;
+    const { message, user, orderHistory } = req.body;
 
     
     let systemPrompt = "";
     try {
         const filePath = path.join(process.cwd(), "public/chatbot-response.txt");
         systemPrompt = fs.readFileSync(filePath, "utf-8");
+
+        // 如果用户已登录，添加用户相关信息到系统提示
+        if (user) {
+            const userContext = `
+                Current User Information:
+                - Name: ${user.name}
+                - Email: ${user.email}
+                - User ID: ${user.id}
+
+                Order History:
+                ${orderHistory.map(order => `- Order ID: ${order.id}, Date: ${order.date}, Products: ${order.products.join(", ")}`).join("\n")}
+
+                Please use this information to provide personalized responses. When discussing orders or materials, refer to the user's specific purchases and history.
+                `;
+            systemPrompt = systemPrompt + "\n\n" + userContext;
+        }
     } catch (error) {
         console.error("Error reading chatbot prompt:", error);
         return res.status(500).json({ message: "Failed to load chatbot prompt" });

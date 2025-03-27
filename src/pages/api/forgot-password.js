@@ -45,7 +45,23 @@ const forgotPassword = async (req, res) => {
         from: process.env.EMAIL_USER, // 使用环境变量
         to: email,
         subject: "Password Reset",
-        text: `Click the following link to reset your password: http://localhost:3000/reset-password?token=${token}`,
+        html: `
+        <div style="background-color:#ffffff;padding:30px 0;">
+            <div style="max-width:600px;margin:auto;background:white;padding:40px;border-radius:8px;font-family:Arial,sans-serif;color:#333;">
+                <h2 style="color:#1a1a1a;">Password Reset</h2>
+                <p style="color:#333;font-size:16px;">Click the following link to reset your password:</p>
+                <p href="http://localhost:3000/reset-password?token=${token}">Reset Password</p>
+                <p style="color:#333;font-size:14px;margin-top:20px;">Best regards,<br/>The BioByte Team</p>
+            </div>
+        </div>
+        
+        <hr style="margin:40px 0;border:none;border-top:1px solid #eee;">
+        <p style="font-size:12px;color:#888;text-align:center;">
+            © 2025 BioByte. All rights reserved.<br/>
+            Contact: biomindbot@gmail.com
+        </p>
+        `
+        
       };
 
       transporter.sendMail(mailOptions, (error, info) => {

@@ -79,7 +79,7 @@ export async function sendOrderEmail(name, email, cart, totalPrice) {
     // 邮件内容
     const mailOptions = {
         from: process.env.EMAIL_USER,
-        to: email, 
+        to: email,
         subject: "Your Order Confirmation",
         text: `
         Dear ${name},
@@ -96,7 +96,42 @@ export async function sendOrderEmail(name, email, cart, totalPrice) {
         Best regards,
         BioByte Team
         `,
-        attachments: validAttachments,
+        html: `
+        <div style="background-color:#f9f9f9;padding:30px 0;">
+            <div style="max-width:600px;margin:auto;background:white;padding:40px;border-radius:8px;font-family:Arial,sans-serif;color:#333;">
+                <h2 style="color:#1a1a1a;">🎉 Your A-Level Biology resource is ready!</h2>
+                <p style="color:#333;font-size:16px;">Dear ${name},</p>
+                <p style="color:#333;font-size:16px;">Thank you for your purchase! Here are your order details:</p>
+                
+                <div style="background:#f8f9fa;border-radius:8px;padding:20px;margin:20px 0;">
+                    <h3 style="color:#1a1a1a;margin-bottom:15px;">Order Summary:</h3>
+                    <div style="color:#555;font-size:14px;">
+                        ${cart.map(item => `
+                            <table width="100%" style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #eee;">
+                                <tr>
+                                    <td style="font-weight: bold;">${item.name} (${item.option})</td>
+                                    <td align="right" style="color:#666;">$${item.price.toFixed(2)}</td>
+                                </tr>
+                            </table>
+                        `).join('')}
+                        <div style="text-align: right;margin-top:15px;font-weight:bold;font-size:16px;">
+                            Total: $${totalPrice.toFixed(2)}
+                        </div>
+                    </div>
+                </div>
+
+                <p style="color:#333;font-size:16px;">Your resources are attached to this email. If you have any questions, feel free to reply to this email.</p>
+                <p style="color:#333;font-size:16px;margin-top:20px;">Best regards,<br/>The BioByte Team</p>
+                
+                <hr style="margin:40px 0;border:none;border-top:1px solid #eee;">
+                <p style="font-size:12px;color:#888;text-align:center;">
+                    © 2025 BioByte. All rights reserved.<br/>
+                    Contact: biomindbot@gmail.com
+                </p>
+            </div>
+        </div>
+        `,
+        attachments: validAttachments
     };
 
     console.log("📧 准备发送邮件，完整选项:", JSON.stringify(mailOptions, null, 2));
