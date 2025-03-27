@@ -259,26 +259,67 @@ const DashboardComponent = () => {
                 </div>
             )}
 
-            {/* 订单管理 */}
-            <div className="flex px-24 m-24 space-x-24 items-start">
-                <div className="w-2/3">
-                    <h2 className="text-xl font-light tracking-wider mb-8">Order History</h2>
+            {/* 移动端设计 */}
+            <div className="block md:hidden px-4 pt-12 mt-12 space-y-24">
+                {/* 个人信息管理 - 移动版 */}
+                <div className="bg-white mb-8 pb-6">
+                    <h2 className="text-xl font-medium mb-4">Personal Information</h2>
+                    {user ? (
+                        <div className="space-y-2">
+                            <div>
+                                <p className="text-sm font-light">Email Address</p>
+                                <p className="text-base font-light">{user.email}</p>
+                            </div>
+                            <div className="pt-3">
+                                <button 
+                                    className="w-full py-2 bg-black font-light text-sm text-white" 
+                                    onClick={() => setShowChangePassword(true)}
+                                >
+                                    CHANGE PASSWORD
+                                </button>
+                            </div>
+                        </div>
+                    ) : (
+                        <p className="text-sm">Loading...</p>
+                    )}
+                </div>
+
+                {/* 订单历史 - 移动版 */}
+                <div className="bg-white">
+                    <h2 className="text-xl font-medium mb-4">Order History</h2>
                     {orders.length > 0 ? (
-                        <div className="grid grid-cols-2 gap-16 w-full">
+                        <div className="space-y-4 p-3">
                             {orders.map((order, index) => (
-                                <div key={`${order.study_resource_id}-${index}`} className="">
-                                    <div className="flex flex-col border border-black p-8">
-                                        <p className="text-md font-base tracking-wide">{order.title}</p>
-                                        <div className="text-sm font-light leading-[0.5rem] mt-4">
-                                            <p>Type: {order.type}</p>
-                                            <p>Level: {order.level}</p>
-                                            <p>Chapter: {order.chapter || 'Full Version'}</p>
-                                            <p>Price: ${order.price}</p>
-                                            <p>Purchase Date: {new Date(order.purchase_date).toLocaleString()}</p>
+                                <div key={`${order.study_resource_id}-${index}`} className="border border-black p-4">
+                                    <div className="p-3">
+                                        <h3 className="text-base font-medium">{order.title}</h3>
+                                    </div>
+                                    <div className="p-3 space-y-1 text-sm">
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Type:</span>
+                                            <span>{order.type}</span>
                                         </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Level:</span>
+                                            <span>{order.level}</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Chapter:</span>
+                                            <span>{order.chapter || 'Full Version'}</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Price:</span>
+                                            <span>${order.price}</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Purchase Date:</span>
+                                            <span>{new Date(order.purchase_date).toLocaleDateString()}</span>
+                                        </div>
+                                    </div>
+                                    <div className="p-3 border-t border-gray-100">
                                         <button
                                             onClick={() => handleResendEmail(order.study_resource_id)}
-                                            className="w-3/5 mt-6 px-3 py-1 bg-black text-white text-sm tracking-wider font-light hover:bg-opacity-[75%] "
+                                            className="w-full py-2 bg-black text-white text-sm font-light tracking-wider"
                                         >
                                             RESEND ORDER EMAIL
                                         </button>
@@ -287,43 +328,110 @@ const DashboardComponent = () => {
                             ))}
                         </div>
                     ) : (
-                        <p className="text-sm font-light mt-2">No order record in the system</p>
+                        <p className="text-sm">No order record in the system</p>
                     )}
                 </div>
 
-                <div className="flex flex-col w-1/3 space-y-24">
-                    {/* 个人信息管理 */}
-                    <div className="bg-white">
-                        <h2 className="text-xl font-light tracking-wider">Personal Information</h2>
-                        {user ? (
-                            <div className="space-y-4">
-                                <p className="font-light text-md text-gray-700 mt-2">Email Address</p>
-                                <p className="text-black font-light text-sm">{user.email}</p>
-                                <div className="flex justify-start items-center pt-6">
-                                    <button className="px-3 py-1.5 bg-black font-light tracking-wide text-sm hover:bg-opacity-[75%] text-white" onClick={() => setShowChangePassword(true)}>CHANGE PASSWORD</button>
+                {/* 优惠券 - 移动版 */}
+                <div className="bg-white mb-8 pb-6">
+                    <h2 className="text-xl font-medium mb-4">My Coupon</h2>
+                    {coupons.length > 0 ? (
+                        <div className="space-y-3">
+                            {coupons.map((coupon) => (
+                                <div key={coupon.id} className="bg-gray-50 p-3 rounded-md text-sm">
+                                    <div className="flex justify-between">
+                                        <span className="font-medium">Code:</span>
+                                        <span>{coupon.code}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="font-medium">Discount:</span>
+                                        <span>{coupon.discount}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="font-medium">Expiry Date:</span>
+                                        <span>{coupon.expiry_date}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span className="font-medium">Status:</span>
+                                        <span>{coupon.status}</span>
+                                    </div>
                                 </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-sm">No available coupon right now</p>
+                    )}
+                </div>
+            </div>
+
+            {/* 桌面端设计 */}
+            <div className="hidden md:block">
+                {/* 订单管理 */}
+                <div className="flex px-24 m-24 space-x-24 items-start">
+                    <div className="w-2/3">
+                        <h2 className="text-xl font-light tracking-wider mb-8">Order History</h2>
+                        {orders.length > 0 ? (
+                            <div className="grid grid-cols-2 gap-16 w-full">
+                                {orders.map((order, index) => (
+                                    <div key={`${order.study_resource_id}-${index}`} className="">
+                                        <div className="flex flex-col border border-black p-8">
+                                            <p className="text-md font-base tracking-wide">{order.title}</p>
+                                            <div className="text-sm font-light leading-[0.5rem] mt-4">
+                                                <p>Type: {order.type}</p>
+                                                <p>Level: {order.level}</p>
+                                                <p>Chapter: {order.chapter || 'Full Version'}</p>
+                                                <p>Price: ${order.price}</p>
+                                                <p>Purchase Date: {new Date(order.purchase_date).toLocaleString()}</p>
+                                            </div>
+                                            <button
+                                                onClick={() => handleResendEmail(order.study_resource_id)}
+                                                className="w-3/5 mt-6 px-3 py-1 bg-black text-white text-sm tracking-wider font-light hover:bg-opacity-[75%] "
+                                            >
+                                                RESEND ORDER EMAIL
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         ) : (
-                            <p>Loading...</p>
+                            <p className="text-sm font-light mt-2">No order record in the system</p>
                         )}
                     </div>
-                    {/* Coupon */}
-                    <div className="bg-white space-y-2">
-                        <h2 className="text-xl font-light tracking-wider">My Coupon</h2>
-                        {coupons.length > 0 ? (
-                            <ul>
-                                {coupons.map((coupon) => (
-                                    <li key={coupon.id} className="border-b py-2">
-                                        <p><strong>优惠码：</strong>{coupon.code}</p>
-                                        <p><strong>折扣：</strong>{coupon.discount}</p>
-                                        <p><strong>有效期：</strong>{coupon.expiry_date}</p>
-                                        <p><strong>状态：</strong>{coupon.status}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p className="text-sm font-light">No available coupon right now</p>
-                        )}
+
+                    <div className="flex flex-col w-1/3 space-y-24">
+                        {/* 个人信息管理 */}
+                        <div className="bg-white">
+                            <h2 className="text-xl font-light tracking-wider">Personal Information</h2>
+                            {user ? (
+                                <div className="space-y-4">
+                                    <p className="font-light text-md text-gray-700 mt-2">Email Address</p>
+                                    <p className="text-black font-light text-sm">{user.email}</p>
+                                    <div className="flex justify-start items-center pt-6">
+                                        <button className="px-3 py-1.5 bg-black font-light tracking-wide text-sm hover:bg-opacity-[75%] text-white" onClick={() => setShowChangePassword(true)}>CHANGE PASSWORD</button>
+                                    </div>
+                                </div>
+                            ) : (
+                                <p>Loading...</p>
+                            )}
+                        </div>
+                        {/* Coupon */}
+                        <div className="bg-white space-y-2">
+                            <h2 className="text-xl font-light tracking-wider">My Coupon</h2>
+                            {coupons.length > 0 ? (
+                                <ul>
+                                    {coupons.map((coupon) => (
+                                        <li key={coupon.id} className="border-b py-2">
+                                            <p><strong>优惠码：</strong>{coupon.code}</p>
+                                            <p><strong>折扣：</strong>{coupon.discount}</p>
+                                            <p><strong>有效期：</strong>{coupon.expiry_date}</p>
+                                            <p><strong>状态：</strong>{coupon.status}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className="text-sm font-light">No available coupon right now</p>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
