@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { getCart } from "../lib/cart";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
     const router = useRouter();
@@ -14,6 +15,7 @@ export default function Navbar() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState(null);
     const [cartCount, setCartCount] = useState(0);
+    const mobileMenuRef = useRef(null);
     
     useEffect(() => {
         const updateCartCount = () => {
@@ -74,7 +76,9 @@ export default function Navbar() {
         return email;
     };
 
-    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
 
     const handleLogin = () => {
         router.push('/login');
@@ -99,8 +103,57 @@ export default function Navbar() {
         ],
     };
 
+    // 菜单容器的动画变体
+    const menuContainerVariants = {
+        hidden: { 
+            opacity: 0,
+            y: -20
+        },
+        visible: { 
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.3,
+                when: "beforeChildren",
+                staggerChildren: 0.1
+            }
+        },
+        exit: {
+            opacity: 0,
+            y: -20,
+            transition: {
+                duration: 0.3,
+                when: "afterChildren",
+                staggerChildren: 0.05,
+                staggerDirection: -1
+            }
+        }
+    };
+
+    // 菜单项的动画变体
+    const menuItemVariants = {
+        hidden: { 
+            opacity: 0,
+            y: -10
+        },
+        visible: { 
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.2
+            }
+        },
+        exit: {
+            opacity: 0,
+            y: -10,
+            transition: {
+                duration: 0.2
+            }
+        }
+    };
+
     return (
-        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-0 z-30 bg-white bg-opacity-[75%] text-gray-800 font-normal">
+        <nav className="fixed left-0 right-0 sm:p-2 md:px-10 md:py-0 z-30 bg-white md:bg-opacity-[75%] text-gray-800 font-normal">
             <div className="mx-screen mx-auto flex items-center justify-between">
                 <div className="flex items-center space-x-2.5 md:space-x-4">
                     <Link href="/">
@@ -201,60 +254,95 @@ export default function Navbar() {
                     ☰
                 </button>
             </div>
-            {/* Mobile menu */}
-            {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg p-4">
-                    <div className="flex flex-col ml-8 space-y-4">
-                        {Object.entries(menuItems).map(([category, items]) => (
-                            <div key={category}>
-                                <h3 className="font-bold text-lg text-gray-700 mt-2 mb-2">{category}</h3>
-                                <ul className="space-y-2">
-                                    {items.map((item) => (
-                                        <li key={item.slug}>
-                                            <Link
-                                                href={`/unit/${item.slug}`}
-                                                className="text-gray-600 hover:text-black transition-colors"
+            
+            {/* Mobile menu - using AnimatePresence for exit animations */}
+            <AnimatePresence mode="wait">
+                {isMobileMenuOpen && (
+                    <motion.div 
+                        className="md:hidden fixed top-20 left-0 w-full bg-white shadow-md p-4"
+                        variants={menuContainerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                    >
+                        <div className="flex flex-col ml-8 space-y-4">
+                            {Object.entries(menuItems).map(([category, items], categoryIndex) => (
+                                <div key={category}>
+                                    <motion.h3 
+                                        className="font-normal tracking-wider text-lg text-gray-800 mt-2 mb-2"
+                                        variants={menuItemVariants}
+                                    >
+                                        {category}
+                                    </motion.h3>
+                                    <ul className="space-y-2">
+                                        {items.map((item) => (
+                                            <motion.li 
+                                                key={item.slug}
+                                                variants={menuItemVariants}
                                             >
-                                                {item.title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                    
-                    <div className="mt-6 mb-4 flex flex-col space-y-4 justify-center items-center bg-gray-100 py-3 rounded-xl">
-                        {isLoggedIn ? (
-                            <div className="flex flex-col items-center space-y-2">
-                                <span className="font-semibold">{username || "User"}</span>
-                                <button
-                                    onClick={() => router.push("/dashboard")}
-                                    className="hover:text-black transition-colors"
+                                                <Link
+                                                    href={`/unit/${item.slug}`}
+                                                    className="text-gray-800 tracking-wider font-light hover:text-black transition-colors"
+                                                >
+                                                    {item.title}
+                                                </Link>
+                                            </motion.li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+
+                        <motion.div 
+                            className="mt-6 mb-4 flex flex-col space-y-2 justify-center items-center py-3 border-t border-gray-200"
+                            variants={menuItemVariants}
+                        >
+                            {isLoggedIn ? (
+                                <div className="flex flex-col items-center space-y-2">
+                                    <motion.span 
+                                        className="font-light tracking-wider"
+                                        variants={menuItemVariants}
+                                    >
+                                        {username || "User"}
+                                    </motion.span>
+                                    <motion.button
+                                        onClick={() => router.push("/dashboard")}
+                                        className="font-light tracking-wider hover:text-black transition-colors"
+                                        variants={menuItemVariants}
+                                    >
+                                        Dashboard
+                                    </motion.button>
+                                    <motion.button
+                                        onClick={handleLogout}
+                                        className="font-light tracking-wider hover:text-black transition-colors"
+                                        variants={menuItemVariants}
+                                    >
+                                        Logout
+                                    </motion.button>
+                                </div>
+                            ) : (
+                                <motion.button
+                                    onClick={handleLogin}
+                                    className="hover:text-black mb-2 font-light tracking-wider"
+                                    variants={menuItemVariants}
                                 >
-                                    Dashboard
-                                </button>
-                                <button
-                                    onClick={handleLogout}
-                                    className="hover:text-black transition-colors"
-                                >
-                                    Logout
-                                </button>
-                            </div>
-                        ) : (
-                            <button
-                                onClick={handleLogin}
-                                className="hover:text-black transition-colors mb-2"
+                                    Login
+                                </motion.button>
+                            )}
+                            <motion.div
+                                variants={menuItemVariants}
                             >
-                                Login
-                            </button>
-                        )}
-                        <Link href="/cart" className="relative mt-2 block">
-                            <Image src="/cart.svg" alt="cart" width={28} height={28} />
-                        </Link>
-                    </div>
-                </div>
-            )}
+                                <Link href="/cart" className="relative mt-2 block">
+                                    <Image src="/cart.svg" alt="cart" width={28} height={28} />
+                                    <span className="absolute bottom-4 left-6 z-50 text-black text-xs px-2 py-1">
+                                        {cartCount}
+                                    </span>
+                                </Link>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 }

@@ -6,14 +6,14 @@ import HeroSection from '../components/index/Herosection';
 import SuccessStories from '../components/index/SuccessStories';
 import ResourceCategories from '../components/index/ResourceCategories';
 
-
+// 使用纯客户端渲染
 export default function Home() {
   useEffect(() => {
-          document.body.classList.add('fade-in');
-          return () => {
-              document.body.classList.remove('fade-in');
-          };
-      }, []);
+    document.body.classList.add('fade-in');
+    return () => {
+      document.body.classList.remove('fade-in');
+    };
+  }, []);
 
   return (
     <div>

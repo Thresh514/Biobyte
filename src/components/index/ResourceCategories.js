@@ -44,22 +44,22 @@ const ResourceCategories = () => {
     };
 
     return (
-        <section id="resource-categories" className="bg-white scroll-mt-12 py-24">
-            <div className="flex space-x-48">
-                <div className='w-1/3 flex-col space-y-12'>
-                    <h2 className="text-2xl mt-12 sm:text-3xl md:text-4xl lg:text-7xl items-start justify-start font-normal tracking-wide text-darker">
+        <section id="resource-categories" className="bg-white scroll-mt-12 py-12 md:py-24 px-4 md:px-0">
+            <div className="flex flex-col md:flex-row md:space-x-48">
+                <div className='w-full md:w-1/3 flex-col space-y-4 md:space-y-12 mb-8 md:mb-0'>
+                    <h2 className="text-4xl mt-6 md:mt-12 lg:text-7xl font-normal tracking-wide text-black">
                         Best Sellers
                     </h2>
-                    <p>Transform your home or office with our gorgeous best selling seasonal arrangements.</p>
+                    <p className="text-sm md:text-base">Transform your home or office with our gorgeous best selling seasonal arrangements.</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 md:gap-12 w-2/3">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full md:w-2/3">
                     {products.map((product, index) => (
                         <div
                             key={product.id}
                             className="relative cursor-pointer bg-white group"
                             onClick={() => handleProductClick(product)}
                         >
-                            <div className="w-full h-full object-cover mb-3 object-contain">
+                            <div className="relative w-full h-80 md:h-80 mb-3">
                                 <Image
                                     src={product.image || '/default-product.jpg'}
                                     alt={product.title}
@@ -69,7 +69,7 @@ const ResourceCategories = () => {
                                 />
                             </div>
                             <button
-                                className='absolute bottom-6 left-16 bg-black text-xs text-white font-normal tracking-wide hidden group-hover:block transition-opacity duration-300 p-3'
+                                className='absolute bottom-24 left-1/2 transform -translate-x-1/2 bg-black text-xs text-white font-normal tracking-wide hidden md:group-hover:block transition-opacity duration-300 p-3'
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     handleProductClick(product);
@@ -77,8 +77,8 @@ const ResourceCategories = () => {
                             >
                                 QUICK VIEW
                             </button>
-                            <h3 className="font-light tracking-wide text-md">{product.title}</h3>
-                            <p className="text-sm font-light text-gray-600">${product.price}</p>
+                            <h3 className="font-light tracking-wide text-md text-center md:text-start">{product.title}</h3>
+                            <p className="text-sm font-light tracking-wide text-gray-600 text-center md:text-start">${product.price}</p>
                         </div>
                     ))}
                 </div>

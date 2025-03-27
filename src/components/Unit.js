@@ -286,8 +286,118 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
 
     return (
         <div className="max-w-7xl mx-auto p-4 md:p-0">
-            {/* 第一部分：商品主要信息 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pb-32">
+            {/* 移动端垂直布局 */}
+            <div className="block md:hidden">
+                {/* 商品图片 */}
+                <div className="mb-6">
+                    <div className="relative w-full h-[400px] bg-white overflow-hidden">
+                    <div 
+                            ref={scrollContainerRef}
+                            className="overflow-x-scroll scrollbar-hide absolute inset-0"
+                            onMouseDown={handleMouseDown}
+                            onMouseMove={handleMouseMove}
+                            onMouseUp={handleMouseUp}
+                            onMouseLeave={handleMouseUp}
+                            onTouchStart={handleUserInteraction}
+                            onTouchMove={handleUserInteraction}
+                            style={{
+                                cursor: isDragging ? 'grabbing' : 'grab',
+                                userSelect: 'none',
+                                scrollBehavior: 'smooth',
+                                '-webkit-overflow-scrolling': 'touch',
+                                scrollbarWidth: 'none',  /* Firefox */
+                                '-ms-overflow-style': 'none',  /* IE and Edge */
+                            }}
+                        >
+                            <style jsx global>{`
+                                .scrollbar-hide::-webkit-scrollbar {
+                                    display: none;
+                                }
+                                .scrollbar-hide {
+                                    -ms-overflow-style: none;
+                                    scrollbar-width: none;
+                                }
+                            `}</style>
+                            <div className="flex" style={{ width: `${images.length * 100}%` }}>
+                                {images.map((img, index) => (
+                                    <div key={index} className="relative w-[400px] h-[400px] flex-shrink-0">
+                                        <Image
+                                            src={img}
+                                            alt={`${title} view ${index + 1}`}
+                                            fill
+                                            quality={80}
+                                            priority={index === 0}
+                                            className="object-contain"
+                                            draggable={false}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <p className="absolute bottom-2 p-2 left-1/2 transform -translate-x-1/2 text-xs text-gray-600 font-light tracking-wide">
+                            Scroll to view details
+                        </p>
+                    </div>
+                </div>
+
+                {/* 标题和价格 */}
+                <div className="mb-6">
+                    <h1 className="text-xl font-normal mb-2">
+                        {selectedOption?.title || title}
+                    </h1>
+                    <p className="text-lg text-gray-800 font-light">
+                        $ {typeof totalPrice === "number" ? totalPrice.toFixed(2) : "0.00"}
+                    </p>
+                </div>
+
+                {/* 款式选择 */}
+                {options && shouldShowOptions && (
+                    <div className="mb-6">
+                        <p className="text-sm mb-2 uppercase tracking-wide">OPTION</p>
+                        <div className="grid grid-cols-4 gap-0">
+                            {options.map((option) => (
+                                <button
+                                    key={option.title}
+                                    disabled={isLoading}
+                                    className={`px-2 py-2 border text-sm transition ${
+                                        selectedOption?.chapter === option.chapter
+                                            ? "bg-white text-gray-800 border-2 border-gray-900"
+                                            : "bg-white text-gray-800 border-gray-300 hover:border-gray-900"
+                                    } ${isLoading ? 'cursor-not-allowed opacity-50' : ''}`}
+                                    onClick={() => handleOptionChange(option)}
+                                >
+                                    {option.chapter}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* 商品描述 */}
+                <div className="mb-6 text-gray-600 font-light text-sm">
+                    <p>Format: PDF</p>
+                    <p>{selectedOption ? selectedOption.description : description}</p>
+                </div>
+
+                {/* 购买按钮 */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                    <button
+                        onClick={handleAddToCart}
+                        className="bg-gray-400 text-white py-3 text-sm hover:bg-gray-500 transition duration-300"
+                    >
+                        ADD TO CART
+                    </button>
+                    <button
+                        onClick={handleBuyNow}
+                        className="bg-white text-black border border-black py-3 text-sm hover:bg-black hover:text-white transition duration-300"
+                    >
+                        BUY NOW
+                    </button>
+                </div>
+            </div>
+
+            {/* 桌面端双列布局 */}
+            <div className="hidden md:grid md:grid-cols-2 gap-20 pb-32">
                 {/* 左侧商品图片 */}
                 <div className="flex items-center justify-center">
                     <div className="relative w-[580px] h-[770px] bg-white overflow-hidden">
@@ -402,7 +512,7 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
 
             {/* Toast 通知 */}
             {showToast && (
-                <div className={`fixed top-1/2 right-1/3 text-white bg-gray-600 bg-opacity-75 z-20 p-6 text-sm rounded-lg shadow-md transition-all duration-200" ${
+                <div className={`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-gray-600 bg-opacity-75 z-20 p-6 text-sm rounded-lg shadow-md transition-all duration-200" ${
                     fadeOut ? "opacity-0" : "opacity-100"
                 }`}
                 >

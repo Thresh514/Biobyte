@@ -40,6 +40,18 @@ const forgotPassword = async (req, res) => {
       const updateQuery = "UPDATE users SET reset_token = ?, reset_expires = ? WHERE email = ?";
       await pool.query(updateQuery, [token, tokenExpiration, email]);
 
+      // 根据环境变量确定基础URL
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 
+                      process.env.VERCEL_URL || 
+                      (process.env.NODE_ENV === 'production' 
+                        ? 'https://biobyte.shop' 
+                        : 'http://localhost:3000');
+      
+      // 构建重置链接
+      const resetLink = `${baseUrl}/reset-password?token=${token}`;
+      
+      console.log(`Generated reset link: ${resetLink}`);
+
       // 发送重置链接到用户邮箱
       const mailOptions = {
         from: process.env.EMAIL_USER, // 使用环境变量
@@ -50,7 +62,11 @@ const forgotPassword = async (req, res) => {
             <div style="max-width:600px;margin:auto;background:white;padding:40px;border-radius:8px;font-family:Arial,sans-serif;color:#333;">
                 <h2 style="color:#1a1a1a;">Password Reset</h2>
                 <p style="color:#333;font-size:16px;">Click the following link to reset your password:</p>
-                <p href="http://localhost:3000/reset-password?token=${token}">Reset Password</p>
+                <div style="text-align:center;margin:30px 0;">
+                    <a href="${resetLink}" style="background-color:#000000;color:#ffffff;padding:12px 30px;text-decoration:none;border-radius:2px;font-size:16px;display:inline-block;font-weight:normal;letter-spacing:1px;">Reset Password</a>
+                </div>
+                <p style="color:#666;font-size:14px;margin-top:20px;">If the button above doesn't work, you can also copy and paste the following link into your browser:</p>
+                <p style="word-break:break-all;color:#0066cc;font-size:14px;">${resetLink}</p>
                 <p style="color:#333;font-size:14px;margin-top:20px;">Best regards,<br/>The BioByte Team</p>
             </div>
         </div>
@@ -58,7 +74,7 @@ const forgotPassword = async (req, res) => {
         <hr style="margin:40px 0;border:none;border-top:1px solid #eee;">
         <p style="font-size:12px;color:#888;text-align:center;">
             © 2025 BioByte. All rights reserved.<br/>
-            Contact: biomindbot@gmail.com
+            Contact: <a href="mailto:biomindbot@gmail.com" style="color:#888;text-decoration:underline;">biomindbot@gmail.com</a>
         </p>
         `
         
