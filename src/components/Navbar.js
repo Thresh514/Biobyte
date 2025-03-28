@@ -113,7 +113,7 @@ export default function Navbar() {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.3,
+                duration: 0.2,
                 when: "beforeChildren",
                 staggerChildren: 0.1
             }
@@ -122,7 +122,7 @@ export default function Navbar() {
             opacity: 0,
             y: -20,
             transition: {
-                duration: 0.3,
+                duration: 0.2,
                 when: "afterChildren",
                 staggerChildren: 0.05,
                 staggerDirection: -1
@@ -140,14 +140,14 @@ export default function Navbar() {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.2
+                duration: 0.1
             }
         },
         exit: {
             opacity: 0,
             y: -10,
             transition: {
-                duration: 0.2
+                duration: 0.1
             }
         }
     };
@@ -212,9 +212,9 @@ export default function Navbar() {
                             <button className="hover:text-black transition-colors p-2">
                                 {getDisplayName(username) || "User"}
                             </button>
-                            <div className={`absolute top-full right-0 mt-2 w-40 bg-white 
+                            <div className={`absolute top-full right-0 mt-5 w-40 bg-opacity-75 bg-white 
                                 transition-all duration-300 ease-out transform ${
-                                    isUserDropdownOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+                                    isUserDropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"
                                 }`}
                                 onMouseEnter={() => setIsUserHovered(true)}
                                 onMouseLeave={() => setIsUserHovered(false)}
