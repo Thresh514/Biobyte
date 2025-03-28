@@ -290,7 +290,7 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
             <div className="block md:hidden">
                 {/* 商品图片 */}
                 <div className="mb-6">
-                    <div className="relative w-full h-[400px] bg-white overflow-hidden">
+                    <div className="relative w-full h-[550px] bg-white overflow-hidden">
                     <div 
                             ref={scrollContainerRef}
                             className="overflow-x-scroll scrollbar-hide absolute inset-0"
@@ -318,9 +318,9 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
                                     scrollbar-width: none;
                                 }
                             `}</style>
-                            <div className="flex" style={{ width: `${images.length * 100}%` }}>
+                            <div className="flex w-auto" >
                                 {images.map((img, index) => (
-                                    <div key={index} className="relative w-[400px] h-[400px] flex-shrink-0">
+                                    <div key={index} className="relative w-full h-[550px] flex-shrink-0">
                                         <Image
                                             src={img}
                                             alt={`${title} view ${index + 1}`}

@@ -113,7 +113,7 @@ export default function Navbar() {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.3,
+                duration: 0.2,
                 when: "beforeChildren",
                 staggerChildren: 0.1
             }
@@ -122,7 +122,7 @@ export default function Navbar() {
             opacity: 0,
             y: -20,
             transition: {
-                duration: 0.3,
+                duration: 0.2,
                 when: "afterChildren",
                 staggerChildren: 0.05,
                 staggerDirection: -1
@@ -140,14 +140,14 @@ export default function Navbar() {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.2
+                duration: 0.1
             }
         },
         exit: {
             opacity: 0,
             y: -10,
             transition: {
-                duration: 0.2
+                duration: 0.1
             }
         }
     };
