@@ -30,7 +30,8 @@
     "remark-gfm": "^4.0.1",
     "style-loader": "^4.0.0",
     "three": "^0.174.0",
-    "tsparticles": "^3.8.1"
+    "tsparticles": "^3.8.1",
+    "tsparticles-slim": "^2.12.0"
   },
   "scripts": {
     "dev": "next dev",
