@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
     const [currentUser, setCurrentUser] = useState(null);
     const [userOrders, setUserOrders] = useState([]);
     const router = useRouter();
+    const isHomePage = router.pathname === "/";
 
     // 获取用户数据的函数
     const fetchUserData = async () => {
@@ -106,7 +107,7 @@ function MyApp({ Component, pageProps }) {
                 />
                 <TranslatorButton />
             </div>
-            {router.pathname === "/" && <Scrolldown />}
+            {isHomePage && <Scrolldown />}
         </TranslationProvider>
     );
 }

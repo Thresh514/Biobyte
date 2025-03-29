@@ -50,7 +50,7 @@ const ResourceCategories = () => {
                     <h2 className="text-4xl mt-6 md:mt-12 lg:text-7xl font-normal tracking-wide text-black">
                         Best Sellers
                     </h2>
-                    <p className="text-sm md:text-base">Transform your home or office with our gorgeous best selling seasonal arrangements.</p>
+                    <p className="text-sm md:text-base">Study smarter, not harder — shop our bestsellers now!</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full md:w-2/3">
                     {products.map((product, index) => (
@@ -69,7 +69,7 @@ const ResourceCategories = () => {
                                 />
                             </div>
                             <button
-                                className='absolute bottom-24 left-1/2 transform -translate-x-1/2 bg-black text-xs text-white font-normal tracking-wide hidden md:group-hover:block transition-opacity duration-300 p-3'
+                                className='absolute bottom-24 left-1/2 transform -translate-x-1/2 bg-black text-xs text-white font-normal tracking-wide hidden md:group-hover:block transition-opacity duration-300 px-2 py-3'
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     handleProductClick(product);
