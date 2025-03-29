@@ -77,7 +77,7 @@ export default async function handler(req, res) {
         // 生成JWT令牌
         const token = jwt.sign(
             { id: user.id, email: user.email },
-            process.env.JWT_SECRET || 'fallback-secret-for-development',
+            process.env.JWT_SECRET,
             { expiresIn: '24h' }
         );
 
