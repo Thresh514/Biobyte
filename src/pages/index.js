@@ -22,7 +22,7 @@ export default function Home() {
         <meta name="description" content="A platform for educational resources." />
       </Head>
       <div><Navbar/></div>
-      <main className="flex flex-col items-center justify-center space-y-32">
+      <main className="flex flex-col items-center justify-center space-y-24">
         <div><HeroSection/></div>
         <div><ResourceCategories/></div>
         <div className="hidden sm:block"><SuccessStories/></div>
