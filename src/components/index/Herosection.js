@@ -93,7 +93,7 @@ export default function HeroSection() {
                                 <motion.span 
                                     className="text-white tracking-wide"
                                     style={{ 
-                                        fontFamily: "'Space Mono', 'Roboto Mono', monospace",
+                                        fontFamily: "monospace",
                                         letterSpacing: '0.08em',
                                         textTransform: 'uppercase',
                                         fontWeight: '700'
