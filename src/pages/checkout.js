@@ -6,29 +6,28 @@ import { useRouter } from "next/navigation";
 import SimpleHeader from "../components/SimpleHeader";
 import { jwtDecode } from "jwt-decode";
 
-
 export default function Checkout() {
     const [cart, setCart] = useState([]);
     const [name, setName] = useState("");
-    const [email, setEmail] = useState(""); // ✅ 添加 email 状态
-    const [loading, setLoading] = useState(false); // 处理支付中的状态
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // ✅ 记录用户是否已登录
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const router = useRouter();
 
     // 读取购物车数据
     useEffect(() => {
         setCart(getCart());
 
-        // **检查 localStorage 里是否有 JWT**
+        // 检查localStorage里是否有JWT
         const token = localStorage.getItem("token");
         if (token) {
             try {
-                const decoded = jwtDecode(token); // ✅ 解析 JWT
-                setEmail(decoded.email); // ✅ 自动填充 email
+                const decoded = jwtDecode(token);
+                setEmail(decoded.email);
                 setIsLoggedIn(true);
             } catch (error) {
-                console.error("Invalid token:", error);
-                localStorage.removeItem("token"); // **JWT 失效，清除**
+                console.error("无效的token:", error);
+                localStorage.removeItem("token");
                 setIsLoggedIn(false);
             }
         }
@@ -37,114 +36,126 @@ export default function Checkout() {
     // 计算总价
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
     
-    // 处理订单提交
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // 生成唯一订单ID
+    const generateOrderId = () => {
+        const timestamp = Date.now();
+        const randomPart = Math.random().toString(36).substring(2, 8);
+        return `order_${timestamp}_${randomPart}`;
+    };
     
+    // 处理PayPal支付
+    const handlePayPalPayment = async () => {
         if (!name || (!isLoggedIn && !email)) {
             alert("请填写所有字段");
             return;
         }
 
-        setLoading(true); // 显示加载状态
-    
-        // 订单数据
-        const orderData = {
-            name,
-            email,  // ✅ 传入自动获取的 email（登录用户）或用户输入的 email（未登录）
-            cart,
-            totalPrice,
-        };
-        console.log("📦 Order Data being sent:", orderData); // 🔍 打印订单数据
+        setLoading(true);
+        
         try {
-            const headers = { "Content-Type": "application/json" };
-
-            // **如果用户已登录，添加 Token 认证**
-            const token = localStorage.getItem("token");
-            if (token) {
-                headers["Authorization"] = `Bearer ${token}`;
-            }
-
-            // 发送订单请求
-            const response = await fetch("/api/checkout", {
+            // 生成本地订单ID
+            const localOrderId = generateOrderId();
+            
+            // 创建PayPal订单
+            const createResponse = await fetch("/api/paypal/create-order", {
                 method: "POST",
-                headers: headers, // ✅ 现在包含 `Authorization` 头
-                body: JSON.stringify(orderData),
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ 
+                    amount: totalPrice,
+                    order_id: localOrderId  // 传递本地生成的订单ID
+                })
             });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                alert(`订单已提交！确认邮件已发送至 ${email}`);
-                clearCart(); // **支付成功才清空购物车**
-                setCart([]);
-                router.push("/order-success");
-            } else {
-                alert(`支付失败：${result.message}`);
+            
+            const orderData = await createResponse.json();
+            
+            if (!createResponse.ok) {
+                throw new Error(orderData.message || "创建订单失败");
             }
+            
+            console.log("PayPal订单创建成功:", orderData);
+            
+            // 保存订单信息到localStorage，以便支付完成后处理
+            localStorage.setItem("pending_order", JSON.stringify({
+                order_id: orderData.order_id || localOrderId,
+                paypal_order_id: orderData.paypal_order_id,
+                user_info: { name, email },
+                cart: cart,
+                totalPrice: totalPrice
+            }));
+            
+            // 重定向到PayPal支付页面
+            window.location.href = orderData.approval_url;
+            
         } catch (error) {
-            console.error("Checkout error:", error);
-            alert("订单提交失败，请稍后再试");
+            console.error("支付处理错误:", error);
+            alert(`支付处理失败: ${error.message}`);
+            setLoading(false);
         }
-
-        setLoading(false); // 结束加载状态
+    };
+    
+    // 提交表单
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        // 调用PayPal支付
+        await handlePayPalPayment();
     };
     
     return (
         <div className="min-h-screen">
             <SimpleHeader />
-        <div className="pt-24 max-w-3xl mx-auto p-6">
-            <h1 className="text-2xl font-bold mb-4">Checkout</h1>
+            <div className="pt-24 max-w-3xl mx-auto p-6">
+                <h1 className="text-2xl font-bold mb-4">结账</h1>
 
-            {cart.length === 0 ? (
-                <p>Your cart is empty</p>
-            ) : (
-                <>
-                    {/* 商品信息 */}
-                    <div className="border p-4 rounded-md mb-6">
-                        <h2 className="text-xl font-semibold mb-2">Order Details</h2>
-                        {cart.map((item) => (
-                            <div key={`${item.id}-${item.option}`} className="flex justify-between mb-2">
-                                <span>{item.name} {item.option !== "Full" && item.option}</span>
-                                <span>${item.price.toFixed(2)}</span>
-                            </div>
-                        ))}
-                        <h3 className="text-lg font-bold mt-4 text-end">Total: ${totalPrice.toFixed(2)}</h3>
-                    </div>
+                {cart.length === 0 ? (
+                    <p>您的购物车是空的</p>
+                ) : (
+                    <>
+                        {/* 商品信息 */}
+                        <div className="border p-4 rounded-md mb-6">
+                            <h2 className="text-xl font-semibold mb-2">订单详情</h2>
+                            {cart.map((item) => (
+                                <div key={`${item.id}-${item.option}`} className="flex justify-between mb-2">
+                                    <span>{item.name} {item.option !== "Full" && item.option}</span>
+                                    <span>${item.price.toFixed(2)}</span>
+                                </div>
+                            ))}
+                            <h3 className="text-lg font-bold mt-4 text-end">总计: ${totalPrice.toFixed(2)}</h3>
+                        </div>
 
-                    {/* 结算表单 */}
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            className="w-full p-2 border rounded-md"
-                            required
-                        />
+                        {/* 结算表单 */}
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <input
+                                type="text"
+                                placeholder="姓名"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                className="w-full p-2 border rounded-md"
+                                required
+                            />
 
-                        {/* **未登录用户需要输入邮箱** */}
-                        {!isLoggedIn && (
+                            {/* 未登录用户需要输入邮箱 */}
+                            {!isLoggedIn && (
                                 <input
                                     type="email"
-                                    placeholder="Email"
+                                    placeholder="邮箱"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     className="w-full p-2 border rounded-md"
                                     required
                                 />
-                        )}
+                            )}
 
-                        <button
-                            type="submit"
-                            className="w-full bg-black text-white font-semibold p-4 rounded-md transition"
-                        >
-                            {loading ? "Processing..." : "Submit Order"}
-                        </button>
-                    </form>
-                </>
-            )}
-        </div>
+                            <button
+                                type="submit"
+                                className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold p-4 rounded-md transition"
+                                disabled={loading}
+                            >
+                                {loading ? "处理中..." : "使用PayPal支付"}
+                            </button>
+                        </form>
+                    </>
+                )}
+            </div>
         </div>
     );
 }
