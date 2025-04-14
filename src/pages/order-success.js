@@ -1,13 +1,87 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import SimpleHeader from "../components/SimpleHeader";
 import { clearCart } from "../lib/cart";
+import confetti from "canvas-confetti";
 
 export default function OrderSuccess() {
     const [loading, setLoading] = useState(true);
     const [orderInfo, setOrderInfo] = useState(null);
     const [error, setError] = useState(null);
     const router = useRouter();
+    const confettiTriggered = useRef(false);
+
+    // 触发彩带特效的函数
+    const triggerConfetti = () => {
+        if (confettiTriggered.current) return; // 防止重复触发
+        confettiTriggered.current = true;
+        
+        // 从两侧向上喷射彩带
+        const duration = 1.5 * 1000; // 持续3秒
+        const animationEnd = Date.now() + duration;
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+        
+        // 随机范围函数
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        
+        // 从左侧向上喷射
+        function frameLeft() {
+            const timeLeft = animationEnd - Date.now();
+            
+            if (timeLeft <= 0) {
+                return;
+            }
+            
+            const particleCount = 3; // 每帧发射的彩带数量
+            
+            confetti({
+                particleCount,
+                angle: randomInRange(80, 100), // 向上喷射
+                spread: 70,
+                origin: { x: 0.1, y: 0.9 }, // 从左下角
+                colors: [colors[Math.floor(randomInRange(0, colors.length))]],
+                ticks: 300,
+                gravity: 0.8,
+                decay: 0.94,
+                startVelocity: randomInRange(35, 45),
+                zIndex: 1000,
+            });
+            
+            requestAnimationFrame(frameLeft);
+        }
+        
+        // 从右侧向上喷射
+        function frameRight() {
+            const timeLeft = animationEnd - Date.now();
+            
+            if (timeLeft <= 0) {
+                return;
+            }
+            
+            const particleCount = 3; // 每帧发射的彩带数量
+            
+            confetti({
+                particleCount,
+                angle: randomInRange(80, 100), // 向上喷射
+                spread: 70,
+                origin: { x: 0.9, y: 0.9 }, // 从右下角
+                colors: [colors[Math.floor(randomInRange(0, colors.length))]],
+                ticks: 300,
+                gravity: 0.8,
+                decay: 0.94,
+                startVelocity: randomInRange(35, 45),
+                zIndex: 1000,
+            });
+            
+            requestAnimationFrame(frameRight);
+        }
+        
+        // 立即启动两侧彩带
+        frameLeft();
+        frameRight();
+    };
 
     useEffect(() => {
         async function processPendingOrder() {
@@ -18,13 +92,15 @@ export default function OrderSuccess() {
             if (!paypalOrderId) {
                 // 没有支付令牌，可能是直接访问了成功页面
                 setLoading(false);
+                // 即使是直接访问也触发彩带
+                triggerConfetti();
                 return;
             }
             
             // 从localStorage获取之前存储的订单信息
             const pendingOrderStr = localStorage.getItem('pending_order');
             if (!pendingOrderStr) {
-                setError("无法找到订单信息");
+                setError("Order information not found");
                 setLoading(false);
                 return;
             }
@@ -43,7 +119,7 @@ export default function OrderSuccess() {
                 });
                 
                 const result = await response.json();
-                console.log("捕获订单响应:", result);
+                console.log("Order capture response:", result);
                 
                 if (response.ok && result.success) {
                     // 支付成功，保存订单信息并清空购物车
@@ -82,12 +158,15 @@ export default function OrderSuccess() {
                         body: JSON.stringify(orderData)
                     });
                     
+                    // 立即触发彩带效果，无延迟
+                    triggerConfetti();
+                    
                 } else {
-                    setError(result.message || "支付处理失败");
+                    setError(result.message || "Payment processing failed");
                 }
             } catch (err) {
-                console.error("处理支付时出错:", err);
-                setError("处理支付时出错: " + err.message);
+                console.error("Error processing payment:", err);
+                setError("Error processing payment: " + err.message);
             } finally {
                 setLoading(false);
             }
@@ -96,42 +175,72 @@ export default function OrderSuccess() {
         processPendingOrder();
     }, [router]);
 
+    // 页面加载完成立即触发彩带
+    useEffect(() => {
+        if (!loading && !error) {
+            // 立即触发，无延迟
+            triggerConfetti();
+        }
+    }, [loading, error]);
+
     return (
         <div className="min-h-screen">
             <SimpleHeader />
-            <div className="max-w-3xl mx-auto p-6 text-center pt-16">
+            <div className="pt-12 p-6 max-w-6xl mx-auto w-full flex-grow">
+                <h1 className="text-4xl md:text-5xl font-light mb-4 tracking-wide">Order Status</h1>
+                
                 {loading ? (
-                    <div className="flex flex-col items-center">
-                        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mb-4"></div>
-                        <p>正在处理您的支付，请稍候...</p>
+                    <div className="flex flex-col items-center justify-center mt-16">
+                        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mb-6"></div>
+                        <p className="text-lg font-light tracking-wide text-gray-600">Processing your payment, please wait...</p>
                     </div>
                 ) : error ? (
-                    <div className="text-red-500">
-                        <h1 className="text-2xl font-bold mb-4">支付处理错误</h1>
-                        <p>{error}</p>
-                        <a href="/" className="mt-6 inline-block bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition">
-                            返回首页
+                    <div className="flex flex-col items-start border-b border-gray-400 pb-12 mt-12">
+                        <h2 className="text-lg font-light mb-6 tracking-wider text-red-500">Payment Processing Error</h2>
+                        <p className="text-sm font-light tracking-wide mb-8">{error}</p>
+                        <a 
+                            href="/" 
+                            className="bg-white border border-gray-500 hover:border-2 text-gray-900 font-light px-12 py-3 transition flex items-center justify-center"
+                        >
+                            Return to Homepage
                         </a>
                     </div>
                 ) : (
-                    <>
-                        <h1 className="text-2xl font-bold text-green-600">🎉 您的订单已成功提交！ 🎉</h1>
-                        <p className="mt-4">感谢您的购买。我们已将确认邮件和资源发送到您的邮箱。</p>
-                        {orderInfo && (
-                            <div className="mt-6 text-left p-4 border border-gray-200 rounded-md bg-gray-50">
-                                <h2 className="font-semibold mb-2">订单信息:</h2>
-                                <p>订单号: {orderInfo.orderId}</p>
-                                <p>交易号: {orderInfo.transactionId}</p>
-                                <p>状态: {orderInfo.status}</p>
-                                <p>总价: ${orderInfo.totalPrice?.toFixed(2)}</p>
+                    <div className="flex flex-col items-start justify-between mt-12 mb-12">
+                        <div className="w-1/2 items-center justify-center border-b border-gray-400 pb-48">
+                            <h2 className="text-lg font-light mb-6 tracking-wider text-green-600">🎉 Order Successfully Placed!</h2>
+                            <p className="text-sm font-light tracking-wide mb-8">Thank you for your purchase. We've sent a confirmation email with your resources to your inbox.</p>
+                        </div>
+                        
+                        <div className="flex flex-col items-start justify-center mt-12 space-y-4">
+                            <p className="text-lg font-light tracking-wide text-gray-600">What's Next?</p>
+                            <div className="flex flex-col space-y-6">
+                                <p className="text-sm font-light tracking-wide">Your resources have been sent to your email. If you don't see them, please check your spam folder.</p>
+                                <a 
+                                    href="/" 
+                                    className="bg-white border border-gray-500 hover:border-2 text-gray-900 font-light w-1/3 p-3 tracking-wide transition flex items-center justify-center"
+                                >
+                                    Return to Homepage
+                                </a>
                             </div>
-                        )}
-                        <a href="/" className="mt-6 inline-block bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition">
-                            返回首页
-                        </a>
-                    </>
+                        </div>
+                    </div>
                 )}
             </div>
+            
+            {/* 隐藏的canvas用于确保confetti正常工作 */}
+            <canvas 
+                id="confetti-canvas" 
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    pointerEvents: 'none',
+                    zIndex: 999
+                }}
+            />
         </div>
     );
 }
