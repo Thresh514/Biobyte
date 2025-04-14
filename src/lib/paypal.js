@@ -3,10 +3,8 @@
  * 用于处理PayPal API请求的通用功能
  */
 
-// 确定使用的API环境（沙盒或生产环境）
-const API_BASE = process.env.NODE_ENV === 'development' 
-  ? 'https://api-m.sandbox.paypal.com' 
-  : 'https://api-m.paypal.com';
+// 直接使用生产环境API端点
+const API_BASE = 'https://api-m.paypal.com';
 
 // 获取PayPal API访问令牌
 export async function getPayPalAccessToken() {
@@ -20,6 +18,7 @@ export async function getPayPalAccessToken() {
   const auth = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
   
   try {
+    console.log('Getting PayPal access token from:', API_BASE);
     const response = await fetch(`${API_BASE}/v1/oauth2/token`, {
       method: 'POST',
       headers: {
@@ -32,9 +31,11 @@ export async function getPayPalAccessToken() {
     const data = await response.json();
     
     if (!response.ok) {
+      console.error('PayPal API error response:', data);
       throw new Error(`Failed to get PayPal access token: ${data.error_description}`);
     }
     
+    console.log('PayPal access token obtained successfully');
     return data.access_token;
   } catch (error) {
     console.error('Error getting PayPal access token:', error);
@@ -47,6 +48,7 @@ export async function createPayPalOrder(amount, customId) {
   const accessToken = await getPayPalAccessToken();
   
   try {
+    console.log('Creating PayPal order for amount:', amount, 'with customId:', customId);
     const response = await fetch(`${API_BASE}/v2/checkout/orders`, {
       method: 'POST',
       headers: {
@@ -72,9 +74,11 @@ export async function createPayPalOrder(amount, customId) {
     const data = await response.json();
     
     if (!response.ok) {
+      console.error('PayPal create order error:', data);
       throw new Error(`Failed to create PayPal order: ${JSON.stringify(data)}`);
     }
     
+    console.log('PayPal order created successfully:', data.id);
     return data;
   } catch (error) {
     console.error('Error creating PayPal order:', error);
@@ -87,6 +91,7 @@ export async function capturePayPalOrder(orderId) {
   const accessToken = await getPayPalAccessToken();
   
   try {
+    console.log('Capturing PayPal order:', orderId);
     const response = await fetch(`${API_BASE}/v2/checkout/orders/${orderId}/capture`, {
       method: 'POST',
       headers: {
@@ -98,9 +103,11 @@ export async function capturePayPalOrder(orderId) {
     const data = await response.json();
     
     if (!response.ok) {
+      console.error('PayPal capture error:', data);
       throw new Error(`Failed to capture PayPal order: ${JSON.stringify(data)}`);
     }
     
+    console.log('PayPal order captured successfully');
     return data;
   } catch (error) {
     console.error('Error capturing PayPal order:', error);

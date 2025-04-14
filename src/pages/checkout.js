@@ -203,7 +203,7 @@ export default function Checkout() {
                         <div className="flex items-center justify-center space-x-8">
                             <button
                                 onClick={handlePayPalPayment}
-                                className="w-full bg-white border border-gray-500 hover:border-2 text-gray-900 font-light w-[160px] p-4 transition flex items-center justify-center"
+                                className="w-full bg-white border border-gray-500 hover:border-2 text-gray-900 font-light w-[200px] p-4 transition flex items-center justify-center"
                                 disabled={loading}
                             >
                                 {loading ? (
@@ -217,7 +217,7 @@ export default function Checkout() {
                             </button>
                             <button
                                 onClick={handleWeChatPayment}
-                                className="w-full bg-white border border-gray-500 hover:border-2 text-gray-900 font-light w-[160px] p-4 transition flex items-center justify-center cursor-not-allowed"
+                                className="w-full bg-white border border-gray-500 hover:border-2 text-gray-900 font-light w-[200px] p-4 transition flex items-center justify-center cursor-not-allowed"
                                 disabled={loading}
                             >
                                 {loading ? (
