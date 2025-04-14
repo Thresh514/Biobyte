@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs";
 import { pool } from "../../lib/db"; // 添加数据库连接
 
-export async function sendOrderEmail(name, email, cart, totalPrice) {
+export async function sendOrderEmail(name, email, cart, totalPrice, order_id) {
     if (!email || !name || !cart.length) {
         throw new Error("Invalid order data");
     }
@@ -86,6 +86,8 @@ export async function sendOrderEmail(name, email, cart, totalPrice) {
 
         Thank you for your order!
 
+        ${order_id ? `Order ID: ${order_id}` : ''}
+
         Order Details:
         ${orderDetails}
 
@@ -104,6 +106,7 @@ export async function sendOrderEmail(name, email, cart, totalPrice) {
                 <p style="color:#333;font-size:16px;">Thank you for your purchase! Here are your order details:</p>
                 
                 <div style="background:#f8f9fa;border-radius:8px;padding:20px;margin:20px 0;">
+                    ${order_id ? `<p style="color:#333;font-size:15px;margin-bottom:15px;">Order ID: ${order_id}</p>` : ''}
                     <h3 style="color:#1a1a1a;margin-bottom:15px;">Order Summary:</h3>
                     <div style="color:#555;font-size:14px;">
                         ${cart.map(item => `

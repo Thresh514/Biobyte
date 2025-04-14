@@ -315,6 +315,10 @@ const DashboardComponent = () => {
                                             <span className="text-gray-500">Purchase Date:</span>
                                             <span>{new Date(order.purchase_date).toLocaleDateString()}</span>
                                         </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Order ID:</span>
+                                            <span>{order.order_id}</span>
+                                        </div>
                                     </div>
                                     <div className="p-3 border-t border-gray-100">
                                         <button
@@ -382,6 +386,7 @@ const DashboardComponent = () => {
                                                 <p>Chapter: {order.chapter || 'Full Version'}</p>
                                                 <p>Price: ${order.price}</p>
                                                 <p>Purchase Date: {new Date(order.purchase_date).toLocaleString()}</p>
+                                                <p>Order ID: {order.order_id}</p>
                                             </div>
                                             <button
                                                 onClick={() => handleResendEmail(order.study_resource_id)}

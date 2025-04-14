@@ -10,25 +10,25 @@ import { jwtDecode } from "jwt-decode";
 export default function Checkout() {
     const [cart, setCart] = useState([]);
     const [name, setName] = useState("");
-    const [email, setEmail] = useState(""); // ✅ 添加 email 状态
-    const [loading, setLoading] = useState(false); // 处理支付中的状态
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // ✅ 记录用户是否已登录
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const router = useRouter();
 
     // 读取购物车数据
     useEffect(() => {
         setCart(getCart());
 
-        // **检查 localStorage 里是否有 JWT**
+        // 检查localStorage里是否有JWT
         const token = localStorage.getItem("token");
         if (token) {
             try {
-                const decoded = jwtDecode(token); // ✅ 解析 JWT
-                setEmail(decoded.email); // ✅ 自动填充 email
+                const decoded = jwtDecode(token);
+                setEmail(decoded.email);
                 setIsLoggedIn(true);
             } catch (error) {
-                console.error("Invalid token:", error);
-                localStorage.removeItem("token"); // **JWT 失效，清除**
+                console.error("无效的token:", error);
+                localStorage.removeItem("token");
                 setIsLoggedIn(false);
             }
         }
@@ -37,114 +37,201 @@ export default function Checkout() {
     // 计算总价
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
     
-    // 处理订单提交
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // 生成唯一订单ID
+    const generateOrderId = () => {
+        const timestamp = Date.now();
+        const randomPart = Math.random().toString(36).substring(2, 8);
+        return `order_${timestamp}_${randomPart}`;
+    };
     
+    // 处理PayPal支付
+    const handlePayPalPayment = async () => {
         if (!name || (!isLoggedIn && !email)) {
-            alert("请填写所有字段");
+            alert("Please fill in all required fields");
             return;
         }
 
-        setLoading(true); // 显示加载状态
-    
-        // 订单数据
-        const orderData = {
-            name,
-            email,  // ✅ 传入自动获取的 email（登录用户）或用户输入的 email（未登录）
-            cart,
-            totalPrice,
-        };
-        console.log("📦 Order Data being sent:", orderData); // 🔍 打印订单数据
+        setLoading(true);
+        
         try {
-            const headers = { "Content-Type": "application/json" };
-
-            // **如果用户已登录，添加 Token 认证**
-            const token = localStorage.getItem("token");
-            if (token) {
-                headers["Authorization"] = `Bearer ${token}`;
-            }
-
-            // 发送订单请求
-            const response = await fetch("/api/checkout", {
+            // 生成本地订单ID
+            const localOrderId = generateOrderId();
+            
+            // 创建PayPal订单
+            const createResponse = await fetch("/api/paypal/create-order", {
                 method: "POST",
-                headers: headers, // ✅ 现在包含 `Authorization` 头
-                body: JSON.stringify(orderData),
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ 
+                    amount: totalPrice,
+                    order_id: localOrderId  // 传递本地生成的订单ID
+                })
             });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                alert(`订单已提交！确认邮件已发送至 ${email}`);
-                clearCart(); // **支付成功才清空购物车**
-                setCart([]);
-                router.push("/order-success");
-            } else {
-                alert(`支付失败：${result.message}`);
+            
+            const orderData = await createResponse.json();
+            
+            if (!createResponse.ok) {
+                throw new Error(orderData.message || "Failed to create order");
             }
+            
+            console.log("PayPal order created successfully:", orderData);
+            
+            // 保存订单信息到localStorage，以便支付完成后处理
+            localStorage.setItem("pending_order", JSON.stringify({
+                order_id: orderData.order_id || localOrderId,
+                paypal_order_id: orderData.paypal_order_id,
+                user_info: { name, email },
+                cart: cart,
+                totalPrice: totalPrice
+            }));
+            
+            // 重定向到PayPal支付页面
+            window.location.href = orderData.approval_url;
+            
         } catch (error) {
-            console.error("Checkout error:", error);
-            alert("订单提交失败，请稍后再试");
+            console.error("Payment processing error:", error);
+            alert(`Payment processing failed: ${error.message}`);
+            setLoading(false);
+        }
+    };
+    
+    // 处理微信支付
+    const handleWeChatPayment = async () => {
+        if (!name || (!isLoggedIn && !email)) {
+            alert("Please fill in all required fields");
+            return;
         }
 
-        setLoading(false); // 结束加载状态
+        setLoading(true);
+        
+        try {
+            alert("WeChat Pay is currently under development");
+            setLoading(false);
+            
+            // 实际的微信支付处理将在这里添加
+            // ...
+            
+        } catch (error) {
+            console.error("WeChat payment error:", error);
+            alert(`WeChat payment failed: ${error.message}`);
+            setLoading(false);
+        }
+    };
+    
+    // 提交表单
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        // 表单提交时不做任何操作，而是通过按钮点击事件处理
     };
     
     return (
         <div className="min-h-screen">
             <SimpleHeader />
-        <div className="pt-24 max-w-3xl mx-auto p-6">
-            <h1 className="text-2xl font-bold mb-4">Checkout</h1>
+            <div className="pt-12 p-6 max-w-6xl mx-auto w-full flex-grow">
+                <h1 className="text-4xl md:text-5xl font-light mb-4 tracking-wide">Checkout</h1>
+                {cart.length === 0 ? (
+                    <p>Your cart is empty</p>
+                ) : (
+                    <div className="flex flex-col items-start justify-between mt-12 mb-12">
+                        {/* 商品信息 */}
+                        <div className="w-1/2 items-center justify-center border-b border-gray-400 pb-12">
+                            <h2 className="text-lg font-light mb-2 tracking-wider">Order Details</h2>
+                            {cart.map((item) => (
+                                <div key={`${item.id}-${item.option}`} className="flex justify-between tracking-wide text-sm font-light space-x-4">
+                                    <span>{item.name} {item.option !== "Full" && item.option}</span>
+                                    <span>${item.price.toFixed(2)}</span>
+                                </div>
+                            ))}
+                            <h3 className="text-md font-light mt-4 text-end">Total: $ {totalPrice.toFixed(2)}</h3>
+                        </div>
 
-            {cart.length === 0 ? (
-                <p>Your cart is empty</p>
-            ) : (
-                <>
-                    {/* 商品信息 */}
-                    <div className="border p-4 rounded-md mb-6">
-                        <h2 className="text-xl font-semibold mb-2">Order Details</h2>
-                        {cart.map((item) => (
-                            <div key={`${item.id}-${item.option}`} className="flex justify-between mb-2">
-                                <span>{item.name} {item.option !== "Full" && item.option}</span>
-                                <span>${item.price.toFixed(2)}</span>
-                            </div>
-                        ))}
-                        <h3 className="text-lg font-bold mt-4 text-end">Total: ${totalPrice.toFixed(2)}</h3>
-                    </div>
-
-                    {/* 结算表单 */}
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            className="w-full p-2 border rounded-md"
-                            required
-                        />
-
-                        {/* **未登录用户需要输入邮箱** */}
-                        {!isLoggedIn && (
+                        {/* 结算表单 */}
+                        <form onSubmit={handleSubmit} className="space-y-8 w-1/2 border-b border-gray-400 pb-16 pt-12">
+                            <p className="text-lg font-light tracking-wide text-gray-600">Basic Information</p>
+                            <div className="relative w-[400px]">
                                 <input
-                                    type="email"
-                                    placeholder="Email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full p-2 border rounded-md"
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                                        bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                                    placeholder=""
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                     required
                                 />
-                        )}
+                                <label
+                                    htmlFor="name"
+                                    className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                                        peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                                        peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                                        peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
+                                >
+                                    Name
+                                </label>
+                            </div>
 
-                        <button
-                            type="submit"
-                            className="w-full bg-black text-white font-semibold p-4 rounded-md transition"
-                        >
-                            {loading ? "Processing..." : "Submit Order"}
-                        </button>
-                    </form>
-                </>
-            )}
-        </div>
+                            {/* 未登录用户需要输入邮箱 */}
+                            {!isLoggedIn && (
+                                <div className="relative w-[400px]">
+                                <input
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    className="peer w-full px-0 py-2 h-6 text-md font-light border-b border-gray-400
+                                        bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
+                                    placeholder=""
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                                <label
+                                    htmlFor="email"
+                                    className="absolute left-0 top-2 text-gray-400 text-lg transition-all 
+                                        peer-placeholder-shown:top-1 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-400
+                                        peer-focus:top-[-16px] peer-focus:text-xs peer-focus:text-gray-600
+                                        peer-[:not(:placeholder-shown)]:top-[-16px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-gray-600"
+                                >
+                                    Email
+                                </label>
+                            </div>
+                            )}
+                        </form>
+                    </div>
+                    )}
+                    <div className="flex flex-col items-start justify-center mt-12 space-y-4">
+                        <p className="text-lg font-light tracking-wide text-gray-600">Choose Payment Method</p>
+                        <div className="flex items-center justify-center space-x-8">
+                            <button
+                                onClick={handlePayPalPayment}
+                                className="w-full bg-white border border-gray-500 hover:border-2 text-gray-900 font-light w-[160px] p-4 transition flex items-center justify-center"
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <div className="flex items-center space-x-2">
+                                        <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-blue-500"></div>
+                                        <span>Processing...</span>
+                                    </div>
+                                ) : (
+                                    <img src="paypal.svg" alt="PayPal Checkout" className="w-auto" />
+                                )}
+                            </button>
+                            <button
+                                onClick={handleWeChatPayment}
+                                className="w-full bg-white border border-gray-500 hover:border-2 text-gray-900 font-light w-[160px] p-4 transition flex items-center justify-center cursor-not-allowed"
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <div className="flex items-center space-x-2">
+                                        <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-blue-500"></div>
+                                        <span>Processing...</span>
+                                    </div>
+                                ) : (
+                                    <img src="wechatpay.svg" alt="WeChat Pay" className="w-auto" />
+                                )}
+                            </button>
+                        </div>
+                    </div>
+            </div>
         </div>
     );
 }
