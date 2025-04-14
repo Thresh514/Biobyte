@@ -212,7 +212,7 @@ export default function Checkout() {
                                         <span>Processing...</span>
                                     </div>
                                 ) : (
-                                    <img src="paypal.svg" alt="PayPal Checkout" className="w-auto" />
+                                    <img src="paypal.svg" alt="PayPal Checkout" className="w-full" />
                                 )}
                             </button>
                             <button
@@ -226,7 +226,7 @@ export default function Checkout() {
                                         <span>Processing...</span>
                                     </div>
                                 ) : (
-                                    <img src="wechatpay.svg" alt="WeChat Pay" className="w-auto" />
+                                    <img src="wechatpay.svg" alt="WeChat Pay" className="w-full" />
                                 )}
                             </button>
                         </div>
