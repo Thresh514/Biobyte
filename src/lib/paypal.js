@@ -3,19 +3,24 @@
  * 用于处理PayPal API请求的通用功能
  */
 
+// 确定使用的API环境（沙盒或生产环境）
+const API_BASE = process.env.NODE_ENV === 'development' 
+  ? 'https://api-m.sandbox.paypal.com' 
+  : 'https://api-m.paypal.com';
+
 // 获取PayPal API访问令牌
 export async function getPayPalAccessToken() {
   const clientId = process.env.PAYPAL_CLIENT_ID;
   const clientSecret = process.env.PAYPAL_SECRET;
 
   if (!clientId || !clientSecret) {
-    throw new Error('缺少PayPal API凭据，请检查环境变量');
+    throw new Error('Missing PayPal API credentials, please check environment variables');
   }
 
   const auth = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
   
   try {
-    const response = await fetch('https://api-m.sandbox.paypal.com/v1/oauth2/token', {
+    const response = await fetch(`${API_BASE}/v1/oauth2/token`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -27,12 +32,12 @@ export async function getPayPalAccessToken() {
     const data = await response.json();
     
     if (!response.ok) {
-      throw new Error(`获取PayPal访问令牌失败: ${data.error_description}`);
+      throw new Error(`Failed to get PayPal access token: ${data.error_description}`);
     }
     
     return data.access_token;
   } catch (error) {
-    console.error('获取PayPal访问令牌时出错:', error);
+    console.error('Error getting PayPal access token:', error);
     throw error;
   }
 }
@@ -42,7 +47,7 @@ export async function createPayPalOrder(amount, customId) {
   const accessToken = await getPayPalAccessToken();
   
   try {
-    const response = await fetch('https://api-m.sandbox.paypal.com/v2/checkout/orders', {
+    const response = await fetch(`${API_BASE}/v2/checkout/orders`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -67,12 +72,12 @@ export async function createPayPalOrder(amount, customId) {
     const data = await response.json();
     
     if (!response.ok) {
-      throw new Error(`创建PayPal订单失败: ${JSON.stringify(data)}`);
+      throw new Error(`Failed to create PayPal order: ${JSON.stringify(data)}`);
     }
     
     return data;
   } catch (error) {
-    console.error('创建PayPal订单时出错:', error);
+    console.error('Error creating PayPal order:', error);
     throw error;
   }
 }
@@ -82,7 +87,7 @@ export async function capturePayPalOrder(orderId) {
   const accessToken = await getPayPalAccessToken();
   
   try {
-    const response = await fetch(`https://api-m.sandbox.paypal.com/v2/checkout/orders/${orderId}/capture`, {
+    const response = await fetch(`${API_BASE}/v2/checkout/orders/${orderId}/capture`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -93,12 +98,12 @@ export async function capturePayPalOrder(orderId) {
     const data = await response.json();
     
     if (!response.ok) {
-      throw new Error(`捕获PayPal订单失败: ${JSON.stringify(data)}`);
+      throw new Error(`Failed to capture PayPal order: ${JSON.stringify(data)}`);
     }
     
     return data;
   } catch (error) {
-    console.error('捕获PayPal订单时出错:', error);
+    console.error('Error capturing PayPal order:', error);
     throw error;
   }
 }

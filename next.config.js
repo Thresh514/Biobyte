@@ -3,6 +3,10 @@ const nextConfig = {
   // 确保只使用一种数据获取方式
   reactStrictMode: true,
   
+  env: {
+    NODE_ENV: process.env.NODE_ENV || 'production',
+  },
+  
   // 优化图片处理
   images: {
     domains: [],
