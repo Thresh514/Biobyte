@@ -4,6 +4,7 @@ import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import Unit from "../../components/Unit";
 import Footer from "../../components/Footer";
+import SEO from '../../components/SEO';
 
 export default function ChapterDetail() {
     const router = useRouter();
@@ -88,12 +89,12 @@ export default function ChapterDetail() {
     const content = useMemo(() => {
         return (
             <div>
-                <Head>
-                    <title>{course?.title || "课程详情"}</title>
-                    <meta name="description" content={course?.description || ""} />
-                    {/* Canonical URL */}
-                    <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
-                </Head>
+                <SEO 
+                    title={`${course?.title} - BioByte`}
+                    description={course?.description || ""}
+                    image={course?.image || "/default.jpg"}
+                    type="product"
+                />
                 <Navbar />
                 <main className="pt-32 md:pt-48 min-h-screen">
                     {course && (
