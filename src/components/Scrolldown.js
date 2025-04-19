@@ -3,6 +3,7 @@ import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 
 export default function Scrolldown() {
     const [isVisible, setIsVisible] = useState(true);
+    const [isInHeroSection, setIsInHeroSection] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,6 +20,22 @@ export default function Scrolldown() {
                 setIsVisible(false);
             } else {
                 setIsVisible(true);
+            }
+            
+            // 检测视窗是否完全在hero section区域内
+            const heroSection = document.getElementById('herosection');
+            if (heroSection) {
+                // 获取heroSection的位置信息
+                const heroRect = heroSection.getBoundingClientRect();
+                
+                // 检查视窗是否完全在hero section内
+                // 1. 视窗顶部应该在或低于hero section的顶部边界 (scrolled >= heroSection.offsetTop)
+                // 2. 视窗底部应该在或高于hero section的底部边界 (scrolled + windowHeight <= heroSection.offsetTop + heroSection.offsetHeight)
+                const isViewportTopInHero = scrolled >= heroSection.offsetTop;
+                const isViewportBottomInHero = (scrolled + windowHeight) <= (heroSection.offsetTop + heroSection.offsetHeight);
+                
+                // 只有当视窗完全在hero section内时，才显示黑色背景
+                setIsInHeroSection(isViewportTopInHero && isViewportBottomInHero);
             }
         };
 
@@ -37,12 +54,17 @@ export default function Scrolldown() {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-opacity">
-            <button 
-                className="bg-transparent pointer-events-none rounded-full p-2 animate-bounce"
+        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 pointer-events-none">
+            <div 
+                className={`rounded-full p-3 animate-bounce ${
+                    isInHeroSection 
+                    ? 'bg-transparent text-white' 
+                    : 'bg-transparent text-black'
+                } transition-all duration-300`}
+                aria-hidden="true"
             >
-                <HiOutlineChevronDoubleDown size={40} />
-            </button>
+                <HiOutlineChevronDoubleDown className="w-8 h-8 md:w-10 md:h-10" />
+            </div>
         </div>
     );
 }

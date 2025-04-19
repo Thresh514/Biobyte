@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { useTranslation } from "../../../context/TranslationContext";
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 // 动态导入粒子组件以避免SSR问题
 const ParticlesBackground = dynamic(() => import('./ParticlesBackground'), {
@@ -75,15 +75,84 @@ export default function HeroSection() {
 
             {/* 标题区域 */}
             <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center px-4 w-screen">
+                {/* 移动端版本 */}
                 <motion.div
-                    className="overflow-hidden"
+                    className="overflow-hidden block md:hidden"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <h1 className="font-mono relative">
+                        <div className="flex flex-col items-center">
+                            <motion.div
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: 0.2 }}
+                                className="relative"
+                            >
+                                <motion.span 
+                                    className="text-white tracking-wide"
+                                    style={{ 
+                                        fontFamily: "monospace",
+                                        letterSpacing: '0.08em',
+                                        textTransform: 'uppercase',
+                                        fontWeight: '700'
+                                    }}
+                                >
+                                    <motion.span 
+                                        className="block text-4xl mb-1 text-start"
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.3, delay: 0.3 }}
+                                    >
+                                        WELCOME
+                                    </motion.span>
+                                    <motion.span 
+                                        className="block text-5xl mb-1 text-start"
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.3, delay: 0.6 }}
+                                    >
+                                        TO
+                                    </motion.span>
+                                    <motion.span 
+                                        className="block text-8xl mb-1 text-start"
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.5, delay: 0.9 }}
+                                    >
+                                        BIO
+                                    </motion.span>
+                                    <motion.span 
+                                        className="block text-8xl text-start"
+                                        initial={{ opacity: 0, x: -10 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.5, delay: 1.2 }}
+                                    >
+                                        BYTE!
+                                    </motion.span>
+                                </motion.span>
+                                <motion.span 
+                                    className="absolute -inset-1 block opacity-40"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 0.4 }}
+                                    transition={{ duration: 1, delay: 0.8 }}
+                                ></motion.span>
+                            </motion.div>
+                        </div>
+                    </h1>
+                </motion.div>
+
+                {/* 桌面端版本 */}
+                <motion.div
+                    className="overflow-hidden hidden md:block"
                     variants={titleContainer}
                     initial="hidden"
                     animate="visible"
                 >
                     <h1 className="text-3xl md:text-8xl font-mono tracking-wide mb-4 relative">
                         <motion.span 
-                            className="inline-block bg-white bg-clip-text text-transparent drop-shadow-[0_0_5px_rgba(0,183,255,0.4)]"
+                            className="text-white tracking-wide"
                             style={{ 
                                 fontFamily: "'Space Mono', 'Roboto Mono', monospace",
                                 letterSpacing: '0.05em',
@@ -108,20 +177,18 @@ export default function HeroSection() {
             {/* 滚动显示的描述文本 */}
             <motion.div 
                 ref={textRef}
-                className="relative z-10 flex flex-col items-center justify-center h-[25vh] bg-black py-2 w-screen"
+                className="relative z-10 flex flex-col items-center justify-center h-auto md:h-[25vh] bg-black pt-12 pb-8 md:py-2 w-screen"
                 style={{ opacity: textOpacity, y: textY }}
             >
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={isTextInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                     transition={{ duration: 0.8 }}
-                    className="max-w-7xl mx-auto px-6 items-end"
+                    className="mx-auto px-4 md:px-6 max-w-xl md:max-w-7xl items-end"
                 >
-                    <div className="backdrop-blur-sm p-4 w-full">
-                        <p className="text-sm md:text-xl font-light tracking-wide">
-                            {t("description")}
-                        </p>
-                    </div>
+                    <p className="text-sm md:text-xl font-light tracking-wider">
+                        {t("description")}
+                    </p>
                 </motion.div>
             </motion.div>
         </motion.section>

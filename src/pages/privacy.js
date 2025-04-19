@@ -1,9 +1,27 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useMemo } from 'react';
 
 export default function Privacy() {
+    const router = useRouter();
+    
+    // 获取干净的规范URL路径
+    const cleanPath = useMemo(() => {
+        if (!router.asPath) return "";
+        return router.asPath.split(/[?#]/)[0];
+    }, [router.asPath]);
+    
     return(
         <div className="min-h-screen bg-white">
+            <Head>
+                <title>Privacy Policy | BioByte</title>
+                <meta name="description" content="Privacy Policy for BioByte platform" />
+                {/* Canonical URL */}
+                <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
+            </Head>
+            
             <Navbar/>
             <div className="max-w-5xl mx-auto px-6 pt-40 pb-32">
                 <h1 className="text-4xl font-light mb-12 tracking-wide">Privacy Policy</h1>
