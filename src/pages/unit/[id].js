@@ -18,6 +18,12 @@ export default function ChapterDetail() {
         return null;
     };
 
+    // 获取干净的规范URL路径（用于canonical URL）
+    const cleanPath = useMemo(() => {
+        if (!router.asPath) return "";
+        return router.asPath.split(/[?#]/)[0];
+    }, [router.asPath]);
+
     useEffect(() => {
         if (!router.isReady) return;
 
@@ -85,6 +91,8 @@ export default function ChapterDetail() {
                 <Head>
                     <title>{course?.title || "课程详情"}</title>
                     <meta name="description" content={course?.description || ""} />
+                    {/* Canonical URL */}
+                    <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
                 </Head>
                 <Navbar />
                 <main className="pt-32 md:pt-48 min-h-screen">
@@ -99,7 +107,7 @@ export default function ChapterDetail() {
                 <Footer />
             </div>
         );
-    }, [course, router.asPath]);
+    }, [course, router.asPath, cleanPath]);
 
     return content;
 }

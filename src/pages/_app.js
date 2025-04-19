@@ -5,6 +5,7 @@ import Chatbot from "../components/Chatbot";
 import Scrolldown from "../components/Scrolldown";
 import { TranslationProvider } from "../../context/TranslationContext";
 import TranslatorButton from "../components/TranslatorButton";
+import Head from "next/head";
 
 // 确保使用纯客户端渲染，不要添加 getStaticProps 或 getServerSideProps
 function MyApp({ Component, pageProps }) {
@@ -94,21 +95,25 @@ function MyApp({ Component, pageProps }) {
             clearInterval(refreshInterval);
         };
     }, []);
-
     return (
-        <TranslationProvider>
-            <Component {...pageProps} />
-            <div className="fixed bottom-8 lg:bottom-16 right-4 lg:right-16 z-50 flex flex-col items-end space-y-4">
-                <Chatbot 
-                    activeComponent={activeComponent} 
-                    setActiveComponent={setActiveComponent}
-                    user={currentUser}
-                    orderHistory={userOrders}
-                />
-                <TranslatorButton />
-            </div>
-            {isHomePage && <Scrolldown />}
-        </TranslationProvider>
+        <>
+            <Head>
+                <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+            </Head>
+            <TranslationProvider>
+                <Component {...pageProps} />
+                <div className="fixed bottom-8 lg:bottom-16 right-4 lg:right-16 z-50 flex flex-col items-end space-y-4">
+                    <Chatbot 
+                        activeComponent={activeComponent} 
+                        setActiveComponent={setActiveComponent}
+                        user={currentUser}
+                        orderHistory={userOrders}
+                    />
+                    <TranslatorButton />
+                </div>
+                {isHomePage && <Scrolldown />}
+            </TranslationProvider>
+        </>
     );
 }
 

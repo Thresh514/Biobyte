@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.biobyte.shop
+
+# Sitemaps
+Sitemap: https://www.biobyte.shop/sitemap.xml
