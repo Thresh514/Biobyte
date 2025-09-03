@@ -1,0 +1,174 @@
+{
+  "unit": "17",
+  "title": "Selection and evolution",
+  "content": [
+    {
+      "section": "17.1 Variation",
+      "items": [
+        {
+          "title": "1 explain, with examples, that phenotypic variation is due to genetic factors or environmental factors or a combination of genetic and environmental factors.",
+          "content": [
+            "Genetic Factors",
+            "Genetic factors are inherited from parents and determine various traits in an organism. These traits are controlled by genes, and variations can arise due to different alleles, mutations, or combinations of genes.",
+            "Example 1: Eye Color in Humans",
+            "Genetic Basis: Eye color is determined by multiple genes, with the OCA2 and HERC2 genes playing significant roles. Different alleles of these genes result in variations in eye color, such as blue, green, brown, or hazel.",
+            "Example 2: Mendelian Inheritance in Pea Plants",
+            "Genetic Basis: Gregor Mendel's experiments with pea plants demonstrated how traits such as flower color and seed shape are inherited according to specific patterns. For instance, the allele for purple flowers (P) is dominant over the allele for white flowers (p), leading to phenotypic variation in flower color.",
+            "Environmental Factors",
+            "Environmental factors refer to external conditions that can influence an organism's phenotype. These factors can include climate, diet, exposure to toxins, social interactions, and many other variables.",
+            "Example 1: Leaf Size in Plants",
+            "Environmental Influence: The size and shape of leaves can be affected by the amount of sunlight, water, and nutrients available. For example, leaves growing in shaded conditions tend to be larger and thinner to maximize light absorption, while those in direct sunlight are smaller and thicker to reduce water loss.",
+            "Example 2: Skin Color in Humans",
+            "Environmental Influence: Human skin color can change due to exposure to sunlight. Increased exposure to UV radiation stimulates the production of melanin, leading to a darker skin tone as a protective response.",
+            "Combination of Genetic and Environmental Factors",
+            "Many traits are influenced by both genetic predispositions and environmental conditions, resulting in a complex interplay that shapes the phenotype.",
+            "Example 1: Height in Humans",
+            "Genetic Influence: Height is influenced by multiple genes that affect growth and development.",
+            "Environmental Influence: Nutrition, health during childhood, and overall living conditions significantly impact growth. For instance, a person with a genetic predisposition for tall stature may not reach their potential height if they experience malnutrition during their growing years.",
+            "Example 2: Fur Color in Himalayan Rabbits",
+            "Genetic Influence: Himalayan rabbits have a gene that affects fur color, which is temperature-sensitive. The fur on cooler parts of the body, such as the ears, nose, paws, and tail, is darker.",
+            "Environmental Influence: The surrounding temperature determines the expression of the fur color. If a Himalayan rabbit is exposed to colder temperatures, more of its fur will turn dark, whereas in warmer environments, the fur remains lighter."
+          ]
+        },
+        {
+          "title": "2 explain what is meant by discontinuous variation and continuous variation.",
+          "content": [
+            "Discontinuous Variation",
+            "Discontinuous variation refers to phenotypic traits that fall into distinct categories with no intermediate states. These traits are typically controlled by one or a few genes, often with clear dominance-recessive relationships, and are not significantly influenced by the environment.",
+            "Characteristics:",
+            "Distinct Categories: Traits can be grouped into specific, non-overlapping categories.",
+            "Qualitative Differences: Traits are qualitatively different rather than varying by degree.",
+            "Single Gene Influence: Often controlled by a single gene or a small number of genes.",
+            "Minimal Environmental Influence: Usually not significantly affected by environmental factors.",
+            "Examples:",
+            "1. Blood Groups in Humans:",
+            "o The ABO blood group system has four distinct categories: A, B, AB, and O. Each individual falls into one of these categories without intermediate forms.",
+            "2. Pea Plant Flower Color:",
+            "o In Mendel's experiments, pea plants exhibited either purple or white flowers, with no intermediate colors. This trait is controlled by a single gene with two alleles.",
+            "3. Ability to Roll Tongue:",
+            "o Tongue rolling is a genetic trait where individuals can either roll their tongue or not, with no intermediate states.",
+            "Continuous Variation",
+            "Continuous variation refers to phenotypic traits that show a range of values with intermediate states between the extremes. These traits are usually controlled by multiple genes (polygenic inheritance) and are significantly influenced by environmental factors.",
+            "Characteristics:",
+            "Range of Values: Traits exhibit a spectrum of values from one extreme to another.",
+            "Quantitative Differences: Traits vary by degree and can be measured quantitatively.",
+            "Polygenic Influence: Controlled by multiple genes, each contributing a small effect.",
+            "Significant Environmental Influence: Often influenced by environmental conditions.",
+            "Examples:",
+            "1. Human Height:",
+            "o Height in humans is a trait that shows continuous variation, with individuals exhibiting a wide range of heights. This trait is influenced by multiple genes and environmental factors such as nutrition and health.",
+            "2. Skin Color:",
+            "o Skin color in humans shows a continuous range of pigmentation, influenced by several genes and environmental factors like sun exposure.",
+            "3. Leaf Length in Plants:",
+            "o The length of leaves in a plant population can vary continuously, with a wide range of lengths influenced by both genetic factors and environmental conditions like light, water, and nutrients."
+          ]
+        },
+        {
+          "title": "3 explain the genetic basis of discontinuous variation and continuous variation.",
+          "content": [
+            "Discontinuous Variation",
+            "Monogenic Traits: Traits controlled by a single gene or a small number of genes.",
+            "Clear-cut Differences: Each genotype produces a distinct phenotype without intermediate forms.",
+            "Dominant and Recessive Alleles: Traits often follow Mendelian inheritance patterns, where dominant alleles mask the effects of recessive alleles.",
+            "Continuous Variation",
+            "Polygenic Traits: Traits controlled by many genes, often located on different chromosomes.",
+            "Additive Effects: Each gene adds a small, incremental effect to the overall phenotype.",
+            "Environmental Influence: The expression of these traits can also be influenced by environmental factors, resulting in a continuous range of phenotypes."
+          ]
+        },
+        {
+          "title": "4 use the t-test to compare the means of two different samples (the formula for the t-test will be provided, as shown in the Mathematical requirements)",
+          "content": [
+            "1. Calculate the means of the two samples ( xˉ1 and xˉ2​ ).",
+            "2. Calculate the standard deviations of the two samples ( s1​ and s2​ ).",
+            "3. Determine the sample sizes ( n1​ and n2​ ).",
+            "4. Apply the t-test formula.",
+            "5. Determine the degrees of freedom.",
+            "6. Compare the calculated t-value with the critical t-value from the t-distribution table.",
+            "T-test Formula",
+            "The formula for the t-test to compare the means of two independent samples is:",
+            "Degrees of Freedom",
+            "The degrees of freedom (df) for the t-test is calculated using:"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "17.2 Natural and artificial selection",
+      "items": [
+        {
+          "title": "1 explain that natural selection occurs because populations have the capacity to produce many offspring that compete for resources; in the ‘struggle for existence’, individuals that are best adapted are most likely to survive to reproduce and pass on their alleles to the next generation.",
+          "content": [
+            "1. Overproduction of Offspring",
+            "Populations of organisms tend to produce more offspring than can survive to adulthood. This is due to the inherent capacity of organisms to reproduce in large numbers. For example, a single pair of rabbits can produce dozens of offspring in a year. Similarly, many plants produce thousands of seeds.",
+            "2. Competition for Resources",
+            "Because resources such as food, water, shelter, and mates are limited, the offspring must compete for these resources to survive. This competition is often referred to as the \"struggle for existence.\" Only a fraction of the offspring will survive to adulthood.",
+            "3. Variation Among Individuals",
+            "Within a population, there is genetic variation among individuals. This variation is due to mutations, genetic recombination during sexual reproduction, and other genetic processes. These genetic differences result in individuals having varying traits (phenotypes), some of which may be more advantageous in the given environment.",
+            "4. Differential Survival and Reproduction",
+            "In the struggle for existence, individuals with traits that provide an advantage in their environment are more likely to survive and reproduce. This concept is often summarized as \"survival of the fittest.\" The \"fittest\" individuals are those whose traits are better suited to the environment, making them more likely to secure resources and avoid predators.",
+            "5. Passing on of Beneficial Alleles",
+            "The individuals that survive and reproduce pass on their alleles to their offspring. Over time, these advantageous alleles become more common in the population. This leads to an increase in the frequency of beneficial traits in subsequent generations."
+          ]
+        },
+        {
+          "title": "2 explain how environmental factors can act as stabilising, disruptive and directional forces of natural selection.",
+          "content": [
+            "Stabilizing Selection",
+            "Stabilizing selection occurs when environmental conditions favor average phenotypes and act against extreme phenotypes at both ends of the phenotypic spectrum. This results in a reduction of genetic diversity in the population over time, as the intermediate forms are favored.",
+            "Disruptive Selection",
+            "Disruptive selection occurs when environmental conditions favor individuals at both extremes of the phenotypic range, while individuals with intermediate phenotypes are less adapted. This can lead to the population splitting into two distinct phenotypic groups over time.",
+            "Directional Selection",
+            "Directional selection occurs when environmental conditions favor individuals that possess a phenotype at one extreme end of the phenotypic spectrum. This results in a shift in the average phenotype of the population towards that extreme over successive generations."
+          ]
+        },
+        {
+          "title": "3 explain how selection, the founder effect and genetic drift, including the bottleneck effect, may affect allele frequencies in populations.",
+          "content": [
+            "Natural Selection:",
+            "Mechanism: Individuals with traits that provide a survival or reproductive advantage are more likely to survive and pass on these advantageous alleles to their offspring.",
+            "Effect on Allele Frequencies: Alleles that enhance fitness increase in frequency. For example, in a population of moths, dark-colored moths might be less visible to predators in a polluted environment, leading to an increase in the frequency of the allele for dark coloration.",
+            "The Founder Effect",
+            "The founder effect occurs when a small group of individuals becomes isolated from a larger population and establishes a new population. The allele frequencies in the new population can be markedly different from those in the original population due to the limited genetic diversity of the founders.",
+            "Mechanism:",
+            "Small Population: A small group of individuals colonizes a new habitat.",
+            "Limited Genetic Diversity: The new population has reduced genetic variation compared to the original population.",
+            "Effect on Allele Frequencies: Alleles present in the founding individuals become more common, while alleles not present are lost. For example, if a few individuals with a rare allele colonize an island, that allele may become common in the island population even if it was rare in the original population.",
+            "Genetic Drift",
+            "Genetic drift is the change in allele frequencies due to random sampling effects, especially in small populations. It can lead to significant changes in allele frequencies over time purely by chance.",
+            "Mechanism:",
+            "Random Sampling: Allele frequencies change due to random events affecting which individuals survive and reproduce.",
+            "Small Populations: Drift has a more pronounced effect in small populations where random events can disproportionately affect allele frequencies.",
+            "Effect on Allele Frequencies: Alleles can become fixed (reach a frequency of 1) or lost (reach a frequency of 0) purely by chance. For example, in a small population of animals, a rare allele might be lost if the only individuals carrying it fail to reproduce.",
+            "The Bottleneck Effect",
+            "The bottleneck effect is a specific type of genetic drift that occurs when a population undergoes a dramatic reduction in size due to a catastrophic event, such as a natural disaster. The survivors may not represent the genetic diversity of the original population, leading to a change in allele frequencies.",
+            "Mechanism:",
+            "Population Reduction: A large population is suddenly reduced in size.",
+            "Survivors' Genetic Makeup: The genetic diversity of the surviving population may be much lower than the original population.",
+            "Effect on Allele Frequencies: Rare alleles may be lost, and the frequencies of surviving alleles may change drastically. For example, if a disease kills most of a population of plants, the few surviving individuals might have different allele frequencies than the original population, leading to a genetic bottleneck."
+          ]
+        },
+        {
+          "title": "4 outline how bacteria become resistant to antibiotics as an example of natural selection.",
+          "content": [
+            "1. Genetic Variation in Bacteria",
+            "In any given bacterial population, there is genetic variation due to mutations and horizontal gene transfer. Some of these genetic variations may provide resistance to antibiotics.",
+            "Mutations: Random changes in the DNA of bacteria can lead to the development of new traits, such as antibiotic resistance.",
+            "Horizontal Gene Transfer: Bacteria can acquire resistance genes from other bacteria through processes like transformation, transduction, and conjugation.",
+            "2. Exposure to Antibiotics",
+            "When a bacterial population is exposed to an antibiotic, the antibiotic acts as a selective pressure.",
+            "Initial Exposure: When bacteria are first exposed to an antibiotic, most of the bacteria may be killed or inhibited by the antibiotic. However, some bacteria might possess or acquire genetic mutations that confer resistance to the antibiotic.",
+            "3. Survival of Resistant Bacteria",
+            "The bacteria with resistance genes survive the antibiotic treatment, while the non-resistant bacteria are killed or inhibited.",
+            "Selective Advantage: The resistant bacteria have a survival advantage in the presence of the antibiotic, allowing them to continue to grow and reproduce while the susceptible bacteria are eliminated.",
+            "4. Reproduction of Resistant Bacteria",
+            "The surviving resistant bacteria reproduce, passing on their resistance genes to their offspring. This leads to an increase in the frequency of the resistance genes in the bacterial population.",
+            "Rapid Reproduction: Bacteria reproduce quickly, so the population of resistant bacteria can increase rapidly.",
+            "Genetic Recombination: The resistance genes can be spread to other bacteria through horizontal gene transfer, even across different species.",
+            "5. Spread of Resistance"
+          ]
+        }
+      ]
+    }
+  ]
+}

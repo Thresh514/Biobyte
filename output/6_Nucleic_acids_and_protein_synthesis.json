@@ -1,0 +1,100 @@
+{
+  "unit": "6",
+  "title": "Nucleic acids and protein synthesis",
+  "content": [
+    {
+      "section": "6.1 Structure of nucleic acids and replication of DNA",
+      "items": [
+        {
+          "title": "describe the structure of nucleotides, including the phosphorylated nucleotide ATP (structural formulae are not expected)",
+          "content": [
+            "The structure of nucleotides can be described as follows:",
+            "Nitrogenous Base: Nucleotides contain one of five nitrogenous bases: adenine (A), guanine (G), cytosine (C), thymine (T) (in DNA), or uracil (U) (in RNA). The base is attached to the sugar molecule.",
+            "Five-Carbon Sugar: In DNA, the sugar is deoxyribose, while in RNA, it is ribose. The sugar is bonded to the nitrogenous base and forms the backbone of the nucleotide chain.",
+            "Phosphate Group(s): Nucleotides can have one, two, or three phosphate groups attached to the sugar molecule. The phosphate groups are attached to the 5' carbon of the sugar in a nucleotide chain.",
+            "Adenosine triphosphate (ATP) is a nucleotide that plays a critical role in cellular energy transfer. It consists of the nitrogenous base adenine, the five-carbon sugar ribose, and three phosphate groups. The presence of three phosphate groups makes ATP a high-energy molecule that can release energy when the bond between the last two phosphate groups is broken, converting ATP to adenosine diphosphate (ADP) and releasing energy for cellular processes."
+          ]
+        },
+        {
+          "title": "state that the bases adenine and guanine are purines with a double ring structure, and that the bases cytosine, thymine and uracil are pyrimidines with a single ring structure (structural formulae for bases are not expected)",
+          "content": [
+            "The bases adenine (A) and guanine (G) are purines, which have a double-ring structure. The bases cytosine (C), thymine (T) (in DNA), and uracil (U) (in RNA) are pyrimidines, which have a single-ring structure"
+          ]
+        },
+        {
+          "title": "describe the structure of a DNA molecule as a double helix, including:",
+          "content": [
+            "The DNA molecule is a double helix with two antiparallel strands. Complementary base pairing between the 5' to 3' and 3' to 5' strands ensures specific hydrogen bonding between adenine (A) and thymine (T) (or uracil (U) in RNA), as well as between cytosine (C) and guanine (G). Cytosine and guanine form three hydrogen bonds, while adenine and thymine form two, contributing to the stability of the DNA molecule. Nucleotides are linked by phosphodiester bonds between the 3' carbon of one sugar molecule and the 5' carbon of the next, forming a sugar-phosphate backbone."
+          ]
+        },
+        {
+          "title": "describe the semi-conservative replication of DNA during the S phase of the cell cycle, including:",
+          "content": [
+            "Initiation: The DNA double helix is unwound by an enzyme called helicase, creating two template strands.",
+            "Primer Binding: Primase synthesizes a short RNA primer on each template strand, providing a starting point for DNA synthesis.",
+            "Elongation - Leading Strand: DNA polymerase III synthesizes the leading strand continuously in the 5' to 3' direction, following the helicase as it unwinds the DNA. Since DNA polymerase can only add nucleotides in the 5' to 3' direction, the leading strand is synthesized continuously.",
+            "Elongation - Lagging Strand: The lagging strand is synthesized discontinuously in short fragments called Okazaki fragments. Primase synthesizes RNA primers, and DNA polymerase III synthesizes short stretches of DNA in the 5' to 3' direction away from the replication fork. This results in the formation of Okazaki fragments.",
+            "Okazaki Fragment Processing: DNA polymerase I removes the RNA primers and replaces them with DNA, while DNA ligase joins the Okazaki fragments on the lagging strand, forming a continuous daughter strand.",
+            "Termination: The replication process continues until the entire DNA molecule is replicated. Telomeres, repetitive DNA sequences at the ends of chromosomes, are replicated by a special enzyme called telomerase to prevent the loss of genetic information during replication."
+          ]
+        },
+        {
+          "title": "describe the structure of an RNA molecule, using the example of messenger RNA (mRNA)",
+          "content": [
+            "Nucleotides: Like DNA, RNA is composed of nucleotides, each consisting of a nitrogenous base, a five-carbon sugar (ribose in RNA), and a phosphate group.",
+            "Nitrogenous Bases: RNA contains four nitrogenous bases: adenine (A), cytosine (C), guanine (G), and uracil (U). Uracil replaces thymine (T) found in DNA and pairs with adenine via two hydrogen bonds.",
+            "Sugar-Phosphate Backbone: The nucleotides in an RNA molecule are linked together by phosphodiester bonds between the 3' carbon of one sugar and the 5' carbon of the next sugar, forming a sugar-phosphate backbone.",
+            "Structure: mRNA molecules are typically single-stranded and can fold into complex secondary structures due to complementary base pairing within the molecule. This folding is important for the function of mRNA in protein synthesis"
+          ]
+        }
+      ]
+    },
+    {
+      "section": "6.2 Protein synthesis",
+      "items": [
+        {
+          "title": "describe the principle of the universal genetic code in which different triplets of DNA bases either code for specific amino acids or correspond to start and stop codons",
+          "content": [
+            "The universal genetic code is a set of rules that specifies how DNA and RNA sequences are translated into proteins. It is universal because it is the same in all organisms, from bacteria to humans. The code is based on codons, which are sequences of three nucleotides (triplets) that specify a particular amino acid or signal the start or end of protein synthesis.",
+            "In the genetic code, each codon corresponds to either one of the 20 standard amino acids used in protein synthesis or one of the three stop codons that signal the end of translation. The start codon, AUG (encoding the amino acid methionine), initiates protein synthesis, while the stop codons (UAA, UAG, and UGA) signal the termination of translation.",
+            "The specificity of the genetic code ensures that the same codons encode the same amino acids across different organisms. This universality is essential for the accurate translation of genetic information into proteins and underlies the fundamental processes of life."
+          ]
+        },
+        {
+          "title": "describe how the information in DNA is used during transcription and translation to construct polypeptides, including the roles of:",
+          "content": [
+            "Transcription:",
+            "RNA Polymerase: RNA polymerase is an enzyme that catalyzes the synthesis of RNA from a DNA template. It binds to the promoter region of a gene on the DNA strand and unwinds the DNA double helix to expose the template strand.",
+            "Messenger RNA (mRNA): mRNA is the RNA molecule synthesized during transcription that carries the genetic information from the DNA in the nucleus to the ribosomes in the cytoplasm. It is complementary to the DNA template strand and serves as a template for translation.",
+            "Codons: Codons are three-nucleotide sequences in mRNA that code for specific amino acids or signal the start or end of translation. Each codon corresponds to a specific amino acid or a stop signal.",
+            "Translation:",
+            "Transfer RNA (tRNA): tRNA molecules are adaptor molecules that carry amino acids to the ribosome during translation. Each tRNA molecule has an anticodon that is complementary to a specific mRNA codon and carries the corresponding amino acid.",
+            "Anticodons: Anticodons are three-nucleotide sequences in tRNA that are complementary to the codons in mRNA. They allow tRNA to recognize and bind to the corresponding codons in mRNA.",
+            "Ribosomes: Ribosomes are cellular structures where protein synthesis occurs. They consist of two subunits (large and small) and contain binding sites for mRNA and tRNA. Ribosomes catalyze the formation of peptide bonds between amino acids, resulting in the synthesis of a polypeptide chain."
+          ]
+        },
+        {
+          "title": "explain that, in eukaryotes, the RNA molecule formed following transcription (primary transcript) is modified by the removal of non-coding sequences (introns) and the joining together of coding sequences (exons) to form mRNA",
+          "content": [
+            "This primary transcript undergoes a process called RNA processing or RNA splicing, where non-coding sequences called introns are removed, and the coding sequences called exons are joined together to form mature messenger RNA (mRNA).",
+            "Introns and Exons: Introns are non-coding sequences found within genes that do not code for proteins. Exons, on the other hand, are coding sequences that contain the genetic information for protein synthesis.",
+            "RNA Splicing: The process of RNA splicing involves the removal of introns and the joining together of exons to produce a mature mRNA molecule. This process is carried out by a complex called the spliceosome, which recognizes specific sequences at the boundaries between introns and exons.",
+            "Alternative Splicing: In some cases, alternative splicing can occur, where different combinations of exons are joined together, leading to the production of multiple protein isoforms from a single gene.",
+            "Formation of Mature mRNA: After RNA splicing, the mature mRNA molecule is exported from the nucleus to the cytoplasm, where it serves as a template for protein synthesis during translation."
+          ]
+        },
+        {
+          "title": "explain that a gene mutation is a result of substitution or deletion or insertion of nucleotides in DNA and outline how each of these types of mutation may affect the polypeptide produced",
+          "content": [
+            "Substitution: In a substitution mutation, one nucleotide is replaced with a different nucleotide. This can lead to three possible outcomes:",
+            "Silent Mutation: The substitution does not change the amino acid coded for by the mRNA codon, so there is no change in the polypeptide.",
+            "Missense Mutation: The substitution results in a different amino acid being incorporated into the polypeptide, which can alter its structure and function. The impact of a missense mutation depends on the specific amino acid change and its location in the protein.",
+            "Nonsense Mutation: The substitution changes a codon that codes for an amino acid into a stop codon, prematurely terminating translation. This results in a truncated, usually nonfunctional polypeptide.",
+            "Deletion: In a deletion mutation, one or more nucleotides are deleted from the DNA sequence. This can lead to a frameshift mutation, where the reading frame of the mRNA is shifted, altering the entire sequence of codons downstream of the mutation. The resulting polypeptide is usually nonfunctional due to the extensive changes in amino acid sequence.",
+            "Insertion: In an insertion mutation, one or more nucleotides are inserted into the DNA sequence. Like deletion, insertion can also cause a frameshift mutation, affecting the entire sequence of codons downstream of the insertion. The resulting polypeptide is often nonfunctional due to the altered amino acid sequence."
+          ]
+        }
+      ]
+    }
+  ]
+}

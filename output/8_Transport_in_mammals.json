@@ -1,0 +1,206 @@
+{
+  "unit": "8",
+  "title": "Transport in mammals",
+  "content": [
+    {
+      "section": "8.1 The circulatory system",
+      "items": [
+        {
+          "title": "recognise arteries, veins and capillaries from microscope slides, photomicrographs and electron micrographs and make plan diagrams showing the structure of arteries and veins in transverse section (TS) and longitudinal section (LS).",
+          "content": [
+            "Arteries:",
+            "Transverse Section: Arteries have thick walls with three distinct layers: the tunica intima (innermost layer), tunica media (middle layer), and tunica externa (outer layer). The tunica media is particularly thick and contains smooth muscle cells.",
+            "Longitudinal Section: In a longitudinal section, arteries appear as vessels with a circular or oval shape, depending on the degree of constriction. The three layers can be seen, with the tunica media appearing as a prominent layer.",
+            "Veins:",
+            "Transverse Section: Veins have thinner walls compared to arteries and lack a well-defined tunica media. They have a larger lumen relative to their diameter.",
+            "Longitudinal Section: In a longitudinal section, veins appear as vessels with a more irregular shape compared to arteries. The walls are thinner, and the lumen is larger. Valves may also be visible in larger veins."
+          ]
+        },
+        {
+          "title": "explain how the structure of muscular arteries, elastic arteries, veins and capillaries are each related to their functions.",
+          "content": [
+            "Muscular Arteries:",
+            "Structure: Muscular arteries have a thick tunica media composed of smooth muscle cells. They also have a well-defined tunica intima and tunica externa.",
+            "Function: The thick muscular layer allows these arteries to regulate blood flow by constricting or dilating in response to changes in blood pressure and tissue demand. They help distribute blood to various parts of the body.",
+            "Elastic Arteries:",
+            "Structure: Elastic arteries have a large number of elastic fibers in their tunica media, giving them a more elastic and stretchable nature. They also have well-defined tunica intima and tunica externa.",
+            "Function: The elastic fibers allow these arteries to expand and recoil in response to each heartbeat, helping maintain a continuous blood flow and dampening the pulsatile nature of blood flow from the heart.",
+            "Veins:",
+            "Structure: Veins have thinner walls compared to arteries, with a less pronounced tunica media and fewer elastic fibers. They have a larger lumen relative to their diameter and may contain valves to prevent backflow of blood.",
+            "Function: Veins carry blood back to the heart under lower pressure. Their thin walls and larger lumens allow them to accommodate a larger volume of blood. Valves prevent the backflow of blood and assist in the return of blood to the heart, especially against gravity in the lower limbs.",
+            "Capillaries:",
+            "Structure: Capillaries consist of a single layer of endothelial cells, which are thin and permeable. They lack tunica media and tunica externa.",
+            "Function: Capillaries are the site of exchange of nutrients, gases, and wastes between the blood and tissues. Their thin walls allow for easy diffusion of substances. Their large surface area facilitates efficient exchange."
+          ]
+        },
+        {
+          "title": "recognise and draw red blood cells, monocytes, neutrophils and lymphocytes from microscope slides, photomicrographs and electron micrographs",
+          "content": [
+            "Red Blood Cells (Erythrocytes):",
+            "Appearance: Circular, biconcave disc shape without a nucleus.",
+            "Function: Carry oxygen from the lungs to the rest of the body and transport carbon dioxide back to the lungs.",
+            "Monocytes:",
+            "Appearance: Larger cells with a kidney-shaped nucleus and abundant cytoplasm.",
+            "Function: Phagocytize pathogens, dead cells, and debris. They can differentiate into macrophages in tissues.",
+            "Neutrophils:",
+            "Appearance: Multi-lobed nucleus (usually 3-5 lobes) with fine, pale lilac granules in the cytoplasm.",
+            "Function: Phagocytosis of bacteria and fungi, especially in the early stages of infection.",
+            "Lymphocytes:",
+            "Appearance: Variable in size with a large, round nucleus that occupies most of the cell. Little cytoplasm visible around the nucleus.",
+            "Function: Play a key role in the immune response, including the production of antibodies and the destruction of infected or cancerous cells."
+          ]
+        },
+        {
+          "title": "state the functions of tissue fluid and describe the formation of tissue fluid in a capillary network",
+          "content": [
+            "Functions of tissue fluid:",
+            "Nutrient delivery",
+            "Waste removal",
+            "Gas exchange",
+            "Fluid balance",
+            "Immune response",
+            "Formation of tissue fluid in a capillary network occurs through a process called filtration. Here's how it works:",
+            "Hydrostatic Pressure: Blood pressure in the capillaries (hydrostatic pressure) is higher than the pressure in the surrounding tissues. This pressure difference forces water and small solutes out of the capillaries into the interstitial space (the space between cells).",
+            "Osmotic Pressure: As fluid leaves the capillaries, the concentration of proteins and other solutes in the capillaries increases. This creates an osmotic pressure, drawing some of the fluid back into the capillaries.",
+            "Balance: Filtration and osmotic pressure are balanced in normal conditions, maintaining a relatively stable level of tissue fluid. Any excess fluid is collected by lymphatic vessels and returned to the bloodstream as lymph."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "8.2 Transport of oxygen and carbon dioxide",
+      "items": [
+        {
+          "title": "describe the role of red blood cells in transporting oxygen and carbon dioxide with reference to the roles of:",
+          "content": [
+            "Haemoglobin:",
+            "Oxygen Transport: Haemoglobin, a protein found in red blood cells, binds to oxygen in the lungs, forming oxyhaemoglobin. This binding is facilitated by iron ions (Fe^2+) in the haemoglobin molecule.",
+            "Carbon Dioxide Transport: Haemoglobin also binds to carbon dioxide, mainly in the form of carbaminohaemoglobin. This helps transport carbon dioxide from tissues to the lungs for removal.",
+            "Carbonic Anhydrase:",
+            "Carbon Dioxide Transport: Inside red blood cells, carbonic anhydrase catalyzes the conversion of carbon dioxide and water into carbonic acid (H2CO3), which then dissociates into bicarbonate ions (HCO3-) and hydrogen ions (H+). This reaction allows for the transport of carbon dioxide in the form of bicarbonate ions, which are more soluble and can be transported in the blood plasma.",
+            "Formation of Haemoglobinic Acid:",
+            "Haemoglobinic acid is formed when carbon dioxide (CO2) reacts with deoxygenated haemoglobin (HHb) in the red blood cells.",
+            "The reaction is as follows: CO2 + HHb → HbCO2 (haemoglobinic acid) + H+.",
+            "Haemoglobinic acid helps transport carbon dioxide from tissues to the lungs for removal.",
+            "Formation of Carbaminohaemoglobin:",
+            "Carbaminohaemoglobin is formed when carbon dioxide reacts directly with amino groups of haemoglobin.",
+            "The reaction is as follows: CO2 + Hb-NH2 → Hb-NHCOOH (carbaminohaemoglobin).",
+            "Carbaminohaemoglobin also helps transport carbon dioxide from tissues to the lungs for removal."
+          ]
+        },
+        {
+          "title": "describe the chloride shift and explain the importance of the chloride shift",
+          "content": [
+            "Description:",
+            "In tissues where carbon dioxide (CO2) is produced, CO2 diffuses into RBCs and reacts with water to form carbonic acid (H2CO3) with the help of carbonic anhydrase enzyme.",
+            "Carbonic acid then dissociates into bicarbonate ions (HCO3-) and hydrogen ions (H+).",
+            "To maintain electrical neutrality and prevent an excess buildup of negative charges inside the RBC, chloride ions (Cl-) move into the RBC from the plasma via a chloride-bicarbonate exchanger known as the band 3 protein.",
+            "In the lungs, where CO2 is exhaled, the process is reversed. Chloride ions move out of the RBCs back into the plasma, and bicarbonate ions move back into the RBCs.",
+            "Importance:",
+            "The chloride shift helps maintain the ionic balance in red blood cells, preventing excessive buildup of negative charges inside the cell.",
+            "It plays a crucial role in the transportation of carbon dioxide in the blood. By converting CO2 into bicarbonate ions in the tissues and then converting them back into CO2 in the lungs, the chloride shift assists in the transport of CO2 from tissues to lungs for elimination.",
+            "The process also helps maintain the pH balance of the blood. Excessive CO2 in the blood can lead to the formation of carbonic acid and a decrease in pH. The chloride shift helps regulate these changes in pH by buffering the excess hydrogen ions produced during carbon dioxide transport."
+          ]
+        },
+        {
+          "title": "describe the role of plasma in the transport of carbon dioxide",
+          "content": [
+            "plasma plays a crucial role in the transport of CO2 in the blood by carrying dissolved CO2, bicarbonate ions, and carbaminohaemoglobin. These mechanisms ensure the efficient removal of CO2 from tissues to the lungs for exhalation."
+          ]
+        },
+        {
+          "title": "describe and explain the oxygen dissociation curve of adult haemoglobin",
+          "content": [
+            "Low pO2 (Tissues):",
+            "In tissues with low pO2, haemoglobin releases oxygen due to the Bohr effect (increased acidity and high carbon dioxide levels).",
+            "This facilitates oxygen unloading to tissues for cellular respiration.",
+            "Mid-range pO2 (Lungs):",
+            "In the lungs with moderate pO2, haemoglobin binds oxygen, transitioning to the R-state (relaxed state).",
+            "This allows for efficient loading of oxygen in the lungs where pO2 is high.",
+            "High pO2 (Lungs):",
+            "At high pO2, haemoglobin is almost fully saturated with oxygen.",
+            "The steep part of the curve indicates that a small change in pO2 results in a large change in oxygen saturation, facilitating efficient oxygen uptake in the lungs.",
+            "Cooperative Binding:",
+            "The sigmoidal shape results from cooperative binding, where the binding of one oxygen molecule enhances the binding of subsequent molecules.",
+            "This allows for efficient loading and unloading of oxygen, adapting to varying oxygen demands in tissues."
+          ]
+        },
+        {
+          "title": "explain the importance of the oxygen dissociation curve at partial pressures of oxygen in the lungs and in respiring tissues",
+          "content": [
+            "The importance of the oxygen dissociation curve lies in its role in facilitating the efficient transport and delivery of oxygen by haemoglobin to tissues throughout the body. It allows haemoglobin to bind oxygen in the lungs, where oxygen levels are high, and release it in tissues with lower oxygen levels, where it is needed for cellular respiration. The sigmoidal shape of the curve indicates cooperative binding, ensuring that oxygen is readily available when and where it is needed most. This adaptability is crucial for supporting aerobic metabolism and overall physiological function in humans and other organisms."
+          ]
+        },
+        {
+          "title": "describe the Bohr shift and explain the importance of the Bohr shift",
+          "content": [
+            "The Bohr shift describes how the binding of oxygen to haemoglobin is affected by changes in acidity (pH) and carbon dioxide (CO2) levels in the blood. When acidity increases or CO2 levels rise, haemoglobin has a lower affinity for oxygen, meaning it releases oxygen more readily. This is important because it allows haemoglobin to unload oxygen more easily in tissues with high levels of CO2 and low pH, where oxygen is needed for cellular respiration. This shift in the oxygen dissociation curve helps ensure that oxygen is delivered to tissues efficiently, matching oxygen delivery with metabolic demand."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "8.3 The heart",
+      "items": [
+        {
+          "title": "describe the external and internal structure of the mammalian heart",
+          "content": [
+            "External Structure:",
+            "Size and Shape: The heart is roughly the size of a fist and has a conical shape, with the apex pointing downward and to the left.",
+            "Coverings: The heart is enclosed in a double-layered membrane called the pericardium, which protects and anchors the heart in the chest cavity.",
+            "Chambers: The heart has four chambers—two atria (upper chambers) and two ventricles (lower chambers). The atria receive blood, while the ventricles pump blood out of the heart.",
+            "Blood Vessels: The heart is connected to major blood vessels—the superior and inferior vena cava bring deoxygenated blood from the body to the right atrium, and the pulmonary arteries carry deoxygenated blood from the right ventricle to the lungs for oxygenation.",
+            "Coronary Vessels: The heart is supplied with blood by the coronary arteries, which branch off the aorta and provide oxygenated blood to the heart muscle.",
+            "Internal Structure:",
+            "Valves: The heart has four valves—tricuspid valve and mitral valve between the atria and ventricles, and pulmonary valve and aortic valve between the ventricles and major blood vessels. These valves ensure one-way blood flow through the heart.",
+            "Septum: The heart is divided into right and left sides by a muscular wall called the septum. This prevents oxygenated and deoxygenated blood from mixing.",
+            "Muscle Tissue: The walls of the heart are made up of cardiac muscle tissue, which contracts to pump blood. The myocardium is the thickest layer, providing the force needed for pumping.",
+            "Conduction System: The heart has its own electrical conduction system, including the sinoatrial (SA) node, atrioventricular (AV) node, and bundle of His, which coordinate the heart's rhythmic contractions.",
+            "2 explain the differences in the thickness of the walls of the:",
+            "Atria and Ventricles:",
+            "The walls of the atria are thinner compared to the ventricles.",
+            "This is because the atria only need to pump blood a short distance to the ventricles, which have thicker walls to pump blood to the lungs (right ventricle) and the rest of the body (left ventricle).",
+            "Left Ventricle and Right Ventricle:",
+            "The left ventricle has a much thicker wall compared to the right ventricle.",
+            "This is because the left ventricle needs to pump blood to the entire body against higher resistance, requiring more forceful contractions and a thicker myocardium.",
+            "In contrast, the right ventricle only needs to pump blood to the lungs, which have lower resistance, so it does not need to generate as much force and has a thinner wall."
+          ]
+        },
+        {
+          "title": "describe the cardiac cycle, with reference to the relationship between blood pressure changes during systole and diastole and the opening and closing of valves",
+          "content": [
+            "Diastole:",
+            "Atria Filling (Atrial Diastole): The heart is relaxed. Blood flows passively from the veins into the atria, causing them to fill.",
+            "Ventricular Filling (Ventricular Diastole): As the atria contract (atrial systole), blood is pushed into the ventricles. This phase accounts for about 70-80% of ventricular filling.",
+            "Atrioventricular (AV) Valves Open: The pressure in the atria is higher than in the ventricles, so the AV valves (tricuspid and mitral) open, allowing blood to flow from the atria into the ventricles.",
+            "Pressure Changes: Blood pressure is lower during diastole as the heart relaxes.",
+            "Systole:",
+            "Atrial Contraction (Atrial Systole): The atria contract, completing the filling of the ventricles.",
+            "Ventricular Contraction (Ventricular Systole): The ventricles contract, increasing pressure and forcing the AV valves to close to prevent backflow of blood into the atria.",
+            "Semilunar Valves Open: When ventricular pressure exceeds arterial pressure, the semilunar valves (aortic and pulmonary) open, allowing blood to be ejected into the aorta and pulmonary artery.",
+            "Pressure Changes: Blood pressure is higher during systole as the heart contracts to pump blood out to the body and lungs.",
+            "Complete Cycle:",
+            "The cardiac cycle is completed when the ventricles relax, and the pressure in the aorta and pulmonary artery closes the semilunar valves.",
+            "The cycle then repeats with the onset of diastole as the atria fill again."
+          ]
+        },
+        {
+          "title": "explain the roles of the sinoatrial node, the atrioventricular node and the Purkyne tissue in the cardiac cycle (knowledge of nervous and hormonal control is not expected)",
+          "content": [
+            "Sinoatrial Node (SAN):",
+            "The SA node, located in the right atrium, is often referred to as the heart's natural pacemaker.",
+            "It generates electrical impulses spontaneously, initiating each heartbeat.",
+            "The electrical impulses from the SA node spread across the atria, causing them to contract and push blood into the ventricles.",
+            "Atrioventricular Node (AVN):",
+            "The AV node is located at the junction between the atria and ventricles.",
+            "It serves as a relay station, delaying the electrical impulses for a brief moment to allow the atria to finish contracting before the ventricles contract.",
+            "This delay ensures that blood is effectively pumped from the atria to the ventricles before the ventricles contract.",
+            "Purkyne Fibers:",
+            "The Purkyne  fibers are specialized fibers that rapidly conduct the electrical impulses from the AV node to the ventricles.",
+            "They ensure that the ventricles contract in a synchronized manner, starting from the apex of the heart and moving upward, effectively pumping blood out of the heart."
+          ]
+        }
+      ]
+    }
+  ]
+}

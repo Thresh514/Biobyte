@@ -1,0 +1,304 @@
+{
+  "unit": "2",
+  "title": "Biological molecules",
+  "content": [
+    {
+      "section": "2.1 Testing for biological molecules",
+      "items": [
+        {
+          "title": "describe and carry out the Benedict’s test for reducing sugars, the iodine test for starch, the emulsion test for lipids and the biuret test for proteins",
+          "content": [
+            "Benedict’s Test for Reducing Sugars:",
+            "Principle: Detects the presence of reducing sugars (e.g., glucose) that can reduce Cu^2+ ions to Cu^+ ions, forming a brick-red precipitate.",
+            "Procedure:",
+            "Prepare a sample solution (e.g., glucose solution).",
+            "Add an equal volume of Benedict's reagent (copper(II) sulfate solution with sodium citrate) to the sample.",
+            "Heat the mixture in a boiling water bath for a few minutes.",
+            "Observe the color change. A green, yellow, orange, or red precipitate indicates the presence of reducing sugars.",
+            "Iodine Test for Starch:",
+            "Principle: Starch forms a blue-black complex with iodine.",
+            "Procedure:",
+            "Prepare a sample solution (e.g., starch solution).",
+            "Add a few drops of iodine solution (iodine dissolved in potassium iodide) to the sample.",
+            "Observe the color change. A blue-black color indicates the presence of starch.",
+            "Emulsion Test for Lipids:",
+            "Principle: Lipids are hydrophobic and form an emulsion when shaken with water.",
+            "Procedure:",
+            "Prepare a sample solution (e.g., lipid solution in ethanol).",
+            "Add the sample to water in a test tube and shake vigorously.",
+            "Observe the formation of a milky emulsion. More milky appearance indicates a higher lipid content.",
+            "Biuret Test for Proteins:",
+            "Principle: Proteins react with copper(II) ions in an alkaline solution to form a violet-colored complex.",
+            "Procedure:",
+            "Prepare a sample solution (e.g., protein solution).",
+            "Add an equal volume of Biuret reagent (sodium hydroxide and copper(II) sulfate solution) to the sample.",
+            "Mix gently and observe the color change. A violet color indicates the presence of proteins."
+          ]
+        },
+        {
+          "title": "describe and carry out a test to identify the presence of non-reducing sugars, using acid hydrolysis and Benedict’s solution",
+          "content": [
+            "Prepare Test Sample:",
+            "Prepare a test solution containing the non-reducing sugar (e.g., sucrose).",
+            "Perform Acid Hydrolysis:",
+            "In a test tube, add 2 mL of the test solution.",
+            "Add a few drops of dilute hydrochloric acid (HCl) to the test tube.",
+            "Place the test tube in a boiling water bath for a few minutes to hydrolyze the non-reducing sugar into reducing sugars (glucose and fructose).",
+            "Neutralize the Solution:",
+            "Add a few drops of sodium hydroxide (NaOH) solution to neutralize the acid.",
+            "Check the pH using pH paper to ensure the solution is neutral (pH 7).",
+            "Perform Benedict's Test:",
+            "Add 2 mL of Benedict's reagent to the test tube.",
+            "Heat the mixture in a boiling water bath for a few minutes.",
+            "Observe Color Change:",
+            "After heating, observe the color change in the test tube.",
+            "A color change from blue (no reducing sugar) to green, yellow, orange, or red indicates the presence of reducing sugars produced from the hydrolysis of the non-reducing sugar."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "2.2 Carbohydrates and lipids",
+      "items": [
+        {
+          "title": "describe and draw the ring forms of α-glucose and β-glucose",
+          "content": [
+            "In their ring forms, α-glucose and β-glucose both form a six-membered ring structure. The ring is created when a hydroxyl group on one carbon atom reacts with the carbonyl carbon atom, forming a closed ring structure.",
+            "The distinguishing feature between α-glucose and β-glucose lies in the position of the hydroxyl group on the first carbon atom (C1) relative to the ring structure:",
+            "In α-glucose, the hydroxyl group on C1 is positioned in a way that points above the plane of the ring.",
+            "In β-glucose, the hydroxyl group on C1 is oriented to project outside the plane of the ring."
+          ]
+        },
+        {
+          "title": "define the terms",
+          "content": [
+            "Monomer: A small molecule that can join together with other monomers to form a larger polymer molecule. Monomers are the building blocks of polymers.",
+            "Polymer: A large molecule composed of many repeated subunits (monomers) bonded together. Polymers can be natural or synthetic and have a wide range of properties and uses.",
+            "Macromolecule: A large molecule, such as a polymer or complex protein, typically composed of thousands of atoms. Macromolecules are essential for the structure and function of living organisms.",
+            "Monosaccharide: The simplest form of carbohydrate, consisting of a single sugar molecule. Examples include glucose, fructose, and galactose. Monosaccharides are the building blocks of more complex carbohydrates.",
+            "Disaccharide: A carbohydrate molecule composed of two monosaccharide units joined together by a glycosidic bond. Common examples include sucrose (glucose + fructose), lactose (glucose + galactose), and maltose (glucose + glucose).",
+            "Polysaccharide: A complex carbohydrate molecule composed of multiple monosaccharide units joined together in long chains. Polysaccharides serve as energy storage molecules (e.g., starch and glycogen) and structural components (e.g., cellulose) in living organisms."
+          ]
+        },
+        {
+          "title": "state the role of covalent bonds in joining smaller molecules together to form polymers.",
+          "content": [
+            "Covalent bonds play a crucial role in joining smaller molecules together to form polymers. These bonds involve the sharing of electrons between atoms, creating strong and stable connections between the monomer units.",
+            "In the process of polymerization, monomers undergo a chemical reaction that forms covalent bonds between their individual units. This reaction typically involves the loss of a small molecule, such as water (dehydration synthesis) or another functional group, to form the new bond.",
+            "The resulting polymer chain is held together by a series of covalent bonds, which provide structural integrity and stability to the molecule. This allows polymers to have distinct properties and functions that are different from those of their individual monomer units."
+          ]
+        },
+        {
+          "title": "describe the formation of a glycosidic bond by condensation, with reference to disaccharides, including sucrose, and polysaccharides",
+          "content": [
+            "Glycosidic bonds are formed through a condensation reaction, where two hydroxyl groups (-OH) on different monosaccharides combine, releasing a water molecule. This reaction forms an oxygen bridge (-O-) between the two carbon atoms, creating the glycosidic bond.",
+            "In sucrose, a disaccharide composed of glucose and fructose, the glycosidic bond forms between the anomeric carbon (C1) of glucose and the hydroxyl group on carbon 2 (C2) of fructose. This linkage is called an α,β-1,2-glycosidic bond.",
+            "In polysaccharides like starch and glycogen, multiple glucose molecules are linked by glycosidic bonds. The specific type of glycosidic bond and arrangement of glucose units determine the structure and properties of the polysaccharide."
+          ]
+        },
+        {
+          "title": "describe the breakage of a glycosidic bond in polysaccharides and disaccharides by hydrolysis, with reference to the non-reducing sugar test",
+          "content": [
+            "Hydrolysis is the process of breaking a glycosidic bond in polysaccharides and disaccharides by the addition of water. This process involves the following steps:",
+            "Addition of Water: Water is added to the glycosidic bond, causing it to break. The oxygen atom in the glycosidic bond gains a hydrogen ion (H+) from water, while the other part of the broken bond gains a hydroxyl group (-OH).",
+            "Formation of Monosaccharides: The glycosidic bond is cleaved, resulting in the formation of two monosaccharide units. In the case of disaccharides, such as sucrose, glucose, and fructose are produced.",
+            "Non-Reducing Sugar Test:",
+            "In the non-reducing sugar test, a small amount of the sugar (e.g., sucrose) is heated with dilute hydrochloric acid (HCl) to hydrolyze it into its monosaccharide components (glucose and fructose).",
+            "After hydrolysis, the solution is neutralized with sodium hydroxide (NaOH) to make it slightly alkaline.",
+            "The resulting solution is then tested with Benedict's reagent to detect the presence of reducing sugars (glucose and fructose), which can reduce the copper ions in the reagent, forming a colored precipitate.",
+            "If the original sugar was a non-reducing sugar (e.g., sucrose), no color change will occur, indicating the absence of reducing sugars."
+          ]
+        },
+        {
+          "title": "describe the molecular structure of the polysaccharides starch (amylose and amylopectin) and glycogen and relate their structures to their functions in living organisms",
+          "content": [
+            "Starch:",
+            "Amylose: Consists of unbranched chains of α-glucose units linked by α-1,4-glycosidic bonds. It has a helical structure.",
+            "Amylopectin: Contains α-1,4-glycosidic bonds like amylose but also has occasional α-1,6-glycosidic bonds, creating branch points. It is more branched and has a larger molecular weight than amylose.",
+            "Glycogen:",
+            "Similar to amylopectin but more highly branched, with frequent α-1,6-glycosidic bonds, creating a highly branched structure.",
+            "Glycogen is the main storage polysaccharide in animals, found in liver and muscle cells.",
+            "Starch (Amylose and Amylopectin):",
+            "Storage: Efficiently stores glucose in plants for energy.",
+            "Accessibility: Amylose is easily accessible for quick energy release.",
+            "Controlled Release: Amylopectin's branching allows for gradual energy release.",
+            "Glycogen:",
+            "Rapid Energy: Highly branched for quick glucose release.",
+            "Efficient Storage: Maximizes glucose storage in animals.",
+            "Regulation: Metabolism is tightly regulated for energy balance."
+          ]
+        },
+        {
+          "title": "describe the molecular structure of the polysaccharide cellulose and outline how the arrangement of cellulose molecules contributes to the function of plant cell walls",
+          "content": [
+            "Cellulose Structure:",
+            "Consists of β-glucose monomers linked by β-1,4-glycosidic bonds.",
+            "Forms long, straight chains with hydrogen bonds between adjacent chains.",
+            "Chains are arranged in parallel and form microfibrils, which are bundled together to form cellulose fibers.",
+            "Function in Plant Cell Walls:",
+            "Strength: Provides strength and rigidity.",
+            "Permeability: Allows water and nutrient passage.",
+            "Protection: Protects against pathogens and damage.",
+            "Support: Maintains cell and tissue structure."
+          ]
+        },
+        {
+          "title": "state that triglycerides are non-polar hydrophobic molecules and describe the molecular structure of triglycerides with reference to fatty acids (saturated and unsaturated), glycerol and the formation of ester bonds",
+          "content": [
+            "Triglycerides are non-polar hydrophobic molecules consisting of three fatty acid chains esterified to a glycerol molecule.",
+            "Molecular Structure:",
+            "Fatty Acids: Long hydrocarbon chains with a carboxyl group (-COOH) at one end.",
+            "Saturated: Have no double bonds between carbon atoms, resulting in a straight chain.",
+            "Unsaturated: Contain one or more double bonds, causing kinks in the chain.",
+            "Glycerol: A three-carbon alcohol with a hydroxyl group (-OH) attached to each carbon.",
+            "Formation of Ester Bonds:",
+            "Each fatty acid chain undergoes esterification with a hydroxyl group of glycerol.",
+            "The reaction releases three water molecules, one for each ester bond formed.",
+            "This process results in the formation of a triglyceride molecule, with three fatty acid chains attached to the glycerol backbone through ester bonds."
+          ]
+        },
+        {
+          "title": "relate the molecular structure of triglycerides to their functions in living organisms",
+          "content": [
+            "Energy Storage: Triglycerides serve as a highly efficient form of energy storage due to their high energy content per gram.",
+            "Insulation: In animals, adipose tissue rich in triglycerides acts as an insulating layer, helping to maintain body temperature.",
+            "Protection: Triglycerides cushion and protect vital organs from mechanical shock.",
+            "Metabolic Water Reserve: During metabolism, triglycerides can be hydrolyzed to release water, which is important in water-stressed environments.",
+            "Buoyancy: In marine animals, triglycerides stored in the liver or adipose tissue help provide buoyancy."
+          ]
+        },
+        {
+          "title": "describe the molecular structure of phospholipids with reference to their hydrophilic (polar) phosphate heads and hydrophobic (non-polar) fatty acid tails",
+          "content": [
+            "Molecular Structure:",
+            "Hydrophilic Head: Consists of a phosphate group (-PO₄) attached to a glycerol molecule. The phosphate group is polar and hydrophilic, meaning it interacts well with water.",
+            "Hydrophobic Tails: Two fatty acid chains attached to the glycerol backbone. These chains are non-polar and hydrophobic, meaning they do not interact well with water."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "2.3 Proteins",
+      "items": [
+        {
+          "title": "describe and draw the general structure of an amino acid and the formation and breakage of a peptide bond",
+          "content": [
+            "Amino acids are organic molecules composed of an amino group (-NH₂), a carboxyl group (-COOH), a hydrogen atom (H), and a variable side chain (R group) attached to a central carbon atom (alpha carbon, Cα).",
+            "Formation of Peptide Bond:",
+            "A peptide bond forms between the carboxyl group of one amino acid and the amino group of another amino acid.",
+            "During the formation of a peptide bond, a molecule of water is released in a condensation reaction.",
+            "The carbon atom from the carboxyl group of one amino acid and the nitrogen atom from the amino group of another amino acid bond together, forming a peptide bond.",
+            "Breakage of Peptide Bond:",
+            "Peptide bonds can be broken through hydrolysis, which involves the addition of a water molecule.",
+            "In hydrolysis, the water molecule is split into a hydrogen ion (H+) and a hydroxide ion (OH-).",
+            "The hydroxide ion (OH-) binds to the carbon atom, and the hydrogen ion (H+) binds to the nitrogen atom, breaking the peptide bond and separating the amino acids."
+          ]
+        },
+        {
+          "title": "explain the meaning of the terms primary structure, secondary structure, tertiary structure and quaternary structure of proteins",
+          "content": [
+            "Primary Structure:",
+            "The primary structure of a protein refers to the chain of amino acids connected by peptide bond.",
+            "Secondary Structure:",
+            "Secondary structure refers to the local folding patterns within a protein chain.",
+            "The two main types of secondary structure are alpha helices and beta sheets, which are stabilized by hydrogen bonds between the backbone atoms of amino acids.",
+            "These structures give the protein its overall shape and stability.",
+            "Tertiary Structure:",
+            "Tertiary structure refers to the three-dimensional arrangement of the entire polypeptide chain.",
+            "It is stabilized by a variety of interactions, including hydrogen bonds, disulfide bonds, hydrophobic interactions, and ionic bonds.",
+            "The tertiary structure determines the overall shape and function of the protein.",
+            "Quaternary Structure:",
+            "Quaternary structure refers to the arrangement of multiple polypeptide chains (subunits) in a multi-subunit protein.",
+            "Proteins with quaternary structure have more than one polypeptide chain, each with its own tertiary structure, that come together to form a functional protein complex.",
+            "The arrangement of these subunits is critical for the function of many proteins, such as enzymes and antibodies."
+          ]
+        },
+        {
+          "title": "describe the types of interaction that hold protein molecules in shape:",
+          "content": [
+            "Hydrophobic Interactions:",
+            "Occur between non-polar molecules or regions of molecules in an aqueous environment.",
+            "Non-polar amino acid side chains tend to cluster together away from water, stabilizing protein structures.",
+            "Hydrogen Bonding:",
+            "Formed between hydrogen atoms covalently bonded to electronegative atoms (e.g., oxygen or nitrogen) and other electronegative atoms.",
+            "Commonly occurs between backbone atoms in protein secondary structures (e.g., between amino and carbonyl groups in alpha helices and beta sheets).",
+            "Ionic Bonding:",
+            "Formed between charged groups on amino acid side chains (e.g., between positively charged amino groups and negatively charged carboxyl groups).",
+            "Helps stabilize protein structures, especially in environments with varying pH.",
+            "Covalent Bonding:",
+            "Includes disulfide bonds, which form between two cysteine residues when their sulfhydryl groups (-SH) oxidize to form a covalent S-S bond.",
+            "Disulfide bonds are important for stabilizing the tertiary and quaternary structures of proteins."
+          ]
+        },
+        {
+          "title": "state that globular proteins are generally soluble and have physiological roles and fibrous proteins are generally insoluble and have structural roles",
+          "content": [
+            "Globular proteins are generally soluble in water and have physiological roles. They are often enzymes, hormones, or antibodies, and they typically have compact, rounded shapes.",
+            "Fibrous proteins, on the other hand, are generally insoluble in water and have structural roles. Examples include collagen, which provides strength to connective tissues, and keratin, which forms hair, nails, and the outer layer of skin. Fibrous proteins are characterized by their long, elongated shapes."
+          ]
+        },
+        {
+          "title": "describe the structure of a molecule of hemoglobin as an example of a globular protein, including the formation of its quaternary structure from two alpha (α) chains (α–globin), two beta (β) chains (β–globin) and a haem group",
+          "content": [
+            "Structure of Hemoglobin:",
+            "Alpha (α) Chains: Each alpha chain is composed of 141 amino acid residues.",
+            "Beta (β) Chains: Each beta chain is composed of 146 amino acid residues.",
+            "Heme Group: Each subunit of hemoglobin contains a heme group, which consists of an iron ion (Fe²⁺) coordinated to a porphyrin ring.",
+            "Quaternary Structure: The four subunits come together to form a quaternary structure through non-covalent interactions, including hydrogen bonds, hydrophobic interactions, and salt bridges.",
+            "Quaternary Structure Formation:",
+            "The quaternary structure of hemoglobin is stabilized by interactions between the alpha and beta chains, as well as interactions between the heme groups and the protein chains.",
+            "The folding and assembly of the four subunits are critical for the proper functioning of hemoglobin as an oxygen carrier in the blood."
+          ]
+        },
+        {
+          "title": "relate the structure of haemoglobin to its function, including the importance of iron  in the haem group",
+          "content": [
+            "Hemoglobin's structure is crucial for its function as an oxygen carrier. The heme group, which contains iron, binds oxygen in a reversible manner. Each hemoglobin molecule has four heme groups, allowing it to carry up to four oxygen molecules. The quaternary structure of hemoglobin, formed by two alpha and two beta subunits, creates a pocket where the heme groups are located. This structure allows hemoglobin to undergo conformational changes that enhance its ability to bind and release oxygen. Hemoglobin's cooperativity enables it to load and unload oxygen efficiently in different tissues. Additionally, hemoglobin acts as a buffer for hydrogen ions and carbon dioxide, helping to regulate the pH of the blood."
+          ]
+        },
+        {
+          "title": "describe the structure of a molecule of collagen as an example of a fibrous protein, and the arrangement of collagen molecules to form collagen fibres",
+          "content": [
+            "Structure of Collagen Molecule:",
+            "Collagen is a fibrous protein made up of three polypeptide chains, known as alpha chains, that are twisted together in a helical conformation to form a triple helix.",
+            "Each alpha chain is composed of a repeating amino acid sequence, with glycine occurring every third residue.",
+            "The triple helix structure of collagen is stabilized by hydrogen bonds between the amino acid residues in adjacent chains.",
+            "Arrangement of Collagen Molecules to Form Collagen Fibers:",
+            "Collagen molecules align themselves in a staggered array, with the ends of the molecules overlapping slightly.",
+            "These aligned collagen molecules then undergo cross-linking, which involves the formation of covalent bonds between certain amino acids (e.g., lysine and hydroxylysine residues) in adjacent collagen molecules.",
+            "The cross-linked collagen molecules aggregate to form collagen fibrils, which further aggregate to form collagen fibers.",
+            "Collagen fibers are strong, flexible, and resistant to stretching, making them ideal for providing structural support in tissues such as skin, tendons, and bones."
+          ]
+        },
+        {
+          "title": "relate the structures of collagen molecules and collagen fibres to their function",
+          "content": [
+            "Structural Support: Collagen provides structural support to tissues such as skin, tendons, ligaments, and bones, helping them resist tensile forces.",
+            "Flexibility: The staggered arrangement of collagen molecules and their cross-linking allow collagen fibers to be flexible and resistant to stretching.",
+            "Wound Healing: Collagen plays a crucial role in wound healing, providing a scaffold for cell migration and tissue regeneration.",
+            "Organ Function: Collagen is essential for the structure and function of organs such as the skin, blood vessels, and organs in the digestive system."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "2.4 Water",
+      "items": [
+        {
+          "title": "explain how hydrogen bonding occurs between water molecules and relate the properties of water to its roles in living organisms, limited to solvent action, high specific heat capacity and latent heat of vaporization",
+          "content": [
+            "Solvent Action:",
+            "Water is known as the universal solvent because of its ability to dissolve a wide range of substances due to its polar nature.",
+            "This property is essential for biological processes, such as the dissolution of nutrients and waste products in cells and the transport of substances in the bloodstream.",
+            "High Specific Heat Capacity:",
+            "Water has a high specific heat capacity, which means it can absorb a large amount of heat energy with only a small increase in temperature.",
+            "This property helps organisms regulate their internal temperature and prevents abrupt changes in temperature, providing a stable environment for biological processes.",
+            "Latent Heat of Vaporization:",
+            "Water has a high latent heat of vaporization, which means it requires a significant amount of heat energy to change from a liquid to a gas.",
+            "This property is important for cooling mechanisms in organisms, such as sweating in humans, where heat is absorbed from the body to evaporate water from the skin, helping to maintain body temperature."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState, memo, useCallback, useRef } from "react";
 import { useRouter } from "next/router";
-import { addToCart, saveCart, getCart } from "../lib/cart.js";
+
 import Image from 'next/image';
 
 const ProductDetail = memo(({ title, description, image, image1, image2, price, type, options, file_path, currentUrl }) => {
@@ -8,9 +8,7 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
     const [selectedOption, setSelectedOption] = useState(null);
     const [totalPrice, setTotalPrice] = useState(price || 0);
     const shouldShowOptions = type && type.trim().toLowerCase() !== "syllabus analysis";
-    const [toastMessage, setToastMessage] = useState("");
-    const [showToast, setShowToast] = useState(false);
-    const [fadeOut, setFadeOut] = useState(false);
+
     const [isLoading, setIsLoading] = useState(false);
     const scrollContainerRef = useRef(null);
     const [isDragging, setIsDragging] = useState(false);
@@ -201,84 +199,30 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
         }
     };
 
-    const handleAddToCart = async () => {
-        // 使用主标题作为商品名称
-        const itemTitle = title;
-        console.log(`🚀 Trying to add to cart: ${itemTitle}`);
-
-        if (!itemTitle) {
-            console.error("❌ 错误: title 为空，无法添加到购物车！");
-            return;
-        }
-
-        const cleanTitle = itemTitle.trim();
-        console.log("📌 handleAddToCart: 传入 API 的 cleanTitle:", cleanTitle);
-
-        // 获取 studyResourceId
-        const studyResourceId = await getStudyResourceId(cleanTitle);
+    const handleView = async () => {
+        // 直接使用当前URL的路径参数
+        const currentPath = currentUrl || router.asPath;
+        console.log(`🚀 当前URL路径: ${currentPath}`);
         
-        if (!studyResourceId) {  
-            console.error("❌ 获取 studyResourceId 失败，未能添加到购物车");
+        // 从URL中提取参数，例如: /unit/AS%20Mindmap%20Chapter%202 -> AS Mindmap Chapter 2
+        const urlParam = currentPath.split('/unit/')[1];
+        if (!urlParam) {
+            console.error("❌ 无法从URL中提取参数");
             return;
         }
         
-        const product = {
-            id: studyResourceId, 
-            name: title.replace(/\s+Chapter\s+\d+$/, ''), // 移除标题中可能的章节信息
-            price: selectedOption ? selectedOption.price : price,
-            option: selectedOption ? selectedOption.chapter : "Full",
-            image: selectedOption ? selectedOption.image : image,
-            file_path: selectedOption ? selectedOption.file_path : file_path
-        };
-
-        console.log("✅ 添加到购物车的商品:", product);
-        addToCart(product);
-        setToastMessage(`${product.name} ${product.option !== "Full" ? product.option : ""} 已添加到购物车！`);
-        setShowToast(true);
-        setFadeOut(false);
-
-        setTimeout(() => {
-            setFadeOut(true);
-            setTimeout(() => setShowToast(false), 500);
-        }, 2500);
+        const decodedParam = decodeURIComponent(urlParam);
+        console.log("📌 解码后的URL参数:", decodedParam);
+        
+        // 构建view路由URL，直接传递URL参数
+        const viewUrl = `/view/${encodeURIComponent(decodedParam)}`;
+        console.log("✅ 跳转到查看页面:", viewUrl);
+        
+        // 跳转到view页面
+        router.push(viewUrl);
     };
 
-    const handleBuyNow = async () => {
-        // 使用主标题作为商品名称
-        const itemTitle = title;
-        console.log(`🚀 Trying to buy now: ${itemTitle}`);
 
-        if (!itemTitle) {
-            console.error("❌ 错误: title 为空，无法购买！");
-            return;
-        }
-
-        const cleanTitle = itemTitle.trim();
-        console.log("📌 handleBuyNow: 传入 API 的 cleanTitle:", cleanTitle);
-
-        // 获取 studyResourceId
-        const studyResourceId = await getStudyResourceId(cleanTitle);
-
-        if (!studyResourceId) {
-            console.error("❌ 获取 studyResourceId 失败，未能购买");
-            return;
-        }
-
-        const product = {
-            id: studyResourceId,
-            name: title.replace(/\s+Chapter\s+\d+$/, ''), // 移除标题中可能的章节信息
-            price: selectedOption ? selectedOption.price : price,
-            option: selectedOption ? selectedOption.chapter : "Full",
-            image: selectedOption ? selectedOption.image : image,
-            file_path: selectedOption ? selectedOption.file_path : file_path
-        };
-
-        console.log("✅ 准备购买的商品:", product);
-        saveCart([product]);
-
-        // 跳转到 Checkout 页面
-        router.push("/checkout");
-    };
 
     if (!title) {
         return <div>加载中...</div>;
@@ -379,19 +323,19 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
                     <p>{selectedOption ? selectedOption.description : description}</p>
                 </div>
 
-                {/* 购买按钮 */}
+                {/* 查看按钮 */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                     <button
-                        onClick={handleAddToCart}
+                        onClick={handleView}
                         className="bg-gray-400 text-white py-3 text-sm hover:bg-gray-500 transition duration-300"
                     >
-                        ADD TO CART
+                        VIEW
                     </button>
                     <button
-                        onClick={handleBuyNow}
+                        onClick={handleView}
                         className="bg-white text-black border border-black py-3 text-sm hover:bg-black hover:text-white transition duration-300"
                     >
-                        BUY NOW
+                        VIEW
                     </button>
                 </div>
             </div>
@@ -490,16 +434,16 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
                     {/* 按钮 */}
                     <div className="flex flex-rows space-x-12 mt-10">
                         <button
-                            onClick={handleAddToCart}
+                            onClick={handleView}
                             className="bg-gray-400 text-white px-12 py-3 hover:bg-gray-500 transition duration-300"
                         >
-                            ADD TO CART
+                            VIEW
                         </button>
                         <button
-                            onClick={handleBuyNow}
+                            onClick={handleView}
                             className="bg-white text-black border border-black px-12 py-3 hover:bg-black hover:text-white transition duration-300"
                         >
-                            Buy Now
+                            VIEW
                         </button>
                     </div>
                     <div className="text-gray-600 font-light text-sm mt-6">
@@ -510,15 +454,7 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
                 </div>
             </div>
 
-            {/* Toast 通知 */}
-            {showToast && (
-                <div className={`fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-gray-600 bg-opacity-75 z-20 p-6 text-sm rounded-lg shadow-md transition-all duration-200" ${
-                    fadeOut ? "opacity-0" : "opacity-100"
-                }`}
-                >
-                    {toastMessage}
-                </div>
-            )}
+
         </div>
     );
 });

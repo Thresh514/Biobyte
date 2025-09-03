@@ -1,0 +1,124 @@
+{
+  "unit": "3",
+  "title": "Enzymes",
+  "content": [
+    {
+      "section": "3.1 Mode of action of enzymes",
+      "items": [
+        {
+          "title": "explain the mode of action of enzymes in terms of an active site, enzyme–substrate complex, lowering of activation energy and enzyme specificity, including the lock- and-key hypothesis and the induced-fit hypothesis",
+          "content": [
+            "Lock-and-Key Hypothesis:",
+            "The lock-and-key hypothesis suggests that the active site of an enzyme is rigid and has a fixed shape that is complementary to the substrate, similar to a key fitting into a lock.",
+            "According to this hypothesis, the substrate fits into the active site like a key into a lock, and the enzyme does not change its shape significantly upon binding.",
+            "Induced-Fit Hypothesis:",
+            "The induced-fit hypothesis suggests that the active site of an enzyme is flexible and can change its shape slightly to accommodate the substrate.",
+            "When the substrate binds, the enzyme undergoes a conformational change to form a more precise fit with the substrate.",
+            "This hypothesis implies that the binding of the substrate induces a change in the enzyme's shape, leading to optimal catalytic activity."
+          ]
+        },
+        {
+          "title": "investigate the progress of enzyme-catalysed reactions by measuring rates of formation of products using catalase and rates of disappearance of substrate using  amylase",
+          "content": [
+            "Catalase (measuring rates of formation of products):",
+            "Catalase catalyzes the breakdown of hydrogen peroxide (H2O2) into water (H2O) and oxygen gas (O2).",
+            "To measure the rate of this reaction, you can collect the oxygen gas produced and measure its volume over time using a gas syringe or a water displacement method.",
+            "Plotting the volume of oxygen gas produced against time gives you a graph from which you can calculate the rate of the reaction.",
+            "Amylase (measuring rates of disappearance of substrate):",
+            "Amylase catalyzes the hydrolysis of starch into smaller carbohydrate molecules such as maltose.",
+            "To measure the rate of this reaction, you can use a colorimetric assay with iodine solution.",
+            "As the starch is broken down into smaller molecules, the iodine solution will change from blue-black to a lighter color due to the formation of iodine-starch complexes.",
+            "By measuring the absorbance of the solution at a specific wavelength using a spectrophotometer over time, you can determine the rate of disappearance of the starch substrate."
+          ]
+        },
+        {
+          "title": "outline the use of a colorimeter for measuring the progress of enzyme-catalysed reactions that involve colour changes",
+          "content": [
+            "Principle:",
+            "A colorimeter measures absorbance of light by a solution.",
+            "Color changes in the reaction cause changes in absorbance.",
+            "Setup:",
+            "Prepare reaction mixture and start the reaction.",
+            "Take samples at intervals and transfer to cuvettes.",
+            "Place cuvettes in the colorimeter.",
+            "Calibration:",
+            "Calibrate using a blank sample to set absorbance to zero.",
+            "Measurement:",
+            "Measure absorbance of samples at appropriate wavelength.",
+            "Record absorbance and time elapsed.",
+            "Analysis:",
+            "Plot absorbance vs. time to track reaction progress.",
+            "Rate of reaction can be determined from the slope.",
+            "Example:",
+            "Monitor formation of colored products in enzyme-catalyzed reactions.",
+            "Absorbance changes as reaction progresses, allowing quantification of reaction rate."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "3.2 Factors that affect enzyme action",
+      "items": [
+        {
+          "title": "investigate and explain the effects of the following factors on the rate of enzyme- catalysed reactions:",
+          "content": [
+            "Effect of Temperature on Enzyme-Catalyzed Reactions:",
+            "Low Temperatures: At low temperatures, enzyme activity is low as the molecules have less kinetic energy and move more slowly, leading to fewer collisions between enzymes and substrates.",
+            "Optimum Temperature: Enzymes have an optimum temperature at which they function best. At this temperature, the rate of enzyme-catalyzed reactions is at its highest.",
+            "High Temperatures: At high temperatures, enzyme activity decreases due to denaturation, where the enzyme's structure is disrupted, leading to loss of function.",
+            "Effect of pH on Enzyme-Catalyzed Reactions:",
+            "Enzymes have an optimal pH at which they function best. Deviation from this pH can lead to a decrease in enzyme activity.",
+            "pH affects the charge of amino acid side chains in the active site of enzymes, which can alter the enzyme's ability to bind to the substrate.",
+            "Buffer solutions are used to maintain a constant pH and study the effect of pH on enzyme activity.",
+            "Effect of Enzyme Concentration:",
+            "Increasing enzyme concentration generally increases the rate of reaction, as more enzyme molecules are available to catalyze the conversion of substrate to product.",
+            "However, at a certain point, adding more enzyme will not further increase the rate, as all substrate molecules are already bound to enzyme molecules (enzyme saturation).",
+            "Effect of Substrate Concentration:",
+            "Increasing substrate concentration generally increases the rate of reaction, as more substrate molecules are available for the enzyme to bind to and convert to product.",
+            "However, at a certain point, adding more substrate will not further increase the rate, as all enzyme molecules are already bound to substrate molecules (enzyme saturation).",
+            "Effect of Inhibitor Concentration:",
+            "Inhibitors are molecules that bind to enzymes and reduce their activity.",
+            "Competitive inhibitors compete with the substrate for binding to the active site, while non-competitive inhibitors bind to a different site on the enzyme, causing a conformational change that reduces the enzyme's activity.",
+            "Increasing inhibitor concentration will generally decrease the rate of reaction, as more inhibitor molecules are available to bind to the enzyme and reduce its activity."
+          ]
+        },
+        {
+          "title": "explain that the maximum rate of reaction (Vmax) is used to derive the Michaelis– Menten constant (Km), which is used to compare the affinity of different enzymes for their substrates",
+          "content": [
+            "The maximum rate of reaction (Vmax) is used to derive the Michaelis-Menten constant (Km), which is used to compare the affinity of different enzymes for their substrates. Vmax is the maximum rate at which an enzyme can catalyze a reaction when all enzyme active sites are saturated with substrate. Km is the substrate concentration at which the reaction rate is half of Vmax. A lower Km indicates a higher affinity of the enzyme for its substrate."
+          ]
+        },
+        {
+          "title": "explain the effects of reversible inhibit.",
+          "content": [
+            "Reversible inhibition occurs when an inhibitor binds to an enzyme and can later dissociate from it, allowing the enzyme to regain its activity. There are two main types of reversible inhibition: competitive and non-competitive.",
+            "Competitive Inhibition:",
+            "In competitive inhibition, the inhibitor binds to the active site of the enzyme, preventing the substrate from binding.",
+            "This type of inhibition can be overcome by increasing the substrate concentration, as this increases the chances of substrate binding before the inhibitor.",
+            "The inhibitor and substrate compete for the active site, hence the name \"competitive\" inhibition.",
+            "Non-Competitive Inhibition:",
+            "In non-competitive inhibition, the inhibitor binds to a site on the enzyme other than the active site, called the allosteric site.",
+            "This binding causes a conformational change in the enzyme, making the active site less effective at catalyzing the reaction.",
+            "Increasing substrate concentration cannot overcome non-competitive inhibition, as the inhibitor does not compete with the substrate for the active site."
+          ]
+        },
+        {
+          "title": "investigate the difference in activity between an enzyme immobilised in alginate and the same enzyme free in solution, and state the advantages of using immobilised enzymes.",
+          "content": [
+            "Difference in Activity:",
+            "Immobilizing an enzyme in alginate can affect its activity compared to the same enzyme free in solution.",
+            "The immobilization process may alter the enzyme's microenvironment, affecting its conformation and therefore its activity.",
+            "However, immobilization can also stabilize the enzyme, making it more resistant to denaturation and extending its lifespan.",
+            "Advantages of Using Immobilized Enzymes:",
+            "Reusability: Immobilized enzymes can be reused multiple times, reducing the need for frequent enzyme replenishment.",
+            "Operational Stability: Immobilized enzymes often exhibit greater stability under a variety of conditions (pH, temperature, etc.) compared to free enzymes.",
+            "Easy Separation: Immobilized enzymes can be easily separated from the reaction mixture, simplifying downstream processing.",
+            "Enhanced Control: Immobilization allows for better control of enzyme concentration and activity in a reaction.",
+            "Improved Product Purity: Immobilized enzymes can lead to higher product purity by reducing the risk of enzyme contamination in the final product.",
+            "Cost-Effectiveness: While the initial immobilization process may incur additional costs, the ability to reuse immobilized enzymes can lead to cost savings in the long run."
+          ]
+        }
+      ]
+    }
+  ]
+}
