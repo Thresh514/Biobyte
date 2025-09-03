@@ -6,7 +6,7 @@
       "section": "14.1 Homeostasis in mammals",
       "items": [
         {
-          "title": "1 explain what is meant by homeostasis and the importance of homeostasis in mammals.",
+          "title": "14.1.1 Explain what is meant by homeostasis and the importance of homeostasis in mammals.",
           "content": [
             "Homeostasis is the process by which living organisms maintain a stable internal environment despite changes in external conditions. This regulation is essential for the proper functioning of cells and organs, ensuring that the internal conditions remain within a narrow, optimal range necessary for life processes.",
             "Importance of Homeostasis in Mammals",
@@ -23,7 +23,7 @@
           ]
         },
         {
-          "title": "2 explain the principles of homeostasis in terms of internal and external stimuli, receptors, coordination systems (nervous system and endocrine system), effectors (muscles and glands) and negative feedback.",
+          "title": "14.1.2 Explain the principles of homeostasis in terms of internal and external stimuli, receptors, coordination systems (nervous system and endocrine system), effectors (muscles and glands) and negative feedback.",
           "content": [
             "Homeostasis involves maintaining a stable internal environment within an organism in response to internal and external stimuli. The principles of homeostasis can be explained through the interaction of various components: receptors, coordination systems (nervous and endocrine systems), effectors, and negative feedback mechanisms.",
             "1. Internal and External Stimuli",
@@ -58,13 +58,13 @@
           ]
         },
         {
-          "title": "3 state that urea is produced in the liver from the deamination of excess amino acids.",
+          "title": "14.1.3 State that urea is produced in the liver from the deamination of excess amino acids.",
           "content": [
             "Urea is produced in the liver from the deamination of excess amino acids."
           ]
         },
         {
-          "title": "4 describe the structure of the human kidney, limited to:",
+          "title": "14.1.4 Describe the structure of the human kidney, limited to:",
           "content": [
             "fibrous capsule",
             "cortex",
@@ -112,7 +112,7 @@
           ]
         },
         {
-          "title": "6 describe and explain the formation of urine in the nephron,",
+          "title": "14.1.5 Describe and explain the formation of urine in the nephron,",
           "content": [
             "limited to:",
             "the formation of glomerular filtrate by ultrafiltration in the Bowman’s capsule",
@@ -135,7 +135,7 @@
           ]
         },
         {
-          "title": "7 relate the detailed structure of the Bowman’s capsule and proximal convoluted tubule to their functions in the formation of urine.",
+          "title": "14.1.6 Relate the detailed structure of the Bowman's capsule and proximal convoluted tubule to their functions in the formation of urine.",
           "content": [
             "Bowman’s Capsule",
             "Structure:",
@@ -165,7 +165,7 @@
           ]
         },
         {
-          "title": "8 describe the roles of the hypothalamus, posterior pituitary gland, antidiuretic hormone (ADH), aquaporins and collecting ducts in osmoregulation.",
+          "title": "14.1.7 Describe the roles of the hypothalamus, posterior pituitary gland, antidiuretic hormone (ADH), aquaporins and collecting ducts in osmoregulation.",
           "content": [
             "Hypothalamus",
             "Osmoreceptors: The hypothalamus contains osmoreceptors that detect changes in blood osmolarity (solute concentration).",
@@ -184,7 +184,7 @@
           ]
         },
         {
-          "title": "9 describe the principles of cell signalling using the example of the",
+          "title": "14.1.8 Describe the principles of cell signalling using the example of the",
           "content": [
             "control of blood glucose concentration by glucagon, limited to:",
             "binding of hormone to cell surface receptor causing conformational change",
@@ -214,7 +214,7 @@
           ]
         },
         {
-          "title": "10 explain how negative feedback control mechanisms regulate blood glucose concentration, with reference to the effects of insulin on muscle cells and liver cells and the effect of glucagon on liver cells.",
+          "title": "14.1.9 Explain how negative feedback control mechanisms regulate blood glucose concentration, with reference to the effects of insulin on muscle cells and liver cells and the effect of glucagon on liver cells.",
           "content": [
             "Insulin and Its Effects:",
             "High Blood Glucose Levels:",

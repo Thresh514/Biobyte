@@ -6,13 +6,13 @@
       "section": "4.1 Fluid mosaic membranes",
       "items": [
         {
-          "title": "describe the fluid mosaic model of membrane structure with reference to the hydrophobic and hydrophilic interactions that account for the formation of the phospholipid bilayer and the arrangement of proteins",
+          "title": "4.1.1 Describe the fluid mosaic model of membrane structure with reference to the hydrophobic and hydrophilic interactions that account for the formation of the phospholipid bilayer and the arrangement of proteins",
           "content": [
             "The fluid mosaic model describes cell membranes as a dynamic structure composed of a lipid bilayer with embedded proteins. The hydrophobic interactions between the fatty acid tails of phospholipids drive the formation of the bilayer, with hydrophilic heads facing outward and inward toward water. Proteins, both integral and peripheral, are embedded or attached to the membrane, performing various functions. Cholesterol helps regulate membrane fluidity. This model emphasizes the dynamic nature of membranes, with molecules constantly moving and interacting."
           ]
         },
         {
-          "title": "describe the arrangement of cholesterol, glycolipids and glycoproteins in cell surface membranes",
+          "title": "4.1.2 Describe the arrangement of cholesterol, glycolipids and glycoproteins in cell surface membranes",
           "content": [
             "Cholesterol: Cholesterol is interspersed within the phospholipid bilayer. Its hydroxyl group interacts with the polar head groups of phospholipids, while its hydrophobic tail interacts with the fatty acid tails of phospholipids. Cholesterol helps regulate membrane fluidity by preventing the phospholipid tails from packing too closely together (which would decrease fluidity) or too far apart (which would increase fluidity).",
             "Glycolipids: Glycolipids are located in the outer leaflet of the membrane, with their carbohydrate portions extending into the extracellular space. The hydrophobic portion of glycolipids integrates into the lipid bilayer, while the hydrophilic carbohydrate portion faces outward, where it can interact with other cells or molecules. Glycolipids are involved in cell recognition and cell signaling processes.",
@@ -20,7 +20,7 @@
           ]
         },
         {
-          "title": "describe the roles of phospholipids, cholesterol, glycolipids, proteins and glycoproteins in cell surface membranes, with reference to stability, fluidity, permeability, transport (carrier proteins and channel proteins), cell signalling (cell surface receptors) and cell recognition (cell surface antigens – see11.1.2)",
+          "title": "4.1.3 Describe the roles of phospholipids, cholesterol, glycolipids, proteins and glycoproteins in cell surface membranes, with reference to stability, fluidity, permeability, transport (carrier proteins and channel proteins), cell signalling (cell surface receptors) and cell recognition (cell surface antigens – see11.1.2)",
           "content": [
             "Phospholipids: Form the basic structure of the membrane, providing a barrier that separates the inside and outside of the cell. They contribute to membrane fluidity and flexibility.",
             "Cholesterol: Regulates membrane fluidity by preventing phospholipids from packing too closely together (which would decrease fluidity) or too far apart (which would increase fluidity). It also stabilizes the membrane.",
@@ -34,7 +34,7 @@
           ]
         },
         {
-          "title": "outline the main stages in the process of cell signalling leading to specific responses:",
+          "title": "4.1.4 Outline the main stages in the process of cell signalling leading to specific responses:",
           "content": [
             "Secretion of Specific Chemicals (Ligands) from Cells:",
             "Cells release signaling molecules, known as ligands, in response to internal or external stimuli.",
@@ -53,7 +53,7 @@
       "section": "4.2 Movement into and out of cells",
       "items": [
         {
-          "title": "describe and explain the processes of ：",
+          "title": "4.2.1 Describe and explain the processes of ：",
           "content": [
             "Simple Diffusion:",
             "Description: The passive movement of molecules from an area of higher concentration to an area of lower concentration across a semipermeable membrane.",
@@ -76,7 +76,7 @@
           ]
         },
         {
-          "title": "investigate simple diffusion and osmosis using plant tissue and non-living materials, including dialysis (Visking) tubing and agar",
+          "title": "4.2.2 Investigate simple diffusion and osmosis using plant tissue and non-living materials, including dialysis (Visking) tubing and agar",
           "content": [
             "Materials Needed:",
             "Plant tissue (e.g., potato or beetroot slices)",
@@ -97,7 +97,7 @@
           ]
         },
         {
-          "title": "illustrate the principle that surface area to volume ratios decrease with increasing size by calculating surface areas and volumes of simple 3-D shapes (as shown in the Mathematical requirements)",
+          "title": "4.2.3 Illustrate the principle that surface area to volume ratios decrease with increasing size by calculating surface areas and volumes of simple 3-D shapes (as shown in the Mathematical requirements)",
           "content": [
             "Cube:",
             "Side length (s) = 1 unit (for simplicity)",
@@ -128,7 +128,7 @@
           ]
         },
         {
-          "title": "investigate the effect of changing surface area to volume ratio on diffusion using agar blocks of different sizes",
+          "title": "4.2.4 Investigate the effect of changing surface area to volume ratio on diffusion using agar blocks of different sizes",
           "content": [
             "Materials:",
             "Agar powder, water, food coloring, knife, ruler, beakers, stopwatch.",
@@ -144,7 +144,7 @@
           ]
         },
         {
-          "title": "investigate the effects of immersing plant tissues in solutions of different water potentials, using the results to estimate the water potential of the tissues",
+          "title": "4.2.5 Investigate the effects of immersing plant tissues in solutions of different water potentials, using the results to estimate the water potential of the tissues",
           "content": [
             "Materials Needed:",
             "Plant tissues (e.g., potato slices)",

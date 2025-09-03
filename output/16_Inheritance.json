@@ -6,7 +6,7 @@
       "section": "16.1 Passage of information from parents to offspring",
       "items": [
         {
-          "title": "1 explain the meanings of the terms haploid (n) and diploid (2n)",
+          "title": "16.1.1 Explain the meanings of the terms haploid (n) and diploid (2n)",
           "content": [
             "Haploid (n):",
             "1. Definition:",
@@ -27,7 +27,7 @@
           ]
         },
         {
-          "title": "2 explain what is meant by homologous pairs of chromosomes.",
+          "title": "16.1.2 Explain what is meant by homologous pairs of chromosomes.",
           "content": [
             "Homologous chromosomes are pairs of chromosomes in a diploid organism that have the same structure and gene sequence, with each member of the pair coming from one parent.",
             "1. Same Size and Shape:",
@@ -39,7 +39,7 @@
           ]
         },
         {
-          "title": "3 explain the need for a reduction division during meiosis in the production of gametes.",
+          "title": "16.1.3 Explain the need for a reduction division during meiosis in the production of gametes.",
           "content": [
             "Maintaining Chromosome Number:",
             "During sexual reproduction, two gametes (sperm and egg) fuse to form a zygote.",
@@ -50,7 +50,7 @@
           ]
         },
         {
-          "title": "4 describe the behaviour of chromosomes in plant and animal cells during meiosis and the associated behaviour of the nuclear envelope, the cell surface membrane and the spindle (names of the main stages of meiosis, but not the sub-divisions of prophase I, are expected: prophase I, metaphase I, anaphase I, telophase I, prophase II, metaphase II, anaphase II and telophase II)",
+          "title": "16.1.4 Describe the behaviour of chromosomes in plant and animal cells during meiosis and the associated behaviour of the nuclear envelope, the cell surface membrane and the spindle (names of the main stages of meiosis, but not the sub-divisions of prophase I, are expected: prophase I, metaphase I, anaphase I, telophase I, prophase II, metaphase II, anaphase II and telophase II)",
           "content": [
             "Meiosis I",
             "1. Prophase I:",
@@ -132,7 +132,7 @@
           ]
         },
         {
-          "title": "5 interpret photomicrographs and diagrams of cells in different stages of meiosis and identify the main stages of meiosis.",
+          "title": "16.1.5 Interpret photomicrographs and diagrams of cells in different stages of meiosis and identify the main stages of meiosis.",
           "content": [
             "Prophase I:",
             "Look for dense, paired chromosomes with crossing over sites.",
@@ -154,7 +154,7 @@
           ]
         },
         {
-          "title": "6 explain that crossing over and random orientation (independent assortment) of pairs of homologous chromosomes and sister chromatids during meiosis produces genetically different gametes.",
+          "title": "16.1.6 Explain that crossing over and random orientation (independent assortment) of pairs of homologous chromosomes and sister chromatids during meiosis produces genetically different gametes.",
           "content": [
             "Crossing Over",
             "What It Is:",
@@ -181,7 +181,7 @@
           ]
         },
         {
-          "title": "7 explain that the random fusion of gametes at fertilization produces genetically different individuals.",
+          "title": "16.1.7 Explain that the random fusion of gametes at fertilization produces genetically different individuals.",
           "content": [
             "Fertilization is the process where two gametes (sperm and egg) combine to form a zygote.",
             "Gametes are haploid cells, meaning they contain one set of chromosomes (n).",
@@ -205,7 +205,7 @@
       "section": "16.2 The roles of genes in determining the phenotype",
       "items": [
         {
-          "title": "1 explain the terms gene, locus, allele, dominant, recessive, codominant, linkage, test cross, F1, F2, phenotype, genotype, homozygous and heterozygous.",
+          "title": "16.2.1 Explain the terms gene, locus, allele, dominant, recessive, codominant, linkage, test cross, F1, F2, phenotype, genotype, homozygous and heterozygous.",
           "content": [
             "Basic Genetic Terms",
             "1. Gene:",
@@ -244,7 +244,7 @@
           ]
         },
         {
-          "title": "2 interpret and construct genetic diagrams, including Punnett squares, to explain and predict the results of monohybrid crosses and dihybrid crosses that involve dominance, codominance, multiple alleles and sex linkage.",
+          "title": "16.2.2 Interpret and construct genetic diagrams, including Punnett squares, to explain and predict the results of monohybrid crosses and dihybrid crosses that involve dominance, codominance, multiple alleles and sex linkage.",
           "content": [
             "1. Monohybrid Crosses",
             "Monohybrid crosses involve one gene with two alleles.",

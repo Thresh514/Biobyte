@@ -6,7 +6,7 @@
       "section": "3.1 Mode of action of enzymes",
       "items": [
         {
-          "title": "explain the mode of action of enzymes in terms of an active site, enzyme–substrate complex, lowering of activation energy and enzyme specificity, including the lock- and-key hypothesis and the induced-fit hypothesis",
+          "title": "3.1.1 Explain the mode of action of enzymes in terms of an active site, enzyme–substrate complex, lowering of activation energy and enzyme specificity, including the lock- and-key hypothesis and the induced-fit hypothesis",
           "content": [
             "Lock-and-Key Hypothesis:",
             "The lock-and-key hypothesis suggests that the active site of an enzyme is rigid and has a fixed shape that is complementary to the substrate, similar to a key fitting into a lock.",
@@ -18,7 +18,7 @@
           ]
         },
         {
-          "title": "investigate the progress of enzyme-catalysed reactions by measuring rates of formation of products using catalase and rates of disappearance of substrate using  amylase",
+          "title": "3.1.2 Investigate the progress of enzyme-catalysed reactions by measuring rates of formation of products using catalase and rates of disappearance of substrate using  amylase",
           "content": [
             "Catalase (measuring rates of formation of products):",
             "Catalase catalyzes the breakdown of hydrogen peroxide (H2O2) into water (H2O) and oxygen gas (O2).",
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "title": "outline the use of a colorimeter for measuring the progress of enzyme-catalysed reactions that involve colour changes",
+          "title": "3.1.3 Outline the use of a colorimeter for measuring the progress of enzyme-catalysed reactions that involve colour changes",
           "content": [
             "Principle:",
             "A colorimeter measures absorbance of light by a solution.",
@@ -60,7 +60,7 @@
       "section": "3.2 Factors that affect enzyme action",
       "items": [
         {
-          "title": "investigate and explain the effects of the following factors on the rate of enzyme- catalysed reactions:",
+          "title": "3.2.1 Investigate and explain the effects of the following factors on the rate of enzyme- catalysed reactions:",
           "content": [
             "Effect of Temperature on Enzyme-Catalyzed Reactions:",
             "Low Temperatures: At low temperatures, enzyme activity is low as the molecules have less kinetic energy and move more slowly, leading to fewer collisions between enzymes and substrates.",
@@ -83,13 +83,13 @@
           ]
         },
         {
-          "title": "explain that the maximum rate of reaction (Vmax) is used to derive the Michaelis– Menten constant (Km), which is used to compare the affinity of different enzymes for their substrates",
+          "title": "3.2.2 Explain that the maximum rate of reaction (Vmax) is used to derive the Michaelis– Menten constant (Km), which is used to compare the affinity of different enzymes for their substrates",
           "content": [
             "The maximum rate of reaction (Vmax) is used to derive the Michaelis-Menten constant (Km), which is used to compare the affinity of different enzymes for their substrates. Vmax is the maximum rate at which an enzyme can catalyze a reaction when all enzyme active sites are saturated with substrate. Km is the substrate concentration at which the reaction rate is half of Vmax. A lower Km indicates a higher affinity of the enzyme for its substrate."
           ]
         },
         {
-          "title": "explain the effects of reversible inhibit.",
+          "title": "3.2.3 Explain the effects of reversible inhibit.",
           "content": [
             "Reversible inhibition occurs when an inhibitor binds to an enzyme and can later dissociate from it, allowing the enzyme to regain its activity. There are two main types of reversible inhibition: competitive and non-competitive.",
             "Competitive Inhibition:",
@@ -103,7 +103,7 @@
           ]
         },
         {
-          "title": "investigate the difference in activity between an enzyme immobilised in alginate and the same enzyme free in solution, and state the advantages of using immobilised enzymes.",
+          "title": "3.3.1 Investigate the difference in activity between an enzyme immobilised in alginate and the same enzyme free in solution, and state the advantages of using immobilised enzymes.",
           "content": [
             "Difference in Activity:",
             "Immobilizing an enzyme in alginate can affect its activity compared to the same enzyme free in solution.",

@@ -6,7 +6,7 @@
       "section": "11.1 The immune system",
       "items": [
         {
-          "title": "describe the mode of action of phagocytes (macrophages and neutrophils)",
+          "title": "11.1.1 Describe the mode of action of phagocytes (macrophages and neutrophils)",
           "content": [
             "Chemotaxis: When a pathogen invades the body or there is tissue damage, chemicals released by the damaged cells attract phagocytes to the site of infection or injury. This process is known as chemotaxis.",
             "Recognition: Phagocytes recognize pathogens through various receptors that bind to specific molecules on the surface of the pathogen. Once recognized, the phagocyte adheres to the pathogen's surface.",
@@ -18,7 +18,7 @@
           ]
         },
         {
-          "title": "explain what is meant by an antigen (see 4.1.3) and state the difference between self-antigens and non-self-antigens",
+          "title": "11.1.2 Explain what is meant by an antigen (see 4.1.3) and state the difference between self-antigens and non-self-antigens",
           "content": [
             "An antigen is a molecule that is capable of eliciting an immune response in the body. It can be a protein, a polysaccharide, a glycoprotein, or any other type of molecule that the immune system recognizes as foreign or non-self.",
             "Origin:",
@@ -30,7 +30,7 @@
           ]
         },
         {
-          "title": "describe the sequence of events that occurs during a primary immune response with  reference to the roles of:",
+          "title": "11.1.3 Describe the sequence of events that occurs during a primary immune response with  reference to the roles of:",
           "content": [
             "Recognition of Antigen:",
             "Antigens from pathogens are engulfed and processed by macrophages, which then display fragments of the antigens on their surface.",
@@ -52,7 +52,7 @@
           ]
         },
         {
-          "title": "explain the role of memory cells in the secondary immune response and in long- term immunity",
+          "title": "11.1.4 Explain the role of memory cells in the secondary immune response and in long- term immunity",
           "content": [
             "Secondary Immune Response:",
             "Memory B-lymphocytes and memory T-lymphocytes are long-lived cells that remain in the body after the primary immune response.",
@@ -70,7 +70,7 @@
       "section": "11.2 Antibodies and vaccination",
       "items": [
         {
-          "title": "relate the molecular structure of antibodies to their functions",
+          "title": "11.1.5 Relate the molecular structure of antibodies to their functions",
           "content": [
             "Y-Shaped Structure:",
             "Antibodies are made up of four polypeptide chains: two heavy chains and two light chains, which are connected by disulfide bonds.",
@@ -87,7 +87,7 @@
           ]
         },
         {
-          "title": "outline the hybridoma method for the production of monoclonal antibodies",
+          "title": "11.2.1 Outline the hybridoma method for the production of monoclonal antibodies",
           "content": [
             "Immunization:",
             "An animal (usually a mouse) is immunized with the antigen of interest to stimulate an immune response.",
@@ -112,7 +112,7 @@
           ]
         },
         {
-          "title": "outline the principles of using monoclonal antibodies in the diagnosis of disease and in the treatment of disease",
+          "title": "11.2.2 Outline the principles of using monoclonal antibodies in the diagnosis of disease and in the treatment of disease",
           "content": [
             "Diagnosis:",
             "Finding Disease Markers: Monoclonal antibodies are used to find specific markers that indicate a disease, like antigens on viruses or cancer cells.",
@@ -125,7 +125,7 @@
           ]
         },
         {
-          "title": "describe the differences between active immunity and passive immunity and between natural immunity and artificial immunity",
+          "title": "11.2.3 Describe the differences between active immunity and passive immunity and between natural immunity and artificial immunity",
           "content": [
             "Active Immunity vs. Passive Immunity:",
             "Active Immunity: Occurs when the body's immune system produces its own antibodies in response to an antigen (e.g., from a vaccine or natural infection). It provides long-lasting protection because memory cells are produced.",
@@ -136,13 +136,13 @@
           ]
         },
         {
-          "title": "explain that vaccines contain antigens that stimulate immune responses to provide long-term immunity",
+          "title": "11.2.4 Explain that vaccines contain antigens that stimulate immune responses to provide long-term immunity",
           "content": [
             "Vaccines are made from weakened or killed germs or parts of germs. When you get a vaccine, these tiny bits of germs stimulate your immune system, which is like your body's defense force, to produce antibodies. These antibodies are like soldiers that can recognize and fight off the specific germ if you are exposed to it later. The vaccine also helps your immune system develop memory cells, which remember how to fight the germ in the future. This way, if you are ever exposed to the real germ, your immune system can quickly recognize and destroy it, protecting you from getting sick. Vaccines are an important tool in preventing infectious diseases and keeping communities healthy."
           ]
         },
         {
-          "title": "explain how vaccination programmes can help to control the spread of infectious  diseases.",
+          "title": "11.2.5 Explain how vaccination programmes can help to control the spread of infectious  diseases.",
           "content": [
             "Direct Protection: Vaccines protect individuals from getting sick by stimulating their immune systems to produce antibodies against specific pathogens. This reduces the likelihood of an individual becoming infected and spreading the disease.",
             "Herd Immunity: When a large portion of a population is vaccinated, it creates a \"herd immunity\" effect. This means that even those who are not vaccinated or who cannot be vaccinated (due to age, health conditions, or other reasons) are protected because the disease has little opportunity to spread within the community.",

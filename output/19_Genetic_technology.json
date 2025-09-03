@@ -6,13 +6,13 @@
       "section": "19.1 Principles of genetic technology",
       "items": [
         {
-          "title": "1 define the term recombinant DNA.",
+          "title": "19.1.1 Define the term recombinant DNA.",
           "content": [
             "Recombinant DNA refers to a form of DNA that has been created by combining genetic material from two or more different sources. This is typically achieved through genetic engineering techniques, where specific sequences of DNA from one organism are inserted into the DNA of another organism. This process allows for the expression of new traits or the production of new proteins that are not found in the original organism."
           ]
         },
         {
-          "title": "2 explain that genetic engineering is the deliberate manipulation of genetic material to modify specific characteristics of an organism and that this may involve transferring a gene into an organism so that the gene is expressed.",
+          "title": "19.1.2 Explain that genetic engineering is the deliberate manipulation of genetic material to modify specific characteristics of an organism and that this may involve transferring a gene into an organism so that the gene is expressed.",
           "content": [
             "Genetic engineering is the deliberate manipulation of an organism's genetic material to modify its specific characteristics. This process involves altering an organism's DNA to achieve desired traits or produce specific proteins. One common technique in genetic engineering is the transfer of genes from one organism to another so that the transferred gene is expressed in the recipient organism.",
             "1. Deliberate Manipulation:",
@@ -30,7 +30,7 @@
           ]
         },
         {
-          "title": "3 explain that genes to be transferred into an organism may be:",
+          "title": "19.1.3 Explain that genes to be transferred into an organism may be:",
           "content": [
             "extracted from the DNA of a donor organism",
             "synthesised from the mRNA of a donor organism",
@@ -56,7 +56,7 @@
           ]
         },
         {
-          "title": "4 explain the roles of restriction endonucleases, DNA ligase, plasmids, DNA polymerase and reverse transcriptase in the transfer of a gene into an organism.",
+          "title": "19.1.4 Explain the roles of restriction endonucleases, DNA ligase, plasmids, DNA polymerase and reverse transcriptase in the transfer of a gene into an organism.",
           "content": [
             "Restriction Endonucleases:",
             "Role: These enzymes act as molecular scissors that cut DNA at specific recognition sites, which are typically palindromic sequences.",
@@ -76,7 +76,7 @@
           ]
         },
         {
-          "title": "5 explain why a promoter may have to be transferred into an organism as well as the desired gene.",
+          "title": "19.1.5 Explain why a promoter may have to be transferred into an organism as well as the desired gene.",
           "content": [
             "Initiation of Transcription:",
             "Function: A promoter is a specific DNA sequence located upstream of a gene that serves as a binding site for RNA polymerase and other transcription factors.",
@@ -87,7 +87,7 @@
           ]
         },
         {
-          "title": "6 explain how gene expression may be confirmed by the use of marker genes coding for fluorescent products.",
+          "title": "19.1.6 Explain how gene expression may be confirmed by the use of marker genes coding for fluorescent products.",
           "content": [
             "1. Marker Genes:",
             "o Definition: Marker genes are additional genes included in a genetic construct that produce easily detectable products. They serve as indicators or reporters of gene expression.",
@@ -109,7 +109,7 @@
           ]
         },
         {
-          "title": "7 explain that gene editing is a form of genetic engineering involving the insertion, deletion or replacement of DNA at specific sites in the genome.",
+          "title": "19.1.7 Explain that gene editing is a form of genetic engineering involving the insertion, deletion or replacement of DNA at specific sites in the genome.",
           "content": [
             "Insertion:",
             "Function: Introducing new genetic material into a specific site in the genome. This can involve adding a single gene or multiple genes.",
@@ -123,7 +123,7 @@
           ]
         },
         {
-          "title": "8 describe and explain the steps involved in the polymerase chain reaction (PCR) to clone and amplify DNA, including the role of Taq polymerase.",
+          "title": "19.1.8 Describe and explain the steps involved in the polymerase chain reaction (PCR) to clone and amplify DNA, including the role of Taq polymerase.",
           "content": [
             "1. Denaturation:",
             "o Description: The double-stranded DNA is heated to around 94-98°C.",
@@ -145,7 +145,7 @@
           ]
         },
         {
-          "title": "9 describe and explain how gel electrophoresis is used to separate DNA fragments of different lengths.",
+          "title": "19.1.9 Describe and explain how gel electrophoresis is used to separate DNA fragments of different lengths.",
           "content": [
             "1. Preparation of the Gel:",
             "o Agarose Gel: Agarose, a polysaccharide obtained from seaweed, is used to make the gel. The concentration of agarose in the gel determines the pore size: higher concentrations create smaller pores, suitable for separating smaller DNA fragments, while lower concentrations create larger pores, suitable for separating larger fragments.",

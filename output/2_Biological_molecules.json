@@ -6,7 +6,7 @@
       "section": "2.1 Testing for biological molecules",
       "items": [
         {
-          "title": "describe and carry out the Benedict’s test for reducing sugars, the iodine test for starch, the emulsion test for lipids and the biuret test for proteins",
+          "title": "2.1.1 Describe and carry out the Benedict's test for reducing sugars, the iodine test for starch, the emulsion test for lipids and the biuret test for proteins",
           "content": [
             "Benedict’s Test for Reducing Sugars:",
             "Principle: Detects the presence of reducing sugars (e.g., glucose) that can reduce Cu^2+ ions to Cu^+ ions, forming a brick-red precipitate.",
@@ -36,7 +36,7 @@
           ]
         },
         {
-          "title": "describe and carry out a test to identify the presence of non-reducing sugars, using acid hydrolysis and Benedict’s solution",
+          "title": "2.1.2 Describe and carry out a test to identify the presence of non-reducing sugars, using acid hydrolysis and Benedict's solution",
           "content": [
             "Prepare Test Sample:",
             "Prepare a test solution containing the non-reducing sugar (e.g., sucrose).",
@@ -61,7 +61,7 @@
       "section": "2.2 Carbohydrates and lipids",
       "items": [
         {
-          "title": "describe and draw the ring forms of α-glucose and β-glucose",
+          "title": "2.2.1 Describe and draw the ring forms of α-glucose and β-glucose",
           "content": [
             "In their ring forms, α-glucose and β-glucose both form a six-membered ring structure. The ring is created when a hydroxyl group on one carbon atom reacts with the carbonyl carbon atom, forming a closed ring structure.",
             "The distinguishing feature between α-glucose and β-glucose lies in the position of the hydroxyl group on the first carbon atom (C1) relative to the ring structure:",
@@ -70,7 +70,7 @@
           ]
         },
         {
-          "title": "define the terms",
+          "title": "2.2.2 Define the terms",
           "content": [
             "Monomer: A small molecule that can join together with other monomers to form a larger polymer molecule. Monomers are the building blocks of polymers.",
             "Polymer: A large molecule composed of many repeated subunits (monomers) bonded together. Polymers can be natural or synthetic and have a wide range of properties and uses.",
@@ -81,7 +81,7 @@
           ]
         },
         {
-          "title": "state the role of covalent bonds in joining smaller molecules together to form polymers.",
+          "title": "2.2.3 State the role of covalent bonds in joining smaller molecules together to form polymers.",
           "content": [
             "Covalent bonds play a crucial role in joining smaller molecules together to form polymers. These bonds involve the sharing of electrons between atoms, creating strong and stable connections between the monomer units.",
             "In the process of polymerization, monomers undergo a chemical reaction that forms covalent bonds between their individual units. This reaction typically involves the loss of a small molecule, such as water (dehydration synthesis) or another functional group, to form the new bond.",
@@ -89,7 +89,7 @@
           ]
         },
         {
-          "title": "describe the formation of a glycosidic bond by condensation, with reference to disaccharides, including sucrose, and polysaccharides",
+          "title": "2.2.4 Describe the formation of a glycosidic bond by condensation, with reference to disaccharides, including sucrose, and polysaccharides",
           "content": [
             "Glycosidic bonds are formed through a condensation reaction, where two hydroxyl groups (-OH) on different monosaccharides combine, releasing a water molecule. This reaction forms an oxygen bridge (-O-) between the two carbon atoms, creating the glycosidic bond.",
             "In sucrose, a disaccharide composed of glucose and fructose, the glycosidic bond forms between the anomeric carbon (C1) of glucose and the hydroxyl group on carbon 2 (C2) of fructose. This linkage is called an α,β-1,2-glycosidic bond.",
@@ -97,7 +97,7 @@
           ]
         },
         {
-          "title": "describe the breakage of a glycosidic bond in polysaccharides and disaccharides by hydrolysis, with reference to the non-reducing sugar test",
+          "title": "2.2.5 Describe the breakage of a glycosidic bond in polysaccharides and disaccharides by hydrolysis, with reference to the non-reducing sugar test",
           "content": [
             "Hydrolysis is the process of breaking a glycosidic bond in polysaccharides and disaccharides by the addition of water. This process involves the following steps:",
             "Addition of Water: Water is added to the glycosidic bond, causing it to break. The oxygen atom in the glycosidic bond gains a hydrogen ion (H+) from water, while the other part of the broken bond gains a hydroxyl group (-OH).",
@@ -110,7 +110,7 @@
           ]
         },
         {
-          "title": "describe the molecular structure of the polysaccharides starch (amylose and amylopectin) and glycogen and relate their structures to their functions in living organisms",
+          "title": "2.2.6 Describe the molecular structure of the polysaccharides starch (amylose and amylopectin) and glycogen and relate their structures to their functions in living organisms",
           "content": [
             "Starch:",
             "Amylose: Consists of unbranched chains of α-glucose units linked by α-1,4-glycosidic bonds. It has a helical structure.",
@@ -129,7 +129,7 @@
           ]
         },
         {
-          "title": "describe the molecular structure of the polysaccharide cellulose and outline how the arrangement of cellulose molecules contributes to the function of plant cell walls",
+          "title": "2.2.7 Describe the molecular structure of the polysaccharide cellulose and outline how the arrangement of cellulose molecules contributes to the function of plant cell walls",
           "content": [
             "Cellulose Structure:",
             "Consists of β-glucose monomers linked by β-1,4-glycosidic bonds.",
@@ -143,7 +143,7 @@
           ]
         },
         {
-          "title": "state that triglycerides are non-polar hydrophobic molecules and describe the molecular structure of triglycerides with reference to fatty acids (saturated and unsaturated), glycerol and the formation of ester bonds",
+          "title": "2.2.8 State that triglycerides are non-polar hydrophobic molecules and describe the molecular structure of triglycerides with reference to fatty acids (saturated and unsaturated), glycerol and the formation of ester bonds",
           "content": [
             "Triglycerides are non-polar hydrophobic molecules consisting of three fatty acid chains esterified to a glycerol molecule.",
             "Molecular Structure:",
@@ -158,7 +158,7 @@
           ]
         },
         {
-          "title": "relate the molecular structure of triglycerides to their functions in living organisms",
+          "title": "2.2.9 Relate the molecular structure of triglycerides to their functions in living organisms",
           "content": [
             "Energy Storage: Triglycerides serve as a highly efficient form of energy storage due to their high energy content per gram.",
             "Insulation: In animals, adipose tissue rich in triglycerides acts as an insulating layer, helping to maintain body temperature.",
@@ -168,7 +168,7 @@
           ]
         },
         {
-          "title": "describe the molecular structure of phospholipids with reference to their hydrophilic (polar) phosphate heads and hydrophobic (non-polar) fatty acid tails",
+          "title": "2.2.10 Describe the molecular structure of phospholipids with reference to their hydrophilic (polar) phosphate heads and hydrophobic (non-polar) fatty acid tails",
           "content": [
             "Molecular Structure:",
             "Hydrophilic Head: Consists of a phosphate group (-PO₄) attached to a glycerol molecule. The phosphate group is polar and hydrophilic, meaning it interacts well with water.",
@@ -181,7 +181,7 @@
       "section": "2.3 Proteins",
       "items": [
         {
-          "title": "describe and draw the general structure of an amino acid and the formation and breakage of a peptide bond",
+          "title": "2.3.1 Describe and draw the general structure of an amino acid and the formation and breakage of a peptide bond",
           "content": [
             "Amino acids are organic molecules composed of an amino group (-NH₂), a carboxyl group (-COOH), a hydrogen atom (H), and a variable side chain (R group) attached to a central carbon atom (alpha carbon, Cα).",
             "Formation of Peptide Bond:",
@@ -195,7 +195,7 @@
           ]
         },
         {
-          "title": "explain the meaning of the terms primary structure, secondary structure, tertiary structure and quaternary structure of proteins",
+          "title": "2.3.2 Explain the meaning of the terms primary structure, secondary structure, tertiary structure and quaternary structure of proteins",
           "content": [
             "Primary Structure:",
             "The primary structure of a protein refers to the chain of amino acids connected by peptide bond.",
@@ -214,7 +214,7 @@
           ]
         },
         {
-          "title": "describe the types of interaction that hold protein molecules in shape:",
+          "title": "2.3.3 Describe the types of interaction that hold protein molecules in shape:",
           "content": [
             "Hydrophobic Interactions:",
             "Occur between non-polar molecules or regions of molecules in an aqueous environment.",
@@ -231,14 +231,14 @@
           ]
         },
         {
-          "title": "state that globular proteins are generally soluble and have physiological roles and fibrous proteins are generally insoluble and have structural roles",
+          "title": "2.3.4 State that globular proteins are generally soluble and have physiological roles and fibrous proteins are generally insoluble and have structural roles",
           "content": [
             "Globular proteins are generally soluble in water and have physiological roles. They are often enzymes, hormones, or antibodies, and they typically have compact, rounded shapes.",
             "Fibrous proteins, on the other hand, are generally insoluble in water and have structural roles. Examples include collagen, which provides strength to connective tissues, and keratin, which forms hair, nails, and the outer layer of skin. Fibrous proteins are characterized by their long, elongated shapes."
           ]
         },
         {
-          "title": "describe the structure of a molecule of hemoglobin as an example of a globular protein, including the formation of its quaternary structure from two alpha (α) chains (α–globin), two beta (β) chains (β–globin) and a haem group",
+          "title": "2.3.5 Describe the structure of a molecule of hemoglobin as an example of a globular protein, including the formation of its quaternary structure from two alpha (α) chains (α–globin), two beta (β) chains (β–globin) and a haem group",
           "content": [
             "Structure of Hemoglobin:",
             "Alpha (α) Chains: Each alpha chain is composed of 141 amino acid residues.",
@@ -251,13 +251,13 @@
           ]
         },
         {
-          "title": "relate the structure of haemoglobin to its function, including the importance of iron  in the haem group",
+          "title": "2.3.6 Relate the structure of haemoglobin to its function, including the importance of iron  in the haem group",
           "content": [
             "Hemoglobin's structure is crucial for its function as an oxygen carrier. The heme group, which contains iron, binds oxygen in a reversible manner. Each hemoglobin molecule has four heme groups, allowing it to carry up to four oxygen molecules. The quaternary structure of hemoglobin, formed by two alpha and two beta subunits, creates a pocket where the heme groups are located. This structure allows hemoglobin to undergo conformational changes that enhance its ability to bind and release oxygen. Hemoglobin's cooperativity enables it to load and unload oxygen efficiently in different tissues. Additionally, hemoglobin acts as a buffer for hydrogen ions and carbon dioxide, helping to regulate the pH of the blood."
           ]
         },
         {
-          "title": "describe the structure of a molecule of collagen as an example of a fibrous protein, and the arrangement of collagen molecules to form collagen fibres",
+          "title": "2.3.7 Describe the structure of a molecule of collagen as an example of a fibrous protein, and the arrangement of collagen molecules to form collagen fibres",
           "content": [
             "Structure of Collagen Molecule:",
             "Collagen is a fibrous protein made up of three polypeptide chains, known as alpha chains, that are twisted together in a helical conformation to form a triple helix.",
@@ -271,7 +271,7 @@
           ]
         },
         {
-          "title": "relate the structures of collagen molecules and collagen fibres to their function",
+          "title": "2.3.8 Relate the structures of collagen molecules and collagen fibres to their function",
           "content": [
             "Structural Support: Collagen provides structural support to tissues such as skin, tendons, ligaments, and bones, helping them resist tensile forces.",
             "Flexibility: The staggered arrangement of collagen molecules and their cross-linking allow collagen fibers to be flexible and resistant to stretching.",
@@ -285,7 +285,7 @@
       "section": "2.4 Water",
       "items": [
         {
-          "title": "explain how hydrogen bonding occurs between water molecules and relate the properties of water to its roles in living organisms, limited to solvent action, high specific heat capacity and latent heat of vaporization",
+          "title": "2.4.1 Explain how hydrogen bonding occurs between water molecules and relate the properties of water to its roles in living organisms, limited to solvent action, high specific heat capacity and latent heat of vaporization",
           "content": [
             "Solvent Action:",
             "Water is known as the universal solvent because of its ability to dissolve a wide range of substances due to its polar nature.",

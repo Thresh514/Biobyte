@@ -6,7 +6,7 @@
       "section": "6.1 Structure of nucleic acids and replication of DNA",
       "items": [
         {
-          "title": "describe the structure of nucleotides, including the phosphorylated nucleotide ATP (structural formulae are not expected)",
+          "title": "6.1.1 Describe the structure of nucleotides, including the phosphorylated nucleotide ATP (structural formulae are not expected)",
           "content": [
             "The structure of nucleotides can be described as follows:",
             "Nitrogenous Base: Nucleotides contain one of five nitrogenous bases: adenine (A), guanine (G), cytosine (C), thymine (T) (in DNA), or uracil (U) (in RNA). The base is attached to the sugar molecule.",
@@ -16,19 +16,19 @@
           ]
         },
         {
-          "title": "state that the bases adenine and guanine are purines with a double ring structure, and that the bases cytosine, thymine and uracil are pyrimidines with a single ring structure (structural formulae for bases are not expected)",
+          "title": "6.1.2 State that the bases adenine and guanine are purines with a double ring structure, and that the bases cytosine, thymine and uracil are pyrimidines with a single ring structure (structural formulae for bases are not expected)",
           "content": [
             "The bases adenine (A) and guanine (G) are purines, which have a double-ring structure. The bases cytosine (C), thymine (T) (in DNA), and uracil (U) (in RNA) are pyrimidines, which have a single-ring structure"
           ]
         },
         {
-          "title": "describe the structure of a DNA molecule as a double helix, including:",
+          "title": "6.1.3 Describe the structure of a DNA molecule as a double helix, including:",
           "content": [
             "The DNA molecule is a double helix with two antiparallel strands. Complementary base pairing between the 5' to 3' and 3' to 5' strands ensures specific hydrogen bonding between adenine (A) and thymine (T) (or uracil (U) in RNA), as well as between cytosine (C) and guanine (G). Cytosine and guanine form three hydrogen bonds, while adenine and thymine form two, contributing to the stability of the DNA molecule. Nucleotides are linked by phosphodiester bonds between the 3' carbon of one sugar molecule and the 5' carbon of the next, forming a sugar-phosphate backbone."
           ]
         },
         {
-          "title": "describe the semi-conservative replication of DNA during the S phase of the cell cycle, including:",
+          "title": "6.1.4 Describe the semi-conservative replication of DNA during the S phase of the cell cycle, including:",
           "content": [
             "Initiation: The DNA double helix is unwound by an enzyme called helicase, creating two template strands.",
             "Primer Binding: Primase synthesizes a short RNA primer on each template strand, providing a starting point for DNA synthesis.",
@@ -39,7 +39,7 @@
           ]
         },
         {
-          "title": "describe the structure of an RNA molecule, using the example of messenger RNA (mRNA)",
+          "title": "6.2.1 Describe the structure of an RNA molecule, using the example of messenger RNA (mRNA)",
           "content": [
             "Nucleotides: Like DNA, RNA is composed of nucleotides, each consisting of a nitrogenous base, a five-carbon sugar (ribose in RNA), and a phosphate group.",
             "Nitrogenous Bases: RNA contains four nitrogenous bases: adenine (A), cytosine (C), guanine (G), and uracil (U). Uracil replaces thymine (T) found in DNA and pairs with adenine via two hydrogen bonds.",
@@ -53,7 +53,7 @@
       "section": "6.2 Protein synthesis",
       "items": [
         {
-          "title": "describe the principle of the universal genetic code in which different triplets of DNA bases either code for specific amino acids or correspond to start and stop codons",
+          "title": "6.2.2 Describe the principle of the universal genetic code in which different triplets of DNA bases either code for specific amino acids or correspond to start and stop codons",
           "content": [
             "The universal genetic code is a set of rules that specifies how DNA and RNA sequences are translated into proteins. It is universal because it is the same in all organisms, from bacteria to humans. The code is based on codons, which are sequences of three nucleotides (triplets) that specify a particular amino acid or signal the start or end of protein synthesis.",
             "In the genetic code, each codon corresponds to either one of the 20 standard amino acids used in protein synthesis or one of the three stop codons that signal the end of translation. The start codon, AUG (encoding the amino acid methionine), initiates protein synthesis, while the stop codons (UAA, UAG, and UGA) signal the termination of translation.",
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "title": "describe how the information in DNA is used during transcription and translation to construct polypeptides, including the roles of:",
+          "title": "6.2.3 Describe how the information in DNA is used during transcription and translation to construct polypeptides, including the roles of:",
           "content": [
             "Transcription:",
             "RNA Polymerase: RNA polymerase is an enzyme that catalyzes the synthesis of RNA from a DNA template. It binds to the promoter region of a gene on the DNA strand and unwinds the DNA double helix to expose the template strand.",
@@ -74,7 +74,7 @@
           ]
         },
         {
-          "title": "explain that, in eukaryotes, the RNA molecule formed following transcription (primary transcript) is modified by the removal of non-coding sequences (introns) and the joining together of coding sequences (exons) to form mRNA",
+          "title": "6.2.4 Explain that, in eukaryotes, the RNA molecule formed following transcription (primary transcript) is modified by the removal of non-coding sequences (introns) and the joining together of coding sequences (exons) to form mRNA",
           "content": [
             "This primary transcript undergoes a process called RNA processing or RNA splicing, where non-coding sequences called introns are removed, and the coding sequences called exons are joined together to form mature messenger RNA (mRNA).",
             "Introns and Exons: Introns are non-coding sequences found within genes that do not code for proteins. Exons, on the other hand, are coding sequences that contain the genetic information for protein synthesis.",
@@ -84,7 +84,7 @@
           ]
         },
         {
-          "title": "explain that a gene mutation is a result of substitution or deletion or insertion of nucleotides in DNA and outline how each of these types of mutation may affect the polypeptide produced",
+          "title": "6.2.5 Explain that a gene mutation is a result of substitution or deletion or insertion of nucleotides in DNA and outline how each of these types of mutation may affect the polypeptide produced",
           "content": [
             "Substitution: In a substitution mutation, one nucleotide is replaced with a different nucleotide. This can lead to three possible outcomes:",
             "Silent Mutation: The substitution does not change the amino acid coded for by the mRNA codon, so there is no change in the polypeptide.",

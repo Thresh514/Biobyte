@@ -6,7 +6,7 @@
       "section": "10.1 Infectious diseases",
       "items": [
         {
-          "title": "state the name and type of pathogen that causes each of the following diseases:",
+          "title": "10.1.1 State the name and type of pathogen that causes each of the following diseases:",
           "content": [
             "cholera – caused by the bacterium Vibrio cholerae",
             "malaria – caused by the protoctists Plasmodium falciparum, Plasmodium malariae, Plasmodium ovale and Plasmodium vivax",
@@ -15,7 +15,7 @@
           ]
         },
         {
-          "title": "explain how cholera, malaria, TB and HIV are transmitted",
+          "title": "10.1.2 Explain how cholera, malaria, TB and HIV are transmitted",
           "content": [
             "Cholera: Cholera is caused by the bacterium Vibrio cholerae, which is typically transmitted through contaminated water or food. Ingesting contaminated food or water can lead to severe diarrhea and dehydration.",
             "Malaria: Malaria is caused by Plasmodium parasites, which are transmitted to humans through the bites of infected female Anopheles mosquitoes. These mosquitoes typically bite between dusk and dawn, and the parasites multiply in the liver before infecting red blood cells.",
@@ -24,7 +24,7 @@
           ]
         },
         {
-          "title": "discuss the biological, social and economic factors that need to be considered in the prevention and control of cholera, malaria, TB and HIV (details of the life cycle of the malarial parasite are not expected)",
+          "title": "10.1.3 Discuss the biological, social and economic factors that need to be considered in the prevention and control of cholera, malaria, TB and HIV (details of the life cycle of the malarial parasite are not expected)",
           "content": [
             "Biological Factors:",
             "Understanding the biology and transmission of each disease is crucial.",
@@ -43,7 +43,7 @@
       "section": "10.2 Antibiotics",
       "items": [
         {
-          "title": "outline how penicillin acts on bacteria and why antibiotics do not affect viruses",
+          "title": "10.2.1 Outline how penicillin acts on bacteria and why antibiotics do not affect viruses",
           "content": [
             "Cell Wall Synthesis Inhibition:",
             "Bacteria have a cell wall that provides structural support and protection.",
@@ -57,7 +57,7 @@
           ]
         },
         {
-          "title": "discuss the consequences of antibiotic resistance and the steps that can be taken to reduce its impact",
+          "title": "10.2.2 Discuss the consequences of antibiotic resistance and the steps that can be taken to reduce its impact",
           "content": [
             "Consequences:",
             "Infections become harder to treat, leading to prolonged illness, increased mortality, and higher healthcare costs.",

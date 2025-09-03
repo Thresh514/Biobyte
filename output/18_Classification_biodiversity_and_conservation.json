@@ -6,7 +6,7 @@
       "section": "18.1 Classification",
       "items": [
         {
-          "title": "1 discuss the meaning of the term species, limited to the biological species concept, morphological species concept and ecological species concept.",
+          "title": "18.1.1 Discuss the meaning of the term species, limited to the biological species concept, morphological species concept and ecological species concept.",
           "content": [
             "Biological Species Concept",
             "A species is a group of individuals that can interbreed and produce viable, fertile offspring in natural conditions but are reproductively isolated from other such groups.",
@@ -17,7 +17,7 @@
           ]
         },
         {
-          "title": "2 describe the classification of organisms into three domains: Archaea, Bacteria and Eukarya.",
+          "title": "18.1.2 Describe the classification of organisms into three domains: Archaea, Bacteria and Eukarya.",
           "content": [
             "1. Archaea",
             "Cell Type: Prokaryotic (lacking a nucleus and membrane-bound organelles).",
@@ -40,7 +40,7 @@
           ]
         },
         {
-          "title": "3 state that Archaea and Bacteria are prokaryotes and that there are differences between them, limited to differences in membrane lipids, ribosomal RNA and composition of cell walls.",
+          "title": "18.1.3 State that Archaea and Bacteria are prokaryotes and that there are differences between them, limited to differences in membrane lipids, ribosomal RNA and composition of cell walls.",
           "content": [
             "1. Membrane Lipids:",
             "o Archaea: The cell membrane lipids of Archaea contain ether bonds between glycerol and their hydrophobic side chains, which are typically branched isoprenoids. This structure makes their membranes more stable in extreme environments.",
@@ -54,7 +54,7 @@
           ]
         },
         {
-          "title": "4 describe the classification of organisms in the Eukarya domain into the taxonomic hierarchy of kingdom, phylum, class, order, family, genus and species.",
+          "title": "18.1.4 Describe the classification of organisms in the Eukarya domain into the taxonomic hierarchy of kingdom, phylum, class, order, family, genus and species.",
           "content": [
             "1. Kingdom",
             "Definition: The highest and most inclusive taxonomic rank in the classification of organisms within the Eukarya domain. There are several kingdoms within Eukarya, each grouping a large number of related organisms.",
@@ -73,7 +73,7 @@
           ]
         },
         {
-          "title": "5 outline the characteristic features of the kingdoms Protoctista, Fungi, Plantae and Animalia.",
+          "title": "18.1.5 Outline the characteristic features of the kingdoms Protoctista, Fungi, Plantae and Animalia.",
           "content": [
             "Kingdom Protoctista (Protista)",
             "Cell Type: Mostly unicellular, some multicellular.",
@@ -107,7 +107,7 @@
           ]
         },
         {
-          "title": "6 outline how viruses are classified, limited to the type of nucleic acid (RNA or DNA) and whether this is single stranded or double stranded.",
+          "title": "18.1.6 Outline how viruses are classified, limited to the type of nucleic acid (RNA or DNA) and whether this is single stranded or double stranded.",
           "content": [
             "DNA Viruses",
             "Double-stranded DNA (dsDNA) Viruses: These viruses have a genome composed of double-stranded DNA. Examples include:",
@@ -134,7 +134,7 @@
       "section": "18.2 Biodiversity",
       "items": [
         {
-          "title": "1 define the terms ecosystem and niche.",
+          "title": "18.2.1 Define the terms ecosystem and niche.",
           "content": [
             "Ecosystem",
             "Definition: An ecosystem is a community of living organisms (plants, animals, and microorganisms) interacting with each other and with their non-living (abiotic) environment (such as air, water, and mineral soil) in a specific area. Ecosystems are dynamic systems that can vary greatly in size and complexity, ranging from a small pond to a vast forest or even the entire biosphere.",
@@ -143,7 +143,7 @@
           ]
         },
         {
-          "title": "2 explain that biodiversity can be assessed at different levels, including:",
+          "title": "18.2.2 Explain that biodiversity can be assessed at different levels, including:",
           "content": [
             "the number and range of different ecosystems and habitats",
             "the number of species and their relative abundance",
@@ -166,7 +166,7 @@
           ]
         },
         {
-          "title": "3 explain the importance of random sampling in determining the biodiversity of an area.",
+          "title": "18.2.3 Explain the importance of random sampling in determining the biodiversity of an area.",
           "content": [
             "1. Reduces Bias",
             "Explanation: Random sampling ensures that the selection of samples is not influenced by any preconceived notions or preferences of the researcher. This prevents biased results that could arise from selectively sampling more accessible, attractive, or familiar areas.",

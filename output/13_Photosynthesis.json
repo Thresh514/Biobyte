@@ -6,7 +6,7 @@
       "section": "13.1 Photosynthesis as an energy transfer process",
       "items": [
         {
-          "title": "1 describe the relationship between the structure of chloroplasts, as shown in diagrams and electron micrographs, and their function.",
+          "title": "13.1.1 Describe the relationship between the structure of chloroplasts, as shown in diagrams and electron micrographs, and their function.",
           "content": [
             "Double Membrane Envelope:",
             "Structure: Chloroplasts are surrounded by a double membrane, comprising an outer membrane and an inner membrane.",
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "title": "2 explain that energy transferred as ATP and reduced NADP from the light-dependent stage is used during the light-independent stage (Calvin cycle) of photosynthesis to produce complex organic molecules.",
+          "title": "13.1.2 Explain that energy transferred as ATP and reduced NADP from the light-dependent stage is used during the light-independent stage (Calvin cycle) of photosynthesis to produce complex organic molecules.",
           "content": [
             "Carbon Fixation:",
             "Process: CO₂ from the atmosphere is fixed into a 5-carbon sugar, ribulose bisphosphate (RuBP), by the enzyme ribulose bisphosphate carboxylase/oxygenase (RuBisCO).",
@@ -47,7 +47,7 @@
           ]
         },
         {
-          "title": "3 state that within a chloroplast, the thylakoids (thylakoid membranes and thylakoid spaces), which occur in stacks called grana, are the site of the light-dependent stage and the stroma is the site of the light-independent stage.",
+          "title": "13.1.3 State that within a chloroplast, the thylakoids (thylakoid membranes and thylakoid spaces), which occur in stacks called grana, are the site of the light-dependent stage and the stroma is the site of the light-independent stage.",
           "content": [
             "Within a chloroplast:",
             "The thylakoids (thylakoid membranes and thylakoid spaces), which occur in stacks called grana, are the site of the light-dependent stage.",
@@ -55,7 +55,7 @@
           ]
         },
         {
-          "title": "4 describe the role of chloroplast pigments (chlorophyll a, chlorophyll b, carotene and xanthophyll) in light absorption in thylakoids.",
+          "title": "13.1.4 Describe the role of chloroplast pigments (chlorophyll a, chlorophyll b, carotene and xanthophyll) in light absorption in thylakoids.",
           "content": [
             "Chlorophyll a:",
             "Role: Primary pigment in photosynthesis.",
@@ -72,7 +72,7 @@
           ]
         },
         {
-          "title": "5 interpret absorption spectra of chloroplast pigments and action spectra for photosynthesis.",
+          "title": "13.1.5 Interpret absorption spectra of chloroplast pigments and action spectra for photosynthesis.",
           "content": [
             "Absorption Spectra of Chloroplast Pigments",
             "The absorption spectrum of a pigment shows the wavelengths of light that the pigment absorbs most effectively. Chloroplast pigments each have a unique absorption spectrum:",
@@ -104,7 +104,7 @@
           ]
         },
         {
-          "title": "6 describe and use chromatography to separate and identify chloroplast pigments (reference should be made to Rf values in identification of chloroplast pigments)",
+          "title": "13.1.6 Describe and use chromatography to separate and identify chloroplast pigments (reference should be made to Rf values in identification of chloroplast pigments)",
           "content": [
             "Procedure",
             "1. Preparation:",
@@ -132,13 +132,13 @@
           ]
         },
         {
-          "title": "7 state that cyclic photophosphorylation and non-cyclic photophosphorylation occur during the light-dependent stage of photosynthesis.",
+          "title": "13.1.7 State that cyclic photophosphorylation and non-cyclic photophosphorylation occur during the light-dependent stage of photosynthesis.",
           "content": [
             "Cyclic photophosphorylation and non-cyclic photophosphorylation occur during the light-dependent stage of photosynthesis."
           ]
         },
         {
-          "title": "8 explain that in cyclic photophosphorylation:",
+          "title": "13.1.8 Explain that in cyclic photophosphorylation:",
           "content": [
             "only photosystem I (PSI) is involved",
             "photoactivation of chlorophyll occurs",
@@ -155,7 +155,7 @@
           ]
         },
         {
-          "title": "9 explain that in non-cyclic photophosphorylation:",
+          "title": "13.1.9 Explain that in non-cyclic photophosphorylation:",
           "content": [
             "photosystem I (PSI) and photosystem II (PSII) are both involved",
             "photoactivation of chlorophyll occurs",
@@ -177,7 +177,7 @@
           ]
         },
         {
-          "title": "10 explain that during photophosphorylation:",
+          "title": "13.1.10 Explain that during photophosphorylation:",
           "content": [
             "energetic electrons release energy as they pass through the electron transport chain (details of carriers are not expected)",
             "the released energy is used to transfer protons across the thylakoid membrane",
@@ -195,7 +195,7 @@
           ]
         },
         {
-          "title": "11 outline the three main stages of the Calvin cycle:",
+          "title": "13.1.11 Outline the three main stages of the Calvin cycle:",
           "content": [
             "rubisco catalyses the fixation of carbon dioxide by combination with a molecule of ribulose bisphosphate (RuBP), a 5C compound, to yield two molecules of glycerate 3-phosphate (GP), a 3C compound",
             "GP is reduced to triose phosphate (TP) in reactions involving reduced NADP and ATP",
@@ -222,13 +222,13 @@
       "section": "13.2 Investigation of limiting factors",
       "items": [
         {
-          "title": "1 state that light intensity, carbon dioxide concentration and temperature are examples of limiting factors of photosynthesis.",
+          "title": "13.2.1 State that light intensity, carbon dioxide concentration and temperature are examples of limiting factors of photosynthesis.",
           "content": [
             "Light intensity, carbon dioxide concentration, and temperature are examples of limiting factors of photosynthesis. These factors directly influence the rate at which photosynthesis can occur in plants, as they affect the availability of energy (light), carbon dioxide, and optimal enzymatic activity (temperature)."
           ]
         },
         {
-          "title": "2 explain the effects of changes in light intensity, carbon dioxide concentration and temperature on the rate of photosynthesis.",
+          "title": "13.2.2 Explain the effects of changes in light intensity, carbon dioxide concentration and temperature on the rate of photosynthesis.",
           "content": [
             "1. Light Intensity:",
             "o Increase in Light Intensity: As light intensity increases, the rate of photosynthesis initially increases proportionally because more photons are available to excite chlorophyll molecules in photosystems I and II. This results in higher production of ATP and NADPH, which are needed for the Calvin cycle.",
@@ -246,7 +246,7 @@
           ]
         },
         {
-          "title": "3 describe and carry out investigations using redox indicators, including DCPIP and methylene blue, and a suspension of chloroplasts to determine the effects of light intensity and light wavelength on the rate of photosynthesis.",
+          "title": "13.2.3 Describe and carry out investigations using redox indicators, including DCPIP and methylene blue, and a suspension of chloroplasts to determine the effects of light intensity and light wavelength on the rate of photosynthesis.",
           "content": [
             "Materials Needed:",
             "DCPIP solution (as a redox indicator)",
@@ -281,7 +281,7 @@
           ]
         },
         {
-          "title": "4 describe and carry out investigations using whole plants, including aquatic plants, to determine the effects of light intensity, carbon dioxide concentration and temperature on the rate of photosynthesis.",
+          "title": "13.2.4 Describe and carry out investigations using whole plants, including aquatic plants, to determine the effects of light intensity, carbon dioxide concentration and temperature on the rate of photosynthesis.",
           "content": [
             "Materials Needed:",
             "Different light sources or lamps with adjustable intensity (e.g., incandescent bulbs, fluorescent lights)",

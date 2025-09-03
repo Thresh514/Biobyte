@@ -6,7 +6,7 @@
       "section": "15.1 Control and coordination in mammals",
       "items": [
         {
-          "title": "1 describe the features of the endocrine system with reference to the hormones ADH, glucagon and insulin (see 14.1.8, 14.1.9 and 14.1.10)",
+          "title": "15.1.1 Describe the features of the endocrine system with reference to the hormones ADH, glucagon and insulin (see 14.1.8, 14.1.9 and 14.1.10)",
           "content": [
             "Features of the Endocrine System",
             "1. Glands and Hormones:",
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "title": "2 compare the features of the nervous system and the endocrine system",
+          "title": "15.1.2 Compare the features of the nervous system and the endocrine system",
           "content": [
             "Speed of Response:",
             "o Nervous System: Rapid, immediate responses to stimuli.",
@@ -55,7 +55,7 @@
           ]
         },
         {
-          "title": "3 describe the structure and function of a sensory neurone and a motor neurone and state that intermediate neurones connect sensory neurones and motor neurons",
+          "title": "15.1.3 Describe the structure and function of a sensory neurone and a motor neurone and state that intermediate neurones connect sensory neurones and motor neurons",
           "content": [
             "Sensory Neuron:",
             "Structure:",
@@ -86,7 +86,7 @@
           ]
         },
         {
-          "title": "4 outline the role of sensory receptor cells in detecting stimuli and stimulating the transmission of impulses in sensory neurons.",
+          "title": "15.1.4 Outline the role of sensory receptor cells in detecting stimuli and stimulating the transmission of impulses in sensory neurons.",
           "content": [
             "Detection of Stimuli:",
             "Types of Receptors: Sensory receptor cells are specialized to detect specific types of stimuli such as light, sound, pressure, temperature, chemicals (taste and smell), and pain.",
@@ -105,7 +105,7 @@
           ]
         },
         {
-          "title": "5 describe the sequence of events that results in an action potential in a sensory neurone, using a chemoreceptor cell in a human taste bud as an example.",
+          "title": "15.1.5 Describe the sequence of events that results in an action potential in a sensory neurone, using a chemoreceptor cell in a human taste bud as an example.",
           "content": [
             "Detection of Stimulus:",
             "Chemical Stimulus: When a person eats food, molecules from the food interact with chemoreceptor cells located in taste buds on the tongue.",
@@ -130,7 +130,7 @@
           ]
         },
         {
-          "title": "6 describe and explain changes to the membrane potential of neurones, including:",
+          "title": "15.1.6 Describe and explain changes to the membrane potential of neurones, including:",
           "content": [
             "how the resting potential is maintained",
             "the events that occur during an action potential",
@@ -154,7 +154,7 @@
           ]
         },
         {
-          "title": "7 describe and explain the rapid transmission of an impulse in a myelinated neurone with reference to saltatory conduction.",
+          "title": "15.1.7 Describe and explain the rapid transmission of an impulse in a myelinated neurone with reference to saltatory conduction.",
           "content": [
             "Structure",
             "1. Myelin Sheath:",
@@ -178,7 +178,7 @@
           ]
         },
         {
-          "title": "8 explain the importance of the refractory period in determining the frequency of impulses.",
+          "title": "15.1.8 Explain the importance of the refractory period in determining the frequency of impulses.",
           "content": [
             "Absolute Refractory Period: Immediately after an action potential, during which the neuron is unable to respond to any stimulus, no matter how strong. This period is primarily due to the inactivation of voltage-gated sodium channels.",
             "Relative Refractory Period: Follows the absolute refractory period, during which the neuron can respond to a stronger-than-usual stimulus to generate a new action potential. During this phase, the membrane potential is hyperpolarized, and some sodium channels are recovering from inactivation.",
@@ -196,7 +196,7 @@
           ]
         },
         {
-          "title": "9 describe the structure of a cholinergic synapse and explain how it functions, including the role of calcium ions.",
+          "title": "15.1.9 Describe the structure of a cholinergic synapse and explain how it functions, including the role of calcium ions.",
           "content": [
             "1. Presynaptic Neuron:",
             "o Axon Terminal: The end of the presynaptic neuron's axon where neurotransmitters are stored and released.",

@@ -6,7 +6,7 @@
       "section": "1.1 The microscope in cell studies",
       "items": [
         {
-          "title": "make temporary preparations of cellular material suitable for viewing with a light microscope",
+          "title": "1.1.1 Make temporary preparations of cellular material suitable for viewing with a light microscope",
           "content": [
             "Place a drop of water or mounting medium on a slide.",
             "Collect a small sample of the material to be viewed.",
@@ -19,7 +19,7 @@
           ]
         },
         {
-          "title": "draw cells from microscope slides and photomicrographs",
+          "title": "1.1.2 Draw cells from microscope slides and photomicrographs",
           "content": [
             "Observe cells, noting shapes and structures.",
             "Lightly sketch cell outlines with a pencil.",
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "title": "calculate magnifications of images and actual sizes of specimens from drawings, photomicrographs and electron micrographs (scanning and transmission)",
+          "title": "1.1.3 Calculate magnifications of images and actual sizes of specimens from drawings, photomicrographs and electron micrographs (scanning and transmission)",
           "content": [
             "Find the scale or magnification provided.",
             "Use the formula: Magnification = Image Size / Actual Size.",
@@ -44,7 +44,7 @@
           ]
         },
         {
-          "title": "use an eyepiece graticule and stage micrometer scale to make measurements and use the appropriate units, millimetre (mm), micrometre (μm) and nanometre (nm)",
+          "title": "1.1.4 Use an eyepiece graticule and stage micrometer scale to make measurements and use the appropriate units, millimetre (mm), micrometre (μm) and nanometre (nm)",
           "content": [
             "Calibrate the Microscope: Place the stage micrometer on the stage and focus on the scale using the lowest magnification. Note the number of eyepiece graticule units that correspond to a known distance on the stage micrometer (e.g., 1 mm = 100 eyepiece units).",
             "Measure the Object: Place the object on the stage and focus on it. Use the eyepiece graticule to measure the size of the object in eyepiece units.",
@@ -54,7 +54,7 @@
           ]
         },
         {
-          "title": "define resolution and magnification and explain the differences between these terms, with reference to light microscopy and electron microscopy",
+          "title": "1.1.5 Define resolution and magnification and explain the differences between these terms, with reference to light microscopy and electron microscopy",
           "content": [
             "Resolution: Ability to distinguish two points as separate. Limited by wavelength.",
             "Magnification: Enlargement ratio of image to actual size. Achieved with lenses.",
@@ -68,7 +68,7 @@
       "section": "1.2 Cells as the basic units of living organisms",
       "items": [
         {
-          "title": "recognise organelles and other cell structures found in eukaryotic cells and outline their structures and functions, limited to:",
+          "title": "1.2.1 Recognise organelles and other cell structures found in eukaryotic cells and outline their structures and functions, limited to:",
           "content": [
             "cell surface membrane",
             "Structure: Phospholipid bilayer with embedded proteins and cholesterol molecules.",
@@ -130,7 +130,7 @@
           ]
         },
         {
-          "title": "describe and interpret photomicrographs, electron micrographs and drawings of typical plant and animal cells",
+          "title": "1.2.2 Describe and interpret photomicrographs, electron micrographs and drawings of typical plant and animal cells",
           "content": [
             "Cell Shape and Size: Note the overall shape and size of the cells. Plant cells are generally rectangular with a rigid cell wall, while animal cells are more rounded without a cell wall.",
             "Cellular Structures: Identify key organelles such as the nucleus, mitochondria, endoplasmic reticulum (ER), Golgi apparatus, and lysosomes (in animal cells), as well as chloroplasts and a large central vacuole (in plant cells).",
@@ -145,7 +145,7 @@
           ]
         },
         {
-          "title": "compare the structure of typical plant and animal cells",
+          "title": "1.2.3 Compare the structure of typical plant and animal cells",
           "content": [
             "Same Aspects:",
             "Both have a cell membrane, nucleus, mitochondria, endoplasmic reticulum, Golgi apparatus, and cytoplasm.",
@@ -160,13 +160,13 @@
           ]
         },
         {
-          "title": "state that cells use ATP from respiration for energy-requiring processes",
+          "title": "1.2.4 State that cells use ATP from respiration for energy-requiring processes",
           "content": [
             "Cells use ATP (adenosine triphosphate) from respiration for energy-requiring processes."
           ]
         },
         {
-          "title": "outline key structural features of a prokaryotic cell as found in a typical bacterium, including:",
+          "title": "1.2.5 Outline key structural features of a prokaryotic cell as found in a typical bacterium, including:",
           "content": [
             "Unicellular",
             "Prokaryotic cells, such as those found in bacteria, are single-celled organisms.",
@@ -184,7 +184,7 @@
           ]
         },
         {
-          "title": "compare the structure of a prokaryotic cell as found in a typical bacterium with the structures of typical eukaryotic cells in plants and animals",
+          "title": "1.2.6 Compare the structure of a prokaryotic cell as found in a typical bacterium with the structures of typical eukaryotic cells in plants and animals",
           "content": [
             "Same Aspects:",
             "Both have a plasma membrane that regulates the passage of substances in and out of the cell.",
@@ -199,7 +199,7 @@
           ]
         },
         {
-          "title": "state that all viruses are non-cellular structures with a nucleic acid core (either DNA or RNA) and a capsid made of protein, and that some viruses have an outer envelope made of phospholipids",
+          "title": "1.2.7 State that all viruses are non-cellular structures with a nucleic acid core (either DNA or RNA) and a capsid made of protein, and that some viruses have an outer envelope made of phospholipids",
           "content": [
             "All viruses consist of genetic material, either DNA or RNA, which contains the instructions for making new virus particles. This genetic material is surrounded by a protein coat called a capsid, which protects the genetic material and helps the virus infect host cells.",
             "Some viruses have an additional outer envelope, which is a lipid membrane derived from the host cell membrane. This envelope contains viral proteins that help the virus attach to and enter host cells."

@@ -6,7 +6,7 @@
       "section": "12.1 Energy",
       "items": [
         {
-          "title": "1 outline the need for energy in living organisms, as illustrated by active transport, movement and anabolic reactions, such as those occurring in DNA replication and protein synthesis",
+          "title": "12.1.1 Outline the need for energy in living organisms, as illustrated by active transport, movement and anabolic reactions, such as those occurring in DNA replication and protein synthesis",
           "content": [
             "Active transport: To move molecules or ions against their concentration gradient across cell membranes.",
             "Movement: To enable cellular locomotion, muscle contraction, and organelle transport.",
@@ -14,7 +14,7 @@
           ]
         },
         {
-          "title": "2 describe the features of ATP that make it suitable as the universal energy currency.",
+          "title": "12.1.2 Describe the features of ATP that make it suitable as the universal energy currency.",
           "content": [
             "ATP contains high-energy phosphate bonds between its phosphate groups. These bonds are relatively unstable and can be hydrolyzed (broken down) to release energy, which can be readily used by cells.",
             "ATP releases energy quickly when hydrolyzed to ADP (adenosine diphosphate) and inorganic phosphate (Pi). This rapid energy release makes ATP ideal for powering cellular processes that require immediate energy, such as muscle contraction and active transport.",
@@ -25,7 +25,7 @@
           ]
         },
         {
-          "title": "3 state that ATP is synthesised by:",
+          "title": "12.1.3 State that ATP is synthesised by:",
           "content": [
             "transfer of phosphate in substrate-linked reactions",
             "chemiosmosis in membranes of mitochondria and chloroplasts",
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "title": "4 explain the relative energy values of carbohydrates, lipids and proteins as respiratory substrates.",
+          "title": "12.1.4 Explain the relative energy values of carbohydrates, lipids and proteins as respiratory substrates.",
           "content": [
             "1. Carbohydrates:",
             "o Energy Yield: Carbohydrates yield approximately 17 kJ per gram when metabolized.",
@@ -52,13 +52,13 @@
           ]
         },
         {
-          "title": "5 state that the respiratory quotient (RQ) is the ratio of the number of molecules of carbon dioxide produced to the number of molecules of oxygen taken in, as a result of respiration",
+          "title": "12.1.5 State that the respiratory quotient (RQ) is the ratio of the number of molecules of carbon dioxide produced to the number of molecules of oxygen taken in, as a result of respiration",
           "content": [
             "The respiratory quotient (RQ) is defined as the ratio of the number of molecules of carbon dioxide produced to the number of molecules of oxygen taken in, as a result of respiration."
           ]
         },
         {
-          "title": "6 calculate RQ values of different respiratory substrates from equations for respiration.",
+          "title": "12.1.6 Calculate RQ values of different respiratory substrates from equations for respiration.",
           "content": [
             "Carbohydrates (Glucose):",
             "Glucose + 6O₂ → 6CO₂ + 6H₂O",
@@ -75,7 +75,7 @@
           ]
         },
         {
-          "title": "7 describe and carry out investigations, using simple respirometers, to determine the RQ of germinating seeds or small invertebrates (e.g. blowfly larvae)",
+          "title": "12.1.7 Describe and carry out investigations, using simple respirometers, to determine the RQ of germinating seeds or small invertebrates (e.g. blowfly larvae)",
           "content": [
             "Materials Needed:",
             "Germinating seeds or small invertebrates (e.g., blowfly larvae)",
@@ -109,7 +109,7 @@
       "section": "12.2 Respiration",
       "items": [
         {
-          "title": "2 outline glycolysis as phosphorylation of glucose and the subsequent splitting of fructose 1,6-bisphosphate (6C) into two triose phosphate molecules (3C), which are then further oxidized to pyruvate (3C), with the production of ATP and reduced NAD.",
+          "title": "12.2.1 Outline glycolysis as phosphorylation of glucose and the subsequent splitting of fructose 1,6-bisphosphate (6C) into two triose phosphate molecules (3C), which are then further oxidized to pyruvate (3C), with the production of ATP and reduced NAD.",
           "content": [
             "1. Glucose to Fructose-1,6-bisphosphate:",
             "o Glucose (6C) is phosphorylated and converted to fructose-1,6-bisphosphate (6C).",
@@ -126,7 +126,7 @@
           ]
         },
         {
-          "title": "3 explain that, when oxygen is available, pyruvate enters mitochondria to take part in the link reaction.",
+          "title": "12.2.2 Explain that, when oxygen is available, pyruvate enters mitochondria to take part in the link reaction.",
           "content": [
             "1. Transport into the Mitochondria:",
             "o Pyruvate (3C) is actively transported from the cytoplasm into the mitochondrial matrix.",
@@ -143,7 +143,7 @@
           ]
         },
         {
-          "title": "4 describe the link reaction, including the role of coenzyme A in the transfer of acetyl (2C) groups.",
+          "title": "12.2.3 Describe the link reaction, including the role of coenzyme A in the transfer of acetyl (2C) groups.",
           "content": [
             "1. Transport of Pyruvate:",
             "o Pyruvate, produced in the cytoplasm during glycolysis, is transported into the mitochondrial matrix.",
@@ -163,7 +163,7 @@
           ]
         },
         {
-          "title": "5 outline the Krebs cycle, explaining that oxaloacetate (4C) acts as an acceptor of the 2C fragment from acetyl coenzyme A to form citrate (6C), which is converted back to oxaloacetate in a series of small steps.",
+          "title": "12.2.4 Outline the Krebs cycle, explaining that oxaloacetate (4C) acts as an acceptor of the 2C fragment from acetyl coenzyme A to form citrate (6C), which is converted back to oxaloacetate in a series of small steps.",
           "content": [
             "1. Formation of Citrate:",
             "o Reaction: Acetyl-CoA (2C) combines with oxaloacetate (4C) to form citrate (6C).",
@@ -184,7 +184,7 @@
           ]
         },
         {
-          "title": "6 explain that reactions in the Krebs cycle involve decarboxylation and dehydrogenation and the reduction of the coenzymes NAD and FAD",
+          "title": "12.2.5 Explain that reactions in the Krebs cycle involve decarboxylation and dehydrogenation and the reduction of the coenzymes NAD and FAD",
           "content": [
             "1. Decarboxylation:",
             "o Definition: The removal of a carbon atom from a molecule in the form of carbon dioxide (CO₂).",
@@ -211,7 +211,7 @@
           ]
         },
         {
-          "title": "7 describe the role of NAD and FAD in transferring hydrogen to carriers in the inner mitochondrial membrane.",
+          "title": "12.2.6 Describe the role of NAD and FAD in transferring hydrogen to carriers in the inner mitochondrial membrane.",
           "content": [
             "NAD (Nicotinamide Adenine Dinucleotide):",
             "Reduction: NAD is reduced to NADH during the Krebs cycle and glycolysis by accepting hydrogen atoms (electrons and protons).",
@@ -228,7 +228,7 @@
           ]
         },
         {
-          "title": "8 explain that during oxidative phosphorylation:",
+          "title": "12.2.7 Explain that during oxidative phosphorylation:",
           "content": [
             "hydrogen atoms split into protons and energetic electrons",
             "energetic electrons release energy as they pass through the electron transport chain (details of carriers are not expected)",
@@ -249,7 +249,7 @@
           ]
         },
         {
-          "title": "9 describe the relationship between the structure and function of mitochondria using diagrams and electron micrographs.",
+          "title": "12.2.8 Describe the relationship between the structure and function of mitochondria using diagrams and electron micrographs.",
           "content": [
             "1. Outer Membrane:",
             "o Smooth, semi-permeable membrane.",
@@ -286,7 +286,7 @@
           ]
         },
         {
-          "title": "10 outline respiration in anaerobic conditions in mammals (lactate fermentation) and in yeast cells (ethanol fermentation)",
+          "title": "12.2.9 Outline respiration in anaerobic conditions in mammals (lactate fermentation) and in yeast cells (ethanol fermentation)",
           "content": [
             "Mammals (Lactate Fermentation):",
             "1. Glycolysis:",
@@ -314,7 +314,7 @@
           ]
         },
         {
-          "title": "11 explain why the energy yield from respiration in aerobic conditions is much greater than the energy yield from respiration in anaerobic conditions (a detailed account of the total yield of ATP from the aerobic respiration of glucose is not expected)",
+          "title": "12.2.10 Explain why the energy yield from respiration in aerobic conditions is much greater than the energy yield from respiration in anaerobic conditions (a detailed account of the total yield of ATP from the aerobic respiration of glucose is not expected)",
           "content": [
             "The energy yield from respiration in aerobic conditions is much greater than in anaerobic conditions primarily due to the efficiency and completeness of oxidative phosphorylation, which occurs only in the presence of oxygen. Here are the key reasons why aerobic respiration yields significantly more ATP compared to anaerobic respiration:",
             "1. Oxidative Phosphorylation:",
@@ -344,7 +344,7 @@
           ]
         },
         {
-          "title": "13 describe and carry out investigations using redox indicators, including DCPIP and methylene blue, to determine the effects of temperature and substrate concentration on the rate of respiration of yeast.",
+          "title": "12.3.1 Describe and carry out investigations using redox indicators, including DCPIP and methylene blue, to determine the effects of temperature and substrate concentration on the rate of respiration of yeast.",
           "content": [
             "Materials Needed:",
             "1. Yeast suspension: Prepare a yeast suspension in water or buffer.",
@@ -390,7 +390,7 @@
           ]
         },
         {
-          "title": "14 describe and carry out investigations using simple respirometers to determine the effect of temperature on the rate of respiration.",
+          "title": "12.3.2 Describe and carry out investigations using simple respirometers to determine the effect of temperature on the rate of respiration.",
           "content": [
             "Materials Needed:",
             "1. Germinating seeds: Ensure they are of the same type and size.",

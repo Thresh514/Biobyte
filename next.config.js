@@ -34,8 +34,6 @@ const nextConfig = {
   experimental: {
     // 并行构建
     cpus: Math.max(1, (require('os').cpus().length / 2)),
-    // 开启 server components，提高性能
-    serverComponents: false,
   }
 };
 

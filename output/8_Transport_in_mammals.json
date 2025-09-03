@@ -6,7 +6,7 @@
       "section": "8.1 The circulatory system",
       "items": [
         {
-          "title": "recognise arteries, veins and capillaries from microscope slides, photomicrographs and electron micrographs and make plan diagrams showing the structure of arteries and veins in transverse section (TS) and longitudinal section (LS).",
+          "title": "8.1.1 Recognise arteries, veins and capillaries from microscope slides, photomicrographs and electron micrographs and make plan diagrams showing the structure of arteries and veins in transverse section (TS) and longitudinal section (LS).",
           "content": [
             "Arteries:",
             "Transverse Section: Arteries have thick walls with three distinct layers: the tunica intima (innermost layer), tunica media (middle layer), and tunica externa (outer layer). The tunica media is particularly thick and contains smooth muscle cells.",
@@ -17,7 +17,7 @@
           ]
         },
         {
-          "title": "explain how the structure of muscular arteries, elastic arteries, veins and capillaries are each related to their functions.",
+          "title": "8.1.2 Explain how the structure of muscular arteries, elastic arteries, veins and capillaries are each related to their functions.",
           "content": [
             "Muscular Arteries:",
             "Structure: Muscular arteries have a thick tunica media composed of smooth muscle cells. They also have a well-defined tunica intima and tunica externa.",
@@ -34,7 +34,7 @@
           ]
         },
         {
-          "title": "recognise and draw red blood cells, monocytes, neutrophils and lymphocytes from microscope slides, photomicrographs and electron micrographs",
+          "title": "8.1.3 Recognise and draw red blood cells, monocytes, neutrophils and lymphocytes from microscope slides, photomicrographs and electron micrographs",
           "content": [
             "Red Blood Cells (Erythrocytes):",
             "Appearance: Circular, biconcave disc shape without a nucleus.",
@@ -51,7 +51,7 @@
           ]
         },
         {
-          "title": "state the functions of tissue fluid and describe the formation of tissue fluid in a capillary network",
+          "title": "8.1.4 State the functions of tissue fluid and describe the formation of tissue fluid in a capillary network",
           "content": [
             "Functions of tissue fluid:",
             "Nutrient delivery",
@@ -71,7 +71,7 @@
       "section": "8.2 Transport of oxygen and carbon dioxide",
       "items": [
         {
-          "title": "describe the role of red blood cells in transporting oxygen and carbon dioxide with reference to the roles of:",
+          "title": "8.2.1 Describe the role of red blood cells in transporting oxygen and carbon dioxide with reference to the roles of:",
           "content": [
             "Haemoglobin:",
             "Oxygen Transport: Haemoglobin, a protein found in red blood cells, binds to oxygen in the lungs, forming oxyhaemoglobin. This binding is facilitated by iron ions (Fe^2+) in the haemoglobin molecule.",
@@ -89,7 +89,7 @@
           ]
         },
         {
-          "title": "describe the chloride shift and explain the importance of the chloride shift",
+          "title": "8.2.2 Describe the chloride shift and explain the importance of the chloride shift",
           "content": [
             "Description:",
             "In tissues where carbon dioxide (CO2) is produced, CO2 diffuses into RBCs and reacts with water to form carbonic acid (H2CO3) with the help of carbonic anhydrase enzyme.",
@@ -103,13 +103,13 @@
           ]
         },
         {
-          "title": "describe the role of plasma in the transport of carbon dioxide",
+          "title": "8.2.3 Describe the role of plasma in the transport of carbon dioxide",
           "content": [
             "plasma plays a crucial role in the transport of CO2 in the blood by carrying dissolved CO2, bicarbonate ions, and carbaminohaemoglobin. These mechanisms ensure the efficient removal of CO2 from tissues to the lungs for exhalation."
           ]
         },
         {
-          "title": "describe and explain the oxygen dissociation curve of adult haemoglobin",
+          "title": "8.2.4 Describe and explain the oxygen dissociation curve of adult haemoglobin",
           "content": [
             "Low pO2 (Tissues):",
             "In tissues with low pO2, haemoglobin releases oxygen due to the Bohr effect (increased acidity and high carbon dioxide levels).",
@@ -126,13 +126,13 @@
           ]
         },
         {
-          "title": "explain the importance of the oxygen dissociation curve at partial pressures of oxygen in the lungs and in respiring tissues",
+          "title": "8.2.5 Explain the importance of the oxygen dissociation curve at partial pressures of oxygen in the lungs and in respiring tissues",
           "content": [
             "The importance of the oxygen dissociation curve lies in its role in facilitating the efficient transport and delivery of oxygen by haemoglobin to tissues throughout the body. It allows haemoglobin to bind oxygen in the lungs, where oxygen levels are high, and release it in tissues with lower oxygen levels, where it is needed for cellular respiration. The sigmoidal shape of the curve indicates cooperative binding, ensuring that oxygen is readily available when and where it is needed most. This adaptability is crucial for supporting aerobic metabolism and overall physiological function in humans and other organisms."
           ]
         },
         {
-          "title": "describe the Bohr shift and explain the importance of the Bohr shift",
+          "title": "8.2.6 Describe the Bohr shift and explain the importance of the Bohr shift",
           "content": [
             "The Bohr shift describes how the binding of oxygen to haemoglobin is affected by changes in acidity (pH) and carbon dioxide (CO2) levels in the blood. When acidity increases or CO2 levels rise, haemoglobin has a lower affinity for oxygen, meaning it releases oxygen more readily. This is important because it allows haemoglobin to unload oxygen more easily in tissues with high levels of CO2 and low pH, where oxygen is needed for cellular respiration. This shift in the oxygen dissociation curve helps ensure that oxygen is delivered to tissues efficiently, matching oxygen delivery with metabolic demand."
           ]
@@ -143,7 +143,7 @@
       "section": "8.3 The heart",
       "items": [
         {
-          "title": "describe the external and internal structure of the mammalian heart",
+          "title": "8.3.1 Describe the external and internal structure of the mammalian heart",
           "content": [
             "External Structure:",
             "Size and Shape: The heart is roughly the size of a fist and has a conical shape, with the apex pointing downward and to the left.",
@@ -167,7 +167,7 @@
           ]
         },
         {
-          "title": "describe the cardiac cycle, with reference to the relationship between blood pressure changes during systole and diastole and the opening and closing of valves",
+          "title": "8.3.2 Describe the cardiac cycle, with reference to the relationship between blood pressure changes during systole and diastole and the opening and closing of valves",
           "content": [
             "Diastole:",
             "Atria Filling (Atrial Diastole): The heart is relaxed. Blood flows passively from the veins into the atria, causing them to fill.",
@@ -185,7 +185,7 @@
           ]
         },
         {
-          "title": "explain the roles of the sinoatrial node, the atrioventricular node and the Purkyne tissue in the cardiac cycle (knowledge of nervous and hormonal control is not expected)",
+          "title": "8.3.3 Explain the roles of the sinoatrial node, the atrioventricular node and the Purkyne tissue in the cardiac cycle (knowledge of nervous and hormonal control is not expected)",
           "content": [
             "Sinoatrial Node (SAN):",
             "The SA node, located in the right atrium, is often referred to as the heart's natural pacemaker.",
