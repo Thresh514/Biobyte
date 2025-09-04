@@ -289,9 +289,9 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
                     <h1 className="text-xl font-normal mb-2">
                         {selectedOption?.title || title}
                     </h1>
-                    <p className="text-lg text-gray-800 font-light">
+                    {/* <p className="text-lg text-gray-800 font-light">
                         $ {typeof totalPrice === "number" ? totalPrice.toFixed(2) : "0.00"}
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* 款式选择 */}
@@ -325,12 +325,6 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
 
                 {/* 查看按钮 */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
-                    <button
-                        onClick={handleView}
-                        className="bg-gray-400 text-white py-3 text-sm hover:bg-gray-500 transition duration-300"
-                    >
-                        VIEW
-                    </button>
                     <button
                         onClick={handleView}
                         className="bg-white text-black border border-black py-3 text-sm hover:bg-black hover:text-white transition duration-300"
@@ -404,9 +398,9 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
                     <p key={selectedOption?.title || title} className="text-2xl font-normal">
                         {selectedOption?.title || title}
                     </p>
-                    <p className="text-xl text-gray-800">
+                    {/* <p className="text-xl text-gray-800">
                         $ {typeof totalPrice === "number" ? totalPrice.toFixed(2) : "0.00"}
-                    </p>
+                    </p> */}
 
                     {/* 款式选择 */}
                     {options && shouldShowOptions && (
@@ -435,13 +429,7 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
                     <div className="flex flex-rows space-x-12 mt-10">
                         <button
                             onClick={handleView}
-                            className="bg-gray-400 text-white px-12 py-3 hover:bg-gray-500 transition duration-300"
-                        >
-                            VIEW
-                        </button>
-                        <button
-                            onClick={handleView}
-                            className="bg-white text-black border border-black px-12 py-3 hover:bg-black hover:text-white transition duration-300"
+                            className="bg-white text-black border border-black px-24 py-3 hover:bg-black hover:text-white transition duration-300"
                         >
                             VIEW
                         </button>
