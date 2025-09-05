@@ -53,7 +53,7 @@ const ResourceCategories = () => {
                     <p className="text-sm md:text-base">Study smarter, not harder — shop our bestsellers now!</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full md:w-2/3">
-                    {products.map((product, index) => (
+                    {(Array.isArray(products) ? products : []).map((product, index) => (
                         <div
                             key={product.id}
                             className="relative cursor-pointer bg-white group"

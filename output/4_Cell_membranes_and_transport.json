@@ -1,0 +1,182 @@
+{
+  "unit": "4",
+  "title": "Cell membranes and transport",
+  "content": [
+    {
+      "section": "4.1 Fluid mosaic membranes",
+      "items": [
+        {
+          "title": "4.1.1 Describe the fluid mosaic model of membrane structure with reference to the hydrophobic and hydrophilic interactions that account for the formation of the phospholipid bilayer and the arrangement of proteins",
+          "content": [
+            "The fluid mosaic model describes cell membranes as a dynamic structure composed of a lipid bilayer with embedded proteins. The hydrophobic interactions between the fatty acid tails of phospholipids drive the formation of the bilayer, with hydrophilic heads facing outward and inward toward water. Proteins, both integral and peripheral, are embedded or attached to the membrane, performing various functions. Cholesterol helps regulate membrane fluidity. This model emphasizes the dynamic nature of membranes, with molecules constantly moving and interacting."
+          ]
+        },
+        {
+          "title": "4.1.2 Describe the arrangement of cholesterol, glycolipids and glycoproteins in cell surface membranes",
+          "content": [
+            "Cholesterol: Cholesterol is interspersed within the phospholipid bilayer. Its hydroxyl group interacts with the polar head groups of phospholipids, while its hydrophobic tail interacts with the fatty acid tails of phospholipids. Cholesterol helps regulate membrane fluidity by preventing the phospholipid tails from packing too closely together (which would decrease fluidity) or too far apart (which would increase fluidity).",
+            "Glycolipids: Glycolipids are located in the outer leaflet of the membrane, with their carbohydrate portions extending into the extracellular space. The hydrophobic portion of glycolipids integrates into the lipid bilayer, while the hydrophilic carbohydrate portion faces outward, where it can interact with other cells or molecules. Glycolipids are involved in cell recognition and cell signaling processes.",
+            "Glycoproteins: Glycoproteins are integral membrane proteins with carbohydrate chains attached to their extracellular domains. These proteins are embedded within the lipid bilayer, with their hydrophobic regions interacting with the lipid tails of phospholipids. The carbohydrate chains extend into the extracellular space, where they can participate in cell-cell recognition, signaling, and immune responses."
+          ]
+        },
+        {
+          "title": "4.1.3 Describe the roles of phospholipids, cholesterol, glycolipids, proteins and glycoproteins in cell surface membranes, with reference to stability, fluidity, permeability, transport (carrier proteins and channel proteins), cell signalling (cell surface receptors) and cell recognition (cell surface antigens – see11.1.2)",
+          "content": [
+            "Phospholipids: Form the basic structure of the membrane, providing a barrier that separates the inside and outside of the cell. They contribute to membrane fluidity and flexibility.",
+            "Cholesterol: Regulates membrane fluidity by preventing phospholipids from packing too closely together (which would decrease fluidity) or too far apart (which would increase fluidity). It also stabilizes the membrane.",
+            "Glycolipids: Located in the outer layer of the membrane, they help maintain stability and play a role in cell recognition.",
+            "Proteins:",
+            "Transport Proteins (Carrier and Channel Proteins): Regulate the movement of molecules across the membrane, facilitating the transport of ions, nutrients, and waste products.",
+            "Cell Surface Receptors: Bind to specific molecules outside the cell and initiate a cellular response, such as cell signaling pathways.",
+            "Enzymes: Catalyze specific chemical reactions at the cell surface.",
+            "Structural Proteins: Help maintain the shape of the cell and stabilize the membrane.",
+            "Glycoproteins: Involved in cell recognition and communication. They can act as cell surface antigens, which are important for immune responses and self-recognition."
+          ]
+        },
+        {
+          "title": "4.1.4 Outline the main stages in the process of cell signalling leading to specific responses:",
+          "content": [
+            "Secretion of Specific Chemicals (Ligands) from Cells:",
+            "Cells release signaling molecules, known as ligands, in response to internal or external stimuli.",
+            "Ligands can be hormones, neurotransmitters, growth factors, or cytokines, among others.",
+            "Transport of Ligands to Target Cells:",
+            "Ligands travel through the extracellular fluid to reach target cells.",
+            "Some ligands may be released into the bloodstream for systemic effects, while others act locally.",
+            "Binding of Ligands to Cell Surface Receptors on Target Cells:",
+            "Ligands bind to specific receptors on the surface of target cells.",
+            "Receptors are often proteins that undergo conformational changes upon ligand binding."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "4.2 Movement into and out of cells",
+      "items": [
+        {
+          "title": "4.2.1 Describe and explain the processes of ：",
+          "content": [
+            "Simple Diffusion:",
+            "Description: The passive movement of molecules from an area of higher concentration to an area of lower concentration across a semipermeable membrane.",
+            "Explanation: This occurs due to the random motion of molecules. No energy is required, and the process continues until equilibrium is reached.",
+            "Facilitated Diffusion:",
+            "Description: Similar to simple diffusion but requires specific carrier proteins or channel proteins to facilitate the movement of molecules across the membrane.",
+            "Explanation: Molecules move down their concentration gradient, and the rate of diffusion is limited by the number of available transport proteins.",
+            "Osmosis:",
+            "Description: The diffusion of water molecules across a semipermeable membrane from an area of lower solute concentration to an area of higher solute concentration.",
+            "Explanation: Water moves to equalize the concentration of solutes on both sides of the membrane, balancing the osmotic pressure.",
+            "Active Transport:",
+            "Description: The movement of molecules against their concentration gradient, requiring energy in the form of ATP.",
+            "Explanation: This process is facilitated by specific carrier proteins (pumps) that bind to the molecule to be transported and use ATP to change shape and move the molecule across the membrane.",
+            "Endocytosis:",
+            "Description: The process by which cells engulf large molecules, particles, or other cells by wrapping the cell membrane around the material to form a vesicle.",
+            "Explanation: There are two main types: phagocytosis (cell eating) and pinocytosis (cell drinking), both of which require energy.",
+            "Exocytosis:",
+            "Description: The process by which cells expel waste products or secrete substances by fusing a vesicle containing the material with the cell membrane, releasing its contents outside the cell.",
+            "Explanation: This process is also energy-dependent and is used for various purposes, such as secretion of hormones, neurotransmitters, or enzymes."
+          ]
+        },
+        {
+          "title": "4.2.2 Investigate simple diffusion and osmosis using plant tissue and non-living materials, including dialysis (Visking) tubing and agar",
+          "content": [
+            "Materials Needed:",
+            "Plant tissue (e.g., potato or beetroot slices)",
+            "Dialysis (Visking) tubing or agar",
+            "Solutions of different sucrose concentrations",
+            "Water",
+            "Beakers",
+            "Knife and cutting board",
+            "Procedure:",
+            "Prepare plant tissue slices and dialysis tubing.",
+            "Place plant tissue in sucrose solutions, observe changes.",
+            "Place tubing in water and then in sucrose solution, observe changes.",
+            "Observations and Analysis:",
+            "Record changes in plant tissue and tubing.",
+            "Compare rates of diffusion and osmosis.",
+            "Conclusion:",
+            "Discuss findings on diffusion and osmosis in plants."
+          ]
+        },
+        {
+          "title": "4.2.3 Illustrate the principle that surface area to volume ratios decrease with increasing size by calculating surface areas and volumes of simple 3-D shapes (as shown in the Mathematical requirements)",
+          "content": [
+            "Cube:",
+            "Side length (s) = 1 unit (for simplicity)",
+            "Surface Area (SA) = 6s^2",
+            "Volume (V) = s^3",
+            "For a cube with side length 1 unit:",
+            "Surface Area = 6(1)^2 = 6 units^2",
+            "Volume = (1)^3 = 1 unit^3",
+            "Surface Area to Volume Ratio = 6/1 = 6 units^-1",
+            "Sphere:",
+            "Radius (r) = 1 unit (for simplicity)",
+            "Surface Area (SA) = 4πr^2",
+            "Volume (V) = (4/3)πr^3",
+            "For a sphere with radius 1 unit:",
+            "Surface Area = 4π(1)^2 ≈ 12.57 units^2",
+            "Volume = (4/3)π(1)^3 ≈ 4.19 units^3",
+            "Surface Area to Volume Ratio ≈ 12.57/4.19 ≈ 3 units^-1",
+            "Cylinder:",
+            "Radius (r) = 1 unit (for simplicity)",
+            "Height (h) = 1 unit (for simplicity)",
+            "Surface Area (SA) = 2πrh + 2πr^2",
+            "Volume (V) = πr^2h",
+            "For a cylinder with radius 1 unit and height 1 unit:",
+            "Surface Area = 2π(1)(1) + 2π(1)^2 ≈ 8.57 units^2",
+            "Volume = π(1)^2(1) ≈ 3.14 units^3",
+            "Surface Area to Volume Ratio ≈ 8.57/3.14 ≈ 2.73 units^-1",
+            "As we can see, as the shapes increase in size, the surface area to volume ratio decreases. This principle has implications in biology, affecting factors such as heat exchange, nutrient absorption, and metabolic rates in organisms."
+          ]
+        },
+        {
+          "title": "4.2.4 Investigate the effect of changing surface area to volume ratio on diffusion using agar blocks of different sizes",
+          "content": [
+            "Materials:",
+            "Agar powder, water, food coloring, knife, ruler, beakers, stopwatch.",
+            "Procedure:",
+            "Prepare agar blocks of different sizes.",
+            "Fill a beaker with colored water.",
+            "Place each agar block in the beaker and time how long it takes for the color to diffuse.",
+            "Record the results.",
+            "Observations:",
+            "Smaller agar blocks with larger surface area to volume ratios diffuse color faster.",
+            "Conclusion:",
+            "Surface area to volume ratio affects diffusion rate, with higher ratios allowing faster diffusion."
+          ]
+        },
+        {
+          "title": "4.2.5 Investigate the effects of immersing plant tissues in solutions of different water potentials, using the results to estimate the water potential of the tissues",
+          "content": [
+            "Materials Needed:",
+            "Plant tissues (e.g., potato slices)",
+            "Solutions of different sucrose concentrations (to create different water potentials)",
+            "Distilled water",
+            "Balance",
+            "Beakers",
+            "Paper towels",
+            "Stopwatch",
+            "Procedure:",
+            "Prepare solutions of different sucrose concentrations (e.g., 0.2M, 0.4M, 0.6M, 0.8M, 1.0M).",
+            "Cut plant tissues into uniform slices.",
+            "Blot the slices with a paper towel to remove excess water.",
+            "Weigh and record the initial mass of each slice.",
+            "Place each slice in a different sucrose solution.",
+            "Allow the slices to equilibrate for a set period (e.g., 30 minutes).",
+            "Remove the slices from the solutions, blot them gently, and reweigh.",
+            "Calculate the percentage change in mass for each slice.",
+            "Plot the percentage change in mass against the concentration of the sucrose solution.",
+            "Determine the concentration at which there is no change in mass (isotonic point).",
+            "Calculations:",
+            "The point at which there is no change in mass corresponds to the water potential of the plant tissue.",
+            "Use the data to estimate the water potential of the plant tissues using a suitable formula or graph.",
+            "Observations and Analysis:",
+            "Higher sucrose concentrations result in greater water loss from the plant tissues, leading to decreased mass.",
+            "The isotonic point represents the sucrose concentration at which the water potential of the solution is equal to the water potential of the plant tissue.",
+            "Conclusion:",
+            "The experiment demonstrates the relationship between water potential and the movement of water in and out of plant tissues.",
+            "The water potential of the plant tissues can be estimated based on the isotonic point."
+          ]
+        }
+      ]
+    }
+  ]
+}
