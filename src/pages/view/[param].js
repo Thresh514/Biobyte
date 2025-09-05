@@ -1,9 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import TopLeftHeader from '../../components/TopLeftHeader';
-import TopRightHeader from '../../components/TopRightHeader';
-import LeftSidebar from '../../components/LeftSidebar';
+import FloatUI from '../../components/FloatUI';
+import ViewContent from '../../components/ViewContent';
 
 export default function ViewPage() {
     const router = useRouter();
@@ -16,6 +15,7 @@ export default function ViewPage() {
     const [expandedSections, setExpandedSections] = useState(new Set());
     const [expandedItems, setExpandedItems] = useState(new Set());
     const [highlightSettings, setHighlightSettings] = useState({ mode: 'none', color: '#ffeb3b' });
+    const [isFullscreen, setIsFullscreen] = useState(false);
 
     // 添加页面淡入动画效果
     useEffect(() => {
@@ -118,9 +118,20 @@ export default function ViewPage() {
     };
 
     const handleUnitChange = (unit) => {
-        setSelectedFile(unit);
-        setSelectedUnitId(unit.id);
-        loadContent(unit.file);
+        // 如果传入的是 unit ID，需要找到对应的 unit 对象
+        if (typeof unit === 'string') {
+            const foundUnit = availableFiles.find(u => u.id === unit);
+            if (foundUnit) {
+                setSelectedFile(foundUnit);
+                setSelectedUnitId(foundUnit.id);
+                loadContent(foundUnit.file);
+            }
+        } else if (unit && unit.id && unit.file) {
+            // 如果传入的是完整的 unit 对象
+            setSelectedFile(unit);
+            setSelectedUnitId(unit.id);
+            loadContent(unit.file);
+        }
     };
 
     const handleHighlightChange = (settings) => {
@@ -135,6 +146,10 @@ export default function ViewPage() {
     const handleRedo = () => {
         // TODO: 实现重做功能
         console.log('Redo clicked');
+    };
+
+    const handleFullscreenToggle = () => {
+        setIsFullscreen(!isFullscreen);
     };
 
     // 默认加载第一个Unit
@@ -342,166 +357,54 @@ export default function ViewPage() {
     }
 
     return (
-        <div className="h-screen flex flex-col bg-gray-100">
+        <div className="relative w-full h-screen overflow-hidden">
             <Head>
                 <title>BioByte - {resourceInfo.type?.toUpperCase()} {resourceInfo.level?.toUpperCase()} View</title>
                 <meta name="description" content={`View ${resourceInfo.type} content for ${resourceInfo.level} level`} />
                 <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
             </Head>
             
-            {/* 悬浮工具栏 */}
-            <TopLeftHeader 
-                currentUnit={selectedFile}
-                onUndo={handleUndo}
-                onRedo={handleRedo}
-            />
-            <TopRightHeader />
-            <LeftSidebar 
-                availableUnits={availableFiles}
-                selectedUnitId={selectedUnitId}
-                onUnitChange={handleUnitChange}
-                onHighlightChange={handleHighlightChange}
-            />
-            
-            {/* 主要内容区域 */}
-            <div className="flex-1 flex overflow-hidden pt-16 pl-80">
+            {/* 画布层 - 全屏内容区域 */}
+            <div className="absolute inset-0 bg-gray-100 overflow-auto">
                 {loading && (
-                    <div className="flex-1 flex items-center justify-center">
+                    <div className="flex items-center justify-center h-full">
                         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-black"></div>
                     </div>
                 )}
                 
                 {error && (
-                    <div className="flex-1 flex items-center justify-center">
+                    <div className="flex items-center justify-center h-full">
                         <div className="text-center">
-                            <div className="text-red-600 mb-2">Error loading content</div>
-                            <div className="text-gray-600 text-sm">{error}</div>
+                            <h2 className="text-xl font-bold text-red-600 mb-2">Error</h2>
+                            <p className="text-gray-600">{error}</p>
                         </div>
                     </div>
                 )}
                 
-                {!loading && !error && (
-                    <>
-                        
-
-                        {/* 右侧内容区 */}
-                        <div className="flex overflow-y-auto">
-                            {content ? (
-                                <div className="p-6">
-                                    {/* 标题 */}
-                                    <div className="mb-8 border-b border-gray-200 pb-6">
-                                        <h1 className="text-2xl font-bold text-darker mb-2">
-                                            Unit {content.unit}: {content.title}
-                                        </h1>
-                                        <div className="text-sm text-gray-600">
-                                            {content.content?.length || 0} sections available
-                                        </div>
-                                    </div>
-
-                                    {/* 内容列表 */}
-                                    <div className="space-y-6">
-                                        {content.content?.map((section, sectionIndex) => (
-                                            <div key={sectionIndex} className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
-                                                {/* 章节标题 */}
-                                                <button
-                                                    onClick={() => toggleSection(sectionIndex)}
-                                                    className="w-full px-6 py-4 bg-white hover:bg-gray-50 transition-colors text-left border-b border-gray-100"
-                                                >
-                                                    <div className="flex items-center justify-between">
-                                                        <h2 className="text-lg font-semibold text-darker">
-                                                            {section.section}
-                                                        </h2>
-                                                        <div className="flex items-center space-x-2">
-                                                            <span className="text-sm text-gray-500">
-                                                                {section.items?.length || 0} items
-                                                            </span>
-                                                            <svg
-                                                                className={`w-5 h-5 text-gray-500 transition-transform ${
-                                                                    expandedSections.has(sectionIndex) ? 'rotate-180' : ''
-                                                                }`}
-                                                                fill="none"
-                                                                stroke="currentColor"
-                                                                viewBox="0 0 24 24"
-                                                            >
-                                                                <path
-                                                                    strokeLinecap="round"
-                                                                    strokeLinejoin="round"
-                                                                    strokeWidth={2}
-                                                                    d="M19 9l-7 7-7-7"
-                                                                />
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-                                                </button>
-
-                                                {/* 章节内容 */}
-                                                {expandedSections.has(sectionIndex) && (
-                                                    <div className="p-6 bg-gray-50">
-                                                        <div className="space-y-4">
-                                                            {section.items?.map((item, itemIndex) => (
-                                                                <div key={itemIndex} className="border border-gray-200 rounded-lg bg-white shadow-sm">
-                                                                    {/* 项目标题 */}
-                                                                    <button
-                                                                        onClick={() => toggleItem(sectionIndex, itemIndex)}
-                                                                        className="w-full px-4 py-3 bg-white hover:bg-gray-50 transition-colors text-left border-b border-gray-100"
-                                                                    >
-                                                                        <div className="flex items-center justify-between">
-                                                                            <h3 className="text-sm font-medium text-darker pr-4">
-                                                                                {item.title}
-                                                                            </h3>
-                                                                            <svg
-                                                                                className={`w-4 h-4 text-gray-600 transition-transform flex-shrink-0 ${
-                                                                                    expandedItems.has(`${sectionIndex}-${itemIndex}`) ? 'rotate-180' : ''
-                                                                                }`}
-                                                                                fill="none"
-                                                                                stroke="currentColor"
-                                                                                viewBox="0 0 24 24"
-                                                                            >
-                                                                                <path
-                                                                                    strokeLinecap="round"
-                                                                                    strokeLinejoin="round"
-                                                                                    strokeWidth={2}
-                                                                                    d="M19 9l-7 7-7-7"
-                                                                                />
-                                                                            </svg>
-                                                                        </div>
-                                                                    </button>
-
-                                                                    {/* 项目内容 */}
-                                                                    {expandedItems.has(`${sectionIndex}-${itemIndex}`) && (
-                                                                        <div className="p-4 bg-white">
-                                                                            <div className="space-y-3">
-                                                                                {item.content?.map((contentItem, contentIndex) => (
-                                                                                    <div
-                                                                                        key={contentIndex}
-                                                                                        className="text-sm text-gray-700"
-                                                                                        dangerouslySetInnerHTML={{ __html: formatText(contentItem) }}
-                                                                                    />
-                                                                                ))}
-                                                                            </div>
-                                                                        </div>
-                                                                    )}
-                                                                </div>
-                                                            ))}
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            ) : (
-                                <div className="flex-1 flex items-center justify-center text-gray-500">
-                                    <div className="text-center">
-                                        <div className="text-lg mb-2">请选择一个章节查看内容</div>
-                                        <div className="text-sm">从左侧导航栏选择Unit</div>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </>
+                {content && !loading && !error && (
+                    <div>
+                        <ViewContent 
+                            data={content}
+                            availableUnits={availableFiles}
+                            onUnitChange={handleUnitChange}
+                            selectedUnitId={selectedUnitId}
+                        />
+                    </div>
                 )}
             </div>
+
+            {/* 悬浮UI层 */}
+            <FloatUI
+                availableUnits={availableFiles}
+                selectedUnitId={selectedUnitId}
+                onUnitChange={handleUnitChange}
+                onHighlightChange={handleHighlightChange}
+                onFullscreenToggle={handleFullscreenToggle}
+                isFullscreen={isFullscreen}
+                onUndo={handleUndo}
+                onRedo={handleRedo}
+                currentUnit={selectedFile}
+            />
         </div>
     );
 }
