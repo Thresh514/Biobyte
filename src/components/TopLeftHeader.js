@@ -8,8 +8,7 @@ const TopLeftHeader = ({ currentUnit, onUndo, onRedo }) => {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     return (
-        <div className="fixed top-4 left-4 z-20 pointer-events-auto">
-            <div className="flex items-center space-x-3 bg-white py-1 px-3 rounded-md shadow-sm">
+        <div className="flex items-center space-x-3 bg-white py-1 px-3 rounded-md shadow-sm">
                 <Link href="/" className="flex items-center">
                     <div className="w-12 h-12 bg-white flex items-center justify-center">
                         <Image src="/whiteicon.svg" alt="logo" width={64} height={64} />
@@ -17,8 +16,8 @@ const TopLeftHeader = ({ currentUnit, onUndo, onRedo }) => {
                 </Link>
                 
                 {currentUnit && (
-                    <div className="p-2 bg-white">
-                        <span className="font-semibold text-gray-800 text-md">
+                    <div className="p-2 bg-white flex-shrink-0 max-w-xs">
+                        <span className="font-semibold text-gray-800 text-md whitespace-nowrap">
                             Unit {currentUnit.id}: {currentUnit.name}
                         </span>
                     </div>
@@ -81,7 +80,6 @@ const TopLeftHeader = ({ currentUnit, onUndo, onRedo }) => {
                         <Redo className="w-6 h-6 text-gray-600" />
                     </button>
                 </div>
-            </div>
         </div>
     );
 };

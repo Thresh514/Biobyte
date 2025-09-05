@@ -44,23 +44,23 @@ const BottomRightControlBar = ({ onFullscreenToggle, isFullscreen }) => {
     const guideContent = (
         <div className="absolute bottom-16 right-0 bg-white rounded-md shadow-sm p-4 w-80 z-30 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
             <div className="text-sm text-gray-700">
-                <h3 className="font-semibold mb-2 text-gray-900">使用指南</h3>
+                <h3 className="font-semibold mb-2 text-gray-900">Guide</h3>
                 <div className="space-y-2">
                     <div className="flex items-start">
                         <span className="text-gray-500 mr-2">•</span>
-                        <span>使用缩放按钮调整内容大小</span>
+                        <span>Use the zoom buttons to adjust the content size</span>
                     </div>
                     <div className="flex items-start">
                         <span className="text-gray-500 mr-2">•</span>
-                        <span>点击全屏按钮隐藏所有工具栏</span>
+                        <span>Click the fullscreen button to hide all toolbars</span>
                     </div>
                     <div className="flex items-start">
                         <span className="text-gray-500 mr-2">•</span>
-                        <span>左侧面板可以切换不同章节</span>
+                        <span>The left sidebar can switch between different chapters</span>
                     </div>
                     <div className="flex items-start">
                         <span className="text-gray-500 mr-2">•</span>
-                        <span>点击章节标题展开/收起内容</span>
+                        <span>Click the chapter title to expand/collapse the content</span>
                     </div>
                 </div>
             </div>
@@ -68,70 +68,61 @@ const BottomRightControlBar = ({ onFullscreenToggle, isFullscreen }) => {
     );
 
     return (
-        <div className="relative">
-            {/* 控制栏 */}
-            <div className="absolute bottom-4 right-4 bg-white rounded-md shadow-sm border border-gray-100 flex items-center space-x-3 px-5 py-2 z-20">
-                {/* 非全屏模式下显示缩放和指南按钮 */}
-                {!isFullscreen && (
-                    <>
-                        {/* 缩放出按钮 */}
-                        <button
-                            onClick={handleZoomOut}
-                            disabled={zoomLevel <= 50}
-                            className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
-                            title="缩小"
-                        >
-                            <Minus className="w-4 h-4" />
-                        </button>
+        <>
+            {!isFullscreen ? (
+                <div className="bg-white rounded-md shadow-sm border border-gray-100 flex items-center space-x-3 px-2 py-2 z-20">
+                    <button
+                        onClick={handleZoomOut}
+                        disabled={zoomLevel <= 50}
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
+                        title="Zoom Out"
+                    >
+                        <Minus className="w-4 h-4" />
+                    </button>
 
-                        {/* 缩放级别显示 */}
-                        <span className="text-sm font-medium text-gray-700 min-w-[3rem] text-center">
-                            {zoomLevel}%
-                        </span>
+                    <span className="text-sm font-medium text-gray-700 min-w-[3rem] text-center">
+                        {zoomLevel}%
+                    </span>
 
-                        {/* 缩放入按钮 */}
-                        <button
-                            onClick={handleZoomIn}
-                            disabled={zoomLevel >= 200}
-                            className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
-                            title="放大"
-                        >
-                            <Plus className="w-4 h-4" />
-                        </button>
-                    </>
-                )}
+                    <button
+                        onClick={handleZoomIn}
+                        disabled={zoomLevel >= 200}
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
+                        title="Zoom In"
+                    >
+                        <Plus className="w-4 h-4" />
+                    </button>
 
-                {/* 全屏按钮 - 始终显示 */}
-                <button
-                    onClick={handleFullscreenToggle}
-                    className="w-6 h-6 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out hover:scale-105"
-                    title={isFullscreen ? "退出全屏" : "全屏"}
-                >
-                    {isFullscreen ? (
-                        <Minimize className="w-6 h-6" />
-                    ) : (
+                    <button
+                        onClick={handleFullscreenToggle}
+                        className="w-6 h-6 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out hover:scale-105"
+                        title="Fullscreen"
+                    >
                         <Maximize className="w-6 h-6" />
-                    )}
-                </button>
+                    </button>
 
-                {/* 非全屏模式下显示指南按钮 */}
-                {!isFullscreen && (
-                    <>
-                        {/* 指南按钮 */}
-                        <button
-                            onClick={handleGuideToggle}
-                            className="p-2 flex items-center justify-center text-gray-600 hover:text-gray-800 duration-200"
-                            title="使用指南"
-                        >
-                            <HelpCircle className="w-6 h-6" />
-                        </button>
-                    </>
-                )}
-            </div>
+                    <button
+                        onClick={handleGuideToggle}
+                        className="p-2 flex items-center justify-center text-gray-600 hover:text-gray-800 duration-200"
+                        title="Guide"
+                    >
+                        <HelpCircle className="w-6 h-6" />
+                    </button>
+                </div>
+            ) : (
+                <div className="bg-white rounded-md shadow-sm border border-gray-100 flex items-center px-4 py-4 z-20">
+                    <button
+                        onClick={handleFullscreenToggle}
+                        className="w-6 h-6 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out hover:scale-105"
+                        title="退出全屏"
+                    >
+                        <Minimize className="w-6 h-6" />
+                    </button>
+                </div>
+            )}
 
-            {/* 指南弹窗 */}
             {showGuide && guideContent}
-        </div>
+        </>
     );
 };
 
