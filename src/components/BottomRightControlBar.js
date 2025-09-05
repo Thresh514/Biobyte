@@ -70,14 +70,14 @@ const BottomRightControlBar = ({ onFullscreenToggle, isFullscreen }) => {
     return (
         <>
             {!isFullscreen ? (
-                <div className="bg-white rounded-md shadow-sm border border-gray-100 flex items-center space-x-3 px-2 py-2 z-20">
+                <div className="bg-white rounded-md shadow-sm border border-gray-100 flex items-center space-x-3 p-2 z-20">
                     <button
                         onClick={handleZoomOut}
                         disabled={zoomLevel <= 50}
-                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
                         title="Zoom Out"
                     >
-                        <Minus className="w-4 h-4" />
+                        <Minus className="w-6 h-6" />
                     </button>
 
                     <span className="text-sm font-medium text-gray-700 min-w-[3rem] text-center">
@@ -87,15 +87,15 @@ const BottomRightControlBar = ({ onFullscreenToggle, isFullscreen }) => {
                     <button
                         onClick={handleZoomIn}
                         disabled={zoomLevel >= 200}
-                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded transition-all duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
                         title="Zoom In"
                     >
-                        <Plus className="w-4 h-4" />
+                        <Plus className="w-6 h-6" />
                     </button>
 
                     <button
                         onClick={handleFullscreenToggle}
-                        className="w-6 h-6 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out hover:scale-105"
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded transition-all duration-200 ease-in-out"
                         title="Fullscreen"
                     >
                         <Maximize className="w-6 h-6" />
@@ -103,17 +103,17 @@ const BottomRightControlBar = ({ onFullscreenToggle, isFullscreen }) => {
 
                     <button
                         onClick={handleGuideToggle}
-                        className="p-2 flex items-center justify-center text-gray-600 hover:text-gray-800 duration-200"
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded transition-all duration-200 ease-in-out"
                         title="Guide"
                     >
                         <HelpCircle className="w-6 h-6" />
                     </button>
                 </div>
             ) : (
-                <div className="bg-white rounded-md shadow-sm border border-gray-100 flex items-center px-4 py-4 z-20">
+                <div className="bg-white rounded-md shadow-sm border border-gray-100 flex items-center p-2 z-20">
                     <button
                         onClick={handleFullscreenToggle}
-                        className="w-6 h-6 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out hover:scale-105"
+                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded transition-all duration-200 ease-in-out"
                         title="退出全屏"
                     >
                         <Minimize className="w-6 h-6" />
