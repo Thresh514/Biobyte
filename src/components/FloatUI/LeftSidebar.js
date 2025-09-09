@@ -1,27 +1,14 @@
 import { useState } from 'react';
 import { Menu, Highlighter, Edit3, MessageCircle } from 'lucide-react';
 
-const LeftSidebar = ({ availableUnits, selectedUnitId, onUnitChange, onHighlightChange, onAnnotationModeChange, onAITutorToggle }) => {
-    const [highlightMode, setHighlightMode] = useState('none');
+const LeftSidebar = ({ availableUnits, selectedUnitId, onUnitChange, onInteractiveModeChange }) => {
+    const [interactiveMode, setInteractiveMode] = useState('none');
     const [showChapterMenu, setShowChapterMenu] = useState(false);
-    const [annotationMode, setAnnotationMode] = useState(false);
-    const [aiTutorActive, setAiTutorActive] = useState(false);
 
-    const handleHighlightModeChange = (mode) => {
-        setHighlightMode(mode);
-        onHighlightChange && onHighlightChange({ mode, color: highlightColor });
-    };
-
-    const handleAnnotationModeChange = () => {
-        const newMode = !annotationMode;
-        setAnnotationMode(newMode);
-        onAnnotationModeChange && onAnnotationModeChange(newMode);
-    };
-
-    const handleAITutorToggle = () => {
-        const newState = !aiTutorActive;
-        setAiTutorActive(newState);
-        onAITutorToggle && onAITutorToggle(newState);
+    const handleModeChange = (mode) => {
+        const newMode = interactiveMode === mode ? 'none' : mode;
+        setInteractiveMode(newMode);
+        onInteractiveModeChange && onInteractiveModeChange(newMode);
     };
 
     return (        
@@ -37,33 +24,33 @@ const LeftSidebar = ({ availableUnits, selectedUnitId, onUnitChange, onHighlight
             </button>
                     
             <button
-                onClick={() => handleHighlightModeChange(highlightMode === 'text' ? 'none' : 'text')}
+                onClick={() => handleModeChange('highlight')}
                 className={`p-2 rounded transition-colors ${
-                    highlightMode === 'text' ? 'bg-yellow-100' : 'hover:bg-white'
+                    interactiveMode === 'highlight' ? 'bg-yellow-100' : 'hover:bg-gray-50'
                 }`}
-                title="Highlight Mode"
+                title="高亮模式"
             >
-                <Highlighter className="w-6 h-6 text-yellow-600" />
+                <Highlighter className={`w-6 h-6 ${interactiveMode === 'highlight' ? 'text-yellow-600' : 'text-gray-600'}`} />
             </button>
                         
             <button
-                onClick={handleAnnotationModeChange}
+                onClick={() => handleModeChange('note')}
                 className={`p-2 rounded transition-colors ${
-                    annotationMode ? 'bg-green-100' : 'hover:bg-white'
+                    interactiveMode === 'note' ? 'bg-green-100' : 'hover:bg-gray-50'
                 }`}
-                title="Annotation Mode"
+                title="注释模式"
             >
-                <Edit3 className="w-6 h-6 text-green-600" />
+                <Edit3 className={`w-6 h-6 ${interactiveMode === 'note' ? 'text-green-600' : 'text-gray-600'}`} />
             </button>
                         
             <button
-                onClick={handleAITutorToggle}
+                onClick={() => handleModeChange('tutor')}
                 className={`p-2 rounded transition-colors ${
-                    aiTutorActive ? 'bg-purple-100' : 'hover:bg-white'
+                    interactiveMode === 'tutor' ? 'bg-purple-100' : 'hover:bg-gray-50'
                 }`}
-                title="AI Tutor Mode"
+                title="AI 导师模式"
             >
-                <MessageCircle className="w-6 h-6 text-purple-600" />
+                <MessageCircle className={`w-6 h-6 ${interactiveMode === 'tutor' ? 'text-purple-600' : 'text-gray-600'}`} />
             </button>
                 
 

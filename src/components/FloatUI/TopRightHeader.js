@@ -65,7 +65,7 @@ const TopRightHeader = () => {
     };
 
     return (
-        <div className="flex items-center space-x-3 bg-white py-2 px-5 rounded-md shadow-sm space-x-4">
+        <div className="flex items-center space-x-3 bg-transparent py-2 px-5 rounded-md shadow-sm space-x-4">
                 {/* Share按钮 */}
                 <button 
                     onClick={handleShare}
