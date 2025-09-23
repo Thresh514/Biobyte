@@ -1,13 +1,13 @@
-import LeftSidebar from './LeftSidebar';
-import BottomRightControlBar from './BottomRightControlBar';
-import TopLeftHeader from './TopLeftHeader';
-import TopRightHeader from './TopRightHeader';
+import LeftSidebar from './FloatUI/LeftSidebar';
+import BottomRightControlBar from './FloatUI/BottomRightControlBar';
+import TopLeftHeader from './FloatUI/TopLeftHeader';
+import TopRightHeader from './FloatUI/TopRightHeader';
 
 const FloatUI = ({ 
     availableUnits, 
     selectedUnitId, 
     onUnitChange, 
-    onHighlightChange,
+    onInteractiveModeChange,
     onFullscreenToggle,
     isFullscreen,
     onUndo,
@@ -74,7 +74,7 @@ const FloatUI = ({
                     availableUnits={availableUnits}
                     selectedUnitId={selectedUnitId}
                     onUnitChange={onUnitChange}
-                    onHighlightChange={onHighlightChange}
+                    onInteractiveModeChange={onInteractiveModeChange}
                 />
             </div>
 

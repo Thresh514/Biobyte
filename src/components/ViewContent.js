@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
+import InteractiveText from './InteractiveText';
 
-const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId }) => {
+const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, interactiveMode = 'none' }) => {
     const [expandedSections, setExpandedSections] = useState(new Set());
     const [expandedItems, setExpandedItems] = useState(new Set());
 
@@ -22,6 +23,22 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId }) => 
             setExpandedItems(allItems);
         }
     }, [data]);
+
+    // 简化的处理函数 - 只保留UI交互
+    const handleHighlightSave = (highlightData) => {
+        console.log('高亮保存:', highlightData);
+        // 这里可以集成你选择的轮子
+    };
+
+    const handleAnnotationSave = (annotationData) => {
+        console.log('注释保存:', annotationData);
+        // 这里可以集成你选择的轮子
+    };
+
+    const handleAITutorAsk = (text) => {
+        console.log('AI Tutor 询问:', text);
+        return '这是AI导师的回答示例。';
+    };
 
     // 格式化文本函数
     const formatText = (text) => {
@@ -128,7 +145,7 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId }) => 
                                 {/* 章节内容 */}
                                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
                                     expandedSections.has(sectionIndex) 
-                                        ? 'max-h-screen opacity-100' 
+                                        ? 'opacity-100' 
                                         : 'max-h-0 opacity-0'
                                 }`}>
                                     <div className="p-6">
@@ -161,10 +178,16 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId }) => 
                                                         <div className="p-4">
                                                             <div className="space-y-3">
                                                                 {item.content?.map((contentItem, contentIndex) => (
-                                                                    <div
+                                                                    <InteractiveText
                                                                         key={contentIndex}
+                                                                        content={formatText(contentItem)}
+                                                                        mode={interactiveMode}
+                                                                        onHighlightSave={handleHighlightSave}
+                                                                        onAnnotationSave={handleAnnotationSave}
+                                                                        onAITutorAsk={handleAITutorAsk}
+                                                                        sectionId={section.section_id || null}
+                                                                        itemId={item.item_id || null}
                                                                         className="text-base text-gray-700"
-                                                                        dangerouslySetInnerHTML={{ __html: formatText(contentItem) }}
                                                                     />
                                                                 ))}
                                                             </div>

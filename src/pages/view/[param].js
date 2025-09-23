@@ -14,7 +14,7 @@ export default function ViewPage() {
     const [selectedUnitId, setSelectedUnitId] = useState(null);
     const [expandedSections, setExpandedSections] = useState(new Set());
     const [expandedItems, setExpandedItems] = useState(new Set());
-    const [highlightSettings, setHighlightSettings] = useState({ mode: 'none', color: '#ffeb3b' });
+    const [interactiveMode, setInteractiveMode] = useState('none');
     const [isFullscreen, setIsFullscreen] = useState(false);
 
     // 添加页面淡入动画效果
@@ -134,8 +134,8 @@ export default function ViewPage() {
         }
     };
 
-    const handleHighlightChange = (settings) => {
-        setHighlightSettings(settings);
+    const handleInteractiveModeChange = (mode) => {
+        setInteractiveMode(mode);
     };
 
     const handleUndo = () => {
@@ -249,17 +249,16 @@ export default function ViewPage() {
                     <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
                 </Head>
                 
-                <TopLeftHeader 
-                    currentUnit={null}
-                    onUndo={() => {}}
-                    onRedo={() => {}}
-                />
-                <TopRightHeader />
-                <LeftSidebar 
+                <FloatUI
                     availableUnits={[]}
                     selectedUnitId={null}
                     onUnitChange={() => {}}
-                    onHighlightChange={() => {}}
+                    onInteractiveModeChange={() => {}}
+                    onFullscreenToggle={() => {}}
+                    isFullscreen={false}
+                    onUndo={() => {}}
+                    onRedo={() => {}}
+                    currentUnit={null}
                 />
                 
                 <main className="pt-16 min-h-screen">
@@ -310,17 +309,16 @@ export default function ViewPage() {
                     <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
                 </Head>
                 
-                <TopLeftHeader 
-                    currentUnit={null}
-                    onUndo={() => {}}
-                    onRedo={() => {}}
-                />
-                <TopRightHeader />
-                <LeftSidebar 
+                <FloatUI
                     availableUnits={[]}
                     selectedUnitId={null}
                     onUnitChange={() => {}}
-                    onHighlightChange={() => {}}
+                    onInteractiveModeChange={() => {}}
+                    onFullscreenToggle={() => {}}
+                    isFullscreen={false}
+                    onUndo={() => {}}
+                    onRedo={() => {}}
+                    currentUnit={null}
                 />
                 
                 <main className="pt-16 min-h-screen">
@@ -388,6 +386,7 @@ export default function ViewPage() {
                             availableUnits={availableFiles}
                             onUnitChange={handleUnitChange}
                             selectedUnitId={selectedUnitId}
+                            interactiveMode={interactiveMode}
                         />
                     </div>
                 )}
@@ -398,7 +397,7 @@ export default function ViewPage() {
                 availableUnits={availableFiles}
                 selectedUnitId={selectedUnitId}
                 onUnitChange={handleUnitChange}
-                onHighlightChange={handleHighlightChange}
+                onInteractiveModeChange={handleInteractiveModeChange}
                 onFullscreenToggle={handleFullscreenToggle}
                 isFullscreen={isFullscreen}
                 onUndo={handleUndo}
