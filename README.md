@@ -1,34 +1,35 @@
-# PayPal 支付系统集成
+# PayPal Payment System Integration
 
-本项目实现了完整的 PayPal 支付流程，包括：
+This project implements a complete PayPal payment flow, including:
 
-- 创建订单
-- 捕获支付
-- 处理 Webhook 事件
+- Order creation
+- Payment capture
+- Webhook event handling
 
-## 环境配置
+## Environment Setup
 
-1. 复制 `.env.local.example` 为 `.env.local` 并填入相关配置：
+1. Copy .env.local.example to .env.local and fill in the required values:
 
 ```env
-# 数据库配置
+# Database configuration
 DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=yourpassword
 DB_NAME=yourdb
 
-# PayPal API 配置
-PAYPAL_CLIENT_ID=你的PayPal客户端ID
-PAYPAL_SECRET=你的PayPal密钥
+# PayPal API configuration
+PAYPAL_CLIENT_ID=your_paypal_client_id
+PAYPAL_SECRET=your_paypal_secret
 
-# 应用URL配置
+# Application URL configuration
 NEXT_PUBLIC_APP_URL=http://localhost:3000
+
 ```
 
-## 数据库设置
+## Database Setup
 
-创建 `orders` 表：
+Create the `orders` table：
 
 ```sql
 CREATE TABLE orders (
@@ -40,15 +41,15 @@ CREATE TABLE orders (
 );
 ```
 
-## API 端点
+## API Endpoints
 
-### 1. 创建订单
+### 1. Create Order
 
-**端点：** `/api/paypal/create-order`
+**Endpoint:** `/api/paypal/create-order`
 
-**请求方法：** POST
+**Method:** POST
 
-**请求参数：**
+**Request body:**
 ```json
 {
   "amount": 10.99,
@@ -56,7 +57,7 @@ CREATE TABLE orders (
 }
 ```
 
-**响应：**
+**Response:**
 ```json
 {
   "success": true,
@@ -66,20 +67,20 @@ CREATE TABLE orders (
 }
 ```
 
-### 2. 捕获支付
+### 2. Capture Payment
 
-**端点：** `/api/paypal/capture-order`
+**Endpoint：** `/api/paypal/capture-order`
 
-**请求方法：** POST
+**Method:** POST
 
-**请求参数：**
+**Request body:**
 ```json
 {
   "paypal_order_id": "5O190127TN364715T"
 }
 ```
 
-**响应：**
+**Response:**
 ```json
 {
   "success": true,
@@ -89,16 +90,17 @@ CREATE TABLE orders (
 }
 ```
 
-### 3. Webhook 处理
+### 3. Webhook Handling
 
-**端点：** `/api/paypal/webhook`
+**Endpoint:** `/api/paypal/webhook`
 
-用于接收 PayPal 发送的支付事件，配置在 PayPal 开发者平台的 Webhook 设置中。
+This endpoint receives PayPal webhook events.
+Make sure to configure it in the PayPal Developer Dashboard under Webhook Settings.
 
-## 前端集成示例
+## Frontend Integration Example
 
 ```javascript
-// 创建订单
+// Create order
 async function createOrder() {
   const response = await fetch('/api/paypal/create-order', {
     method: 'POST',
@@ -109,12 +111,12 @@ async function createOrder() {
   const data = await response.json();
   
   if (data.success) {
-    // 重定向到 PayPal 付款页面
+    // Redirect user to PayPal approval page
     window.location.href = data.approval_url;
   }
 }
 
-// 捕获支付 (通常在用户从 PayPal 返回后进行)
+// Capture payment (typically after returning from PayPal)
 async function capturePayment(paypalOrderId) {
   const response = await fetch('/api/paypal/capture-order', {
     method: 'POST',
@@ -125,13 +127,13 @@ async function capturePayment(paypalOrderId) {
   const data = await response.json();
   
   if (data.success) {
-    // 支付成功，显示成功信息
+    // Payment completed, show success message
   }
 }
 ```
 
-## 安全注意事项
+## Security Considerations
 
-1. 确保所有敏感配置存储在环境变量中
-2. 在生产环境中使用 HTTPS
-3. 考虑添加 Webhook 签名验证以增强安全性
+1. Store all sensitive configurations in environment variables.
+2. Always use HTTPS in production.
+3. Implement Webhook signature verification to prevent spoofed events.
