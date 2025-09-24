@@ -38,3 +38,17 @@ nav {
     }
 }
 
+/* 暂时注释掉高亮样式 */
+/* .highlight {
+    background-color: #fef3c7 !important;
+    padding: 0px 4px !important;
+    border-radius: 4px !important;
+    display: inline !important;
+}
+
+mark.highlight {
+    background-color: #fef3c7 !important;
+    padding: 0px 4px !important;
+    border-radius: 4px !important;
+    display: inline !important;
+} */

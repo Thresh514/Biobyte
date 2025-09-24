@@ -24,8 +24,8 @@ const LeftSidebar = ({ availableUnits, selectedUnitId, onUnitChange, onInteracti
             </button>
                     
             <button
-                onClick={() => handleModeChange('highlight')}
-                className={`p-2 rounded transition-colors ${
+                // onClick={() => handleModeChange('highlight')}
+                className={`p-2 rounded transition-colors cursor-not-allowed ${
                     interactiveMode === 'highlight' ? 'bg-yellow-100' : 'hover:bg-gray-50'
                 }`}
                 title="高亮模式"
@@ -34,8 +34,8 @@ const LeftSidebar = ({ availableUnits, selectedUnitId, onUnitChange, onInteracti
             </button>
                         
             <button
-                onClick={() => handleModeChange('note')}
-                className={`p-2 rounded transition-colors ${
+                // onClick={() => handleModeChange('note')}
+                className={`p-2 rounded transition-colors cursor-not-allowed ${
                     interactiveMode === 'note' ? 'bg-green-100' : 'hover:bg-gray-50'
                 }`}
                 title="注释模式"
@@ -44,8 +44,8 @@ const LeftSidebar = ({ availableUnits, selectedUnitId, onUnitChange, onInteracti
             </button>
                         
             <button
-                onClick={() => handleModeChange('tutor')}
-                className={`p-2 rounded transition-colors ${
+                // onClick={() => handleModeChange('tutor')}
+                className={`p-2 rounded transition-colors cursor-not-allowed ${
                     interactiveMode === 'tutor' ? 'bg-purple-100' : 'hover:bg-gray-50'
                 }`}
                 title="AI 导师模式"

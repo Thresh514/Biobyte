@@ -5,12 +5,18 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
+  let connection;
   try {
-    const connection = await pool.getConnection();
+    connection = await pool.getConnection();
     const [products] = await connection.query(
       'SELECT id, title, price, image, type, level, chapter FROM study_resources ORDER BY RAND() LIMIT 3'
     );
-    connection.release();
+
+    // 确保 products 是数组
+    if (!Array.isArray(products)) {
+      console.error('Database query did not return an array:', products);
+      return res.status(500).json({ message: 'Database query error' });
+    }
 
     // 处理返回的数据
     const formattedProducts = products.map(product => ({
@@ -22,6 +28,18 @@ export default async function handler(req, res) {
     res.status(200).json(formattedProducts);
   } catch (error) {
     console.error('Error fetching random products:', error);
-    res.status(500).json({ message: 'Internal server error' });
+    
+    // 根据错误类型返回不同的状态码
+    if (error.code === 'ECONNREFUSED' || error.code === 'ENOTFOUND') {
+      res.status(503).json({ message: 'Database connection failed' });
+    } else if (error.code === 'ER_ACCESS_DENIED_ERROR') {
+      res.status(503).json({ message: 'Database access denied' });
+    } else {
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  } finally {
+    if (connection) {
+      connection.release();
+    }
   }
 } 
