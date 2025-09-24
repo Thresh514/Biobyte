@@ -1,14 +1,70 @@
-# PayPal Payment System Integration
+# BioByte - A-Level Biology Learning Platform
 
-This project implements a complete PayPal payment flow, including:
+BioByte is an online learning platform designed specifically for A-Level and IGCSE Biology students, providing high-quality educational resources and intelligent learning experiences.
 
-- Order creation
-- Payment capture
-- Webhook event handling
+## 🎯 Project Overview
 
-## Environment Setup
+BioByte is committed to making biology learning simpler, more efficient, and more engaging. We provide:
 
-1. Copy .env.local.example to .env.local and fill in the required values:
+- **Free Learning Content**: Comprehensive coverage of all A-Level Biology chapters with detailed knowledge points
+- **High-Quality Learning Resources**: Mind maps, syllabus analysis, video tutorials, and more
+- **Intelligent Learning Assistant**: AI chatbot providing personalized learning support
+- **User-Friendly Interface**: Modern responsive design supporting multiple devices
+- **Multi-language Support**: Bilingual interface in English and Chinese
+
+## 📚 Core Features
+
+### Learning Resources
+- **Chapter Content**: Complete coverage of 19 chapters with detailed knowledge points
+- **Mind Maps**: Visual knowledge structures to help understand concept relationships
+- **Syllabus Analysis**: Targeted analysis of exam focus points
+- **Interactive Content**: Support for highlighting, note-taking, and other personalized learning features
+
+### User System
+- **Free Access**: Most learning content is freely available
+- **User Registration**: Personal account management and learning progress tracking
+- **Order Management**: Complete purchase and order history records
+
+### Technical Features
+- **Responsive Design**: Perfect adaptation for desktop and mobile devices
+- **Real-time Search**: Quickly find needed learning content
+- **Smart Customer Service**: 24/7 AI assistant to answer learning questions
+- **Secure Payment**: Integration with PayPal and other payment methods
+
+## 🚀 Tech Stack
+
+- **Frontend Framework**: Next.js 15 + React 19
+- **Styling System**: Tailwind CSS
+- **Database**: MySQL
+- **Authentication**: JWT + bcrypt
+- **Payment Integration**: PayPal API
+- **AI Integration**: OpenAI API
+- **Deployment**: Support for multiple deployment methods
+
+## 📁 Project Structure
+
+```
+/
+├── src/
+│   ├── components/          # React components
+│   │   ├── index/          # Homepage related components
+│   │   ├── FloatUI/        # Floating UI components
+│   │   └── ...
+│   ├── pages/              # Next.js pages
+│   │   ├── api/            # API endpoints
+│   │   ├── unit/           # Chapter pages
+│   │   └── ...
+│   ├── lib/                # Utility libraries and data
+│   └── styles/             # Style files
+├── output/                 # Learning content JSON files
+├── uploads/                # Uploaded learning materials
+├── public/                 # Static assets
+└── context/                # React Context
+```
+
+## 🛠️ Environment Setup
+
+1. Copy and configure environment variables:
 
 ```env
 # Database configuration
@@ -16,124 +72,113 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=yourpassword
-DB_NAME=yourdb
+DB_NAME=biobyte
 
-# PayPal API configuration
-PAYPAL_CLIENT_ID=your_paypal_client_id
-PAYPAL_SECRET=your_paypal_secret
+# JWT secret
+JWT_SECRET=your-jwt-secret
+
+# PayPal API configuration (optional)
+PAYPAL_CLIENT_ID=your-paypal-client-id
+PAYPAL_SECRET=your-paypal-secret
+
+# OpenAI API configuration (optional)
+OPENAI_API_KEY=your-openai-api-key
 
 # Application URL configuration
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 
+# Email configuration (optional)
+EMAIL_USER=your-email@example.com
+EMAIL_PASS=your-email-password
 ```
 
-## Database Setup
+2. Install dependencies:
 
-Create the `orders` table：
-
-```sql
-CREATE TABLE orders (
-  order_id VARCHAR(50) PRIMARY KEY,
-  status ENUM('PENDING', 'PAID') DEFAULT 'PENDING',
-  transaction_id VARCHAR(50),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+```bash
+npm install
 ```
 
-## API Endpoints
+3. Initialize database:
 
-### 1. Create Order
+Visit the `/api/create-tables` endpoint to automatically create the required database tables.
 
-**Endpoint:** `/api/paypal/create-order`
+4. Start development server:
 
-**Method:** POST
-
-**Request body:**
-```json
-{
-  "amount": 10.99,
-  "order_id": "optional_custom_id" 
-}
+```bash
+npm run dev
 ```
 
-**Response:**
-```json
-{
-  "success": true,
-  "order_id": "order_123456789",
-  "paypal_order_id": "5O190127TN364715T",
-  "approval_url": "https://www.sandbox.paypal.com/checkoutnow?token=5O190127TN364715T"
-}
-```
+## 📊 Database Structure
 
-### 2. Capture Payment
+Main data tables:
 
-**Endpoint：** `/api/paypal/capture-order`
+- `users` - User information
+- `study_resources` - Learning resources
+- `user_study_resources` - User purchase records
+- `highlights` - User highlight notes
 
-**Method:** POST
+## 🔧 Main API Endpoints
 
-**Request body:**
-```json
-{
-  "paypal_order_id": "5O190127TN364715T"
-}
-```
+### Learning Content Related
+- `GET /api/getViewContent` - Get chapter content
+- `GET /api/getResource` - Get resource information
+- `GET /api/getRandomProducts` - Get recommended resources
 
-**Response:**
-```json
-{
-  "success": true,
-  "order_id": "order_123456789",
-  "transaction_id": "9TP43732WN775710N", 
-  "status": "COMPLETED"
-}
-```
+### User Management
+- `POST /api/register` - User registration
+- `POST /api/login` - User login
+- `GET /api/user` - Get user information
+- `GET /api/orders` - Get order history
 
-### 3. Webhook Handling
+### Payment System
+- `POST /api/paypal/create-order` - Create order
+- `POST /api/paypal/capture-order` - Capture payment
+- `POST /api/paypal/webhook` - Payment callback
 
-**Endpoint:** `/api/paypal/webhook`
+### Smart Features
+- `POST /api/chat` - AI chatbot
+- `POST /api/highlights` - Save/get highlight notes
 
-This endpoint receives PayPal webhook events.
-Make sure to configure it in the PayPal Developer Dashboard under Webhook Settings.
+## 🎨 Design Philosophy
 
-## Frontend Integration Example
+BioByte adopts a modern minimalist design style with a focus on user experience:
 
-```javascript
-// Create order
-async function createOrder() {
-  const response = await fetch('/api/paypal/create-order', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ amount: 10.99 })
-  });
-  
-  const data = await response.json();
-  
-  if (data.success) {
-    // Redirect user to PayPal approval page
-    window.location.href = data.approval_url;
-  }
-}
+- **Intuitive Navigation**: Clear information architecture and navigation structure
+- **Visual Hierarchy**: Reasonable visual hierarchy and information organization
+- **Interactive Feedback**: Smooth interaction animations and user feedback
+- **Accessibility Design**: Considering the usage needs of different users
 
-// Capture payment (typically after returning from PayPal)
-async function capturePayment(paypalOrderId) {
-  const response = await fetch('/api/paypal/capture-order', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ paypal_order_id: paypalOrderId })
-  });
-  
-  const data = await response.json();
-  
-  if (data.success) {
-    // Payment completed, show success message
-  }
-}
-```
+## 🔮 Future Plans
 
-## Security Considerations
+- **AI Tutor Features**: More intelligent personalized learning guidance
+- **Learning Progress Tracking**: Detailed learning analysis and progress management
+- **Community Features**: Student communication and discussion platform
+- **Mobile Application**: Native mobile app development
+- **More Subjects**: Expansion to other A-Level subjects
 
-1. Store all sensitive configurations in environment variables.
-2. Always use HTTPS in production.
-3. Implement Webhook signature verification to prevent spoofed events.
+## 📝 Development Notes
+
+This project is transitioning from a paid resource purchasing platform to a free online learning platform, aiming to provide high-quality free educational resources to more students while retaining some premium features as paid options.
+
+## 🤝 Contributing Guidelines
+
+Contributions and suggestions are welcome! Please follow these steps:
+
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact Us
+
+- Email: biomindbot@gmail.com
+- Website: [BioByte Official Site](https://biobyte.shop)
+
+---
+
+*Making biology learning simpler and more engaging!* 🧬

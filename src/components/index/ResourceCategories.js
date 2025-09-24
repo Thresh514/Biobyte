@@ -5,15 +5,36 @@ import Image from 'next/image';
 const ResourceCategories = () => {
     const router = useRouter();
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
+                setLoading(true);
+                setError(null);
                 const response = await fetch('/api/getRandomProducts');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
                 const data = await response.json();
-                setProducts(data);
+                
+                // 确保 data 是数组
+                if (Array.isArray(data)) {
+                    setProducts(data);
+                } else {
+                    console.error('API returned non-array data:', data);
+                    setProducts([]);
+                    setError('Invalid data format received');
+                }
             } catch (error) {
                 console.error('Error fetching products:', error);
+                setError(error.message);
+                setProducts([]);
+            } finally {
+                setLoading(false);
             }
         };
 
@@ -53,34 +74,48 @@ const ResourceCategories = () => {
                     <p className="text-sm md:text-base">Study smarter, not harder — shop our bestsellers now!</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full md:w-2/3">
-                    {products.map((product, index) => (
-                        <div
-                            key={product.id}
-                            className="relative cursor-pointer bg-white group"
-                            onClick={() => handleProductClick(product)}
-                        >
-                            <div className="relative w-full h-80 md:h-80 mb-3">
-                                <Image
-                                    src={product.image || '/default-product.jpg'}
-                                    alt={product.title}
-                                    fill
-                                    quality={80}
-                                    className="object-contain"
-                                />
-                            </div>
-                            <button
-                                className='absolute bottom-24 left-1/2 transform -translate-x-1/2 bg-black text-xs text-white font-normal tracking-wide hidden md:group-hover:block transition-opacity duration-300 px-2 py-3'
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    handleProductClick(product);
-                                }}
-                            >
-                                QUICK VIEW
-                            </button>
-                            <h3 className="font-light tracking-wide text-md text-center md:text-start">{product.title}</h3>
-                            <p className="text-sm font-light tracking-wide text-gray-600 text-center md:text-start">${product.price}</p>
+                    {loading ? (
+                        <div className="col-span-3 flex justify-center items-center py-12">
+                            <div className="text-gray-500">Loading...</div>
                         </div>
-                    ))}
+                    ) : error ? (
+                        <div className="col-span-3 flex justify-center items-center py-12">
+                            <div className="text-red-500">Loading failed: {error}</div>
+                        </div>
+                    ) : products && products.length > 0 ? (
+                        products.map((product, index) => (
+                            <div
+                                key={product.id}
+                                className="relative cursor-pointer bg-white group"
+                                onClick={() => handleProductClick(product)}
+                            >
+                                <div className="relative w-full h-80 md:h-80 mb-3">
+                                    <Image
+                                        src={product.image || '/default-product.jpg'}
+                                        alt={product.title}
+                                        fill
+                                        quality={80}
+                                        className="object-contain"
+                                    />
+                                </div>
+                                <button
+                                    className='absolute bottom-24 left-1/2 transform -translate-x-1/2 bg-black text-xs text-white font-normal tracking-wide hidden md:group-hover:block transition-opacity duration-300 px-2 py-3'
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleProductClick(product);
+                                    }}
+                                >
+                                    QUICK VIEW
+                                </button>
+                                <h3 className="font-light tracking-wide text-md text-center md:text-start">{product.title}</h3>
+                                <p className="text-sm font-light tracking-wide text-gray-600 text-center md:text-start">${product.price}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <div className="col-span-3 flex justify-center items-center py-12">
+                            <div className="text-gray-500">No products available</div>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

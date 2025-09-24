@@ -1,0 +1,134 @@
+{
+  "unit": "7",
+  "title": "Transport of Plant",
+  "content": [
+    {
+      "section": "7.1 Structure of transport tissues",
+      "items": [
+        {
+          "title": "7.1.1 Draw plan diagrams of transverse sections of stems, roots and leaves of herbaceous dicotyledonous plants from microscope slides and photomicrographs.",
+          "content": [
+            "Here's a general guide:",
+            "Stem: The stem of a s dicotyledonous plant typically consists of several tissues, including epidermis, cortex, vascular bundles, and pith. Start by drawing a circle to represent the epidermis, then add layers for the cortex and pith. Inside the stem, draw several oval-shaped vascular bundles arranged in a circle. Label each part accordingly.",
+            "Root: The root of a dicotyledonous plant has a similar structure to the stem but lacks pith and has a central vascular cylinder instead. Draw a circle for the epidermis, then add layers for the cortex and vascular cylinder. Inside the vascular cylinder, draw several x-shaped structures to represent the xylem and phloem. Label each part accordingly.",
+            "Leaf: The leaf of a dicotyledonous plant consists of several layers, including epidermis, mesophyll, and vascular bundles. Draw a long oval shape to represent the leaf. Inside the leaf, draw two layers for the upper and lower epidermis. Between the epidermal layers, draw the mesophyll, which consists of palisade and spongy parenchyma. Add vascular bundles in the mesophyll, connecting to the veins. Label each part accordingly."
+          ]
+        },
+        {
+          "title": "7.1.2 Describe the distribution of xylem and phloem in transverse sections of stems, roots and leaves of herbaceous dicotyledonous plants.",
+          "content": [
+            "Stems:",
+            "Stem Cross-Section: In stems, the xylem and phloem are arranged in vascular bundles. These bundles are scattered throughout the stem, forming a pattern known as the vascular cylinder or vascular bundle system.",
+            "Xylem and Phloem: Xylem is located toward the center of the vascular bundle, while phloem is located toward the outer edge. This arrangement helps in the efficient transport of water and nutrients throughout the plant.",
+            "Roots:",
+            "Root Cross-Section: In roots, the xylem and phloem are arranged in the center of the root, forming a structure known as the vascular cylinder or stele.",
+            "Xylem and Phloem: Similar to stems, xylem is located toward the center of the vascular cylinder, while phloem is located toward the outer edge. This arrangement allows for the efficient uptake of water and nutrients from the soil.",
+            "Leaves:",
+            "Leaf Cross-Section: In leaves, the xylem and phloem are arranged in vascular bundles that run through the leaf, primarily in the midrib and veins.",
+            "Xylem and Phloem: Xylem is typically located on the upper side of the vascular bundle, closer to the upper epidermis, while phloem is located on the lower side, closer to the lower epidermis. This arrangement helps in the transport of water and nutrients from the roots to the leaves and other parts of the plant."
+          ]
+        },
+        {
+          "title": "7.1.3 Draw and label xylem vessel elements, phloem sieve tube elements and companion cells from microscope slides, photomicrographs and electron micrographs",
+          "content": [
+            "Here's a general guide:",
+            "Xylem Vessel Elements:",
+            "Draw elongated cells with thick walls and perforations (or pits) in the walls.",
+            "Label the thick walls as lignified and the perforations as pits.",
+            "Add labels for primary and secondary walls, as well as the lumen.",
+            "Phloem Sieve Tube Elements:",
+            "Draw elongated cells with thin walls and sieve plates at the ends.",
+            "Label the thin walls and the sieve plates.",
+            "Add labels for the lumen and the cytoplasm.",
+            "Companion Cells:",
+            "Draw small, elongated cells adjacent to the sieve tube elements.",
+            "Label the cells as companion cells.",
+            "Add labels for the nucleus, cytoplasm, and cell wall."
+          ]
+        },
+        {
+          "title": "7.1.4 Relate the structure of xylem vessel elements, phloem sieve tube elements and companion cells to their functions",
+          "content": [
+            "Xylem Vessel Elements:",
+            "Structure: Xylem vessel elements are elongated cells with lignified walls and perforations called pits. These elements are stacked end-to-end, forming vessels that transport water and minerals from roots to shoots.",
+            "Function: The lignified walls provide strength and support, allowing the vessel to withstand the tension created by water movement. The pits allow water to move laterally between vessel elements, ensuring efficient water transport.",
+            "Phloem Sieve Tube Elements:",
+            "Structure: Phloem sieve tube elements are elongated cells with thin walls and sieve plates at the ends. These elements are interconnected to form sieve tubes that transport sugars and other organic nutrients throughout the plant.",
+            "Function: The thin walls of sieve tube elements allow for efficient nutrient transport. The sieve plates facilitate the movement of nutrients between adjacent sieve tube elements. However, sieve tube elements lack a nucleus, ribosomes, and a distinct vacuole, relying on companion cells for metabolic functions.",
+            "Companion Cells:",
+            "Structure: Companion cells are small, elongated cells located adjacent to sieve tube elements. They have a nucleus, abundant ribosomes, and a large central vacuole.",
+            "Function: Companion cells are metabolically active and provide energy and nutrients to maintain the function and integrity of sieve tube elements. They are involved in loading sugars into the sieve tubes and in regulating the movement of substances between the sieve tubes and surrounding cells."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "7.2 Transport mechanisms",
+      "items": [
+        {
+          "title": "7.2.1 Describe the transport of water from the soil to the xylem through the:",
+          "content": [
+            "Apoplast Pathway:",
+            "Description: In the apoplast pathway, water moves through the cell walls and intercellular spaces without entering the cell cytoplasm. It is a continuous network of cell walls and extracellular spaces that extends throughout the plant.",
+            "Key Features: The cell walls in the apoplast pathway are composed of lignin and cellulose, which provide structural support and prevent collapse of the cell walls under tension. Lignin is particularly important for its hydrophobic properties, which help in water movement.",
+            "Function: Water moves rapidly through the apoplast pathway, facilitated by the cohesive and adhesive properties of water molecules. However, water must eventually cross the plasma membrane to enter the symplast pathway and reach the xylem.",
+            "Symplast Pathway:",
+            "Description: In the symplast pathway, water moves through the cytoplasm of cells via plasmodesmata, which are channels that connect the cytoplasm of adjacent cells. This pathway allows for controlled movement of water and solutes between cells.",
+            "Key Features: The endodermis, a specialized layer of cells in the root cortex, plays a crucial role in regulating water and solute movement in the symplast pathway. The endodermal cells are characterized by the presence of a Casparian strip, which is a band of suberin (a waxy substance) in their cell walls.",
+            "Function: The Casparian strip is impermeable to water and ions, forcing water and solutes to cross the plasma membrane of endodermal cells to enter the symplast pathway. This selective barrier allows the plant to control the uptake of water and nutrients from the soil."
+          ]
+        },
+        {
+          "title": "7.2.2 Explain that transpiration involves the evaporation of water from the internal surfaces of leaves followed by diffusion of water vapour to the atmosphere",
+          "content": [
+            "During transpiration, water molecules evaporate from the moist surfaces of the cells in the leaf, particularly from the spongy mesophyll and the surface of the cells in the stomatal pores. These water molecules then diffuse through the stomata into the surrounding air, where they become water vapor and are carried away by air currents.",
+            "The evaporation of water from the internal surfaces of leaves creates a negative pressure (tension) in the leaf cells, which pulls water from the roots through the xylem vessels. This process, known as cohesion-tension theory, relies on the cohesive properties of water molecules and the tensile strength of water columns in the xylem."
+          ]
+        },
+        {
+          "title": "7.2.3 Explain how hydrogen bonding of water molecules is involved with movement of water in the xylem by cohesion-tension in transpiration pull and by adhesion to cellulose in cell walls",
+          "content": [
+            "Cohesion-Tension:",
+            "Cohesion: Water molecules are cohesive, meaning they are attracted to each other. This cohesion is due to hydrogen bonding between water molecules. As water evaporates from the leaves during transpiration, it creates tension (negative pressure) in the xylem.",
+            "Tension: The tension created by transpiration pull is transmitted through the water column in the xylem, from the leaves to the roots. This tension is maintained by the cohesive forces between water molecules, which allow them to form a continuous column in the xylem.",
+            "Adhesion to Cellulose:",
+            "Adhesion: Water molecules also adhere (stick) to the cellulose molecules in the cell walls of xylem vessels. This adhesion helps counter the force of gravity, allowing water to move upwards in the xylem.",
+            "Capillary Action: The adhesion of water to cellulose, combined with cohesion between water molecules, allows for capillary action, where water is drawn up narrow tubes (such as xylem vessels) against gravity. This helps water move from the roots to the leaves."
+          ]
+        },
+        {
+          "title": "7.2.4 Make annotated drawings of transverse sections of leaves from xerophytic plants to explain how they are adapted to reduce water loss by transpiration.",
+          "content": [
+            "Thick Cuticle: Draw a thick, waxy layer on the outer surface of the leaf. Label it as \"Thick Cuticle.\" This layer helps reduce water loss by providing a barrier to transpiration.",
+            "Sunken Stomata: Draw stomata that are sunken into pits or grooves in the leaf surface. Label them as \"Sunken Stomata.\" This adaptation helps reduce water loss by creating a more humid microclimate around the stomata, reducing the rate of transpiration.",
+            "Reduced Number of Stomata: Draw fewer stomata compared to leaves of non-xerophytic plants. Label this adaptation as \"Reduced Stomata.\" This reduces the surface area available for transpiration.",
+            "Hairy Surface: Draw hairs (trichomes) on the leaf surface. Label them as \"Hairs.\" These hairs create a boundary layer of still air around the leaf, reducing the rate of transpiration by slowing down air movement.",
+            "Rolled or Curled Leaves: Draw leaves that are rolled or curled. Label this adaptation as \"Rolled Leaves.\" This reduces the surface area exposed to the air, reducing transpiration.",
+            "Additional Adaptations: You can also include other adaptations such as thickened epidermis, smaller leaf size, and succulence (water storage tissue) if relevant to the xerophytic plant you are illustrating."
+          ]
+        },
+        {
+          "title": "7.3.1 Explain how companion cells transfer assimilates to phloem sieve tubes, with reference to proton pumps and cotransporter proteins",
+          "content": [
+            "Loading of Assimilates: Assimilates are actively transported into the companion cells from surrounding cells or from the apoplast. This process requires energy in the form of ATP and is facilitated by proton pumps located in the plasma membrane of companion cells.",
+            "Proton Pump Activity: Proton pumps actively transport protons (H+) from the cytoplasm of the companion cell into the cell wall or apoplast. This creates a concentration gradient of protons, with a higher concentration outside the cell than inside.",
+            "Cotransport with Protons: Cotransporter proteins are embedded in the plasma membrane of companion cells. These cotransporters facilitate the transport of assimilates, such as sucrose, along with protons. The protons move down their concentration gradient back into the companion cell, while the assimilates are transported against their concentration gradient into the sieve tube.",
+            "Transfer to Phloem Sieve Tubes: Once inside the companion cell, assimilates move through plasmodesmata (channels connecting companion cells and sieve tubes) into the sieve tubes. The movement of assimilates into the sieve tubes is driven by the high concentration of assimilates in the companion cell.",
+            "Mass Flow in Phloem: The movement of assimilates along with water through the sieve tubes is driven by a pressure gradient between source and sink tissues. This mass flow, known as translocation, allows assimilates to be transported efficiently over long distances within the plant."
+          ]
+        },
+        {
+          "title": "7.3.2 Explain mass flow in phloem sieve tubes down a hydrostatic pressure gradient from source to sink",
+          "content": [
+            "Loading at Source: Assimilates are actively transported into the sieve tubes at source regions, such as mature leaves or storage organs, by companion cells. This loading process creates a high concentration of assimilates in the sieve tubes at the source.",
+            "Pressure Build-Up: As assimilates are loaded into the sieve tubes, the concentration of solutes (primarily sugars) increases, creating a higher solute potential in the sieve tubes compared to the surrounding cells. This leads to the uptake of water by osmosis, increasing the pressure inside the sieve tubes.",
+            "Pressure Gradient: The increase in pressure at the source creates a pressure gradient along the phloem pathway, with higher pressure at the source and lower pressure at the sink. This pressure gradient drives the flow of assimilates through the sieve tubes.",
+            "Translocation: Assimilates, along with water, flow through the sieve tubes from regions of high pressure (source) to regions of low pressure (sink). This mass flow of assimilates is driven by the pressure gradient and is a relatively rapid process, allowing for efficient transport over long distances.",
+            "Unloading at Sink: At the sink, assimilates are actively unloaded from the sieve tubes by companion cells and used for growth, storage, or other metabolic processes. This unloading reduces the pressure in the sieve tubes at the sink.",
+            "Return Flow: Some of the water that entered the sieve tubes at the source is recirculated back to the xylem via the phloem for reuse in the plant."
+          ]
+        }
+      ]
+    }
+  ]
+}

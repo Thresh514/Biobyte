@@ -62,6 +62,45 @@ export default async function handler(req, res) {
     `);
     console.log("✅ user_study_resources表创建成功");
 
+    // 暂时注释掉highlights表创建
+    // await pool.query(`
+    //   CREATE TABLE IF NOT EXISTS highlights (
+    //     id INT AUTO_INCREMENT PRIMARY KEY,
+    //     section_id VARCHAR(50),
+    //     item_id VARCHAR(50),
+    //     user_id INT NOT NULL,
+    //     serialized_data TEXT,
+    //     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    //     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    //     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    //     INDEX idx_user_section (user_id, section_id),
+    //     INDEX idx_user_item (user_id, item_id)
+    //   )
+    // `);
+    // console.log("✅ highlights表创建成功");
+
+    // 创建annotations表
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS annotations (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        text TEXT NOT NULL,
+        start_offset INT NOT NULL,
+        end_offset INT NOT NULL,
+        annotation TEXT NOT NULL,
+        unit_id VARCHAR(50),
+        section_id VARCHAR(50),
+        item_id VARCHAR(50),
+        user_id INT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+        INDEX idx_user_unit (user_id, unit_id),
+        INDEX idx_user_section (user_id, section_id),
+        INDEX idx_user_item (user_id, item_id)
+      )
+    `);
+    console.log("✅ annotations表创建成功");
+
     // 尝试从resources表迁移数据（如果存在）
     try {
       // 检查resources表是否存在
