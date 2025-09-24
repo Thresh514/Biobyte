@@ -1,137 +1,184 @@
-# PayPal 支付系统集成
+# BioByte - A-Level Biology Learning Platform
 
-本项目实现了完整的 PayPal 支付流程，包括：
+BioByte is an online learning platform designed specifically for A-Level and IGCSE Biology students, providing high-quality educational resources and intelligent learning experiences.
 
-- 创建订单
-- 捕获支付
-- 处理 Webhook 事件
+## 🎯 Project Overview
 
-## 环境配置
+BioByte is committed to making biology learning simpler, more efficient, and more engaging. We provide:
 
-1. 复制 `.env.local.example` 为 `.env.local` 并填入相关配置：
+- **Free Learning Content**: Comprehensive coverage of all A-Level Biology chapters with detailed knowledge points
+- **High-Quality Learning Resources**: Mind maps, syllabus analysis, video tutorials, and more
+- **Intelligent Learning Assistant**: AI chatbot providing personalized learning support
+- **User-Friendly Interface**: Modern responsive design supporting multiple devices
+- **Multi-language Support**: Bilingual interface in English and Chinese
+
+## 📚 Core Features
+
+### Learning Resources
+- **Chapter Content**: Complete coverage of 19 chapters with detailed knowledge points
+- **Mind Maps**: Visual knowledge structures to help understand concept relationships
+- **Syllabus Analysis**: Targeted analysis of exam focus points
+- **Interactive Content**: Support for highlighting, note-taking, and other personalized learning features
+
+### User System
+- **Free Access**: Most learning content is freely available
+- **User Registration**: Personal account management and learning progress tracking
+- **Order Management**: Complete purchase and order history records
+
+### Technical Features
+- **Responsive Design**: Perfect adaptation for desktop and mobile devices
+- **Real-time Search**: Quickly find needed learning content
+- **Smart Customer Service**: 24/7 AI assistant to answer learning questions
+- **Secure Payment**: Integration with PayPal and other payment methods
+
+## 🚀 Tech Stack
+
+- **Frontend Framework**: Next.js 15 + React 19
+- **Styling System**: Tailwind CSS
+- **Database**: MySQL
+- **Authentication**: JWT + bcrypt
+- **Payment Integration**: PayPal API
+- **AI Integration**: OpenAI API
+- **Deployment**: Support for multiple deployment methods
+
+## 📁 Project Structure
+
+```
+/
+├── src/
+│   ├── components/          # React components
+│   │   ├── index/          # Homepage related components
+│   │   ├── FloatUI/        # Floating UI components
+│   │   └── ...
+│   ├── pages/              # Next.js pages
+│   │   ├── api/            # API endpoints
+│   │   ├── unit/           # Chapter pages
+│   │   └── ...
+│   ├── lib/                # Utility libraries and data
+│   └── styles/             # Style files
+├── output/                 # Learning content JSON files
+├── uploads/                # Uploaded learning materials
+├── public/                 # Static assets
+└── context/                # React Context
+```
+
+## 🛠️ Environment Setup
+
+1. Copy and configure environment variables:
 
 ```env
-# 数据库配置
+# Database configuration
 DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=yourpassword
-DB_NAME=yourdb
+DB_NAME=biobyte
 
-# PayPal API 配置
-PAYPAL_CLIENT_ID=你的PayPal客户端ID
-PAYPAL_SECRET=你的PayPal密钥
+# JWT secret
+JWT_SECRET=your-jwt-secret
 
-# 应用URL配置
+# PayPal API configuration (optional)
+PAYPAL_CLIENT_ID=your-paypal-client-id
+PAYPAL_SECRET=your-paypal-secret
+
+# OpenAI API configuration (optional)
+OPENAI_API_KEY=your-openai-api-key
+
+# Application URL configuration
 NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# Email configuration (optional)
+EMAIL_USER=your-email@example.com
+EMAIL_PASS=your-email-password
 ```
 
-## 数据库设置
+2. Install dependencies:
 
-创建 `orders` 表：
-
-```sql
-CREATE TABLE orders (
-  order_id VARCHAR(50) PRIMARY KEY,
-  status ENUM('PENDING', 'PAID') DEFAULT 'PENDING',
-  transaction_id VARCHAR(50),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+```bash
+npm install
 ```
 
-## API 端点
+3. Initialize database:
 
-### 1. 创建订单
+Visit the `/api/create-tables` endpoint to automatically create the required database tables.
 
-**端点：** `/api/paypal/create-order`
+4. Start development server:
 
-**请求方法：** POST
-
-**请求参数：**
-```json
-{
-  "amount": 10.99,
-  "order_id": "optional_custom_id" 
-}
+```bash
+npm run dev
 ```
 
-**响应：**
-```json
-{
-  "success": true,
-  "order_id": "order_123456789",
-  "paypal_order_id": "5O190127TN364715T",
-  "approval_url": "https://www.sandbox.paypal.com/checkoutnow?token=5O190127TN364715T"
-}
-```
+## 📊 Database Structure
 
-### 2. 捕获支付
+Main data tables:
 
-**端点：** `/api/paypal/capture-order`
+- `users` - User information
+- `study_resources` - Learning resources
+- `user_study_resources` - User purchase records
+- `highlights` - User highlight notes
 
-**请求方法：** POST
+## 🔧 Main API Endpoints
 
-**请求参数：**
-```json
-{
-  "paypal_order_id": "5O190127TN364715T"
-}
-```
+### Learning Content Related
+- `GET /api/getViewContent` - Get chapter content
+- `GET /api/getResource` - Get resource information
+- `GET /api/getRandomProducts` - Get recommended resources
 
-**响应：**
-```json
-{
-  "success": true,
-  "order_id": "order_123456789",
-  "transaction_id": "9TP43732WN775710N", 
-  "status": "COMPLETED"
-}
-```
+### User Management
+- `POST /api/register` - User registration
+- `POST /api/login` - User login
+- `GET /api/user` - Get user information
+- `GET /api/orders` - Get order history
 
-### 3. Webhook 处理
+### Payment System
+- `POST /api/paypal/create-order` - Create order
+- `POST /api/paypal/capture-order` - Capture payment
+- `POST /api/paypal/webhook` - Payment callback
 
-**端点：** `/api/paypal/webhook`
+### Smart Features
+- `POST /api/chat` - AI chatbot
+- `POST /api/highlights` - Save/get highlight notes
 
-用于接收 PayPal 发送的支付事件，配置在 PayPal 开发者平台的 Webhook 设置中。
+## 🎨 Design Philosophy
 
-## 前端集成示例
+BioByte adopts a modern minimalist design style with a focus on user experience:
 
-```javascript
-// 创建订单
-async function createOrder() {
-  const response = await fetch('/api/paypal/create-order', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ amount: 10.99 })
-  });
-  
-  const data = await response.json();
-  
-  if (data.success) {
-    // 重定向到 PayPal 付款页面
-    window.location.href = data.approval_url;
-  }
-}
+- **Intuitive Navigation**: Clear information architecture and navigation structure
+- **Visual Hierarchy**: Reasonable visual hierarchy and information organization
+- **Interactive Feedback**: Smooth interaction animations and user feedback
+- **Accessibility Design**: Considering the usage needs of different users
 
-// 捕获支付 (通常在用户从 PayPal 返回后进行)
-async function capturePayment(paypalOrderId) {
-  const response = await fetch('/api/paypal/capture-order', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ paypal_order_id: paypalOrderId })
-  });
-  
-  const data = await response.json();
-  
-  if (data.success) {
-    // 支付成功，显示成功信息
-  }
-}
-```
+## 🔮 Future Plans
 
-## 安全注意事项
+- **AI Tutor Features**: More intelligent personalized learning guidance
+- **Learning Progress Tracking**: Detailed learning analysis and progress management
+- **Community Features**: Student communication and discussion platform
+- **Mobile Application**: Native mobile app development
+- **More Subjects**: Expansion to other A-Level subjects
 
-1. 确保所有敏感配置存储在环境变量中
-2. 在生产环境中使用 HTTPS
-3. 考虑添加 Webhook 签名验证以增强安全性
+## 📝 Development Notes
+
+This project is transitioning from a paid resource purchasing platform to a free online learning platform, aiming to provide high-quality free educational resources to more students while retaining some premium features as paid options.
+
+## 🤝 Contributing Guidelines
+
+Contributions and suggestions are welcome! Please follow these steps:
+
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact Us
+
+- Email: biomindbot@gmail.com
+- Website: [BioByte Official Site](https://biobyte.shop)
+
+---
+
+*Making biology learning simpler and more engaging!* 🧬

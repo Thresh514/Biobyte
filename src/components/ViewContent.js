@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import InteractiveText from './InteractiveText';
+import ContentProtection from './ContentProtection';
 
 const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, interactiveMode = 'none' }) => {
     const [expandedSections, setExpandedSections] = useState(new Set());
@@ -107,6 +108,7 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, inter
 
     return (
         <div className="flex h-full pt-24 pl-24">
+            <ContentProtection>
             {/* 右侧内容区 */}
             <div className="overflow-y-auto zoom-target">
                 <div className="p-6">
@@ -221,7 +223,8 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, inter
                         ))}
                     </div>
                 </div>
-            </div>
+                </div>
+            </ContentProtection>
         </div>
     );
 };
