@@ -246,6 +246,7 @@ export default function ViewPage() {
                 <Head>
                     <title>BioByte - View Not Available</title>
                     <meta name="description" content="View content not available for mindmap resources" />
+                    <meta name="robots" content="noindex, nofollow" />
                     <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
                 </Head>
                 
@@ -306,6 +307,7 @@ export default function ViewPage() {
                 <Head>
                     <title>BioByte - No Content Available</title>
                     <meta name="description" content="No content available for this resource" />
+                    <meta name="robots" content="noindex, nofollow" />
                     <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
                 </Head>
                 
@@ -359,6 +361,7 @@ export default function ViewPage() {
             <Head>
                 <title>BioByte - {resourceInfo.type?.toUpperCase()} {resourceInfo.level?.toUpperCase()} View</title>
                 <meta name="description" content={`View ${resourceInfo.type} content for ${resourceInfo.level} level`} />
+                <meta name="robots" content="noindex, nofollow" />
                 <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
             </Head>
             

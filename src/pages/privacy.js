@@ -18,6 +18,7 @@ export default function Privacy() {
             <Head>
                 <title>Privacy Policy | BioByte</title>
                 <meta name="description" content="Privacy Policy for BioByte platform" />
+                <meta name="robots" content="noindex, nofollow" />
                 {/* Canonical URL */}
                 <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
             </Head>

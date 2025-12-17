@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import SimpleHeader from "../components/SimpleHeader";
 import Footer from "../components/Footer";
 
@@ -114,6 +115,10 @@ const Register = () => {
 
   return (
     <div>
+      <Head>
+        <title>Register | BioByte</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <SimpleHeader />
       <div className="flex items-center justify-center min-h-screen">
         <div className="flex flex-col items-center w-full max-w-md p-8 bg-white">

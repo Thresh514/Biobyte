@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import SimpleHeader from "../components/SimpleHeader";
 import Footer from "../components/Footer";
 
@@ -81,6 +82,10 @@ const ResetPassword = () => {
 
   return (
     <div>
+      <Head>
+        <title>Reset Password | BioByte</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <SimpleHeader />
       <div className="flex items-center justify-center min-h-screen bg-lightest">
         <div className="flex flex-col items-center w-full max-w-md p-8">

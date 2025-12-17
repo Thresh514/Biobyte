@@ -18,6 +18,7 @@ export default function Terms() {
             <Head>
                 <title>Terms of Service | BioByte</title>
                 <meta name="description" content="Terms of Service for BioByte platform" />
+                <meta name="robots" content="noindex, nofollow" />
                 {/* Canonical URL */}
                 <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
             </Head>

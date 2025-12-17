@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import SimpleHeader from "../components/SimpleHeader";
 import Footer from "../components/Footer";
 
@@ -30,6 +31,10 @@ const ForgotPassword = () => {
 
   return (
     <div>
+      <Head>
+        <title>Forgot Password | BioByte</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <SimpleHeader />
       <div className="flex items-center justify-center min-h-screen bg-lightest">
         <div className="flex flex-col items-center w-full max-w-md p-8">
