@@ -14,6 +14,7 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState(null);
+    const [userRole, setUserRole] = useState(null);
     const [cartCount, setCartCount] = useState(0);
     const mobileMenuRef = useRef(null);
     
@@ -38,12 +39,29 @@ export default function Navbar() {
     
 
     useEffect(() => {
-        const storedUsername = localStorage.getItem("email");
-        const token = localStorage.getItem("token");
-        if (token) {
-            setIsLoggedIn(true);
-            setUsername(storedUsername);
-        }
+        // 使用新的auth check API来检查登录状态（从cookie读取token）
+        fetch("/api/auth/check", {
+            method: "GET",
+            credentials: 'include'
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.isAuthenticated && data.user) {
+                    setIsLoggedIn(true);
+                    setUsername(data.user.email);
+                    setUserRole(data.user.role);
+                    // 存储email到localStorage用于显示
+                    localStorage.setItem("email", data.user.email);
+                } else {
+                    setIsLoggedIn(false);
+                    setUsername(null);
+                    setUserRole(null);
+                }
+            })
+            .catch((err) => {
+                console.error("Auth check error:", err);
+                setIsLoggedIn(false);
+            });
     }, []);
 
     useEffect(() => {
@@ -84,12 +102,49 @@ export default function Navbar() {
         router.push('/login');
     };
 
-    const handleLogout = () => {
-        localStorage.removeItem("token");
+    const handleLogout = async () => {
+        // 调用logout API清除cookie
+        try {
+            await fetch("/api/auth/logout", {
+                method: "POST",
+                credentials: 'include'
+            });
+        } catch (error) {
+            console.error("Logout error:", error);
+        }
         localStorage.removeItem("email");
         setUsername(null);
+        setUserRole(null);
         setIsLoggedIn(false);
         router.push('/');
+    };
+
+    const handleDashboard = async () => {
+        // 如果userRole已经加载，直接使用
+        if (userRole === 'admin') {
+            router.push('/admin');
+            return;
+        }
+        
+        // 如果userRole还没加载，先检查一下
+        if (userRole === null && isLoggedIn) {
+            try {
+                const response = await fetch("/api/auth/check", {
+                    method: "GET",
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                if (data.isAuthenticated && data.user && data.user.role === 'admin') {
+                    router.push('/admin');
+                    return;
+                }
+            } catch (error) {
+                console.error("Error checking user role:", error);
+            }
+        }
+        
+        // 默认跳转到dashboard
+        router.push('/dashboard');
     };
 
     const menuItems = {
@@ -220,7 +275,7 @@ export default function Navbar() {
                                 onMouseLeave={() => setIsUserHovered(false)}
                             >
                                 <button
-                                    onClick={() => router.push("/dashboard")}
+                                    onClick={handleDashboard}
                                     className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                                 >
                                     DASHBOARD
@@ -306,7 +361,7 @@ export default function Navbar() {
                                         {username || "User"}
                                     </motion.span>
                                     <motion.button
-                                        onClick={() => router.push("/dashboard")}
+                                        onClick={handleDashboard}
                                         className="font-light tracking-wider hover:text-black transition-colors"
                                         variants={menuItemVariants}
                                     >

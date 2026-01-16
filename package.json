@@ -8,8 +8,9 @@
     "css-loader": "^7.1.2",
     "dompurify": "^3.2.4",
     "express-rate-limit": "^7.5.0",
-    "framer-motion": "^12.6.2",
+    "framer-motion": "^12.26.2",
     "i18next": "^24.2.2",
+    "jose": "^6.1.3",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
     "log4javascript": "^1.4.16",
@@ -25,6 +26,7 @@
     "nodemailer": "^7.0.11",
     "object-assign": "^4.1.1",
     "openai": "^4.86.2",
+    "pg": "^8.17.1",
     "rangy": "^1.3.2",
     "rangy-classapplier": "^2.1.0",
     "rangy2": "^2.1.0",
@@ -46,7 +48,9 @@
     "postbuild": "next-sitemap",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "kill-port": "./kill-port.sh",
+    "cleanup": "./cleanup-nextjs.sh"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

@@ -1,4 +1,4 @@
-import { pool } from "../../lib/db"; 
+import { getResourceByTitle } from "../../lib/db-helpers"; 
 
 export default async function handler(req, res) {
     if (req.method !== "GET") {
@@ -16,20 +16,16 @@ export default async function handler(req, res) {
         console.log("📌 查询数据库的 title:", cleanedTitle);
 
         // **查询数据库，直接用 title 进行匹配**
-        const [rows] = await pool.query(
-            "SELECT id FROM study_resources WHERE title = ?", 
-            [cleanedTitle]
-        );
+        const resource = await getResourceByTitle(cleanedTitle);
 
-        console.log("🔍 数据库查询结果：", rows); 
+        console.log("🔍 数据库查询结果：", resource); 
 
-
-        if (rows.length === 0) {
+        if (!resource) {
             console.warn(`⚠️ 未找到匹配的 study_resource_id: ${cleanedTitle}`);
             return res.status(404).json({ error: "No matching study_resource_id found" });
         }
 
-        return res.status(200).json({ id: rows[0].id });
+        return res.status(200).json({ id: resource.id });
 
     } catch (error) {
         console.error("❌ 数据库查询出错:", error);

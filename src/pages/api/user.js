@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { pool } from "../../lib/db";
+import { getUserById } from "../../lib/db-helpers";
 
 // 输入验证工具函数
 const sanitizeInput = (input) => {
@@ -17,12 +17,13 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: "Method Not Allowed" });
     }
 
-    const authHeader = req.headers.authorization;
-    if (!authHeader) {
+    // 优先从cookie获取token，如果没有则从Authorization header获取（向后兼容）
+    const token = req.cookies?.token || 
+                  (req.headers.authorization ? sanitizeInput(req.headers.authorization.split(" ")[1]) : null);
+    
+    if (!token) {
         return res.status(401).json({ message: "Unauthorized" });
     }
-
-    const token = sanitizeInput(authHeader.split(" ")[1]);
 
     try {
         // 解析 JWT Token
@@ -33,19 +34,18 @@ export default async function handler(req, res) {
             return res.status(400).json({ message: "Invalid user ID format" });
         }
 
-        // 使用参数化查询
-        const query = "SELECT id, email, role FROM users WHERE id = ?";
-        const [rows] = await pool.query(query, [decoded.id]);
+        // 使用 db-helpers 获取用户
+        const user = await getUserById(decoded.id);
 
-        if (rows.length === 0) {
+        if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
 
         // 清理返回数据
         const sanitizedUser = {
-            id: rows[0].id,
-            email: sanitizeInput(rows[0].email),
-            role: sanitizeInput(rows[0].role)
+            id: user.id,
+            email: sanitizeInput(user.email),
+            role: sanitizeInput(user.role)
         };
 
         return res.status(200).json(sanitizedUser);

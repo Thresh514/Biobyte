@@ -1,4 +1,9 @@
-import { pool } from "../../lib/db"; // 引入数据库连接池
+import { 
+  getAllResources, 
+  getResourceByTitle, 
+  getResourcesByFilters, 
+  getMindmapChapters 
+} from "../../lib/db-helpers";
 
 // 定义 slug 到实际标题的映射
 const slugToTitle = {
@@ -15,9 +20,7 @@ export default async function handler(req, res) {
 
     try {
         // 首先获取并显示所有记录，用于调试
-        const [allRecords] = await pool.query(
-            "SELECT id, title, type, level FROM study_resources"
-        );
+        const allRecords = await getAllResources();
         console.log("📚 数据库中的所有记录:", JSON.stringify(allRecords, null, 2));
 
         const { title: slug } = req.query;
@@ -59,15 +62,12 @@ export default async function handler(req, res) {
             level = 'A2';
         } else {
             // 尝试直接查找完整标题
-            const [directMatch] = await pool.query(
-                "SELECT * FROM study_resources WHERE title = ?",
-                [slug]
-            );
+            const directMatch = await getResourceByTitle(slug);
 
-            if (directMatch.length > 0) {
-                resourceType = directMatch[0].type;
-                level = directMatch[0].level;
-                chapter = directMatch[0].chapter;
+            if (directMatch) {
+                resourceType = directMatch.type;
+                level = directMatch.level;
+                chapter = directMatch.chapter;
             } else {
                 console.log("❌ 无效的 slug:", slug);
                 return res.status(404).json({ 
@@ -81,21 +81,14 @@ export default async function handler(req, res) {
         console.log("🔍 查询参数:", { type: resourceType, level, chapter });
         
         // 查找主记录
-        let query, params;
+        const filters = { type: resourceType, level };
         if (chapter) {
-            if (chapter === 'All') {
-                query = `SELECT * FROM study_resources WHERE type = ? AND level = ? AND chapter = 'All'`;
-                params = [resourceType, level];
-            } else {
-                query = `SELECT * FROM study_resources WHERE type = ? AND level = ? AND chapter = ?`;
-                params = [resourceType, level, chapter];
-            }
+            filters.chapter = chapter === 'All' ? 'All' : chapter;
         } else {
-            query = `SELECT * FROM study_resources WHERE type = ? AND level = ? AND chapter = 'All'`;
-            params = [resourceType, level];
+            filters.chapter = 'All';
         }
 
-        const [rows] = await pool.query(query, params);
+        const rows = await getResourcesByFilters(filters);
 
         console.log("✅ 查询结果行数:", rows.length);
         if (rows.length > 0) {
@@ -125,15 +118,7 @@ export default async function handler(req, res) {
         if (resourceType === "Mindmap") {
             console.log("📍 处理 Mindmap 类型资源");
             // 获取所有相关章节
-            const [chapters] = await pool.query(
-                `SELECT * FROM study_resources 
-                 WHERE type = ? AND level = ?
-                 ORDER BY CASE 
-                    WHEN chapter = 'All' THEN 0 
-                    ELSE CAST(REGEXP_REPLACE(chapter, '[^0-9]', '') AS UNSIGNED) 
-                 END`,
-                [resourceType, level]
-            );
+            const chapters = await getMindmapChapters(level);
             
             console.log("📚 找到相关章节:", JSON.stringify(chapters.map(row => ({
                 title: row.title,

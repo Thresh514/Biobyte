@@ -50,7 +50,23 @@ const Register = () => {
         });
       }, 1000);
     } else {
-      alert(`发送验证码失败，请重试。原因：${data.message || "未知错误。"}`);
+      // 处理频率限制响应
+      if (response.status === 429 && data.remainingSeconds) {
+        setCountdown(data.remainingSeconds);
+        alert(data.message || `请等待 ${data.remainingSeconds} 秒后再发送验证码。`);
+        
+        const timer = setInterval(() => {
+          setCountdown((prev) => {
+            if (prev === 0) {
+              clearInterval(timer);
+              return 0;
+            }
+            return prev - 1;
+          });
+        }, 1000);
+      } else {
+        alert(`发送验证码失败，请重试。原因：${data.message || "未知错误。"}`);
+      }
     }
   };
 

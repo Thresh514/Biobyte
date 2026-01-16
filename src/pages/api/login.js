@@ -1,5 +1,4 @@
-import { loginLimiter } from '../../middleware/rateLimit';
-import { pool } from '../../lib/db'; // 引入数据库连接池
+import { getUserByEmail } from '../../lib/db-helpers';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
@@ -28,15 +27,6 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: '方法不允许' });
     }
 
-    // 暂时跳过速率限制检查
-    /*
-    try {
-        await loginLimiter(req, res);
-    } catch (error) {
-        console.error('❌ 速率限制错误:', error.message);
-        return res.status(429).json({ message: error.message });
-    }
-    */
 
     const { email, password } = req.body;
     console.log('📧 收到的邮箱:', email);
@@ -51,13 +41,11 @@ export default async function handler(req, res) {
     try {
         console.log('🔍 查询用户信息...');
         // 查询用户
-        const [users] = await pool.query('SELECT * FROM users WHERE email = ?', [email]);
-        if (users.length === 0) {
+        const user = await getUserByEmail(email);
+        if (!user) {
             console.error('❌ 用户不存在:', email);
             return res.status(401).json({ message: '邮箱或密码错误' });
         }
-
-        const user = users[0];
         console.log('✅ 找到用户:', user.id);
         console.log('🔑 检查密码字段:', Object.keys(user));
         
@@ -74,9 +62,9 @@ export default async function handler(req, res) {
 
         console.log('✅ 密码验证成功');
 
-        // 生成JWT令牌
+        // 生成JWT令牌（包含role信息，用于middleware验证）
         const token = jwt.sign(
-            { id: user.id, email: user.email },
+            { id: user.id, email: user.email, role: user.role },
             process.env.JWT_SECRET,
             { expiresIn: '24h' }
         );
@@ -89,10 +77,43 @@ export default async function handler(req, res) {
         res.setHeader('X-Frame-Options', 'DENY');
         res.setHeader('X-XSS-Protection', '1; mode=block');
 
-        console.log('✅ 登录成功，返回令牌');
+        // 将token设置为httpOnly cookie（更安全，防止XSS攻击）
+        const isProduction = process.env.NODE_ENV === 'production';
+        const maxAge = 24 * 60 * 60; // 24小时（秒）
+        
+        // 设置token cookie - 使用正确的格式
+        // 注意：在开发环境中不使用Secure，SameSite使用Lax以确保正常工作
+        const tokenCookieOptions = [
+            `token=${token}`,
+            'HttpOnly',
+            'Path=/',
+            `Max-Age=${maxAge}`,
+            'SameSite=Lax',
+            ...(isProduction ? ['Secure'] : [])
+        ].join('; ');
+        
+        // 设置token_exp cookie（非httpOnly，前端可能需要检查过期时间）
+        const tokenExpCookieOptions = [
+            `token_exp=${token_exp}`,
+            'Path=/',
+            `Max-Age=${maxAge}`,
+            'SameSite=Lax',
+            ...(isProduction ? ['Secure'] : [])
+        ].join('; ');
+        
+        // 在Next.js API路由中，使用数组设置多个cookie
+        res.setHeader('Set-Cookie', [tokenCookieOptions, tokenExpCookieOptions]);
+        
+        console.log('✅ Cookie设置完成:', {
+            tokenLength: token.length,
+            tokenCookieSet: true,
+            isProduction: isProduction,
+            cookieOptions: tokenCookieOptions.substring(0, 100) + '...'
+        });
+
+        console.log('✅ 登录成功，token已设置为cookie');
         return res.status(200).json({
-            token,
-            token_exp,
+            success: true,
             user: {
                 id: user.id,
                 email: user.email,

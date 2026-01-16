@@ -1,7 +1,6 @@
-import { pool } from "../../lib/db";
+import { upsertVerificationCode, checkVerificationCodeRateLimit } from "../../lib/db-helpers";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
-import moment from "moment";
 
 const sendVerificationCode = async (req, res) => {
   if (req.method === "POST") {
@@ -12,18 +11,31 @@ const sendVerificationCode = async (req, res) => {
     }
 
     try {
+      // 检查是否在1分钟内发送过验证码（使用数据库时间比较，避免时区问题）
+      const rateLimitCheck = await checkVerificationCodeRateLimit(email, 60);
+      
+      if (!rateLimitCheck.allowed) {
+        console.log('Rate limited:', {
+          email,
+          remainingSeconds: rateLimitCheck.remainingSeconds
+        });
+        return res.status(429).json({ 
+          message: `请等待 ${rateLimitCheck.remainingSeconds} 秒后再发送验证码。`,
+          remainingSeconds: rateLimitCheck.remainingSeconds
+        });
+      }
+
       const verificationCode = crypto.randomInt(100000, 999999).toString();
-      const expiryTime = moment.utc().add(10, 'minutes').toDate();
-        console.log("Calculated expiryTime (UTC):", expiryTime);
+      // 不再在应用层计算过期时间，而是在数据库层计算，避免时区问题
+      // 传入null，让数据库使用 NOW() + INTERVAL '10 minutes'
+      console.log("Generating verification code:", verificationCode);
 
       // 存入数据库（此时用户还未注册）
-      await pool.query(
-        "INSERT INTO verification_codes (email, code, expires_at) VALUES (?, ?, UTC_TIMESTAMP() + INTERVAL 60 MINUTE) ON DUPLICATE KEY UPDATE code = VALUES(code), expires_at = VALUES(expires_at)",
-        [email, verificationCode, expiryTime]
-      ).catch((err) => {
-        console.error("Database error:", err);
+      // 传入null作为expires_at，让数据库计算
+      const success = await upsertVerificationCode(email, verificationCode, null);
+      if (!success) {
         return res.status(400).json({ message: "Failed to insert verification code." });
-      });
+      }
 
       // 发送验证码邮件
       const transporter = nodemailer.createTransport({

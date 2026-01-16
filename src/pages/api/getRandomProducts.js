@@ -1,16 +1,12 @@
-import { pool } from '../../lib/db';
+import { getRandomResources } from '../../lib/db-helpers';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  let connection;
   try {
-    connection = await pool.getConnection();
-    const [products] = await connection.query(
-      'SELECT id, title, price, image, type, level, chapter FROM study_resources ORDER BY RAND() LIMIT 3'
-    );
+    const products = await getRandomResources(3);
 
     // 确保 products 是数组
     if (!Array.isArray(products)) {
@@ -36,10 +32,6 @@ export default async function handler(req, res) {
       res.status(503).json({ message: 'Database access denied' });
     } else {
       res.status(500).json({ message: 'Internal server error' });
-    }
-  } finally {
-    if (connection) {
-      connection.release();
     }
   }
 } 
