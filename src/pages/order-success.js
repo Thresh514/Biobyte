@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Head from "next/head";
 import SimpleHeader from "../components/SimpleHeader";
 import { clearCart } from "../lib/cart";
 import confetti from "canvas-confetti";
@@ -185,6 +186,10 @@ export default function OrderSuccess() {
 
     return (
         <div className="min-h-screen">
+            <Head>
+                <title>Order Success | BioByte</title>
+                <meta name="robots" content="noindex, nofollow" />
+            </Head>
             <SimpleHeader />
             <div className="pt-12 p-6 max-w-6xl mx-auto w-full flex-grow">
                 <h1 className="text-4xl md:text-5xl font-light mb-4 tracking-wide">Order Status</h1>

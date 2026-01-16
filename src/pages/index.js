@@ -6,6 +6,7 @@ import HeroSection from '../components/index/Herosection';
 import SuccessStories from '../components/index/SuccessStories';
 import ResourceCategories from '../components/index/ResourceCategories';
 import SEO from '../components/SEO';
+import { Analytics } from "@vercel/analytics/next"
 
 // 使用纯客户端渲染
 export default function Home() {
@@ -18,10 +19,11 @@ export default function Home() {
 
   return (
     <div>
+      <Analytics />
       <SEO 
         title="BioByte - A-Level Biology Study Resources"
         description="Download professional A-Level Biology study materials and mind maps."
-        image="/indexbg-compress.jpeg"  // 建议添加一个专门的 Open Graph 图片
+        image="/indexbg-compress.jpeg"
         type="website"
       />
       <div><Navbar/></div>

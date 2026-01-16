@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { getCart, clearCart } from "../lib/cart";
 import { useRouter } from "next/navigation";
+import Head from "next/head";
 import SimpleHeader from "../components/SimpleHeader";
 import { jwtDecode } from "jwt-decode";
 
@@ -125,6 +126,10 @@ export default function Checkout() {
     
     return (
         <div className="min-h-screen">
+            <Head>
+                <title>Checkout | BioByte</title>
+                <meta name="robots" content="noindex, nofollow" />
+            </Head>
             <SimpleHeader />
             <div className="pt-12 p-6 max-w-6xl mx-auto w-full flex-grow">
                 <h1 className="text-4xl md:text-5xl font-light mb-4 tracking-wide">Checkout</h1>

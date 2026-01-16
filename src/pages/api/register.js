@@ -1,5 +1,11 @@
 import bcrypt from "bcryptjs";
-import { pool } from "../../lib/db"; // 引入数据库连接池
+import { 
+  getUserByEmail, 
+  createUser, 
+  getVerificationCode, 
+  verifyCode, 
+  deleteVerificationCode 
+} from "../../lib/db-helpers";
 
 const register = async (req, res) => {
   console.log("Register API hit");  // ✅ 这行放在 `if (req.method === "POST")` 之前
@@ -13,17 +19,9 @@ const register = async (req, res) => {
     }
 
     try{
-
-        const [dbCheck] = await pool.query("SELECT DATABASE();");
-        console.log("当前连接的数据库是:", dbCheck);
-
         // 检查邮箱是否已经存在
-        const [emailCheck] = await pool.query(
-            "SELECT * FROM users WHERE email = ?",
-            [email]
-        );
-
-        if (emailCheck.length > 0) {
+        const existingUser = await getUserByEmail(email);
+        if (existingUser) {
             return res.status(400).json({ message: "Email already registered. Please log in" });
         }
 
@@ -32,59 +30,37 @@ const register = async (req, res) => {
 
         // 检查验证码是否存在
         const cleanVerificationCode = String(verificationCode).trim();
-        const [verificationCheck] = await pool.query(
-          "SELECT * FROM verification_codes WHERE email = ?",
-          [email]
-        );
+        const verificationCheck = await getVerificationCode(email);
 
-        if (verificationCheck.length === 0) {
+        if (!verificationCheck) {
           console.log("No verification code found for email:", email);
           return res.status(400).json({ message: "Please request a verification code first." });
         }
 
-        // 检查验证码是否正确
-        const [codeCheck] = await pool.query(
-          "SELECT * FROM verification_codes WHERE email = ? AND code = ?",
-          [email, cleanVerificationCode]
-        );
-
-        if (codeCheck.length === 0) {
-          console.log("Invalid verification code for email:", email);
-          return res.status(400).json({ message: "Incorrect verification code." });
+        // 验证验证码（包括正确性和过期时间）
+        const isValidCode = await verifyCode(email, cleanVerificationCode);
+        if (!isValidCode) {
+          console.log("Invalid or expired verification code for email:", email);
+          return res.status(400).json({ message: "Incorrect or expired verification code." });
         }
 
-        // 检查验证码是否过期
-        const [expiredCheck] = await pool.query(
-          "SELECT * FROM verification_codes WHERE email = ? AND code = ? AND expires_at > NOW()",
-          [email, cleanVerificationCode]
-        );
-
-        if (expiredCheck.length === 0) {
-          console.log("Expired verification code for email:", email);
-          return res.status(400).json({ message: "Verification code has expired. Please request a new one." });
-        }
-
-        // 将数据插入到数据库
-        const insertQuery = "INSERT INTO users (email, password_hash, role) VALUES (?, ?, ?)";
-        const insertValues = [email, hashedPassword, "member"];
+        // 创建用户
         try {
-          console.log("Executing query:", insertQuery, insertValues);
-          const [result] = await pool.query(insertQuery, insertValues);
-      
-          if (result.affectedRows === 0) {
-              console.error("Insert failed: No rows affected.");
-              return res.status(500).json({ message: "User registration failed. No rows inserted." });
-          }
-      
-          console.log("Insert Result:", result);
+          console.log("Creating user:", email);
+          const result = await createUser({
+            email,
+            password_hash: hashedPassword,
+            role: "member"
+          });
+          console.log("User created successfully:", result.id);
       } catch (error) {
-          console.error("Error inserting user:", error);
+          console.error("Error creating user:", error);
           return res.status(500).json({ message: "Database insertion error.", error: error.message });
       }
 
         // 注册成功后，删除验证码
-        const deleteResult = await pool.query("DELETE FROM verification_codes WHERE email = ?", [email]);
-        console.log("Delete Result:", deleteResult);
+        await deleteVerificationCode(email);
+        console.log("Verification code deleted for:", email);
 
         return res.status(201).json({ message: "User registered successfully." });
     } catch (error) {

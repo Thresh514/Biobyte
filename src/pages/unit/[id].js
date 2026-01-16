@@ -89,12 +89,11 @@ export default function ChapterDetail() {
     const content = useMemo(() => {
         return (
             <div>
-                <SEO 
-                    title={`${course?.title} - BioByte`}
-                    description={course?.description || ""}
-                    image={course?.image || "/default.jpg"}
-                    type="product"
-                />
+                <Head>
+                    <title>{course?.title ? `${course.title} - BioByte` : 'BioByte'}</title>
+                    <meta name="description" content={course?.description || ""} />
+                    <meta name="robots" content="noindex, nofollow" />
+                </Head>
                 <Navbar />
                 <main className="pt-32 md:pt-48 min-h-screen">
                     {course && (

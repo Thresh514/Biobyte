@@ -1,4 +1,4 @@
-import { pool } from "../../../lib/db";
+import { updateOrderToPaid } from "../../../lib/db-helpers";
 import { capturePayPalOrder } from "../../../lib/paypal";
 
 export default async function handler(req, res) {
@@ -88,19 +88,10 @@ export default async function handler(req, res) {
     // 尝试更新数据库订单状态，但不阻止流程
     let dbUpdateSuccess = false;
     try {
-      // 直接更新user_study_resources表中的记录
-      const [result] = await pool.query(
-        'UPDATE user_study_resources SET status = ?, transaction_id = ? WHERE order_id = ?',
-        ['PAID', transactionId, customId]
-      );
-      
-      if (result.affectedRows === 0) {
-        console.warn(`未找到本地订单ID对应的记录: ${customId}`);
-        // 将在checkout API中创建记录，这里不返回错误
-      } else {
-        console.log(`成功更新订单 ${customId} 的状态为已支付，更新了 ${result.affectedRows} 条记录`);
-        dbUpdateSuccess = true;
-      }
+      // 更新订单状态为已支付
+      await updateOrderToPaid(customId, transactionId);
+      console.log(`成功更新订单 ${customId} 的状态为已支付`);
+      dbUpdateSuccess = true;
     } catch (dbError) {
       console.error('更新订单状态失败，但继续处理:', dbError);
       // 不因数据库更新失败而中断流程

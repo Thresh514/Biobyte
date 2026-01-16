@@ -1,4 +1,4 @@
-import { pool } from "../../lib/db"; // 连接数据库
+import { getUserByEmail, setUserResetToken } from "../../lib/db-helpers";
 import nodemailer from "nodemailer";
 import crypto from "crypto"; // 用于生成随机令牌
 
@@ -18,27 +18,20 @@ const forgotPassword = async (req, res) => {
     try {
       // 查找邮箱是否存在
       console.log("Checking if email exists:", email);
-      const query = "SELECT * FROM users WHERE email = ?";
-      const [user] = await pool.query(query, [email]);
+      const user = await getUserByEmail(email);
 
-      if (!user.length) {
+      if (!user) {
         return res.status(404).json({ message: "Email not found." });
       }
 
       // 生成一个随机的重置令牌
       const token = crypto.randomBytes(20).toString("hex");
 
-      // 设置令牌过期时间（例如 1 小时）
-      const tokenExpiration = new Date(Date.now() + 3600000)  // 当前时间 + 1 小时
-      .toISOString()
-      .slice(0, 19)
-      .replace("T", " ");
-
-    console.log(`Generated token: ${token}, expires at: ${tokenExpiration}`);
+      console.log(`Generated token: ${token}`);
 
       // 更新数据库，存储这个令牌和过期时间
-      const updateQuery = "UPDATE users SET reset_token = ?, reset_expires = ? WHERE email = ?";
-      await pool.query(updateQuery, [token, tokenExpiration, email]);
+      // 传入 null 让数据库使用 NOW() + 1小时来计算过期时间，确保时区一致
+      await setUserResetToken(email, token, null);
 
       // 根据环境变量确定基础URL
       const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 

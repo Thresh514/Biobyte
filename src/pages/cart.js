@@ -2,6 +2,7 @@
 
     import { useState, useEffect } from "react";
     import { useRouter } from "next/router";
+    import Head from "next/head";
     import { getCart, updateQuantity, removeFromCart, clearCart } from "../lib/cart";
     import Navbar from "../components/Navbar";
     import Image from 'next/image';
@@ -45,6 +46,10 @@
 
         return (
             <div className="min-h-screen flex flex-col">
+                <Head>
+                    <title>Shopping Cart | BioByte</title>
+                    <meta name="robots" content="noindex, nofollow" />
+                </Head>
                 <Navbar />
                 <div className="pt-32 p-6 max-w-6xl mx-auto w-full flex-grow">
                     <h1 className="text-4xl md:text-5xl font-light mb-4">SHOPPING CART</h1>

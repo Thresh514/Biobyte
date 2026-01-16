@@ -31,13 +31,11 @@ const Login = () => {
 
             const data = await response.json(); // 解析 JSON 响应
             
-            if (response.ok) {
+            if (response.ok && data.success) {
                 console.log("✅ 登录成功");
-                // 登录成功，跳转到主页
-                localStorage.setItem("userLoggedIn", true);
-                localStorage.setItem("token", data.token);  // 存 JWT
-                localStorage.setItem("token_exp", data.token_exp);  // 存 token 过期时间
-                localStorage.setItem("email", email);  // 存 email
+                // Token已存储在httpOnly cookie中，不需要localStorage
+                // 只存储email用于显示
+                localStorage.setItem("email", email);
                 router.push("/");
             } else {
                 // 登录失败，显示错误信息
@@ -90,10 +88,16 @@ const Login = () => {
         checkTokenExpiration();
     }, []);
 
-    const logout = () => {
-        localStorage.removeItem("userLoggedIn");
-        localStorage.removeItem("token");
-        localStorage.removeItem("token_exp");
+    const logout = async () => {
+        // 调用logout API清除cookie
+        try {
+            await fetch("/api/auth/logout", {
+                method: "POST",
+                credentials: 'include'
+            });
+        } catch (error) {
+            console.error("Logout error:", error);
+        }
         localStorage.removeItem("email");
         router.push("/login");
     };
@@ -122,6 +126,7 @@ const Login = () => {
                                 bg-transparent text-gray-900 focus:outline-none focus:border-black placeholder-transparent"
                             placeholder=""
                             onChange={(e) => setEmail(e.target.value)}
+                            autoComplete="email"
                             required
                         />
                         {/* Label 作为 Placeholder */}
@@ -146,6 +151,7 @@ const Login = () => {
                                 placeholder=""
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
+                                autoComplete="current-password"
                                 required
                             />
                             <label

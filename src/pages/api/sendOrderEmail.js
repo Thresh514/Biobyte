@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import path from "path";
 import fs from "fs";
-import { pool } from "../../lib/db"; // 添加数据库连接
+import { getResourcesForEmail } from "../../lib/db-helpers";
 
 export async function sendOrderEmail(name, email, cart, totalPrice, order_id) {
     if (!email || !name || !cart.length) {
@@ -33,10 +33,8 @@ export async function sendOrderEmail(name, email, cart, totalPrice, order_id) {
             
             // 直接通过 id 查询文件路径
             console.log("📝 查询数据库 id:", item.id);
-            const [rows] = await pool.query(
-                "SELECT id, file_path, title FROM study_resources WHERE id = ?",
-                [item.id]
-            );
+            const resources = await getResourcesForEmail([item.id]);
+            const rows = resources.length > 0 ? [resources[0]] : [];
             console.log("📝 数据库查询结果:", JSON.stringify(rows, null, 2));
 
             if (rows.length === 0 || !rows[0].file_path) {

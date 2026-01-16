@@ -66,6 +66,7 @@ export default function HeroSection() {
             id="herosection" 
             ref={containerRef}
             className="relative bg-black text-white w-screen min-h-screen overflow-hidden scroll-mt-16"
+            style={{ position: 'relative' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}

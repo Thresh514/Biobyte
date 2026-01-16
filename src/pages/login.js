@@ -9,6 +9,7 @@ const LoginPage = () => {
             <Head>
                 <title>Login Page</title>
                 <meta name="description" content="Login page." />
+                <meta name="robots" content="noindex, nofollow" />
             </Head>
             <SimpleHeader />
             <main className="bg-lightest">

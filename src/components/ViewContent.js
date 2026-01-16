@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import InteractiveText from './InteractiveText';
+import ContentProtection from './ContentProtection';
 
 const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, interactiveMode = 'none' }) => {
     const [expandedSections, setExpandedSections] = useState(new Set());
@@ -24,10 +25,11 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, inter
         }
     }, [data]);
 
-    // 简化的处理函数 - 只保留UI交互
+    // 使用 TextHighlighter 的处理函数
     const handleHighlightSave = (highlightData) => {
         console.log('高亮保存:', highlightData);
-        // 这里可以集成你选择的轮子
+        // TextHighlighter 已经处理了高亮的创建和显示
+        // 这里可以添加额外的逻辑，比如保存到本地存储或发送到服务器
     };
 
     const handleAnnotationSave = (annotationData) => {
@@ -106,16 +108,34 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, inter
 
     return (
         <div className="flex h-full pt-24 pl-24">
+            <ContentProtection>
             {/* 右侧内容区 */}
             <div className="overflow-y-auto zoom-target">
                 <div className="p-6">
                     {/* 标题 */}
                     <div className="mb-8 border-b border-gray-200 pb-6">
-                        <h1 className="text-3xl font-bold text-darker mb-2">
-                            Unit {data.unit}: {data.title}
-                        </h1>
-                        <div className="text-base text-gray-600">
-                            {data.content?.length || 0} sections available
+                        <div className="flex justify-between items-center">
+                            <div>
+                                <h1 className="text-3xl font-bold text-darker mb-2">
+                                    Unit {data.unit}: {data.title}
+                                </h1>
+                                <div className="text-base text-gray-600">
+                                    {data.content?.length || 0} sections available
+                                </div>
+                            </div>
+                            {/* 暂时注释掉高亮模式的清除按钮 */}
+                            {/* {interactiveMode === 'highlight' && (
+                                <button
+                                    onClick={() => {
+                                        // 触发所有 InteractiveText 组件清除高亮
+                                        const event = new CustomEvent('clearAllHighlights');
+                                        window.dispatchEvent(event);
+                                    }}
+                                    className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                                >
+                                    清除所有高亮
+                                </button>
+                            )} */}
                         </div>
                     </div>
 
@@ -178,17 +198,18 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, inter
                                                         <div className="p-4">
                                                             <div className="space-y-3">
                                                                 {item.content?.map((contentItem, contentIndex) => (
-                                                                    <InteractiveText
-                                                                        key={contentIndex}
-                                                                        content={formatText(contentItem)}
-                                                                        mode={interactiveMode}
-                                                                        onHighlightSave={handleHighlightSave}
-                                                                        onAnnotationSave={handleAnnotationSave}
-                                                                        onAITutorAsk={handleAITutorAsk}
-                                                                        sectionId={section.section_id || null}
-                                                                        itemId={item.item_id || null}
-                                                                        className="text-base text-gray-700"
-                                                                    />
+                                                                    <div key={contentIndex} className="searchable-content">
+                                                                        <InteractiveText
+                                                                            content={formatText(contentItem)}
+                                                                            mode={interactiveMode}
+                                                                            onHighlightSave={handleHighlightSave}
+                                                                            onAnnotationSave={handleAnnotationSave}
+                                                                            onAITutorAsk={handleAITutorAsk}
+                                                                            sectionId={section.section_id || null}
+                                                                            itemId={item.item_id || null}
+                                                                            className="text-base text-gray-700 interactive-text"
+                                                                        />
+                                                                    </div>
                                                                 ))}
                                                             </div>
                                                         </div>
@@ -202,7 +223,8 @@ const ViewContent = ({ data, availableUnits, onUnitChange, selectedUnitId, inter
                         ))}
                     </div>
                 </div>
-            </div>
+                </div>
+            </ContentProtection>
         </div>
     );
 };

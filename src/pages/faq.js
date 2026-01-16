@@ -19,6 +19,7 @@ export default function Home() {
         <Head>
             <title>FAQ Page</title>
             <meta name="description" content="faq" />
+            <meta name="robots" content="noindex, nofollow" />
             {/* Canonical URL */}
             <link rel="canonical" href={`https://www.biobyte.shop${cleanPath}`} />
         </Head>

@@ -1,4 +1,4 @@
-import { pool } from "../../../lib/db";
+import { updateOrderToPaid } from "../../../lib/db-helpers";
 import { validatePayPalWebhook } from "../../../lib/paypal";
 
 export default async function handler(req, res) {
@@ -35,18 +35,9 @@ export default async function handler(req, res) {
 
       // 连接数据库并更新订单状态
       try {
-        // 更新user_study_resources表中所有与该订单ID相关的记录
-        const [result] = await pool.query(
-          "UPDATE user_study_resources SET status = ?, transaction_id = ? WHERE order_id = ?",
-          ['PAID', transactionId, customId]
-        );
-
-        // 检查是否更新了任何行
-        if (result.affectedRows === 0) {
-          console.warn(`未找到订单号 ${customId} 对应的记录`);
-        } else {
-          console.log(`成功更新订单 ${customId} 的状态为已支付，更新了 ${result.affectedRows} 条记录`);
-        }
+        // 更新订单状态为已支付
+        await updateOrderToPaid(customId, transactionId);
+        console.log(`成功更新订单 ${customId} 的状态为已支付`);
       } catch (dbError) {
         console.error("数据库更新失败:", dbError);
         // 即使数据库更新失败，仍返回 200 以通知 PayPal 我们已收到请求

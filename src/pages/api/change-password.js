@@ -1,4 +1,4 @@
-import { pool } from "../../lib/db"; // 数据库连接库
+import { getUserByEmail, updateUserPassword } from "../../lib/db-helpers";
 import bcrypt from "bcryptjs";
 
 export default async function handler(req, res) {
@@ -14,14 +14,11 @@ export default async function handler(req, res) {
 
     try {
         // 1️⃣ 查找用户
-        const query = "SELECT id, password_hash FROM users WHERE email = ?";
-        const [rows] = await pool.query(query, [email]);
+        const user = await getUserByEmail(email);
 
-        if (rows.length === 0) {
+        if (!user) {
             return res.status(404).json({ message: "User doesn't exist" });
         }
-
-        const user = rows[0];
 
         // 2️⃣ 验证旧密码
         const isPasswordValid = await bcrypt.compare(oldPassword, user.password_hash);
@@ -31,7 +28,11 @@ export default async function handler(req, res) {
 
         // 3️⃣ 加密新密码并更新
         const hashedPassword = await bcrypt.hash(newPassword, 10);
-        await pool.query("UPDATE users SET password_hash = ? WHERE email = ?", [hashedPassword, email]);
+        const success = await updateUserPassword(email, hashedPassword);
+        
+        if (!success) {
+            return res.status(500).json({ message: "Failed to update password." });
+        }
 
         return res.status(200).json({ message: "Password changed successful!" });
     } catch (error) {

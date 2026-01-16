@@ -1,4 +1,4 @@
-import { pool } from "../../lib/db";
+import { getUserPurchaseRecords } from "../../lib/db-helpers";
 import jwt from "jsonwebtoken";
 import { sendOrderEmail } from "./sendOrderEmail";
 
@@ -33,17 +33,8 @@ export default async function handler(req, res) {
             return res.status(401).json({ message: "Invalid token" });
         }
 
-        // 查询用户的资源购买记录 - 不再查询order_id
-        const query = `
-            SELECT 
-                sr.title, sr.price, sr.file_path, sr.type, sr.level, sr.chapter,
-                usr.purchase_date
-            FROM user_study_resources usr
-            JOIN study_resources sr ON usr.study_resource_id = sr.id
-            WHERE usr.user_id = ? AND usr.study_resource_id = ?
-        `;
-
-        const [purchaseRecords] = await pool.query(query, [userId, study_resource_id]);
+        // 查询用户的资源购买记录
+        const purchaseRecords = await getUserPurchaseRecords(userId, study_resource_id);
 
         if (purchaseRecords.length === 0) {
             return res.status(404).json({ message: "Resource purchase record not found" });

@@ -42,3 +42,7 @@ yarn-error.log*
 next-env.d.ts
 
 /docs
+
+.DS_Store
+
+db_biomind_2025-11-04_130823.sql

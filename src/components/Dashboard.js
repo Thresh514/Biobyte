@@ -19,63 +19,63 @@ const DashboardComponent = () => {
     };
 
     useEffect(() => {
-        const token = localStorage.getItem("token");
-        console.log("Token:", token);
-        const tokenExp = localStorage.getItem("token_exp");
-
-        // 检查 token 是否存在，是否过期
-        if (!token || Date.now() > tokenExp) {
-            console.warn("Token expired, logging out...");
-            localStorage.removeItem("token");
-            localStorage.removeItem("token_exp");
-            window.location.href = "/login"; // 自动跳转到登录页面
-            return;
-        }
-
-        // 获取用户信息
-        fetch("/api/user", {
+        // 使用auth check API检查登录状态（从cookie读取token）
+        fetch("/api/auth/check", {
             method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`,
-                "Content-Type": "application/json",
-            },
+            credentials: 'include'
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log("User Data:", data);
-                setUser(data);
+                if (!data.isAuthenticated || !data.user) {
+                    console.warn("Not authenticated, redirecting to login...");
+                    window.location.href = "/login";
+                    return;
+                }
+                
+                // 设置用户信息
+                setUser(data.user);
+                
+                // 获取用户订单（cookie会自动发送）
+                fetch("/api/orders", {
+                    method: "GET",
+                    credentials: 'include',
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                })
+                    .then((res) => res.json())
+                    .then((ordersData) => {
+                        console.log("Orders Data:", ordersData);
+                        setOrders(ordersData);
+                    })
+                    .catch((err) => console.error("Order Fetch Error:", err));
             })
-            .catch((err) => console.error("User Fetch Error:", err));
-
-        // 获取用户订单
-        fetch("/api/orders", {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`,
-                "Content-Type": "application/json",
-            },
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log("Orders Data:", data);
-                setOrders(data);
-            })
-            .catch((err) => console.error("Order Fetch Error:", err));
+            .catch((err) => {
+                console.error("Auth check error:", err);
+                window.location.href = "/login";
+            });
 
         // 获取用户优惠券
         fetch("/api/coupons")
             .then((res) => res.json())
             .then((data) => setCoupons(data));
 
-        // 定时检查 token 是否过期
+        // 定时检查登录状态（cookie过期由服务器端处理）
         const interval = setInterval(() => {
-            const tokenExpCheck = localStorage.getItem("token_exp");
-            if (!tokenExpCheck || Date.now() > tokenExpCheck) {
-                console.warn("Token expired, logging out...");
-                localStorage.removeItem("token");
-                localStorage.removeItem("token_exp");
-                window.location.href = "/login";
-            }
+            fetch("/api/auth/check", {
+                method: "GET",
+                credentials: 'include'
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (!data.isAuthenticated) {
+                        console.warn("Not authenticated, redirecting to login...");
+                        window.location.href = "/login";
+                    }
+                })
+                .catch((err) => {
+                    console.error("Auth check error:", err);
+                });
         }, 60000); // 1分钟检查一次
 
         return () => clearInterval(interval); // 组件卸载时清除定时器
