@@ -5,12 +5,14 @@ import Navbar from "../../components/Navbar";
 import Unit from "../../components/Unit";
 import Footer from "../../components/Footer";
 import SEO from '../../components/SEO';
+import MembershipModal from "../../components/MembershipModal";
 
 export default function ChapterDetail() {
     const router = useRouter();
     const { id } = router.query;
     const [course, setCourse] = useState(null);
     const [currentPath, setCurrentPath] = useState("");
+    const [showMembershipModal, setShowMembershipModal] = useState(false);
 
     // 获取资源类型的辅助函数
     const getResourceType = (path) => {
@@ -105,8 +107,7 @@ export default function ChapterDetail() {
                             
                             if (!permissionData.hasAccess) {
                                 // 需要会员权限但用户不是会员
-                                alert('Membership required to access mindmap content. Please upgrade your account.');
-                                router.push('/dashboard');
+                                setShowMembershipModal(true);
                                 return;
                             }
                         }
@@ -143,6 +144,13 @@ export default function ChapterDetail() {
                     )}
                 </main>
                 <Footer />
+                
+                {/* Membership Modal */}
+                <MembershipModal 
+                    isOpen={showMembershipModal}
+                    onClose={() => setShowMembershipModal(false)}
+                    message="Membership required to access mindmap content. Please upgrade your account to continue."
+                />
             </div>
         );
     }, [course, router.asPath, cleanPath]);

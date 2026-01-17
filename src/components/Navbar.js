@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { getCart } from "../lib/cart";
 import { motion, AnimatePresence } from "framer-motion";
+import MembershipModal from "./MembershipModal";
 
 export default function Navbar() {
     const router = useRouter();
@@ -16,6 +17,7 @@ export default function Navbar() {
     const [username, setUsername] = useState(null);
     const [userRole, setUserRole] = useState(null);
     const [cartCount, setCartCount] = useState(0);
+    const [showMembershipModal, setShowMembershipModal] = useState(false);
     const mobileMenuRef = useRef(null);
     
     useEffect(() => {
@@ -146,8 +148,7 @@ export default function Navbar() {
                 
                 if (!permissionData.hasAccess) {
                     // 需要会员权限但用户不是会员
-                    alert('Membership required to access mindmap content. Please upgrade your account.');
-                    router.push('/dashboard');
+                    setShowMembershipModal(true);
                     return;
                 }
             }
@@ -441,6 +442,13 @@ export default function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
+            
+            {/* Membership Modal */}
+            <MembershipModal 
+                isOpen={showMembershipModal}
+                onClose={() => setShowMembershipModal(false)}
+                message="Membership required to access mindmap content. Please upgrade your account to continue."
+            />
         </nav>
     );
 }
