@@ -329,6 +329,15 @@ export async function batchCheckResourceAccess(userId, resourceIds) {
     return {};
   }
 
+  // 登录用户无法访问任何资源
+  if (userId === null) {
+    const accessMap = {};
+    resourceIds.forEach(id => {
+      accessMap[id] = false;
+    });
+    return accessMap;
+  }
+
   try {
     // 获取所有资源信息（包含类型）
     const placeholders = resourceIds.map((_, i) => `$${i + 1}`).join(',');
@@ -365,28 +374,18 @@ export async function batchCheckResourceAccess(userId, resourceIds) {
       }
     });
 
-    // 批量检查 Mindmap 权限（需要会员）
-    if (mindmapResources.length > 0 && userId) {
-      const membership = await checkMembership(userId);
-      const hasMembership = membership !== null && membership.status === 'active';
-      mindmapResources.forEach(id => {
-        accessMap[id] = hasMembership;
-      });
-    } else {
-      mindmapResources.forEach(id => {
-        accessMap[id] = false;
-      });
-    }
+    // 合并需要会员权限的资源（Mindmap + 价格为-1的资源）
+    const membershipRequiredResources = [...mindmapResources, ...memberResources];
 
-    // 批量检查会员权限
-    if (memberResources.length > 0 && userId) {
+    // 统一检查会员权限
+    if (membershipRequiredResources.length > 0 && userId) {
       const membership = await checkMembership(userId);
       const hasMembership = membership !== null && membership.status === 'active';
-      memberResources.forEach(id => {
+      membershipRequiredResources.forEach(id => {
         accessMap[id] = hasMembership;
       });
     } else {
-      memberResources.forEach(id => {
+      membershipRequiredResources.forEach(id => {
         accessMap[id] = false;
       });
     }
