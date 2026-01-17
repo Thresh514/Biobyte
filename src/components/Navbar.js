@@ -296,7 +296,8 @@ export default function Navbar() {
                             LOGIN
                         </button>
                     )}
-                    <Link href="/cart">
+                    {/* 暂时隐藏购物车 */}
+                    <Link href="/cart" className="hidden">
                         <Image src="/cart.svg" alt="cart" width={28} height={28} />
                         <span className="absolute top-4 right-6 z-50 text-black text-xs px-2 py-1 rounded-full">
                             {cartCount}
@@ -384,8 +385,10 @@ export default function Navbar() {
                                     Login
                                 </motion.button>
                             )}
+                            {/* 暂时隐藏购物车 */}
                             <motion.div
                                 variants={menuItemVariants}
+                                className="hidden"
                             >
                                 <Link href="/cart" className="relative mt-2 block">
                                     <Image src="/cart.svg" alt="cart" width={28} height={28} />
