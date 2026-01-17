@@ -102,7 +102,7 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <TranslationProvider>
                 <Component {...pageProps} />
-                {/*<div className="fixed bottom-8 lg:bottom-16 right-4 lg:right-16 z-50 flex flex-col items-end space-y-4">
+                <div className="fixed bottom-8 lg:bottom-16 right-4 lg:right-16 z-50 flex flex-col items-end space-y-4">
                     <Chatbot 
                         activeComponent={activeComponent} 
                         setActiveComponent={setActiveComponent}
@@ -110,7 +110,7 @@ function MyApp({ Component, pageProps }) {
                         orderHistory={userOrders}
                     />
                     <TranslatorButton />
-                </div> */}
+                </div>
                 {isHomePage && <Scrolldown />}
             </TranslationProvider>
         </>

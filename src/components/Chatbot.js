@@ -100,7 +100,10 @@ export default function Chatbot({ activeComponent, setActiveComponent, user, ord
 
         try {
             // 检查是否是询问订单历史的消息
-            const isOrderHistoryQuery = sanitizedInput.toLowerCase().includes('order') && sanitizedInput.toLowerCase().includes('history');
+            const isOrderHistoryQuery = (
+                sanitizedInput.toLowerCase().includes('order') ||
+                sanitizedInput.includes('订单')
+            );
 
             if (isOrderHistoryQuery && user && orderHistory && orderHistory.length > 0) {
                 // 移除 "Processing..." 消息

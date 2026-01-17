@@ -5,12 +5,14 @@ import Navbar from "../../components/Navbar";
 import Unit from "../../components/Unit";
 import Footer from "../../components/Footer";
 import SEO from '../../components/SEO';
+import MembershipModal from "../../components/MembershipModal";
 
 export default function ChapterDetail() {
     const router = useRouter();
     const { id } = router.query;
     const [course, setCourse] = useState(null);
     const [currentPath, setCurrentPath] = useState("");
+    const [showMembershipModal, setShowMembershipModal] = useState(false);
 
     // 获取资源类型的辅助函数
     const getResourceType = (path) => {
@@ -75,8 +77,45 @@ export default function ChapterDetail() {
                 }
                 return res.json();
             })
-            .then((data) => {
+            .then(async (data) => {
                 console.log("✅ 获取数据成功:", data);
+                
+                // 权限检查：检查用户是否有访问权限
+                const resourceType = getResourceType(router.asPath);
+                if (resourceType) {
+                    try {
+                        const accessCheck = await fetch('/api/auth/check', {
+                            method: 'GET',
+                            credentials: 'include'
+                        });
+                        const authData = await accessCheck.json();
+                        
+                        if (!authData.isAuthenticated) {
+                            // 未登录用户，重定向到登录页面
+                            const currentUrl = encodeURIComponent(router.asPath);
+                            router.push(`/login?redirect=${currentUrl}`);
+                            return;
+                        }
+
+                        // 检查具体资源权限
+                        if (resourceType === 'Mindmap') {
+                            const permissionCheck = await fetch(`/api/check-resource-access?resourceType=Mindmap`, {
+                                method: 'GET',
+                                credentials: 'include'
+                            });
+                            const permissionData = await permissionCheck.json();
+                            
+                            if (!permissionData.hasAccess) {
+                                // 需要会员权限但用户不是会员
+                                setShowMembershipModal(true);
+                                return;
+                            }
+                        }
+                    } catch (error) {
+                        console.error('权限检查失败:', error);
+                    }
+                }
+                
                 setCourse(data);
             })
             .catch((error) => {
@@ -105,6 +144,13 @@ export default function ChapterDetail() {
                     )}
                 </main>
                 <Footer />
+                
+                {/* Membership Modal */}
+                <MembershipModal 
+                    isOpen={showMembershipModal}
+                    onClose={() => setShowMembershipModal(false)}
+                    message="Membership required to access mindmap content. Please upgrade your account to continue."
+                />
             </div>
         );
     }, [course, router.asPath, cleanPath]);

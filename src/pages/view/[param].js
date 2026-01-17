@@ -97,6 +97,28 @@ export default function ViewPage() {
         setError(null);
         
         try {
+            // 首先检查用户登录状态和权限
+            const authCheck = await fetch('/api/auth/check', {
+                method: 'GET',
+                credentials: 'include'
+            });
+            const authData = await authCheck.json();
+            
+            if (!authData.isAuthenticated) {
+                // 未登录用户显示权限错误
+                setError("View Content Not Available");
+                setLoading(false);
+                return;
+            }
+            
+            // 检查具体权限（syllabus vs mindmap）
+            if (resourceInfo.type === 'syllabus-analysis') {
+                // Syllabus Analysis: 登录用户可以访问
+                // 继续加载内容
+            } else {
+                // 其他资源类型的权限检查可以在这里添加
+            }
+            
             const response = await fetch(`/api/getViewContent?file=${encodeURIComponent(fileName)}`);
             if (!response.ok) {
                 throw new Error('Failed to load content');
@@ -375,9 +397,39 @@ export default function ViewPage() {
                 
                 {error && (
                     <div className="flex items-center justify-center h-full">
-                        <div className="text-center">
-                            <h2 className="text-xl font-bold text-red-600 mb-2">Error</h2>
-                            <p className="text-gray-600">{error}</p>
+                        <div className="max-w-lg mx-auto px-6 py-12 text-center">
+                            <div className="bg-white border border-gray-200 rounded-lg shadow-md p-8">
+                                <div className="mb-6">
+                                    <div className="w-16 h-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
+                                        <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <h1 className="text-2xl font-bold text-darker mb-2">
+                                        {error === "View Content Not Available" ? "View Content Not Available" : "Error"}
+                                    </h1>
+                                    <p className="text-gray-700 mb-6">
+                                        {error === "View Content Not Available" 
+                                            ? "Please log in to access this content." 
+                                            : error
+                                        }
+                                    </p>
+                                </div>
+                                
+                                <div className="space-y-4">
+                                    <button
+                                        onClick={() => router.back()}
+                                        className="bg-white text-black border border-black px-6 py-3 hover:bg-black hover:text-white transition duration-300"
+                                    >
+                                        Go Back
+                                    </button>
+                                    {error === "View Content Not Available" && (
+                                        <div className="text-sm text-gray-500">
+                                            Please log in to your account to access the content
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 )}
