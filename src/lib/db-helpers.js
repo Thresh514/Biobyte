@@ -8,9 +8,9 @@ import { pool } from './db';
  */
 export async function checkResourceAccess(userId, resourceId) {
   try {
-    // 1. 获取资源信息
+    // 1. 获取资源信息（包含类型和价格）
     const [resources] = await pool.query(
-      'SELECT price FROM study_resources WHERE id = $1',
+      'SELECT price, type FROM study_resources WHERE id = $1',
       [resourceId]
     );
 
@@ -20,8 +20,24 @@ export async function checkResourceAccess(userId, resourceId) {
 
     const resource = resources[0];
     const price = parseFloat(resource.price);
+    const resourceType = resource.type;
 
-    // 2. 根据价格判断权限类型
+    // 2. 新的权限判断逻辑：基于资源类型
+    if (resourceType === 'Syllabus Analysis') {
+      // Syllabus Analysis: 只需登录
+      return userId !== null;
+    }
+
+    if (resourceType === 'Mindmap') {
+      // Mindmap: 需要会员权限
+      if (!userId) {
+        return false; // 未登录用户无法访问
+      }
+      const membership = await checkMembership(userId);
+      return membership !== null && membership.status === 'active';
+    }
+
+    // 3. 兜底：使用原有的价格逻辑（向后兼容）
     if (price === 0.00) {
       // 免费资源：只需检查用户是否登录
       return userId !== null;
@@ -314,22 +330,32 @@ export async function batchCheckResourceAccess(userId, resourceIds) {
   }
 
   try {
-    // 获取所有资源信息
+    // 获取所有资源信息（包含类型）
     const placeholders = resourceIds.map((_, i) => `$${i + 1}`).join(',');
     const [resources] = await pool.query(
-      `SELECT id, price FROM study_resources WHERE id IN (${placeholders})`,
+      `SELECT id, price, type FROM study_resources WHERE id IN (${placeholders})`,
       resourceIds
     );
 
     const accessMap = {};
+    const syllabusResources = [];
+    const mindmapResources = [];
     const freeResources = [];
     const memberResources = [];
     const paidResources = [];
 
-    // 分类资源
+    // 分类资源：优先按类型，然后按价格
     resources.forEach(resource => {
       const price = parseFloat(resource.price);
-      if (price === 0.00) {
+      const resourceType = resource.type;
+      
+      if (resourceType === 'Syllabus Analysis') {
+        syllabusResources.push(resource.id);
+        accessMap[resource.id] = userId !== null; // 只需登录
+      } else if (resourceType === 'Mindmap') {
+        mindmapResources.push(resource.id);
+        // 需要会员权限，稍后批量检查
+      } else if (price === 0.00) {
         freeResources.push(resource.id);
         accessMap[resource.id] = userId !== null; // 免费资源只需登录
       } else if (price === -1.00) {
@@ -338,6 +364,19 @@ export async function batchCheckResourceAccess(userId, resourceIds) {
         paidResources.push(resource.id);
       }
     });
+
+    // 批量检查 Mindmap 权限（需要会员）
+    if (mindmapResources.length > 0 && userId) {
+      const membership = await checkMembership(userId);
+      const hasMembership = membership !== null && membership.status === 'active';
+      mindmapResources.forEach(id => {
+        accessMap[id] = hasMembership;
+      });
+    } else {
+      mindmapResources.forEach(id => {
+        accessMap[id] = false;
+      });
+    }
 
     // 批量检查会员权限
     if (memberResources.length > 0 && userId) {

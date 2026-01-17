@@ -119,6 +119,49 @@ export default function Navbar() {
         router.push('/');
     };
 
+    // 处理菜单项点击，加入权限检查
+    const handleMenuClick = async (slug, category) => {
+        try {
+            // 检查用户登录状态
+            const authCheck = await fetch('/api/auth/check', {
+                method: 'GET',
+                credentials: 'include'
+            });
+            const authData = await authCheck.json();
+            
+            if (!authData.isAuthenticated) {
+                // 未登录用户，重定向到登录页面
+                const currentUrl = encodeURIComponent(`/unit/${slug}`);
+                router.push(`/login?redirect=${currentUrl}`);
+                return;
+            }
+            
+            // 如果是 Mindmap，检查会员权限
+            if (category === 'Mindmaps') {
+                const permissionCheck = await fetch(`/api/check-resource-access?resourceType=Mindmap`, {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+                const permissionData = await permissionCheck.json();
+                
+                if (!permissionData.hasAccess) {
+                    // 需要会员权限但用户不是会员
+                    alert('Membership required to access mindmap content. Please upgrade your account.');
+                    router.push('/dashboard');
+                    return;
+                }
+            }
+            
+            // 权限检查通过，正常导航
+            router.push(`/unit/${slug}`);
+            
+        } catch (error) {
+            console.error('Menu click error:', error);
+            // 出错时还是允许导航，由目标页面处理权限
+            router.push(`/unit/${slug}`);
+        }
+    };
+
     const handleDashboard = async () => {
         // 如果userRole已经加载，直接使用
         if (userRole === 'admin') {
@@ -240,7 +283,7 @@ export default function Navbar() {
                                         {items.map((item) => (
                                             <li key={item.slug}>
                                                 <button
-                                                    onClick={() => router.push(`/unit/${item.slug}`)}
+                                                    onClick={() => handleMenuClick(item.slug, category)}
                                                     className="relative text-gray-800 font-light tracking-wider hover:text-black transition-colors 
                                                     before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-full before:h-[1.5px] before:bg-gray-600 
                                                     before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
