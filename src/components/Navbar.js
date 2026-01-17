@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { getCart } from "../lib/cart";
 import { motion, AnimatePresence } from "framer-motion";
-import MembershipModal from "./MembershipModal";
 
 export default function Navbar() {
     const router = useRouter();
@@ -17,7 +16,6 @@ export default function Navbar() {
     const [username, setUsername] = useState(null);
     const [userRole, setUserRole] = useState(null);
     const [cartCount, setCartCount] = useState(0);
-    const [showMembershipModal, setShowMembershipModal] = useState(false);
     const mobileMenuRef = useRef(null);
     
     useEffect(() => {
@@ -121,46 +119,9 @@ export default function Navbar() {
         router.push('/');
     };
 
-    // 处理菜单项点击，加入权限检查
-    const handleMenuClick = async (slug, category) => {
-        try {
-            // 检查用户登录状态
-            const authCheck = await fetch('/api/auth/check', {
-                method: 'GET',
-                credentials: 'include'
-            });
-            const authData = await authCheck.json();
-            
-            if (!authData.isAuthenticated) {
-                // 未登录用户，重定向到登录页面
-                const currentUrl = encodeURIComponent(`/unit/${slug}`);
-                router.push(`/login?redirect=${currentUrl}`);
-                return;
-            }
-            
-            // 如果是 Mindmap，检查会员权限
-            if (category === 'Mindmaps') {
-                const permissionCheck = await fetch(`/api/check-resource-access?resourceType=Mindmap`, {
-                    method: 'GET',
-                    credentials: 'include'
-                });
-                const permissionData = await permissionCheck.json();
-                
-                if (!permissionData.hasAccess) {
-                    // 需要会员权限但用户不是会员
-                    setShowMembershipModal(true);
-                    return;
-                }
-            }
-            
-            // 权限检查通过，正常导航
-            router.push(`/unit/${slug}`);
-            
-        } catch (error) {
-            console.error('Menu click error:', error);
-            // 出错时还是允许导航，由目标页面处理权限
-            router.push(`/unit/${slug}`);
-        }
+    // 处理菜单项点击，直接导航（权限检查由目标页面处理）
+    const handleMenuClick = (slug) => {
+        router.push(`/unit/${slug}`);
     };
 
     const handleDashboard = async () => {
@@ -284,7 +245,7 @@ export default function Navbar() {
                                         {items.map((item) => (
                                             <li key={item.slug}>
                                                 <button
-                                                    onClick={() => handleMenuClick(item.slug, category)}
+                                                    onClick={() => handleMenuClick(item.slug)}
                                                     className="relative text-gray-800 font-light tracking-wider hover:text-black transition-colors 
                                                     before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-full before:h-[1.5px] before:bg-gray-600 
                                                     before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
@@ -301,6 +262,12 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden md:flex items-center space-x-6">
+                    {/* Membership Button */}
+                    <Link href="/membership">
+                        <button className="hover:text-black transition-colors p-2">
+                            MEMBERSHIP
+                        </button>
+                    </Link>
                     {/* User Dropdown */}
                     {isLoggedIn ? (
                         <div
@@ -397,6 +364,13 @@ export default function Navbar() {
                             className="mt-6 mb-4 flex flex-col space-y-2 justify-center items-center py-3 border-t border-gray-200"
                             variants={menuItemVariants}
                         >
+                            <motion.div
+                                variants={menuItemVariants}
+                            >
+                                <Link href="/membership" className="font-light tracking-wider hover:text-black transition-colors">
+                                    Membership
+                                </Link>
+                            </motion.div>
                             {isLoggedIn ? (
                                 <div className="flex flex-col items-center space-y-2">
                                     <motion.span 
@@ -445,13 +419,6 @@ export default function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-            
-            {/* Membership Modal */}
-            <MembershipModal 
-                isOpen={showMembershipModal}
-                onClose={() => setShowMembershipModal(false)}
-                message="Membership required to access mindmap content. Please upgrade your account to continue."
-            />
         </nav>
     );
 }

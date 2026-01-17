@@ -1,0 +1,876 @@
+[
+  {
+    "id": "root_0",
+    "label": "Transport in mammal",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "circulatory system",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "why we need circulatory system",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "large animal has small surface area to volume ratio, so the diffusion is not efficient",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "circulatory system carry fluid to allowed more efficient exchange",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "human circulatory system",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "heart",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_0",
+                    "label": "four chamber",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_0_child_0",
+                        "label": "atrium",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_0_child_0_child_0",
+                            "label": "receive blood from vein and push blood into ventricle",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_0_child_1",
+                        "label": "ventricle",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_0_child_1_child_0",
+                            "label": "pumped blood out of heart to artery receive blood from atrium",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_1",
+                    "label": "flows of blood",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_0",
+                        "label": "right atrium > tricuspid valve > right ventricle > pulmonary artery > lung >",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_1",
+                        "label": "pulmonary vein > left atrium > bicuspid valve > left ventricle > aorta > rest",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_2",
+                        "label": "of body > vena cava > right atrium",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_3",
+                        "label": "rest of body: aorta > artery > arteriole > capillary > venule > vein > vena",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_4",
+                        "label": "cava",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_2",
+                    "label": "cardiac cycle",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_2_child_0",
+                        "label": "ventricular systole",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_0_child_0",
+                            "label": "both ventricles contrast and blood pressure inside ventricle spike",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_0_child_1",
+                            "label": "atrioventricular valves are pushed closed",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_0_child_2",
+                            "label": "semi-lunar valves in aorta and pulmonary artery all pushed open",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_0_child_3",
+                            "label": "blood flows from ventricle into artery",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_2_child_1",
+                        "label": "ventricular diastole",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_1_child_0",
+                            "label": "ventricle relax and blood pressure inside ventricle decrease",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_1_child_1",
+                            "label": "semi-lunar valve in the aorta or pulmonary artery are pushed close",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_1_child_2",
+                            "label": "blood flows from vein into atrium",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_2_child_2",
+                        "label": "atrial systole",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_2_child_0",
+                            "label": "both atrium contrast and blood pressure inside atrium increase",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_2_child_2_child_1",
+                            "label": "blood flows from atrium into ventricle",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_3",
+                    "label": "control of heart beats",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_3_child_0",
+                        "label": "myogenic",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_0_child_0",
+                            "label": "cardiac muscle naturally contrast and relax rhythmically",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_3_child_1",
+                        "label": "sinoartrial node (SAN)---pacemaker",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_1_child_0",
+                            "label": "SAN contract and sends out electrical impulses across the entire atrial",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_1_child_1",
+                            "label": "wall",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_1_child_2",
+                            "label": "the cardiac muscles in atrial wall receive the impulses and contract,",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_1_child_3",
+                            "label": "which leads to atrial systole",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_3_child_2",
+                        "label": "atrioventricular node (AVN)",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_2_child_0",
+                            "label": "delay for 0.1 second",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_2_child_1",
+                            "label": "AVN receive the impulse and delay for 0.1 second to ensure the",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_2_child_2",
+                            "label": "completion of atrial systole",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_2_child_3",
+                            "label": "AVN sends the electrical impulse down the septum along the Purkyne",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_2_child_4",
+                            "label": "tissue to apex",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_2_child_5",
+                            "label": "the impulse sweep upward through the ventricular walls, ventricle",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_2_child_6",
+                            "label": "contract.",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_3_child_2_child_7",
+                            "label": "ventricle relax",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "double closed circulatory system",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_0",
+                    "label": "double: the blood flow through heart twice in one circuit",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_1",
+                    "label": "closed: the blood flow in blood vessel",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "blood vessel",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_0",
+                    "label": "artery",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_0",
+                        "label": "carry high pressure blood, away from heart( 120mmHg for maximum)",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_1",
+                        "label": "outer layer (tunica externa)",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_0_child_1_child_0",
+                            "label": "collagen fibers, elastic fibers (elastin)",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_2",
+                        "label": "middle layer (tunica medium)",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_0_child_2_child_0",
+                            "label": "elastic fibers, smooth muscle",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_3",
+                        "label": "inner layer (tunica intima)",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_0_child_3_child_0",
+                            "label": "endothelium",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_0_child_1_child_2_child_0_child_3_child_0_child_0",
+                                "label": "squamous",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_4",
+                        "label": "lumen",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_0_child_4_child_0",
+                            "label": "relative small",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_5",
+                        "label": "elastic artery",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_0_child_5_child_0",
+                            "label": "high elastic fiber and low smooth muscle",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_6",
+                        "label": "muscular artery",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_0_child_6_child_0",
+                            "label": "low elastic fiber and high smooth muscle",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_1",
+                    "label": "vein",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_1_child_0",
+                        "label": "carry low pressure blood, toward heart ( 5mmHg maximum)",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_1_child_1",
+                        "label": "how to transport blood",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_1_child_1_child_0",
+                            "label": "muscle contraction can generate pressure to the blood in vein",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_1_child_1_child_1",
+                            "label": "semi-lunar valve ensure an one-way flow of blood",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_2",
+                    "label": "capillary",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_2_child_0",
+                        "label": "5-10 micrometer in diameter",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_2_child_1",
+                        "label": "pore",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_2_child_2",
+                        "label": "single layer of cell called squamous endothelium",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_3",
+                    "label": "vasoconstriction and vasodilation",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_3_child_0",
+                        "label": "decrease and increase in blood flow",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "blood",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "plasma",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "95% water",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_0_child_1",
+                "label": "glucose",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_0_child_2",
+                "label": "amino acid",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_0_child_3",
+                "label": "mineral ion",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_3_child_0",
+                    "label": "sodium ion, potassium ion,  hydrogen carbonate ion",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_4",
+                "label": "urea",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_0_child_5",
+                "label": "hormones",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_0_child_6",
+                "label": "plasma protein (fibrinogen, antibody. albumin)",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "red blood cell (erythrocyte)",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "biconcave structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_0_child_0",
+                    "label": "decrease the distance for oxygen to bind hemoglobin",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "7 micrometer in diameter",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_1_child_0",
+                    "label": "allow slow movement in capillary",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_1_child_2",
+                "label": "a specialized cytoskeleton allows RBC to restore its shape upon narrower",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_3",
+                "label": "capillaries",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_4",
+                "label": "no nucleus no mitochondria no ER",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_4_child_0",
+                    "label": "provide more room for hemoglobin",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "white blood cell",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "phagocyte",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_0",
+                    "label": "neutrophile",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_2_child_0_child_0_child_0",
+                        "label": "multi-lobed nucleus",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_2_child_0_child_0_child_1",
+                        "label": "destroy pathogen by phagocytosis",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_1",
+                    "label": "macrophage",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_2_child_0_child_1_child_0",
+                        "label": "monocyte is precursor",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_2_child_0_child_1_child_1",
+                        "label": "has a kidney-shaped nucleus",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_2_child_1",
+                "label": "lymphocyte",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_2_child_1_child_0",
+                    "label": "B lymphocyte",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_1_child_1",
+                    "label": "T lymphocyte",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_1_child_2",
+                    "label": "large nucleus that almost occupies the whole cell",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_3",
+            "label": "platelet",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_3_child_0",
+                "label": "blood clotting",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "tissue fluid (interstitial fluid)",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "the plasma leak out of capillaries",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "low concentration of plasma protein",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "why use water as a solvent",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "see Chapter 2",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_1",
+                "label": "water is polar",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_2",
+                "label": "can form hydrogen bond",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_3",
+                "label": "high specific heat capacity",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_3_child_0",
+                    "label": "maintain relative stable temperature",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "transport of oxygen",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "hemoglobin",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_0_child_0",
+                "label": "one heme group can bind to two oxygen atoms",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_0_child_1",
+                "label": "oxygen dissociation curve",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_0",
+                    "label": "the binding of the first oxygen molecule makes the second and the third",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_1",
+                    "label": "binding of oxygen easier, that is steeply increase in middle",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_2",
+                    "label": "hemoglobin percentage saturation",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_2_child_0",
+                        "label": "20%-25% in respiring tissue",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_2_child_1",
+                        "label": "95%-97% in lungs",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_3",
+                    "label": "Bohr shift",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_0",
+                        "label": "carbon dioxide combines with water to form carbonic acid under the",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_1",
+                        "label": "catalysis of carbonic anhydrase in the red blood cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_2",
+                        "label": "carbonic acid dissociates into protons and hydrogen carbonate in the red",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_3",
+                        "label": "blood cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_4",
+                        "label": "hemoglobin dissociation curve will shift to the right",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_5",
+                        "label": "the formation of hemoglobinic acid will decrease the affinity between",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_6",
+                        "label": "hemoglobin and oxygen",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -13,17 +13,24 @@ export default function handler(req, res) {
     }
 
     try {
-        // 构建文件路径
-        const filePath = path.join(process.cwd(), 'output', file);
+        // Syllabus Analysis 文件从 public/syllabus_analysis/ 目录读取
+        const filePath = path.join(process.cwd(), 'public', 'syllabus_analysis', file);
         
-        // 检查文件是否存在
-        if (!fs.existsSync(filePath)) {
-            return res.status(404).json({ error: 'File not found' });
+        // 如果文件不存在，尝试从旧路径读取（向后兼容）
+        let fileContent;
+        if (fs.existsSync(filePath)) {
+            fileContent = fs.readFileSync(filePath, 'utf8');
+        } else {
+            // 向后兼容：尝试从 output/ 目录读取
+            const fallbackPath = path.join(process.cwd(), 'output', file);
+            if (fs.existsSync(fallbackPath)) {
+                fileContent = fs.readFileSync(fallbackPath, 'utf8');
+            } else {
+                console.error(`File not found: ${filePath}`);
+                return res.status(404).json({ error: 'File not found' });
+            }
         }
 
-        // 读取文件内容
-        const fileContent = fs.readFileSync(filePath, 'utf8');
-        
         // 解析JSON
         const jsonData = JSON.parse(fileContent);
         

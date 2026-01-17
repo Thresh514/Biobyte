@@ -12,7 +12,10 @@ const FloatUI = ({
     isFullscreen,
     onUndo,
     onRedo,
-    currentUnit
+    currentUnit,
+    mindmapNodeTree,
+    mindmapTitle,
+    isMindmap
 }) => {
     // 位置配置 - 在这里调整各个组件的位置
     const positions = {
@@ -75,6 +78,8 @@ const FloatUI = ({
                     selectedUnitId={selectedUnitId}
                     onUnitChange={onUnitChange}
                     onInteractiveModeChange={onInteractiveModeChange}
+                    mindmapNodeTree={mindmapNodeTree}
+                    isMindmap={isMindmap}
                 />
             </div>
 
@@ -83,6 +88,8 @@ const FloatUI = ({
                     currentUnit={currentUnit}
                     onUndo={onUndo}
                     onRedo={onRedo}
+                    mindmapTitle={mindmapTitle}
+                    isMindmap={isMindmap}
                 />
             </div>
 
@@ -94,6 +101,7 @@ const FloatUI = ({
                 <BottomRightControlBar
                     onFullscreenToggle={onFullscreenToggle}
                     isFullscreen={isFullscreen}
+                    isMindmap={isMindmap}
                 />
             </div>
         </>

@@ -1,0 +1,742 @@
+[
+  {
+    "id": "root_0",
+    "label": "biomolecule",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "protein",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "function",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "enzyme",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "hemoglobin-oxygen carry pigment",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_2",
+                "label": "structural protein",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_2_child_0",
+                    "label": "collagen",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_2_child_1",
+                    "label": "kertain",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_3",
+                "label": "hormones",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_4",
+                "label": "receptor on cell surface membrane",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_5",
+                "label": "transport protein on the cell membrane",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_6",
+                "label": "antibody",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "structure",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "monomer: amino acid",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_0",
+                    "label": "test: add biuret solution",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_1",
+                    "label": "protein present, color turn to purple",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "primary structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_0",
+                    "label": "a sequence of amino acid",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_1",
+                    "label": "condensation by peptide bond",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "secondary structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_0",
+                    "label": "hydrogen bond between oxygen on the carbonyl group and the hydrogen on",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_1",
+                    "label": "the nitrogen",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_2",
+                    "label": "alpha-helix",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_3",
+                    "label": "beta-pleated sheet",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_3",
+                "label": "tertiary structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_0",
+                    "label": "the interaction between the R group of the different amino acids",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_1",
+                    "label": "disulfide bond",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_2",
+                    "label": "ionic bond",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_3",
+                    "label": "weak hydrophobic interaction",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_4",
+                    "label": "hydrogen bond",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_4",
+                "label": "quaternary structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_4_child_0",
+                    "label": "more than one polypeptide chain working together as a functional",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_4_child_1",
+                    "label": "macromolecule",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_4_child_2",
+                    "label": "interaction between polypeptide",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_5",
+                "label": "fibrous protein",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_5_child_0",
+                    "label": "structural function",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_5_child_1",
+                    "label": "insoluble in water as the R group of the amino acids are mostly non-polar",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_5_child_2",
+                    "label": "collegen",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_5_child_2_child_0",
+                        "label": "alpha helix> triple helix( by hydrogen bond)> 3 polypeptide> collagen",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_5_child_2_child_1",
+                        "label": "molecule> collagen fibrils> collagen fiber",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_6",
+                "label": "globular protein",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_6_child_0",
+                    "label": "soluble in water",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_6_child_0_child_0",
+                        "label": "non-polar amino acids are facing inward",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_6_child_1",
+                    "label": "hemoglobin",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_6_child_1_child_0",
+                        "label": "haem group",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_6_child_1_child_0_child_0",
+                            "label": "a type of prosthetic group, iron can bind oxygen.",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_6_child_1_child_1",
+                        "label": "each subunit can bind one oxygen molecule",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_6_child_1_child_2",
+                        "label": "sickle cell anaemia",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_6_child_1_child_2_child_0",
+                            "label": "genetic disease",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "lipid",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "glycerol+ fatty acid( by ester linkage)",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "function",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "energy storage",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "heat insulator",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_2",
+                "label": "buoyancy",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_3",
+                "label": "reserve for water",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "test of lipid",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "lipid is dissolved in ethanol",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_1",
+                "label": "add water",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_2",
+                "label": "shake vigorously",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_3",
+                "label": "lipid droplet appear",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "carbohydrate",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "monosaccharide(reducing sugar)",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "glucose",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_0",
+                    "label": "alpha-glucose",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_1",
+                    "label": "beta-glucose",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_1",
+                "label": "fructose",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_2",
+                "label": "galactose",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_3",
+                "label": "test for reducing sugar",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_3_child_0",
+                    "label": "add Benedict's solution(CuSO4 in base environment)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_3_child_1",
+                    "label": "water bath in beaker(70- 80 degree)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_3_child_2",
+                    "label": "blue> green> orange> brick-red ppt.",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "disaccharide(reducing sugar (except sucrose)",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "maltose",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_0",
+                    "label": "alpha-glucose+ alpha-glucose",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "sucrose",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_0",
+                    "label": "test",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_0_child_0",
+                        "label": "make sure no reducing sugar in solution",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_0_child_1",
+                        "label": "water bath with hydrochloric acid",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_0_child_2",
+                        "label": "HCI can catalyzes the hydrolysis of sucrose and form fructose and glucose(",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_0_child_3",
+                        "label": "add NaHCO3 to neutralize)",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_0_child_4",
+                        "label": "add Benedict's solution, if it turns to brick-red ppt, sucrose exists",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_1",
+                    "label": "alpha-glucose+fructose",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_2",
+                "label": "lactose",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_2_child_0",
+                    "label": "alpha-glucose+ galactose",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_3",
+                "label": "through condensation by 1,4-glycosidic bond",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "polysaccharide",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "starch",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_0_child_0",
+                    "label": "amylose",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_0_child_0",
+                        "label": "1,4-glycosidic bond",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_0_child_1",
+                        "label": "helical structure",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_0_child_2",
+                        "label": "unbranched",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_0_child_1",
+                    "label": "amylopectin",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_1_child_0",
+                        "label": "1,4/1,6-glycosidic bond",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_1_child_1",
+                        "label": "branched",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_0_child_2",
+                    "label": "test for starch",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_2_child_0",
+                        "label": "add iodine solution( orange brown)",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_2_child_1",
+                        "label": "turn to dark blue",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_1",
+                "label": "glycogen",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_1_child_0",
+                    "label": "highly branched(1,4/1,6-glycosidic bond)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_1_child_1",
+                    "label": "in the liver and muscle fibers",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_2",
+                "label": "cellulose",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_2_child_0",
+                    "label": "made up the plant cell wall",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_2_child_1",
+                    "label": "condensation by the beta-glucose rotated 180 degree",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "nucleic acid",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_0_child_4",
+        "label": "water",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_4_child_0",
+            "label": "hydrogen bond",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_4_child_0_child_0",
+                "label": "a type of intermolecular force",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_4_child_1",
+            "label": "surface tension",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_2",
+            "label": "density",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_3",
+            "label": "specific heat capacity",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_4",
+            "label": "freezing point",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_5",
+            "label": "latent heat of vaporization",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_5",
+        "label": "microfibril",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_6",
+        "label": "cellulose fiber",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_7",
+        "label": "cell wall",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_8",
+        "label": "nucleophilic attack: linar structure to ring structure",
+        "side": "right",
+        "children": []
+      }
+    ]
+  }
+]

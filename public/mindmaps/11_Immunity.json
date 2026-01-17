@@ -1,0 +1,1389 @@
+[
+  {
+    "id": "root_0",
+    "label": "Immunity",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "Immunity system",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "innate immunity",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "physical",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_0",
+                    "label": "skin",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_1",
+                    "label": "blood clotting",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_0_child_0_child_1_child_0",
+                        "label": "fibrinogen",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_0_child_1_child_1",
+                        "label": "platelet",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_2",
+                    "label": "mucus (in trachea)",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "chemical",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_1_child_0",
+                    "label": "macrophage (phagocyte)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_1_child_1",
+                    "label": "stomachic acid",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "acquired immunity",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "B- lymphocyte",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "T- lymphocyte",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "Antigen",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "cell marker on the cell surface membrane",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "self antigen",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "produced by the organism's own body cells. Immune system does not recognize as",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "foreign antigen.",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "non-self antigen",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "not produced by the organism's own body cells. (found on pathogenic bacteria",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_1",
+                "label": "and virus or donated blood/ organs)",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "Types of cells",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "phagocytes",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "neutrophil",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_0",
+                    "label": "multi- lobed nucleus",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_1",
+                    "label": "made up 70% of white blood cell",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_2",
+                    "label": "act as \"patrol\" in bloodstream",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_3",
+                    "label": "short lifespan",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_4",
+                    "label": "made in bone narrow",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_5",
+                    "label": "mode of action of phagocytosis",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_0",
+                        "label": "Chemotaxis: chemicals released by pathogens and cells under attack attract",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_1",
+                        "label": "neutrophil to the site",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_2",
+                        "label": "Recognition and Attachment",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_2_child_0",
+                            "label": "neutrophlis attach to the bacteria directly",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_2_child_1",
+                            "label": "neutrophils bind to the bacteria that are marked by antibodies with the",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_2_child_2",
+                            "label": "receptor on the cell surface membrane",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_3",
+                        "label": "Phagocytosis",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_3_child_0",
+                            "label": "the netrophils engulf and trap bacteria inside a phagosome",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_4",
+                        "label": "Lysosomes fuse with phagosome and destroy the bacteria with lysosomes/",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_5",
+                        "label": "hydrolytic enzyme",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_6",
+                        "label": "After digestion, neutrophils die",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_1",
+                "label": "macrophage/ monocyte",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_0",
+                    "label": "made up 5% of white blood cell",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_1",
+                    "label": "long lifespan",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_2",
+                    "label": "remains in blood in few days (monocyte) then migrate into organs including",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_3",
+                    "label": "lungs, liver, spleen, kidney and lymph nodes (macrophage)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_4",
+                    "label": "mode of action of phagocytosis",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_4_child_0",
+                        "label": "Chemotaxis: chemicals released by pathogens and cells under attack attract",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_4_child_1",
+                        "label": "neutrophil to the site",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_4_child_2",
+                        "label": "Recognition and Attachment",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_1_child_4_child_2_child_0",
+                            "label": "neutrophlis attach to the bacteria directly",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_0_child_1_child_4_child_2_child_1",
+                            "label": "neutrophils bind to the bacteria that are marked by antibodies with the",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_0_child_1_child_4_child_2_child_2",
+                            "label": "receptor on the cell surface membrane",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_4_child_3",
+                        "label": "Phagocytosis",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_1_child_4_child_3_child_0",
+                            "label": "the netrophils engulf and trap bacteria inside a phagosome",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_4_child_4",
+                        "label": "Lysosomes fuse with phagosome and destroy the bacteria with lysosomes/",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_4_child_5",
+                        "label": "hydrolytic enzyme",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_4_child_6",
+                        "label": "After digestion, neutrophils die",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_5",
+                    "label": "act as antigen-presenting cell (APC)",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_5_child_0",
+                        "label": "instead of destorying the pathogens completely, they isolate and display the",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_5_child_1",
+                        "label": "antigen to the lymphocytes.",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "lymphocytes",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "B lymphocytes",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_0",
+                    "label": "first found in bone marrows, that's why it is called \"B\".",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_1",
+                    "label": "produced and mature in BM, spread to lymph nodes and spleen.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_2",
+                    "label": "millions of different B cells are produced upon birth, each with a specific",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_3",
+                    "label": "antibody receptor.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_4",
+                    "label": "primary immune response",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_4_child_0",
+                        "label": "When B cells recognize the displayed antigens from APC, it will become",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_4_child_1",
+                        "label": "activated.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_4_child_2",
+                        "label": "The activated B cells undergo clonal selection and expansion.",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_1_child_0_child_4_child_2_child_0",
+                            "label": "clonal expansion",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_1_child_0_child_4_child_2_child_0_child_0",
+                                "label": "the increase in number of specific clones of B cell by mitosis",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_0_child_4_child_2_child_1",
+                            "label": "clonal selection",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_1_child_0_child_4_child_2_child_1_child_0",
+                                "label": "an individual B cell have an antibody receptor complementary to an",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_1_child_0_child_4_child_2_child_1_child_1",
+                                "label": "antigen and become stimulated.",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_4_child_3",
+                        "label": "Some B cells differentiate into plasma cells that produce antibodies against",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_4_child_4",
+                        "label": "the pathogen.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_4_child_5",
+                        "label": "Antibodies are released into the bloodstream, where they can bind to and",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_4_child_6",
+                        "label": "neutralize the pathogen.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_4_child_7",
+                        "label": "Some B cells become memory B cells, providing long-term immunity.",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_5",
+                    "label": "secondary immune response",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_5_child_0",
+                        "label": "If the same antigen is found in the body in the second time, the memory",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_5_child_1",
+                        "label": "cells recognize the antigen, divide rapidly and differentiate into plasma cells",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_5_child_2",
+                        "label": "and memory cells. Plasma cells secrete antibodies.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_5_child_3",
+                        "label": "quicker, the infection can be destoryed annd removed before the pathogen",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_5_child_4",
+                        "label": "replicate.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_5_child_5",
+                        "label": "the response is extremely fast and more antibodies produced.",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "T lymphocytes",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_0",
+                    "label": "act as antigen presenting cell",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_1",
+                    "label": "two types",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_1_child_0",
+                        "label": "T-helper cell",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_1_child_1",
+                        "label": "T-killer cell",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_1_child_1_child_0",
+                            "label": "a.k.a T-cytotoxic cell",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_2",
+                    "label": "millions of different T cells are produced upon birth, each with a specific",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_3",
+                    "label": "antibody receptor.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_4",
+                    "label": "origin and mature in thymus, that's why it is called \"T\".",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_5",
+                    "label": "mode of action",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_5_child_0",
+                        "label": "T-helper cell",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_0_child_0",
+                            "label": "Antigen presentation",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_1_child_1_child_5_child_0_child_0_child_0",
+                                "label": "T cells are activated when they recognize antigens displayed on the",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_1_child_1_child_5_child_0_child_0_child_1",
+                                "label": "surface of host cells, such as macrophages or infected body cells.",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_0_child_1",
+                            "label": "When activated, T-helper cells release cytokines.",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_1_child_1_child_5_child_0_child_1_child_0",
+                                "label": "cytokines: signaling molecules that stimulate B cells to divide and",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_1_child_1_child_5_child_0_child_1_child_1",
+                                "label": "develop into plasma cells, secreting antibodies.",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_0_child_2",
+                            "label": "Some T-helper cells also stimulate macrophages to carry out",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_0_child_3",
+                            "label": "phagocytosis more effectively.",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_5_child_1",
+                        "label": "T-killer cell",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_1_child_0",
+                            "label": "T-killer cells search for infected cells displaying foreign antigens.",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_1_child_1",
+                            "label": "Attaching to these cells and release toxic substances, such as hydrogen",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_1_child_2",
+                            "label": "peroxide, to kill both the infected cells and the pathogens inside them.",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_5_child_2",
+                        "label": "Memory Cells",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_2_child_0",
+                            "label": "After the primary immune response, memory T-helper and T-killer cells",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_5_child_2_child_1",
+                            "label": "are produced.",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_1_child_1_child_5_child_2_child_1_child_0",
+                                "label": "The memory cells remain in the body and can quickly become active",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_1_child_1_child_5_child_2_child_1_child_1",
+                                "label": "during a secondary response to the same antigen.",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "Antibody",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "plasma protein",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "globular glycoprotein with quaternary structure, and are involving immunity",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_2",
+            "label": "produced by plasma cell",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_3",
+            "label": "Immunoglobin",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_3_child_0",
+                "label": "IgG",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_3_child_1",
+                "label": "IgE",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_3_child_2",
+                "label": "IgM",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_4",
+            "label": "Structure",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_4_child_0",
+                "label": "composed of four polypeptide chains.",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_4_child_0_child_0",
+                    "label": "two identical heavy chains",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_4_child_0_child_1",
+                    "label": "two identical light chains",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_4_child_0_child_2",
+                    "label": "linked together by disulfide bridge",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_4_child_0_child_3",
+                    "label": "Y-shaped structure",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_4_child_1",
+                "label": "Each antibody chain has two main regions.",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_4_child_1_child_0",
+                    "label": "variable region",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_4_child_1_child_0_child_0",
+                        "label": "located at the tips of the Y-shaped arms and is responsible for binding to",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_4_child_1_child_0_child_1",
+                        "label": "specific antigens.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_4_child_1_child_1",
+                    "label": "constant region",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_4_child_2",
+                "label": "The tips of the Y-shaped arms contain antigen-binding sites, which are highly",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_3",
+                "label": "variable and specific to the epitopes of antigen.",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_4_child_3_child_0",
+                    "label": "epitope: the part of antigen that antibodies bind",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_4_child_4",
+                "label": "hinge region",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_4_child_4_child_0",
+                    "label": "gives flexibility which allows antigen binding site to be placed at different",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_4_child_4_child_1",
+                    "label": "angles when binding to antigen.",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_5",
+            "label": "How to work",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_5_child_0",
+                "label": "combines with virus and prevent infection",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_5_child_1",
+                "label": "attach to flagella of bacteria, making them less active and easy to engulf",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_5_child_2",
+                "label": "cause agglutination of bacteria",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_5_child_3",
+                "label": "punches holes on the cell wall of bacteria, and ell will die by osmosis.",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_5_child_4",
+                "label": "phagocyte bind to the constant region of an antibody with a receptor and engulf a",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_5_child_5",
+                "label": "\"marked\" bacterium.",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_5_child_6",
+                "label": "Antibody neutralize the toxin by binding to the toxin. (a.k.a antitoxin)",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_6",
+            "label": "monoclonal antibodies",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_6_child_0",
+                "label": "Hybridoma method",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_6_child_0_child_0",
+                    "label": "Monoclonal antibodies are artificially produced antibodies produced from a",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_0_child_1",
+                    "label": "single B cell clone",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_0_child_2",
+                    "label": "Monoclonal antibodies bind antigens, in the same way naturally produced",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_0_child_3",
+                    "label": "antibodies do",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_0_child_4",
+                    "label": "The method enables large quantities of identical antibodies to be produced",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_0_child_5",
+                    "label": "Steps",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_6_child_0_child_5_child_0",
+                        "label": "Injecting mice with an antigen that stimulates the production of antibody-",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_6_child_0_child_5_child_1",
+                        "label": "producing plasma cells",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_6_child_0_child_5_child_2",
+                        "label": "Isolated plasma cells from the mice are fused with immortal tumour cells,",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_6_child_0_child_5_child_3",
+                        "label": "which result in hybridoma cells",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_6_child_0_child_5_child_4",
+                        "label": "The fusion of plasma and tumour by electric current",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_6_child_0_child_5_child_5",
+                        "label": "These hybrid cells are grown in a selective growth medium and screened for",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_6_child_0_child_5_child_6",
+                        "label": "the production of the desired antibody",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_6_child_0_child_5_child_7",
+                        "label": "They are then cultured to produce large numbers of monoclonal antibodies",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_6_child_1",
+                "label": "Applications",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_6_child_1_child_0",
+                    "label": "Pregnancy tests",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_1_child_1",
+                    "label": "Diagnosing HIV",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_1_child_2",
+                    "label": "Detecting the presence of pathogens",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_1_child_3",
+                    "label": "Blood typing before transfusions and tissue typing before transplants",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_1_child_4",
+                    "label": "Detecting the presence of antibiotics in milk",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_6_child_1_child_5",
+                    "label": "Detecting cancer cells",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_4",
+        "label": "type of immunity",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_4_child_0",
+            "label": "active immunity",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_0_child_0",
+                "label": "acquired when an antigen enters the body triggering a specific immune response",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_0_child_0_child_0",
+                    "label": "antibodies are produced",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_0_child_1",
+                "label": "natural active immunity",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_0_child_1_child_0",
+                    "label": "get wound",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_0_child_2",
+                "label": "artificial active immunity",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_0_child_2_child_0",
+                    "label": "vaccine",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_4_child_0_child_2_child_0_child_0",
+                        "label": "a suspension of antigen that are intentionally put into the body to induce",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_0_child_2_child_0_child_1",
+                        "label": "artificial active immunity",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_0_child_2_child_0_child_2",
+                        "label": "types",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_4_child_0_child_2_child_0_child_2_child_0",
+                            "label": "inactivated vaccine",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_4_child_0_child_2_child_0_child_2_child_0_child_0",
+                                "label": "contain pathogens that are killed",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_4_child_0_child_2_child_0_child_2_child_1",
+                            "label": "lived attennated",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_4_child_0_child_2_child_0_child_2_child_1_child_0",
+                                "label": "contain pathogens that are weakened or attennated",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_4_child_0_child_2_child_0_child_2_child_2",
+                            "label": "RNA vaccine",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_4_child_0_child_2_child_0_child_2_child_2_child_0",
+                                "label": "mRNA enter muscle cells and instruct the cells to produce a spike",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_4_child_0_child_2_child_0_child_2_child_2_child_1",
+                                "label": "protein",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_0_child_3",
+                "label": "production of memory cells",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_0_child_3_child_0",
+                    "label": "long-term immunity",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_4_child_1",
+            "label": "passive immunity",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_1_child_0",
+                "label": "acquired without an immune response",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_0",
+                    "label": "antibodies are acquired from other organisms",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_1_child_1",
+                "label": "no memory cells",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_1_child_1_child_0",
+                    "label": "no long-term immunity",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_1_child_2",
+                "label": "natural passive immunity",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_1_child_2_child_0",
+                    "label": "mother give child antibodies through placenta",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_2_child_1",
+                    "label": "mother give child antibodies through breast milk",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_1_child_3",
+                "label": "artificial passive immunity",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_1_child_3_child_0",
+                    "label": "injection of antibodies",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_5",
+        "label": "Herd immunity",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_5_child_0",
+            "label": "enough people are vaacinated at the same time",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_5_child_1",
+            "label": "problems",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_5_child_1_child_0",
+                "label": "people who are malnourished or immunodeficient have poor response to vaccines",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_1_child_1",
+                "label": "antigenic concealment",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_5_child_1_child_1_child_0",
+                    "label": "pathogens hide from immunity by living inside cells",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_1_child_1_child_1",
+                    "label": "pathogens coat their bodies in host proteins",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_1_child_1_child_2",
+                    "label": "pathogen parasiting immune celss such macrophage and T-cell (HIV)",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_1_child_1_child_3",
+                    "label": "pathogens remain in parts of body that immune cells cannot reach.",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_5_child_1_child_1_child_3_child_0",
+                        "label": "vibrio cholerae in small intestine",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_5_child_1_child_2",
+                "label": "antigenic variation",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_5_child_1_child_2_child_0",
+                    "label": "the variation in the antigen of pathogens causes vaccines to not trigger an",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_1_child_2_child_1",
+                    "label": "immune response (HIV)",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_1_child_2_child_2",
+                    "label": "too many antigens",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_5_child_1_child_2_child_2_child_0",
+                        "label": "plasmodium",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

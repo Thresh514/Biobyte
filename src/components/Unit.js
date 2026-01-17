@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import Image from 'next/image';
 
-const ProductDetail = memo(({ title, description, image, image1, image2, price, type, options, file_path, currentUrl }) => {
+const ProductDetail = memo(({ title, description, image, image1, image2, price, type, options, file_path, currentUrl, onShowMembershipModal }) => {
     const router = useRouter();
     const [selectedOption, setSelectedOption] = useState(null);
     const [totalPrice, setTotalPrice] = useState(price || 0);
@@ -199,27 +199,78 @@ const ProductDetail = memo(({ title, description, image, image1, image2, price, 
         }
     };
 
+    // 获取资源类型的辅助函数
+    const getResourceType = (path) => {
+        if (path.includes('syllabus-analysis')) return 'Syllabus Analysis';
+        if (path.includes('mindmap')) return 'Mindmap';
+        return null;
+    };
+
     const handleView = async () => {
         // 直接使用当前URL的路径参数
         const currentPath = currentUrl || router.asPath;
         console.log(`🚀 当前URL路径: ${currentPath}`);
         
-        // 从URL中提取参数，例如: /unit/AS%20Mindmap%20Chapter%202 -> AS Mindmap Chapter 2
-        const urlParam = currentPath.split('/unit/')[1];
-        if (!urlParam) {
-            console.error("❌ 无法从URL中提取参数");
-            return;
+        // 1. 检查用户登录状态
+        try {
+            const authCheck = await fetch('/api/auth/check', {
+                method: 'GET',
+                credentials: 'include'
+            });
+            const authData = await authCheck.json();
+            
+            if (!authData.isAuthenticated) {
+                // 未登录：重定向到登录页
+                const redirectUrl = encodeURIComponent(router.asPath);
+                router.push(`/login?redirect=${redirectUrl}`);
+                return;
+            }
+
+            // 2. 检查资源类型和会员权限
+            const resourceType = getResourceType(currentPath);
+            
+            if (resourceType === 'Mindmap') {
+                const permissionCheck = await fetch(`/api/check-resource-access?resourceType=Mindmap`, {
+                    method: 'GET',
+                    credentials: 'include'
+                });
+                const permissionData = await permissionCheck.json();
+                
+                if (!permissionData.hasAccess) {
+                    // 没有会员权限：显示弹窗（通过prop回调）
+                    if (onShowMembershipModal) {
+                        onShowMembershipModal();
+                    }
+                    return;
+                }
+            }
+
+            // 3. 权限通过，正常跳转
+            const urlParam = currentPath.split('/unit/')[1];
+            if (!urlParam) {
+                console.error("❌ 无法从URL中提取参数");
+                return;
+            }
+            
+            const decodedParam = decodeURIComponent(urlParam);
+            console.log("📌 解码后的URL参数:", decodedParam);
+            
+            // 构建view路由URL，直接传递URL参数
+            const viewUrl = `/view/${encodeURIComponent(decodedParam)}`;
+            console.log("✅ 跳转到查看页面:", viewUrl);
+            
+            // 跳转到view页面
+            router.push(viewUrl);
+        } catch (error) {
+            console.error('权限检查失败:', error);
+            // 出错时仍然尝试跳转，由目标页面处理权限
+            const urlParam = currentPath.split('/unit/')[1];
+            if (urlParam) {
+                const decodedParam = decodeURIComponent(urlParam);
+                const viewUrl = `/view/${encodeURIComponent(decodedParam)}`;
+                router.push(viewUrl);
+            }
         }
-        
-        const decodedParam = decodeURIComponent(urlParam);
-        console.log("📌 解码后的URL参数:", decodedParam);
-        
-        // 构建view路由URL，直接传递URL参数
-        const viewUrl = `/view/${encodeURIComponent(decodedParam)}`;
-        console.log("✅ 跳转到查看页面:", viewUrl);
-        
-        // 跳转到view页面
-        router.push(viewUrl);
     };
 
 

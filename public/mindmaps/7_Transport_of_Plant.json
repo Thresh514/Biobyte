@@ -1,0 +1,678 @@
+[
+  {
+    "id": "root_0",
+    "label": "Transport in Plant",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "structure",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "leave",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "epidermis",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_0",
+                    "label": "cuticle",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_0_child_0_child_0_child_0",
+                        "label": "waterproof material",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "xylem and phloem",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_2",
+                "label": "palisade mesophyll",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_3",
+                "label": "sponge mesophyll",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_4",
+                "label": "stomata",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "stem",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "epidermis",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "cortex",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "vascular bundle",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_3",
+                "label": "cambium",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_4",
+                "label": "pith",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "root",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_2_child_0",
+                "label": "epidermis",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_1",
+                "label": "cortex",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_2",
+                "label": "endodermis",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_3",
+                "label": "vascular bundle",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_3",
+            "label": "vascular bundle",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_3_child_0",
+                "label": "xylem",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_0_child_0",
+                    "label": "xylem vessel element",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_0_child_0_child_0",
+                        "label": "hollowed tube",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_3_child_0_child_0_child_1",
+                        "label": "lignified cell wall",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_3_child_0_child_0_child_1_child_0",
+                            "label": "waterproof",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_3_child_0_child_0_child_2",
+                        "label": "pit to allow lateral movement",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_3_child_0_child_0_child_3",
+                        "label": "spiral thickening",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_0_child_1",
+                    "label": "transport water and mineral ions",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_1",
+                "label": "phloem",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_0",
+                    "label": "sieve tube element",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_0_child_0",
+                        "label": "no nucleus, tonoplast or ribosome",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_0_child_1",
+                        "label": "less organelles",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_1",
+                    "label": "companion cell",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_1_child_0",
+                        "label": "the twice number of organelles",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_2",
+                    "label": "transport organic substance",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "transport of organic substances",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "assimilates are transported from source to sink",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "source",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_0_child_0",
+                    "label": "the region of plant that produce assimilates",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_1",
+                "label": "sink",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_1_child_0",
+                    "label": "the region of plant that remove assimilates",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_2",
+                "label": "sucrose, amino acid, hormone",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "loading sucrose into phloem",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "proton pump on the cell surface membrane of companion cell actively transport",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "protons out of the cell. this is active transport using ATP",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_2",
+                "label": "the transport generate a proton concentration gradient across the membrane",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_3",
+                "label": "proton-sucrose cotransporter allows proton diffuse into companion cell down the",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_4",
+                "label": "concentration gradient",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_5",
+                "label": "sucrose can move into the cell along with proton through the cotransporter against",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_6",
+                "label": "the concentration gradient",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_7",
+                "label": "sucrose diffuse into sieve tube element through plasmodesmata down the",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_8",
+                "label": "concentration gradient",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_9",
+                "label": "the entry of sucrose lower the water potential in the sieve tube element",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_10",
+                "label": "water diffuse into sieve tube element by osmosis",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_11",
+                "label": "hydrostatis pressure increase",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "transport of water and mineral ions",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "leave",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "transpairation",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_0",
+                    "label": "water vapor in air space diffuses into the atmosphere through stomata down",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_1",
+                    "label": "the water potential gradient",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_2",
+                    "label": "water on the mesophyll cell walls evaporates into the air space",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_3",
+                    "label": "water in xylem leaves through pits and enters the mesophyll cell wall",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_4",
+                    "label": "water moves up the xylem to replace the water loss in the leaves",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_5",
+                    "label": "factor on the rate",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_0",
+                        "label": "temperature",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_0_child_0",
+                            "label": "higher temperature, rate increase",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_1",
+                        "label": "humidity",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_1_child_0",
+                            "label": "higher humidity, rate decrease",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_2",
+                        "label": "wind speed",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_2_child_0",
+                            "label": "increase in speed, rate increase",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_5_child_3",
+                        "label": "light intensity",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_3_child_0",
+                            "label": "light> stomata open> rate increase",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_0_child_0_child_5_child_3_child_1",
+                            "label": "dark> stomata close> rate decrease",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_1",
+                "label": "water movement between cells",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_0",
+                    "label": "symplast pathway",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_0_child_0",
+                        "label": "water moves through the cell surface membrane and tonoplast by osmosis",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_0_child_1",
+                        "label": "water enter adjacent cell by plasmodesmata",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_1",
+                    "label": "apoplast pathway",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_1_child_1_child_0",
+                        "label": "water moves through the cell walls and air space",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "stem",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "cohesion-tension theory",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_0",
+                    "label": "transpiration pull",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_1",
+                    "label": "hydrogen bond between water molecules",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_1_child_0",
+                        "label": "to move as a continuous column",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "adhesion",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_0",
+                    "label": "intermolecular force between water and cellulose",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_0_child_0",
+                        "label": "pull water upward",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "roots",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "movement across endodermis",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_0_child_0",
+                    "label": "Casparian strip",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_0_child_0",
+                        "label": "suberin- waterproof",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_0_child_1",
+                    "label": "passage cell",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_1_child_0",
+                        "label": "control the movement of mineral ions",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_1",
+                "label": "water movement between cells",
+                "side": "right",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "xerophyte plant feature",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "rolled up leave",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "stomata are formed on the upper epidermis",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_2",
+            "label": "hairs on the upper epidermis help to retain moist air",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_3",
+            "label": "sunken stomata can retain water vapor",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_4",
+            "label": "flattened photosynthetic stem to reduce surface area and to store water",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_5",
+            "label": "the leaves reduce to spine which lessen the surface area",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_6",
+            "label": "trichomes are hair like structure and as barrier to water loss",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_7",
+            "label": "thick waterproof cuticle on the epidermis can prevent water loss",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_8",
+            "label": "swollen succulent stems store water and coat with wax",
+            "side": "right",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

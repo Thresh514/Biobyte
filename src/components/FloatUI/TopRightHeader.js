@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Share, Settings, User, LogOut, UserCircle } from 'lucide-react';
+import { Share, Settings, User, LogOut, UserCircle, HelpCircle } from 'lucide-react';
 
 const TopRightHeader = () => {
     const [showUserMenu, setShowUserMenu] = useState(false);
     const [copied, setCopied] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userInfo, setUserInfo] = useState(null);
+    const [showInstructions, setShowInstructions] = useState(false);
 
     // 检查用户登录状态
     useEffect(() => {
@@ -64,8 +65,48 @@ const TopRightHeader = () => {
         return name.charAt(0).toUpperCase();
     };
 
+    // 切换操作提示显示
+    const handleInstructionsToggle = () => {
+        setShowInstructions(!showInstructions);
+    };
+
+    // 操作提示内容
+    const instructionsContent = (
+        <div className="absolute top-12 right-0 bg-white rounded-md shadow-sm p-4 w-80 z-30 animate-in fade-in-0 slide-in-from-top-2 duration-300">
+            <div className="text-sm text-gray-700">
+                <h3 className="font-semibold mb-2 text-gray-900">操作指南</h3>
+                <div className="space-y-2">
+                    <div className="flex items-start">
+                        <span className="text-gray-500 mr-2">•</span>
+                        <span>鼠标滚轮：缩放</span>
+                    </div>
+                    <div className="flex items-start">
+                        <span className="text-gray-500 mr-2">•</span>
+                        <span>左键拖拽：平移</span>
+                    </div>
+                    <div className="flex items-start">
+                        <span className="text-gray-500 mr-2">•</span>
+                        <span>点击节点：展开/收起</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
     return (
         <div className="flex items-center space-x-3 bg-transparent py-2 px-5 rounded-md shadow-sm space-x-4">
+                {/* 操作提示按钮 */}
+                <div className="relative">
+                    <button
+                        onClick={handleInstructionsToggle}
+                        className="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded transition-all duration-200 ease-in-out"
+                        title="操作指南"
+                    >
+                        <HelpCircle className="w-6 h-6" />
+                    </button>
+                    {showInstructions && instructionsContent}
+                </div>
+
                 {/* Share按钮 */}
                 <button 
                     onClick={handleShare}

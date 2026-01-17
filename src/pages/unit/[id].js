@@ -77,45 +77,8 @@ export default function ChapterDetail() {
                 }
                 return res.json();
             })
-            .then(async (data) => {
+            .then((data) => {
                 console.log("✅ 获取数据成功:", data);
-                
-                // 权限检查：检查用户是否有访问权限
-                const resourceType = getResourceType(router.asPath);
-                if (resourceType) {
-                    try {
-                        const accessCheck = await fetch('/api/auth/check', {
-                            method: 'GET',
-                            credentials: 'include'
-                        });
-                        const authData = await accessCheck.json();
-                        
-                        if (!authData.isAuthenticated) {
-                            // 未登录用户，重定向到登录页面
-                            const currentUrl = encodeURIComponent(router.asPath);
-                            router.push(`/login?redirect=${currentUrl}`);
-                            return;
-                        }
-
-                        // 检查具体资源权限
-                        if (resourceType === 'Mindmap') {
-                            const permissionCheck = await fetch(`/api/check-resource-access?resourceType=Mindmap`, {
-                                method: 'GET',
-                                credentials: 'include'
-                            });
-                            const permissionData = await permissionCheck.json();
-                            
-                            if (!permissionData.hasAccess) {
-                                // 需要会员权限但用户不是会员
-                                setShowMembershipModal(true);
-                                return;
-                            }
-                        }
-                    } catch (error) {
-                        console.error('权限检查失败:', error);
-                    }
-                }
-                
                 setCourse(data);
             })
             .catch((error) => {
@@ -139,6 +102,7 @@ export default function ChapterDetail() {
                         <Unit 
                             {...course}
                             currentUrl={router.asPath}
+                            onShowMembershipModal={() => setShowMembershipModal(true)}
                             key={router.asPath} // 添加 key 属性以强制组件重新渲染
                         />
                     )}

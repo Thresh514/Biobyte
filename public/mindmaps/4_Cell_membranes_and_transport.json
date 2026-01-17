@@ -1,0 +1,655 @@
+[
+  {
+    "id": "root_0",
+    "label": "membrane structure and",
+    "side": "center",
+    "children": []
+  },
+  {
+    "id": "root_1",
+    "label": "transport",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_1_child_0",
+        "label": "membrane transport",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_1_child_0_child_0",
+            "label": "passive transport",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_0_child_0_child_0",
+                "label": "diffusion",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_0_child_0_child_0",
+                    "label": "the net movement of particle down the concentration gradient",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_0_child_0_child_1",
+                    "label": "no energy required",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_0_child_1",
+                "label": "osmosis: the net movement of water molecule",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_0_child_1_child_0",
+                    "label": "water potential",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_1_child_0_child_0_child_1_child_0_child_0",
+                        "label": "the measurement of the tendency of water molecule to move",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_0_child_0_child_1_child_0_child_1",
+                        "label": "ψ(kPa)",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_1_child_0_child_0_child_1_child_0_child_1_child_0",
+                            "label": "ψ(water)=0",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_1_child_0_child_0_child_1_child_0_child_1_child_1",
+                            "label": "ψ(NaCl solution)<0",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_1_child_0_child_0_child_1_child_0_child_2",
+                        "label": "the environment has lower water potential than cell fluid: cell burst (cell is",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_0_child_0_child_1_child_0_child_3",
+                        "label": "turgid)",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_0_child_0_child_1_child_0_child_4",
+                        "label": "the environment has higher water potential than cell fluid: cell shrink(cell is",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_0_child_0_child_1_child_0_child_5",
+                        "label": "flaccid> the protoplast is removed from cell wall> the cell is",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_0_child_0_child_1_child_0_child_6",
+                        "label": "plasmolysed/plasmolysis)",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_0_child_2",
+                "label": "facilitated diffusion",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_0_child_2_child_0",
+                    "label": "the transport of substances across a cell membrane down the concentration",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_0_child_2_child_1",
+                    "label": "gradient with the help of transport protein",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_0_child_3",
+                "label": "rate of passive transportation",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_0_child_3_child_0",
+                    "label": "concentration gradient increase, velocity increase",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_0_child_3_child_1",
+                    "label": "temperature increase, velocity increase",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_0_child_3_child_2",
+                    "label": "nature of the molecules or ions",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_0_child_3_child_3",
+                    "label": "surface area increase, velocity increase",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_0_child_3_child_4",
+                    "label": "distance increase, velocity decrease",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_0_child_1",
+            "label": "active transport: the substance move against the concentration gradient with the ATP",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_0_child_2",
+            "label": "requirement",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_0_child_2_child_0",
+                "label": "carrier protein",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_2_child_0_child_0",
+                    "label": "sodium- potassium pump",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_1_child_0_child_2_child_0_child_0_child_0",
+                        "label": "out: 3Na ions",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_0_child_2_child_0_child_0_child_1",
+                        "label": "in: 2K ions",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_1_child_0_child_2_child_0_child_1",
+                    "label": "can be active transport or passive transport",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_2_child_0_child_2",
+                    "label": "it switches between two comformation",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_2_child_1",
+                "label": "channel protein",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_2_child_1_child_0",
+                    "label": "embedded in the cell surface membrane, allowed ions, small polar molecules to",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_2_child_1_child_1",
+                    "label": "pass through their hydrophilic tunnel",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_2_child_1_child_2",
+                    "label": "hydrophobic region embedded in the middle of the cell surface membrane",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_2_child_2",
+                "label": "bulk transport",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_2_child_2_child_0",
+                    "label": "endocytosis",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_1_child_0_child_2_child_2_child_0_child_0",
+                        "label": "phagocytosis: the ingestion of the particles larger than 0.5 μm in diameter",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_0_child_2_child_2_child_0_child_1",
+                        "label": "pinocytosis: the ingestion of surrounding fluid",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_0_child_2_child_2_child_0_child_2",
+                        "label": "receptor- mediated endocytosis(virus antigen bind with receptor)",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_1_child_0_child_2_child_2_child_1",
+                    "label": "exocytosis",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_1_child_0_child_2_child_2_child_1_child_0",
+                        "label": "secretion of enzyme/ antibody/ hormones",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_0_child_3",
+            "label": "the types of the transportation for the different types of molecule",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_0_child_3_child_0",
+                "label": "small non-polar molecule(oxygen, carbon dioxide, small lipids)",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_3_child_0_child_0",
+                    "label": "diffusion",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_3_child_1",
+                "label": "small polar molecule(water, urea)",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_3_child_1_child_0",
+                    "label": "water: osmosis",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_3_child_1_child_1",
+                    "label": "urea: facilitated diffusion",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_3_child_2",
+                "label": "large polar molecule(glucose, sucrose)",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_3_child_2_child_0",
+                    "label": "carrier protein",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_3_child_3",
+                "label": "charged ions(potassium ion, sodium ion)",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_3_child_3_child_0",
+                    "label": "channel protein",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_1",
+        "label": "membrane structure",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_1_child_1_child_0",
+            "label": "phospholipid",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_1_child_0_child_0",
+                "label": "phospholipid bilayer constitute the basic structure of cell membrane",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_0_child_1",
+                "label": "with hydrophilic head and hydrophobic tail",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_1_child_1",
+            "label": "protein",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_1_child_1_child_0",
+                "label": "glycoprotein",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_1_child_1_child_0_child_0",
+                    "label": "act as cell marker",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_1_child_1_child_1_child_0_child_0_child_0",
+                        "label": "cell recognition",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_1_child_1_child_0_child_0_child_1",
+                        "label": "antigen",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_1_child_1_child_1_child_0_child_1",
+                    "label": "receptor",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_1_child_1_child_1_child_0_child_1_child_0",
+                        "label": "endocytosis",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_1_child_1_child_0_child_1_child_1",
+                        "label": "cell adhesion",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_1_child_1_child_0_child_1_child_2",
+                        "label": "cell signalling",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_1_child_1_child_1_child_0_child_1_child_2_child_0",
+                            "label": "pathway of the G-protein couple receptor",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_1_child_1_child_1",
+                "label": "transport protein",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_1_child_1_child_1_child_0",
+                    "label": "channel protein",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_1_child_1_child_1",
+                    "label": "carrier protein",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_1_child_1_child_2",
+                "label": "extrinsic protein",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_1_child_2",
+            "label": "lipid",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_1_child_2_child_0",
+                "label": "cholesterol",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_1_child_2_child_0_child_0",
+                    "label": "small molecule",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_0_child_1",
+                    "label": "prevent ion leakage",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_0_child_2",
+                    "label": "maintain the mechanical stability of cell membrane",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_0_child_3",
+                    "label": "maintain the fluidity of the cell membrane",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_1_child_1_child_2_child_0_child_3_child_0",
+                        "label": "at high temp. reduce the fluidity to prevent membrane to break",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_1_child_2_child_0_child_3_child_1",
+                        "label": "at low temp. maintain the fluidity and preventing close packing",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_1_child_2_child_1",
+                "label": "glycolipid",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_1_child_2_child_1_child_0",
+                    "label": "see \"glycoprotein\"",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_1_child_1",
+                    "label": "form hydrogen bond with water molecule (glycocalyx)",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_1_child_3",
+            "label": "fluid mosaic model",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_1_child_3_child_0",
+                "label": "the membrane is made of components such as phospholipids, glycoproteins,",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_3_child_1",
+                "label": "glycolipids and cholesterol. the components on the membrane are constantly",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_3_child_2",
+                "label": "moving",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_3_child_3",
+                "label": "factors of fluidity",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_1_child_3_child_3_child_0",
+                    "label": "temperature increase, fluidity increase",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_3_child_3_child_1",
+                    "label": "double bond on the fatty acid increase, fluidity increase",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_3_child_3_child_2",
+                    "label": "length of the fatty acid chain increase, fluidity decrease",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_3_child_3_child_3",
+                    "label": "cholesterol",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_2",
+        "label": "the ligand has a complementary shape to the binding site of the",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_1_child_3",
+        "label": "receptor, the binding is specific",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_1_child_4",
+        "label": "the binding induced a comformational change to the receptor and",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_1_child_5",
+        "label": "activates a G-protein",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_1_child_6",
+        "label": "the activated G-protein activate a enzyme",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_1_child_7",
+        "label": "the enzyme catalyzes a conversion that produces second messanger.",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_1_child_8",
+        "label": "this amplifies the signal",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_1_child_9",
+        "label": "the second messager triggered an enzyme cascade, and finally the cell",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_1_child_10",
+        "label": "produces a response",
+        "side": "right",
+        "children": []
+      }
+    ]
+  }
+]

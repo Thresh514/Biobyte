@@ -1,0 +1,668 @@
+[
+  {
+    "id": "root_0",
+    "label": "Nucleic acids and protein",
+    "side": "center",
+    "children": []
+  },
+  {
+    "id": "root_1",
+    "label": "synthesis",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_1_child_0",
+        "label": "nucleic acid",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_1_child_0_child_0",
+            "label": "monomer: nucleotide /polymer: nucleic acid",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_0_child_1",
+            "label": "ribonucleic acid (RNA)",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_0_child_1_child_0",
+                "label": "pentose sugar",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_0_child_1_child_1",
+                "label": "nitrogenous base",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_1_child_1_child_0",
+                    "label": "adenine",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_1_child_1_child_1",
+                    "label": "uracil",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_1_child_1_child_2",
+                    "label": "cytosine",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_1_child_1_child_3",
+                    "label": "guanine",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_1_child_2",
+                "label": "phosphate group",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_0_child_2",
+            "label": "deoxyribonucleic acid (DNA)",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_0_child_2_child_0",
+                "label": "pentose sugar",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_0_child_2_child_1",
+                "label": "nitrogenous base",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_0_child_2_child_1_child_0",
+                    "label": "adenine (purine: two ring structure)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_2_child_1_child_1",
+                    "label": "thymine(pyrimidine: single ring structure)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_2_child_1_child_2",
+                    "label": "cytosine( pyrimidine)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_0_child_2_child_1_child_3",
+                    "label": "guanine (purine)",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_0_child_2_child_2",
+                "label": "phosphate group",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_0_child_2_child_3",
+                "label": "double helix and antiparallel",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_0_child_3",
+            "label": "Adenosine Triphosphate",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_0_child_3_child_0",
+                "label": "ATP+H2O <=> ADP+ H3PO4 ( enthalpy change= -30.5kJ/mol)",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_0_child_4",
+            "label": "phosphodiester bond",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_0_child_5",
+            "label": "the ability to store information and can control the behavior of the cell",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_0_child_6",
+            "label": "the ability to copy itself accuratelly",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_1",
+        "label": "DNA replication( S phase)",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_1_child_1_child_0",
+            "label": "semi-conservative replication",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_1_child_1",
+            "label": "the end-replication problem",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_1_child_1_child_0",
+                "label": "after each DNA replication the end of each DNA molecule is shorten",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_1_child_2",
+            "label": "steps of replication",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_1_child_2_child_0",
+                "label": "DNA double helix unwinds and the hydrogen bonds  between the complementary",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_2_child_1",
+                "label": "bases break using DNA helicase",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_2_child_2",
+                "label": "both of the strands are used as the template and the complementary base pairing",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_2_child_3",
+                "label": "occurs between the template strand and free",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_2_child_4",
+                "label": "activatednucleotides",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_2_child_5",
+                "label": "adjacent nucleotides are joined by phosphodiester bonds formed in condensation",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_2_child_6",
+                "label": "reaction using DNA polymerase",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_1_child_1_child_2_child_7",
+                "label": "DNA polymerase",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_1_child_1_child_2_child_7_child_0",
+                    "label": "only works in the 5' to 3' direction",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_7_child_1",
+                    "label": "add nucleotide from 3' end of the new strand",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_7_child_2",
+                    "label": "the leading strand is replicated continuously in the 5' to 3' direction",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_7_child_3",
+                    "label": "the second strand which is called the lagging strand is repliacted",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_7_child_4",
+                    "label": "discontinuously in the 5' to 3' direction and forming Okazaki fragments",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_1_child_2_child_7_child_5",
+                    "label": "DNA ligase join the Okazaki fragment and the leading strand together",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_2",
+        "label": "mutation",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_1_child_2_child_0",
+            "label": "change in DNA sequence",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_1_child_2_child_1",
+            "label": "substitution mutation",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_2_child_1_child_0",
+                "label": "a base replaced by different base",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_2_child_1_child_1",
+                "label": "sickle cell anaemia",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_2_child_1_child_1_child_0",
+                    "label": "CTT> CAT",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_2_child_1_child_1_child_1",
+                    "label": "hemoglobin",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_2_child_2",
+            "label": "deletion mutation",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_2_child_2_child_0",
+                "label": "frame shift",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_2_child_3",
+            "label": "addition mutation",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_2_child_3_child_0",
+                "label": "add a base",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_2_child_4",
+            "label": "non-sense mutation",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_2_child_4_child_0",
+                "label": "mutation occurs on the non-coding region like introns",
+                "side": "right",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_3",
+        "label": "protein synthesis",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_1_child_3_child_0",
+            "label": "transcription",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_3_child_0_child_0",
+                "label": "take place in nucleus",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_3_child_0_child_1",
+                "label": "RNA polymerase transcribe a segment of DNA",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_3_child_0_child_2",
+                "label": "steps of transcription",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_3_child_0_child_2_child_0",
+                    "label": "the hydrogen bonds between the complementary bases break and the DNA",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_0_child_2_child_1",
+                    "label": "uncoils, separating the two strands by DNA helicase",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_0_child_2_child_2",
+                    "label": "one of the DNA strands is used as a template to make the mRNA molecule",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_0_child_2_child_3",
+                    "label": "which is called the template strand",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_0_child_2_child_4",
+                    "label": "free nucleotide bind to the exposed bases via complementary base pairing",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_0_child_2_child_5",
+                    "label": "adjacent nucleotide are joined by phosphodiester bonds to form mRNA by RNA",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_0_child_2_child_6",
+                    "label": "polymerase",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_3_child_0_child_3",
+                "label": "post-transcriptional modification",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_3_child_0_child_3_child_0",
+                    "label": "RNA splicing",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_0_child_3_child_1",
+                    "label": "RNA modification",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_3_child_1",
+            "label": "translation",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_3_child_1_child_0",
+                "label": "genetic code",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_3_child_1_child_0_child_0",
+                    "label": "triplet codes",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_1_child_3_child_1_child_0_child_0_child_0",
+                        "label": "a sequence of 3 consecutive nucleotides that codes for a specific amino",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_3_child_1_child_0_child_0_child_1",
+                        "label": "acid",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_1_child_3_child_1_child_0_child_0_child_2",
+                        "label": "START codon",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_1_child_3_child_1_child_0_child_0_child_2_child_0",
+                            "label": "AUG>>methione",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_1_child_3_child_1_child_0_child_0_child_3",
+                        "label": "STOP codon",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_1_child_3_child_1_child_0_child_0_child_3_child_0",
+                            "label": "UAA/ UAG/ UGA",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_1_child_3_child_1_child_0_child_0_child_4",
+                        "label": "codon: RNA triplet",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_0_child_1",
+                    "label": "gene is a sequence of DNA nucleotide that can code for peptide",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_3_child_1_child_1",
+                "label": "transfer RNA",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_3_child_1_child_1_child_0",
+                    "label": "clover shape",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_1_child_1",
+                    "label": "anticodon region",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_1_child_2",
+                    "label": "amino acid arm",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_1_child_3",
+                    "label": "61 different types of RNA",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_3_child_1_child_2",
+                "label": "ribosome (80s)",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_3_child_1_child_2_child_0",
+                    "label": "made in nucleolus",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_2_child_1",
+                    "label": "ribosomal protein and rRNA",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_2_child_2",
+                    "label": "large subunit: 60s/ small subunit: 40s",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_3_child_1_child_3",
+                "label": "steps of translation",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_0",
+                    "label": "mRNA strand bind to a ribosome",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_1",
+                    "label": "ribosome read the first codon",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_2",
+                    "label": "tRNA containing the complementary anticodon can bind to the codon forming",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_3",
+                    "label": "complementary base pairs",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_4",
+                    "label": "a second tRNA binds to the second codon",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_5",
+                    "label": "the amino acid in the first codon forms peptide bond with the second amino",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_6",
+                    "label": "acid with peptidyl transferase",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_7",
+                    "label": "the ribosome moves down the mRNA and continue to elongate the peptide",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_1_child_3_child_1_child_3_child_8",
+                    "label": "chain until it reaches a STOP codon",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_3_child_2",
+            "label": "central dogma",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_3_child_2_child_0",
+                "label": "DNA> mRNA> peptide/ protein",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_3_child_2_child_1",
+                "label": "virus: reverse transcriptase (RNA> DNA)",
+                "side": "right",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

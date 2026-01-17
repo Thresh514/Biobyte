@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import { Search, ChevronLeft, ChevronRight, Undo, Redo } from 'lucide-react';
 
-const TopLeftHeader = ({ currentUnit, onUndo, onRedo }) => {
+const TopLeftHeader = ({ currentUnit, onUndo, onRedo, mindmapTitle, isMindmap }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [searchResults, setSearchResults] = useState({
@@ -255,10 +255,15 @@ const TopLeftHeader = ({ currentUnit, onUndo, onRedo }) => {
                     </div>
                 </Link>
                 
-                {currentUnit && (
+                {(currentUnit || (isMindmap && mindmapTitle)) && (
                     <div className="p-2 bg-white flex-shrink-0 max-w-xs">
                         <span className="font-semibold text-gray-800 text-md whitespace-nowrap">
-                            Unit {currentUnit.id}: {currentUnit.name}
+                            {isMindmap && mindmapTitle 
+                                ? mindmapTitle
+                                : currentUnit 
+                                    ? `Unit ${currentUnit.id}: ${currentUnit.name}`
+                                    : ''
+                            }
                         </span>
                     </div>
                 )}

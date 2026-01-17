@@ -1,0 +1,811 @@
+[
+  {
+    "id": "root_0",
+    "label": "cell",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "microscope",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "light microscope",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "can observe large organelles, cell, tissue, organ, organism",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "live cell",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_2",
+                "label": "stained",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_3",
+                "label": "color image",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_4",
+                "label": "visible light source",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_4_child_0",
+                    "label": "red light 700nm/ violet light 400nm",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "electron microscope",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "transmission electron microscope",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "scanning electron microscope",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "radiation: electrons",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_3",
+                "label": "wavelength: 0.5nm- 10nm",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_4",
+                "label": "in the magnetic field",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_5",
+                "label": "white and black image",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_6",
+                "label": "dead speciman",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_7",
+                "label": "can observe small organelles and virus",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "magnification",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_2_child_0",
+                "label": "M=I/A",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "virus",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "non-living",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "structure",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "capsomere",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "capsid",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_2",
+                "label": "genetic material",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_2_child_0",
+                    "label": "DNA",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_1_child_2_child_1",
+                    "label": "rRNA",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_1_child_3",
+                "label": "viral envelope: phospholipid",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "hijack nucleus to produce own viral DNA",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "eukayotes cell structure",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "plant cell",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "chloroplast",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_0",
+                    "label": "structure",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_0_child_0",
+                        "label": "inner membrane",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_0_child_1",
+                        "label": "outer membrane",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_0_child_2",
+                        "label": "thylakoid",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_0_child_3",
+                        "label": "stroma",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_0_child_4",
+                        "label": "grana",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_1",
+                    "label": "site of photosynthesis",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_2",
+                    "label": "10nm",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_1",
+                "label": "cell wall",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_0",
+                    "label": "made of cellulose",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_1",
+                    "label": "maintain the cell shape",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_2",
+                    "label": "freely permeable",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_3",
+                    "label": "fungi cell wall: made of chitin",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_2",
+                "label": "vacuole",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_2_child_0",
+                    "label": "variable in size",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_2_child_1",
+                    "label": "large permenant vesicle",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_2_child_2",
+                    "label": "maintain the turgor pressure of a plant cell",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_2_child_3",
+                    "label": "store sugar, mineral salts and pigments",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_2_child_4",
+                    "label": "tonoplast",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_3",
+                "label": "plasmodesmata",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "animal cell",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "ribosome",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_0",
+                    "label": "25nm",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_1",
+                    "label": "site of protein synthesis",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_2",
+                    "label": "made of rRNA and ribosomal protein",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_3",
+                    "label": "free ribosome: synthesis cytoplasm protein",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "microtubule",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_0",
+                    "label": "25nm",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_1",
+                    "label": "alpha tubulin+ beta tubulin> dimer",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_2",
+                    "label": "involved in mitosis",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_3",
+                    "label": "transport of vesicle",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_2",
+                "label": "centrosome",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_2_child_0",
+                    "label": "no membrane bounded",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_2_child_1",
+                    "label": "located close to nucleus",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_2_child_2",
+                    "label": "organize the formation of microtubule",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_2_child_3",
+                    "label": "consist of two centrioles perpendicular to each other",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_3",
+                "label": "lysosome",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_3_child_0",
+                    "label": "contains hydrolytic enzyme",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_3_child_1",
+                    "label": "digest bacteria",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_3_child_2",
+                    "label": "digest damaged organelles",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_4",
+                "label": "mitochondria",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_4_child_0",
+                    "label": "site of aerobic respiration: a chemical reaction that break down nutrient",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_4_child_1",
+                    "label": "molecules and release energy inside of a cell",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_4_child_2",
+                    "label": "outer membrane",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_4_child_3",
+                    "label": "inner membrane",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_4_child_4",
+                    "label": "crista",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_4_child_5",
+                    "label": "matrix",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_5",
+                "label": "Golgi body",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_5_child_0",
+                    "label": "flatten sacs of membrane",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_5_child_1",
+                    "label": "modifies protein",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_5_child_2",
+                    "label": "add a carbohydrate to the protein> glycoprotein",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_5_child_3",
+                    "label": "packaging and transfer of proteins",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_6",
+                "label": "smooth ER",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_6_child_0",
+                    "label": "no ribosome on the surface",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_6_child_1",
+                    "label": "production, processing, storage of lipids",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_7",
+                "label": "rough ER",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_7_child_0",
+                    "label": "membrane bounded",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_7_child_1",
+                    "label": "flattened sacs",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_7_child_2",
+                    "label": "involved in folding, modification and transport of proteins",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_8",
+                "label": "nucleus",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_8_child_0",
+                    "label": "nucleus envelope",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_8_child_0_child_0",
+                        "label": "double membrane structure",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_8_child_1",
+                    "label": "nucleus pore",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_8_child_1_child_0",
+                        "label": "in: nucleotide, ATP, rRNA, ribosomal protein",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_8_child_1_child_1",
+                        "label": "out: mRNA, ribosome, genetic material",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_8_child_2",
+                    "label": "nucleolus",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_8_child_2_child_0",
+                        "label": "synthesis ribosome",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_8_child_3",
+                    "label": "chromatin",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "endosymbiont therory",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "mitochondria and chloroplast originally are prokaryotes, and they are taken/engulf",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_1",
+                "label": "in by eukaryotes, forming a symbiontic relationship",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_2",
+                "label": "stroma: 70s ribosome/ circular DNA",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_3",
+                "label": "matrix: 70s ribosome/ circular DNA",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_3",
+            "label": "living organism that contains true nucleus",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "prokaryote cell",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "living organism that do not have a true nucleus",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "structure",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_3_child_1_child_0",
+                "label": "circular DNA",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_1_child_1",
+                "label": "cytoplasm",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_0",
+                    "label": "70s ribosome",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_1_child_2",
+                "label": "cell wall( made of peptidoglygan)",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_1_child_3",
+                "label": "cell surface membrane",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_1_child_4",
+                "label": "flagellum",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_4_child_0",
+                    "label": "provide movement",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_1_child_5",
+                "label": "capsule",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_5_child_0",
+                    "label": "slime layer for protection",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_1_child_6",
+                "label": "plasmid DNA",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_1_child_7",
+                "label": "pili",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_2",
+            "label": "0.5- 5um",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_4",
+        "label": "measurement of the size of speciman",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_4_child_0",
+            "label": "measure the size of the observed cell in units with eyepieces graticule",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_1",
+            "label": "calibrate the eyepieces graticule with a stage micrometer",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_2",
+            "label": "calculate the actual size of the cell",
+            "side": "right",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_5",
+        "label": "secretory pathway: DNA> ribosome( by mRNA)> rough ER( form",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_6",
+        "label": "polypeptide)> Glogi body",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_7",
+        "label": "10- 100um",
+        "side": "right",
+        "children": []
+      }
+    ]
+  }
+]

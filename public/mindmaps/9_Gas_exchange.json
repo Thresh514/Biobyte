@@ -1,0 +1,272 @@
+[
+  {
+    "id": "root_0",
+    "label": "Gas exchange system",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "structure of gas exchange system",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "trachea",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "1.8cm",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "C-ringed structure",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_2",
+                "label": "contain cartilage which use to support the walls of trachea",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_3",
+                "label": "prevent collapsing of trachea when inhaling the pressure inside the airway",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_4",
+                "label": "smooth muscle to control the pressure of airway",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "bronchus",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "1.2cm",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "irregular cartilage",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "ciliated epithelium",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_0",
+                    "label": "move substance on the surface",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_1",
+                    "label": "goblet cell can secretes mucus to trap dust and bacteria",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_2",
+                    "label": "ciliated cell can move the map of mucus towards the throat",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_3",
+                    "label": "mucus gland can also secret sticky mucus ( mucin: glycoprotein)",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_3",
+                "label": "smooth muscle to control the pressure of airway",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "bronchiole",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_2_child_0",
+                "label": "respirating bronchiole",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_2_child_0_child_0",
+                    "label": "can exchange gas",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_2_child_1",
+                "label": "terminal bronchiole",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_2_child_1_child_0",
+                    "label": "contain cilia",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_3",
+            "label": "alveolus",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_3_child_0",
+                "label": "large number of alveolus can maximum gas exchange surface area",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_3_child_1",
+                "label": "elastic fiber",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_4",
+            "label": "ribs",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_0_child_5",
+            "label": "intercostal muscle",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_0_child_6",
+            "label": "pleural membrane",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_0_child_7",
+            "label": "diaphragm",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "inhalation gas",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "21% O2",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "0.04% CO2",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "exhalation gas",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "16% O2",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "4% CO2",
+            "side": "right",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "adaptation to functions",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "Maximise the surface area for the diffusion of carbon dioxide and oxygen by having",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "large number of alveoli ( gas exchange surface)",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_2",
+            "label": "Minimise the distance for diffusion: alveoli and capillaries are both made up of single",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_3",
+            "label": "layer of cells",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_4",
+            "label": "Maintain concentration gradient for diffusion by ventilation in alveoli and circulation in",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_5",
+            "label": "capillaries",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_6",
+            "label": "clean and warm air enter alveoli during breathing",
+            "side": "right",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

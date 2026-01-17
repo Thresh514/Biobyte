@@ -18,9 +18,9 @@ const MembershipModal = ({ isOpen, onClose, message }) => {
     };
   }, [isOpen]);
 
-  const handleDashboardClick = () => {
+  const handleLearnModeClick = () => {
     onClose();
-    router.push('/dashboard');
+    router.push('/membership');
   };
 
   const handleEscapeKey = (e) => {
@@ -72,14 +72,14 @@ const MembershipModal = ({ isOpen, onClose, message }) => {
           {/* Action buttons */}
           <div className="flex gap-4 justify-center">
             <button
-              onClick={handleDashboardClick}
-              className="bg-white bg-opacity-80 text-black border border-black px-6 py-2 hover:bg-black hover:text-white transition duration-300 font-medium"
+              onClick={handleLearnModeClick}
+              className="bg-white text-black border border-black px-6 py-2 hover:bg-gray-100 transition duration-300 font-medium"
             >
-              Go to Dashboard
+              Learn Mode
             </button>
             <button
               onClick={onClose}
-              className="bg-white bg-opacity-80 text-black border border-black px-6 py-2 hover:bg-black hover:text-white transition duration-300 font-medium"
+              className="bg-black text-white border border-black px-6 py-2 hover:bg-gray-800 transition duration-300 font-medium"
             >
               Close
             </button>

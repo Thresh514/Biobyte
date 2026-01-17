@@ -1,0 +1,78 @@
+{
+  "unit": "10",
+  "title": "Infectious diseases",
+  "content": [
+    {
+      "section": "10.1 Infectious diseases",
+      "items": [
+        {
+          "title": "10.1.1 State the name and type of pathogen that causes each of the following diseases:",
+          "content": [
+            "cholera – caused by the bacterium Vibrio cholerae",
+            "malaria – caused by the protoctists Plasmodium falciparum, Plasmodium malariae, Plasmodium ovale and Plasmodium vivax",
+            "tuberculosis (TB) – caused by the bacteria Mycobacterium tuberculosis and M terium bovis.",
+            "HIV/AIDS – caused by the human immunodeficiency virus (HIV)"
+          ]
+        },
+        {
+          "title": "10.1.2 Explain how cholera, malaria, TB and HIV are transmitted",
+          "content": [
+            "Cholera: Cholera is caused by the bacterium Vibrio cholerae, which is typically transmitted through contaminated water or food. Ingesting contaminated food or water can lead to severe diarrhea and dehydration.",
+            "Malaria: Malaria is caused by Plasmodium parasites, which are transmitted to humans through the bites of infected female Anopheles mosquitoes. These mosquitoes typically bite between dusk and dawn, and the parasites multiply in the liver before infecting red blood cells.",
+            "Tuberculosis (TB): TB is caused by the bacterium Mycobacterium tuberculosis, which is spread through the air when an infected person coughs or sneezes. People inhale the bacteria and may develop an active TB infection, especially if their immune system is compromised.",
+            "HIV/AIDS: HIV (Human Immunodeficiency Virus) is transmitted through contact with certain body fluids, such as blood, semen, vaginal fluids, and breast milk, from an infected person. HIV attacks the immune system, leading to AIDS (Acquired Immunodeficiency Syndrome) if left untreated."
+          ]
+        },
+        {
+          "title": "10.1.3 Discuss the biological, social and economic factors that need to be considered in the prevention and control of cholera, malaria, TB and HIV (details of the life cycle of the malarial parasite are not expected)",
+          "content": [
+            "Biological Factors:",
+            "Understanding the biology and transmission of each disease is crucial.",
+            "Developing vaccines, improving sanitation, and using insecticide-treated bed nets are important biological strategies.",
+            "Social Factors:",
+            "Poverty, inadequate sanitation, and limited healthcare access contribute to disease transmission.",
+            "Health education, community engagement, and improving living conditions are vital social interventions.",
+            "Economic Factors:",
+            "Economic factors impact access to prevention and treatment.",
+            "Investing in infrastructure and ensuring affordable access to drugs are key economic strategies."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "10.2 Antibiotics",
+      "items": [
+        {
+          "title": "10.2.1 Outline how penicillin acts on bacteria and why antibiotics do not affect viruses",
+          "content": [
+            "Cell Wall Synthesis Inhibition:",
+            "Bacteria have a cell wall that provides structural support and protection.",
+            "Penicillin interferes with the formation of the bacterial cell wall by inhibiting the enzyme involved in cross-linking the peptidoglycan molecules in the cell wall.",
+            "Without a functional cell wall, bacteria are unable to maintain their structure and integrity, leading to cell lysis and death.",
+            "Antibiotics and Viruses:",
+            "Antibiotics like penicillin are ineffective against viruses.",
+            "Viruses are different from bacteria in that they are not complete cells and do not have cell walls.",
+            "Viruses replicate inside host cells using the host cell's machinery, making it difficult to target them without harming the host cell.",
+            "Since antibiotics target specific bacterial functions like cell wall synthesis, they have no effect on viruses."
+          ]
+        },
+        {
+          "title": "10.2.2 Discuss the consequences of antibiotic resistance and the steps that can be taken to reduce its impact",
+          "content": [
+            "Consequences:",
+            "Infections become harder to treat, leading to prolonged illness, increased mortality, and higher healthcare costs.",
+            "Common infections may become untreatable, potentially leading to increased morbidity and mortality rates.",
+            "The effectiveness of medical procedures that rely on antibiotics, such as surgeries and chemotherapy, may be compromised due to the risk of infection.",
+            "Steps to Reduce Impact:",
+            "Antibiotic Stewardship: Promote the responsible use of antibiotics by healthcare providers and patients to prevent overuse and misuse.",
+            "Improved Diagnostics: Develop rapid diagnostic tests to identify the specific bacteria causing an infection and determine the most effective antibiotic treatment.",
+            "Vaccination: Increase vaccination rates to prevent infections and reduce the need for antibiotics.",
+            "Research and Development: Invest in the development of new antibiotics and alternative treatments to combat resistant bacteria.",
+            "Public Education: Educate the public about the importance of using antibiotics appropriately and completing the prescribed course of treatment.",
+            "Global Cooperation: Coordinate efforts internationally to address antibiotic resistance and implement strategies to combat it effectively."
+          ]
+        }
+      ]
+    }
+  ]
+}

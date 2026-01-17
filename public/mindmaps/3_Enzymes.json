@@ -1,0 +1,408 @@
+[
+  {
+    "id": "root_0",
+    "label": "enzyme",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "mode of actions of enzyme",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "lock and key hypothesis",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "substrate bind to the enzyme by successful collision",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "formation of enzyme-substrate complex",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_2",
+                "label": "the E-S complex allow the catalysts to happen",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_3",
+                "label": "the product are released from the active site",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "induced-fit hypothesis",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "the substrate is not completely complementary to the active site",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "upon binding, the enzyme can change the shape of the active site to maximize the",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "binding",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_3",
+                "label": "the enzyme catalyse the reaction of substrate",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_4",
+                "label": "the products leave the active site and the enzyme resumed the shape of active site",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "factors that effect enzyme actions",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "temperature",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "lower than optimum temperature",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_0_child_0",
+                    "label": "temperature increase> kinetic energy increase> successful collision more likely",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_0_child_1",
+                    "label": "to occur> more E-S complex formed> rate of reaction increase",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_1",
+                "label": "optimum temperature: the greatest rate of reaction",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_0_child_2",
+                "label": "higher than optimum temperature",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_2_child_0",
+                    "label": "temperature increase> the hydrogen bond will break> the shape active site",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_2_child_1",
+                    "label": "change> enzyme is denatured",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "pH value",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "optimum pH value: the greatest rate of reaction",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "denature on the both side",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_1_child_0",
+                    "label": "the ionic bond and hydrogen bond will break> change the tertiary structure of",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_1_child_1_child_1",
+                    "label": "enzyme> the shape of active site will be altered> less E-S complex formed",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "substrate concentration",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "substrate concentration increase, rate of reaction increase",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_1",
+                "label": "when reach to the Vmax, the active sites are fully occupied, rate of reaction keep",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_2",
+                "label": "constant",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_3",
+            "label": "enzyme concentration",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_3_child_0",
+                "label": "enzyme concentration increase, rate of reaction increase(substrate is excess)",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "enzyme is a biological catalyst that can speed up the rate of metabolic",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "reaction",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "intercellular",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "extracellular",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_3_child_2",
+            "label": "catabolic reaction",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_3_child_2_child_0",
+                "label": "break down of big molecule",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_3",
+            "label": "anabolic reaction",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_3_child_3_child_0",
+                "label": "the formation of complex molecule",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_4",
+        "label": "immobilized enzyme",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_4_child_0",
+            "label": "soluble globular protein",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_1",
+            "label": "heat and pH tolerant",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_5",
+        "label": "inhibitor",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_5_child_0",
+            "label": "competitive inhibitor",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_5_child_0_child_0",
+                "label": "has the similar shape to the substrate",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_0_child_1",
+                "label": "the competitive inhibitor compete active site with substrate",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_0_child_2",
+                "label": "increase the concentration of substrate can reduce inhibition",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_0_child_3",
+                "label": "sub A> sub B> subC> subD",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_0_child_4",
+                "label": "sub D(competitive inhibitor to the sub A)",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_5_child_1",
+            "label": "non-competitive inhibitor",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_5_child_1_child_0",
+                "label": "binds to the allosteric site of the enzyme",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_1_child_1",
+                "label": "the binding stimulates the enzyme to change the shape of active site, so that",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_1_child_2",
+                "label": "substrate can no longer bind to the active site",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_1_child_3",
+                "label": "the inhibition occurs regardless of the substrate concentration",
+                "side": "right",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_6",
+        "label": "Km contant",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_6_child_0",
+            "label": "Vmax",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_6_child_0_child_0",
+                "label": "the maximum rate of enzyme activity",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_6_child_1",
+            "label": "Km",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_6_child_1_child_0",
+                "label": "the substrate concentration required when 1/2 Vmax is reached",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_6_child_1_child_1",
+                "label": "Km is inversely proportional to the affinity of enzyme",
+                "side": "right",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_7",
+        "label": "lower the activation energy",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_8",
+        "label": "common mechanism to maintain the concentration of certain substrate",
+        "side": "right",
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,847 @@
+[
+  {
+    "id": "root_0",
+    "label": "infectious disease",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "cholera",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "pathogen",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "vibrio cholerae",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_0",
+                    "label": "it secretes a toxin called choleragen in the intestine",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "transmission",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "food-borne",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_0",
+                    "label": "faeces from patient contains a amount of the pathogen",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "water-borne",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_0",
+                    "label": "the water used for utensil cleaning, drinking and bathing is contaminated by the",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_1",
+                    "label": "pathogen then the pathogen can be transmitted",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "signs and symptoms",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_2_child_0",
+                "label": "diarrhoea",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_1",
+                "label": "vomitting",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_2",
+                "label": "dehydration: loss of water and salt",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_3",
+            "label": "treatment",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_3_child_0",
+                "label": "rehydration theapy",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_0_child_0",
+                    "label": "solution containing glucose, salt and water",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_1",
+                "label": "intravenous injection",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_3_child_2",
+                "label": "use antibiotics in severe cases to avoid antibiotics resistance",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_4",
+            "label": "prevention",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_4_child_0",
+                "label": "chlorinate piped water to kill bacteria",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_4_child_1",
+                "label": "provide adequate sewage treatment infrastructure",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_4_child_2",
+                "label": "monitoring program by WHO",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "tuberculosis",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "pathogen",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "mycobacterium tuberculosis",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_0_child_1",
+                "label": "mycobacterium bovis",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "transmission",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "air- borne (tuberculosis)",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_0_child_0",
+                    "label": "water droplets",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_1_child_0_child_1",
+                    "label": "TB can spread quickly from person to person when the infected person coughs,",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_1_child_0_child_2",
+                    "label": "sneezes or spits. Then, the health person inhale the droplet to be infected",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "unpasteurized milk and uncooked meat (bovis)",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "sign and sysptoms",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "fever",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_1",
+                "label": "cough",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_2",
+                "label": "sneeze",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_3",
+                "label": "short of breath",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_4",
+                "label": "cheat pain",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_5",
+                "label": "cough of blood",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_3",
+            "label": "treatment",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_3_child_0",
+                "label": "antibiotics",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_4",
+            "label": "tuberosis prevention",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_4_child_0",
+                "label": "BCG vaccine",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_4_child_1",
+                "label": "contract tracing: quarantine",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_5",
+            "label": "bovis prevention",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_5_child_0",
+                "label": "vaccinate cattle and routining test for TB",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_5_child_1",
+                "label": "pasteurizing milk",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_5_child_2",
+                "label": "ensuring meat is cooked properly",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "malaria",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "pathogen",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "plasmodium vivax",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_1",
+                "label": "plasmodium malariae",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_2",
+                "label": "plasmodium ovale",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_3",
+                "label": "plasmodium falciparan",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "transmission",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "vector-borne: female Anopheles mosquitoes",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "blood-borne: blood transfusion",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "sign and sysptom",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "fever",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_1",
+                "label": "headache",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_2",
+                "label": "muscle pain",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_3",
+                "label": "fatigue",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_3",
+            "label": "treatment",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_3_child_0",
+                "label": "use antibiotics",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_3_child_0_child_0",
+                    "label": "antibiotics resistance is a problem to treat malaria",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_4",
+            "label": "control",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_4_child_0",
+                "label": "spray insectides",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_4_child_1",
+                "label": "spread oil over the surfaces of water where mosquitoes lay their eggs",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_4_child_2",
+                "label": "draining marshes and unnecessary bodies of water",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_4_child_3",
+                "label": "stock fish in ponds as the fish can feed on mosquito larvae",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_5",
+            "label": "prevention",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_5_child_0",
+                "label": "spray mosquito repellent",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_5_child_1",
+                "label": "use bed net",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_5_child_2",
+                "label": "prophylactic drugs",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_6",
+            "label": "recent advancement",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_6_child_0",
+                "label": "improve the drug efeectiveness",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_6_child_1",
+                "label": "improve diagnosis",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_6_child_2",
+                "label": "use drugs in combination to reduce drug resistance",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_6_child_3",
+                "label": "biological control to target larvae",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_6_child_4",
+                "label": "the development of vaccine",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "AIDS",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "pathogen",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_0_child_0",
+                "label": "human immunodeficiency virus",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_0_child_0",
+                    "label": "cannot survive outside",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "transmission",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_1_child_0",
+                "label": "blood donation without screening or sharing of needles",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_1_child_1",
+                "label": "sexual intercourse",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_1_child_2",
+                "label": "mother to child through placenta or breast milk",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_1_child_3",
+                "label": "mixing of blood between mother and child during birth",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_2",
+            "label": "treatment",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_2_child_0",
+                "label": "no vaccines and no cure",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_2_child_1",
+                "label": "drugs that delay the onset of AIDS",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_2_child_1_child_0",
+                    "label": "downside: side-effect, very expensive",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_2_child_1_child_1",
+                    "label": "opportunistic disease: TB, pneumonia",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_3",
+            "label": "signs and symptom",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_3_child_0",
+                "label": "mild fever",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_3_child_1",
+                "label": "sneeze",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_3_child_2",
+                "label": "running nose",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_4",
+            "label": "prevention and control",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_4_child_0",
+                "label": "education programs about how the virus is transmitted and encouraging people to",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_1",
+                "label": "charge their behaviors",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_2",
+                "label": "contact tracing",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_3",
+                "label": "screening blood donation",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_4",
+                "label": "the disposal of needles need to handle correctly and cautiously",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_5",
+                "label": "encourage high-risk individuals (male-homosexual, prostitutes, injecting drug users",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_6",
+                "label": "to be tested)",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_7",
+                "label": "use anti-retroviral drugs in 48 hours",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_8",
+                "label": "using drugs to block the transmission between mother and child at placenta,",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_4_child_9",
+                "label": "during birth and through breast milk",
+                "side": "right",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_4",
+        "label": "antibiotics",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_4_child_0",
+            "label": "drugs that kill or stop the growth of bacteria but do not harm the cells of the infected",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_1",
+            "label": "organism",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_2",
+            "label": "antibiotics are derived from living organism and also be made synthetically",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_4_child_3",
+            "label": "how antibiotics interfere with the growth or metabolism of the target bacterium",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_3_child_0",
+                "label": "synthesis of bacterial cell wall",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_3_child_1",
+                "label": "activity of proteins in bacterial cell surface membrane",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_3_child_2",
+                "label": "bacterial enzyme protein",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_3_child_3",
+                "label": "bacterial DNA synthesis",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_3_child_4",
+                "label": "bacterial protein synthesis",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_4_child_4",
+            "label": "antibiotics resistance",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_4_child_0",
+                "label": "reasons for antibiotic resistance",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_4_child_0_child_0",
+                    "label": "overuse of antibiotics and antibiotics are prescribed when not necessary",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_4_child_0_child_1",
+                    "label": "large scale use of antibiotics in farming to prevent disease in livestock",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_4_child_0_child_2",
+                    "label": "patients failing to complete the full course of antibiotics prescribed",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_4_child_1",
+                "label": "ways to prevent antibiotics resistance",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_4_child_1_child_0",
+                    "label": "using antibiotics only when necessary not prescribing antibiotics on viral",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_4_child_1_child_1",
+                    "label": "infection",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_4_child_1_child_2",
+                    "label": "complete the full round of medication",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_4_child_1_child_3",
+                    "label": "use narrow spectum antibiotics instead of wide-spectum antibiotics",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_4_child_1_child_4",
+                    "label": "disposal of antibiotics need to be handled cautiously",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_4_child_1_child_5",
+                    "label": "the prescription and sales of antibiotics should be strictly controlled",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_4_child_1_child_6",
+                    "label": "avoid using antibiotics in farming to prevent rather than cure",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

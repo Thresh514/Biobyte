@@ -1,0 +1,158 @@
+{
+  "unit": "11",
+  "title": "Immunity",
+  "content": [
+    {
+      "section": "11.1 The immune system",
+      "items": [
+        {
+          "title": "11.1.1 Describe the mode of action of phagocytes (macrophages and neutrophils)",
+          "content": [
+            "Chemotaxis: When a pathogen invades the body or there is tissue damage, chemicals released by the damaged cells attract phagocytes to the site of infection or injury. This process is known as chemotaxis.",
+            "Recognition: Phagocytes recognize pathogens through various receptors that bind to specific molecules on the surface of the pathogen. Once recognized, the phagocyte adheres to the pathogen's surface.",
+            "Engulfment: The phagocyte extends pseudopodia (temporary projections of the cell membrane) to surround and engulf the pathogen, forming a phagosome.",
+            "Phagosome Formation: The engulfed pathogen is contained within the phagosome, a vesicle inside the phagocyte.",
+            "Phagolysosome Formation: The phagosome fuses with lysosomes, which are organelles containing digestive enzymes. This forms a phagolysosome, where the pathogen is broken down by the enzymes.",
+            "Destruction: The pathogen is destroyed by the enzymes and other antimicrobial substances within the phagolysosome.",
+            "Exocytosis: After digestion, the waste material is expelled from the phagocyte through exocytosis, and the phagocyte is ready to engulf another pathogen."
+          ]
+        },
+        {
+          "title": "11.1.2 Explain what is meant by an antigen (see 4.1.3) and state the difference between self-antigens and non-self-antigens",
+          "content": [
+            "An antigen is a molecule that is capable of eliciting an immune response in the body. It can be a protein, a polysaccharide, a glycoprotein, or any other type of molecule that the immune system recognizes as foreign or non-self.",
+            "Origin:",
+            "Self Antigens: Self antigens are molecules naturally present in the body's cells and tissues. They are derived from the individual's own cells and are recognized as \"self\" by the immune system.",
+            "Non-Self Antigens: Non-self antigens are molecules that are foreign to the body. They are derived from external sources such as pathogens (e.g., bacteria, viruses, fungi), toxins, or other foreign substances.",
+            "Recognition by the Immune System:",
+            "Self Antigens: The immune system is tolerant to self antigens and does not normally mount an immune response against them. This tolerance is essential to prevent the immune system from attacking the body's own cells and tissues (autoimmunity).",
+            "Non-Self Antigens: Non-self antigens are recognized as foreign by the immune system, which triggers an immune response to eliminate them. This response includes the production of antibodies and activation of immune cells to target and destroy the foreign invaders."
+          ]
+        },
+        {
+          "title": "11.1.3 Describe the sequence of events that occurs during a primary immune response with  reference to the roles of:",
+          "content": [
+            "Recognition of Antigen:",
+            "Antigens from pathogens are engulfed and processed by macrophages, which then display fragments of the antigens on their surface.",
+            "Activation of T-Helper Cells:",
+            "T-helper cells recognize the antigen fragments presented by macrophages and become activated.",
+            "Activated T-helper cells secrete cytokines, which stimulate the proliferation and activation of other immune cells, including B-lymphocytes and T-killer cells.",
+            "Activation of B-Lymphocytes:",
+            "B-lymphocytes that have encountered the antigen become activated.",
+            "Activated B-lymphocytes differentiate into plasma cells, which produce and secrete specific antibodies against the antigen.",
+            "Antibody Production:",
+            "Antibodies are released into the bloodstream and lymphatic system, where they bind to the antigen and mark it for destruction.",
+            "Antibodies can neutralize pathogens directly, or they can enhance phagocytosis by macrophages and other phagocytes through a process called opsonization.",
+            "Activation of T-Killer Cells:",
+            "T-killer cells are activated by cytokines released by T-helper cells.",
+            "Activated T-killer cells directly attack and destroy infected cells or cells displaying antigens on their surface.",
+            "Resolution of the Infection:",
+            "The combined action of antibodies, T-killer cells, and other immune cells leads to the elimination of the pathogen.",
+            "Some activated B-lymphocytes and T-lymphocytes differentiate into memory cells, which provide long-lasting immunity against future infections by the same pathogen."
+          ]
+        },
+        {
+          "title": "11.1.4 Explain the role of memory cells in the secondary immune response and in long- term immunity",
+          "content": [
+            "Secondary Immune Response:",
+            "Memory B-lymphocytes and memory T-lymphocytes are long-lived cells that remain in the body after the primary immune response.",
+            "If the same pathogen re-infects the body, memory cells recognize the antigen quickly and mount a faster, stronger, and more effective immune response compared to the primary response.",
+            "Memory B-lymphocytes quickly differentiate into plasma cells that produce large quantities of specific antibodies, helping to eliminate the pathogen more rapidly.",
+            "Long-Term Immunity:",
+            "Memory cells provide long-lasting immunity against specific pathogens.",
+            "Memory B-lymphocytes and memory T-lymphocytes persist in the body for years or even a lifetime, ready to respond rapidly to re-infection.",
+            "This long-term immunity is the basis for the effectiveness of vaccines, which stimulate the production of memory cells without causing the disease itself."
+          ]
+        }
+      ]
+    },
+    {
+      "section": "11.2 Antibodies and vaccination",
+      "items": [
+        {
+          "title": "11.1.5 Relate the molecular structure of antibodies to their functions",
+          "content": [
+            "Y-Shaped Structure:",
+            "Antibodies are made up of four polypeptide chains: two heavy chains and two light chains, which are connected by disulfide bonds.",
+            "The Y-shaped structure allows antibodies to bind to antigens with high specificity.",
+            "Variable Regions:",
+            "The tips of the Y-shaped antibodies contain variable regions, which are highly variable in amino acid sequence.",
+            "These variable regions enable antibodies to recognize and bind to a wide range of antigens with high specificity.",
+            "Constant Regions:",
+            "The stem of the Y-shaped antibodies contains constant regions, which are more conserved in amino acid sequence.",
+            "The constant regions determine the class (isotype) of the antibody and its functional properties, such as activating complement or binding to immune cells.",
+            "Antigen Binding:",
+            "The variable regions of the antibody form the antigen-binding site, which binds to specific regions (epitopes) on the antigen.",
+            "This binding is highly specific and allows antibodies to recognize and neutralize pathogens or mark them for destruction by other immune cells."
+          ]
+        },
+        {
+          "title": "11.2.1 Outline the hybridoma method for the production of monoclonal antibodies",
+          "content": [
+            "Immunization:",
+            "An animal (usually a mouse) is immunized with the antigen of interest to stimulate an immune response.",
+            "B-lymphocytes in the spleen of the immunized animal produce antibodies against the antigen.",
+            "Isolation of B-lymphocytes:",
+            "The spleen cells containing the B-lymphocytes producing the desired antibodies are isolated from the immunized animal.",
+            "Fusion with Myeloma Cells:",
+            "The isolated B-lymphocytes are fused with myeloma cells (cancerous B-lymphocytes that can be grown indefinitely in culture).",
+            "The fusion is typically achieved using a technique involving polyethylene glycol (PEG).",
+            "Selection of Hybridoma Cells:",
+            "After fusion, the mixture of cells contains unfused myeloma cells, unfused B-lymphocytes, and fused hybridoma cells.",
+            "Selection techniques (e.g., culture media containing a selective agent) are used to isolate the hybridoma cells.",
+            "Cloning:",
+            "Single hybridoma cells are isolated and grown into separate colonies, each producing antibodies against the specific antigen.",
+            "This process ensures that each colony consists of cells producing a single type of antibody (monoclonal).",
+            "Screening and Expansion:",
+            "The monoclonal antibodies produced by the different hybridoma cell colonies are screened for their specificity and affinity to the antigen.",
+            "Selected hybridoma cell lines are expanded in culture to produce larger quantities of monoclonal antibodies.",
+            "Harvesting Monoclonal Antibodies:",
+            "Monoclonal antibodies are harvested from the culture supernatant of the selected hybridoma cell lines.",
+            "The antibodies can be purified for use in research, diagnostics, and therapy."
+          ]
+        },
+        {
+          "title": "11.2.2 Outline the principles of using monoclonal antibodies in the diagnosis of disease and in the treatment of disease",
+          "content": [
+            "Diagnosis:",
+            "Finding Disease Markers: Monoclonal antibodies are used to find specific markers that indicate a disease, like antigens on viruses or cancer cells.",
+            "Tests: They're used in tests (like ELISA) to check for these markers in blood or tissue samples.",
+            "Imaging: In some tests, they're used to help see inside the body and find diseases, like cancer.",
+            "Treatment:",
+            "Targeting Specific Cells: Monoclonal antibodies can be made to attach to certain cells, like cancer cells, helping to treat them.",
+            "Boosting Immune System: They can also help the immune system fight diseases better, like in some cancer treatments.",
+            "Reducing Inflammation: For diseases where the immune system attacks the body (like in some types of arthritis), monoclonal antibodies can help calm down the immune response."
+          ]
+        },
+        {
+          "title": "11.2.3 Describe the differences between active immunity and passive immunity and between natural immunity and artificial immunity",
+          "content": [
+            "Active Immunity vs. Passive Immunity:",
+            "Active Immunity: Occurs when the body's immune system produces its own antibodies in response to an antigen (e.g., from a vaccine or natural infection). It provides long-lasting protection because memory cells are produced.",
+            "Passive Immunity: Involves the transfer of antibodies from one individual to another. This can be naturally acquired, such as through maternal antibodies passed to a fetus during pregnancy, or artificially acquired, such as through the injection of antibodies (e.g., antivenom).",
+            "Natural Immunity vs. Artificial Immunity:",
+            "Natural Immunity: Occurs through natural exposure to pathogens or antigens. For example, when someone gets sick with a disease and then develops immunity to it.",
+            "Artificial Immunity: Results from deliberate exposure to antigens, such as through vaccination. It is a way to induce immunity without causing the disease itself."
+          ]
+        },
+        {
+          "title": "11.2.4 Explain that vaccines contain antigens that stimulate immune responses to provide long-term immunity",
+          "content": [
+            "Vaccines are made from weakened or killed germs or parts of germs. When you get a vaccine, these tiny bits of germs stimulate your immune system, which is like your body's defense force, to produce antibodies. These antibodies are like soldiers that can recognize and fight off the specific germ if you are exposed to it later. The vaccine also helps your immune system develop memory cells, which remember how to fight the germ in the future. This way, if you are ever exposed to the real germ, your immune system can quickly recognize and destroy it, protecting you from getting sick. Vaccines are an important tool in preventing infectious diseases and keeping communities healthy."
+          ]
+        },
+        {
+          "title": "11.2.5 Explain how vaccination programmes can help to control the spread of infectious  diseases.",
+          "content": [
+            "Direct Protection: Vaccines protect individuals from getting sick by stimulating their immune systems to produce antibodies against specific pathogens. This reduces the likelihood of an individual becoming infected and spreading the disease.",
+            "Herd Immunity: When a large portion of a population is vaccinated, it creates a \"herd immunity\" effect. This means that even those who are not vaccinated or who cannot be vaccinated (due to age, health conditions, or other reasons) are protected because the disease has little opportunity to spread within the community.",
+            "Break the Chain of Transmission: Vaccination programs help break the chain of transmission of infectious diseases. By reducing the number of susceptible individuals in a population, the likelihood of an infected person coming into contact with someone who is susceptible is greatly reduced.",
+            "Prevent Outbreaks and Epidemics: High vaccination rates can prevent outbreaks and epidemics of vaccine-preventable diseases. Even if a few cases occur, the disease is less likely to spread widely in a vaccinated population.",
+            "Protect Vulnerable Populations: Vaccination programs protect vulnerable populations, such as infants, the elderly, and those with weakened immune systems, who are at higher risk of severe complications from infectious diseases.",
+            "Cost-Effective Public Health Intervention: Vaccination is a cost-effective public health intervention. The cost of vaccinating a population is often much lower than the cost of treating the disease and dealing with its consequences"
+          ]
+        }
+      ]
+    }
+  ]
+}

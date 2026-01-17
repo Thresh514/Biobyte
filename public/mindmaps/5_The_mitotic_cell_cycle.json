@@ -1,0 +1,392 @@
+[
+  {
+    "id": "root_0",
+    "label": "mitosis",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "structure of chromosome",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "telomere",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "made of repeating DNA nuleotide, DNA segment at the end of chromosome",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "gene",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "a segment DNA that codes for protein",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "centromere",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_0_child_3",
+            "label": "nucleic acid(by histone)> chromatin> nucleosome(by supercoil)> chromosome",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "stem cell",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "totipotent",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "differentiate into any cell type",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "pluripotent",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "differentiate into any cell type in embryo",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "multipotent",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "lose some of the potency compared with embryonic stem cells",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "cancer cell",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "pathway of formation of cancer cell",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "normal cell > mutation of DNA > change in the shape of protein> cancer cell",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_1",
+                "label": "mutation of DNA: proto-oncogene> oncogene(control the cell division) controlled",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_2",
+                "label": "by tumor suppressor gene(P53 gene)",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "tumor",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "benign tumor",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_0",
+                    "label": "stay at its original location",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "malignant tumor",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_0",
+                    "label": "can spread to other location",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "cell cycle",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "interphase",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_3_child_0_child_0",
+                "label": "G1 phase",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_0_child_0",
+                    "label": "growth phase, increasing in cell size",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_0_child_0_child_0",
+                        "label": "protein synthesis",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_0_child_1",
+                    "label": "check point 1: commit to dividing or not dividing",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_1",
+                "label": "S phase",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_0",
+                    "label": "DNA replication",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_2",
+                "label": "G2 phase",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_2_child_0",
+                    "label": "check point 2: check errors and repair for newly synthesized DNA",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_2_child_1",
+                    "label": "duplication of centrosome",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_2_child_2",
+                    "label": "increasing the production of tubulin to make microtuble and mitotic spindles",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "M phase(mitosis/ nuclear division)",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_3_child_1_child_0",
+                "label": "prophase",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_0",
+                    "label": "chromatin condense to form chromosome, the individual chromosome appear",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_1",
+                    "label": "nuclear envelope disappear",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_2",
+                    "label": "two centrosome move to the opposite poles",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_3",
+                    "label": "mitotic fibers begin to emerge from the centrosome",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_1_child_1",
+                "label": "metaphase",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_0",
+                    "label": "chromosome line up at the equator of the cell",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_1",
+                    "label": "centrosome reach the opposite poles",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_2",
+                    "label": "spindle continue to extend from centrosome and attach to the centromere",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_1_child_2",
+                "label": "anaphase",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_2_child_0",
+                    "label": "spindle fibers shorten",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_2_child_1",
+                    "label": "the sister chromatids separate at the centromere",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_2_child_2",
+                    "label": "the sister chromatids are pulled towards to the opposite poles",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_1_child_3",
+                "label": "telophase",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_3_child_0",
+                    "label": "chromosome uncoiled to form chromatin",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_3_child_1",
+                    "label": "nuclear envelope and nucleolus reform",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_3_child_2",
+                    "label": "spindle fibers break down",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_3_child_3",
+                    "label": "cytokinesis: constriction of the cytoplasm between two nuclei",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_4",
+        "label": "meaning of mitosis: repair tissue/ asexual reproduction/ growth of",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_0_child_5",
+        "label": "multicellular organisms",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_6",
+        "label": "the supercoil form of chromatin",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_7",
+        "label": "metastasis: tumor invade other tissue",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_0_child_8",
+        "label": "secondary growth",
+        "side": "right",
+        "children": []
+      }
+    ]
+  }
+]
