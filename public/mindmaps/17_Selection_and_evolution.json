@@ -1,0 +1,1208 @@
+[
+  {
+    "id": "root_0",
+    "label": "Selection & Evolution",
+    "side": "center",
+    "children": []
+  },
+  {
+    "id": "root_1",
+    "label": "Variation",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_1_child_0",
+        "label": "differences between mutation",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_1_child_0_child_0",
+            "label": "mutation that occur on somatic cells cannot be inherited by the offspring",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_0_child_1",
+            "label": "mutation in gametes have long-lasting effects",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_1",
+        "label": "phenotype determinantion factor",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_1_child_1_child_0",
+            "label": "genetic factor",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_1_child_1",
+            "label": "environmental factor",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_1_child_1_child_0",
+                "label": "phenotype variation caused by environmental factor cannot be inherited",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_1_child_2",
+            "label": "combination of genetic factors and environmental factors",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_1_child_1_child_2_child_0",
+                "label": "examples: height, skin color, amount of hair, weight",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_2",
+        "label": "discontinuous variation",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_1_child_2_child_0",
+            "label": "caused entirely by genes",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_2_child_1",
+            "label": "qualtitive differences that fall into distingulishable catagories with no intermediates",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_1_child_2_child_2",
+            "label": "different alleles at a single gene locus have a large effect on the phenotype",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_3",
+        "label": "continuous variation",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_1_child_3_child_0",
+            "label": "caused by both genes and environment",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_1_child_3_child_1",
+            "label": "quantitive differences that cannot fall into distinguishable catagorises. Instead, a range of values exist between two extremes within the phenotype will fall.",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_1_child_3_child_2",
+            "label": "different alleles at a single locus have little effect on the phenotype",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_1_child_3_child_3",
+            "label": "different alleles have same, often additive effect on the phenotype",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_1_child_3_child_4",
+            "label": "if a large number of genes have a combined effect on the phenotype, they are called polygenes",
+            "side": "right",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_1_child_4",
+        "label": "t-test",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_1_child_4_child_0",
+            "label": "citeria",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_4_child_0_child_0",
+                "label": "compare two sets of continuous data",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_4_child_0_child_1",
+                "label": "the distribution of data is normal distribution",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_4_child_0_child_2",
+                "label": "more than ten readings for each set of data",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_4_child_0_child_3",
+                "label": "standard deviation of the two sets of data are similar",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_4_child_1",
+            "label": "standard error",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_4_child_1_child_0",
+                "label": "i have 95% confidence that if a second sample of the same population is taken, the mean of the second population will fall within 2 times the value of SE from mean of the first sample",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_4_child_2",
+            "label": "error bar",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_4_child_2_child_0",
+                "label": "if error bars of two populations overlap, then the difference between the two groups of data is definitely not significant",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_1_child_4_child_3",
+            "label": "steps",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_1_child_4_child_3_child_0",
+                "label": "Formulate Hypotheses",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_4_child_3_child_0_child_0",
+                    "label": "null hypothesis",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_1_child_4_child_3_child_0_child_0_child_0",
+                        "label": "There is no significant difference between the mean of group A and group B",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_1_child_4_child_3_child_1",
+                "label": "Calculate the t-statistic",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_4_child_3_child_2",
+                "label": "Determine the Degrees of Freedom",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_4_child_3_child_3",
+                "label": "Find the Critical t-value",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_1_child_4_child_3_child_4",
+                "label": "Compare the t-statistic to the Critical t-value",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_1_child_4_child_3_child_4_child_0",
+                    "label": "If the absolute value of the t-statistic is greater than the critical t-value, reject the null hypothesis (H0H0​). This indicates a significant difference between the groups.",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "root_2",
+    "label": "indentify evolutionary relationships",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_2_child_0",
+        "label": "the more similar the DNA sequence of twop species are, the closely related the species. Two species have more recent common ancestors",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_2_child_1",
+        "label": "mitochondrial DNA",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_2_child_1_child_0",
+            "label": "small DNA sequence",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_2_child_1_child_1",
+            "label": "Mt DNA acquire changes only by mutation",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_2_child_1_child_2",
+            "label": "the rate of mutation is constant, which called \"molecular clock\"",
+            "side": "right",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "root_3",
+    "label": "Speciation",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_3_child_0",
+        "label": "allopatric speciation",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_3_child_0_child_0",
+            "label": "geographical differences",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_3_child_0_child_0_child_0",
+                "label": "there are two places, mountain and rivers",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_3_child_0_child_0_child_0_child_0",
+                    "label": "experience different selection pressure",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_3_child_0_child_0_child_0_child_1",
+                    "label": "accumulate different mutations",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_3_child_0_child_0_child_1",
+                "label": "barriers between two populations prevent interbreeding and gene flow",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_3_child_0_child_0_child_2",
+                "label": "over time. when two isolated population are brought together and no interbreeding occurs, the populations have become two species",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_3_child_1",
+        "label": "sympatric speciation",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_3_child_1_child_0",
+            "label": "same places",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_3_child_1_child_0_child_0",
+                "label": "flowering time",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_3_child_1_child_0_child_0_child_0",
+                    "label": "different soil pH value",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_3_child_1_child_0_child_0_child_1",
+                    "label": "different selection pressure",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_3_child_1_child_0_child_0_child_2",
+                    "label": "the pH affect the flowering time, alkaline soil came the flowering to occur earlier. acidic soil cause the flowering to occure later.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_3_child_1_child_0_child_0_child_3",
+                    "label": "non-overlapping flowering time keep the two population genetically isolated",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_3_child_1_child_0_child_0_child_4",
+                    "label": "due to ecological separation",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_3_child_1_child_0_child_1",
+                "label": "fish pond",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_3_child_1_child_0_child_1_child_0",
+                    "label": "cichild fish",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_3_child_1_child_0_child_1_child_0_child_0",
+                        "label": "short jaw live close to water surface",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_3_child_1_child_0_child_1_child_0_child_1",
+                        "label": "long jaw live in the bottom of the pond",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_3_child_1_child_0_child_1_child_0_child_2",
+                        "label": "behavior separtation and ecological separation occurs",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_3_child_1_child_0_child_1_child_0_child_3",
+                        "label": "mating behavior cannot interbreed",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "root_4",
+    "label": "Evolution",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_4_child_0",
+        "label": "species",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_4_child_0_child_0",
+            "label": "similar morphological feature",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_4_child_0_child_0_child_0",
+                "label": "appearance",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_4_child_0_child_1",
+            "label": "similar physiological feature",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_4_child_0_child_1_child_0",
+                "label": "circulatory system",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_4_child_0_child_2",
+            "label": "biochemical feature",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_4_child_0_child_2_child_0",
+                "label": "DNA",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_4_child_0_child_3",
+            "label": "behavioral feature",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_4_child_0_child_3_child_0",
+                "label": "mating behavior",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_4_child_0_child_4",
+            "label": "can interbreed and produce fertile offsprings",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_4_child_0_child_5",
+            "label": "reproductively isolated from other species",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_4_child_1",
+        "label": "definition",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_4_child_1_child_0",
+            "label": "generation of new species from pre-existing species over time, as a result of change to gene pool",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_4_child_2",
+        "label": "gene pool",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_4_child_2_child_0",
+            "label": "the collection of genes within a interbreeding population",
+            "side": "right",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_4_child_3",
+        "label": "reproductive isolation",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_4_child_3_child_0",
+            "label": "pre-zygotic",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_4_child_3_child_0_child_0",
+                "label": "individual don't recognize one anther as potential mate or not responding to the mating behavior",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_4_child_3_child_0_child_1",
+                "label": "Animals being physically unable to mate",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_4_child_3_child_0_child_2",
+                "label": "incompatibility of pollens and stigma in plants",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_4_child_3_child_0_child_3",
+                "label": "inability of a male gametes to fuse with a female gametes",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_4_child_3_child_1",
+            "label": "post-zygotic",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_4_child_3_child_1_child_0",
+                "label": "failure of cell division in the zygotes",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_4_child_3_child_1_child_1",
+                "label": "non-viable offspring",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_4_child_3_child_1_child_2",
+                "label": "viable but sterile",
+                "side": "right",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "root_5",
+    "label": "change in gene pool/ allele frequency",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_5_child_0",
+        "label": "natural selection",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_5_child_1",
+        "label": "genetic drift",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_5_child_2",
+        "label": "founder effect",
+        "side": "right",
+        "children": []
+      },
+      {
+        "id": "root_5_child_3",
+        "label": "bottleneck effect",
+        "side": "right",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "root_6",
+    "label": "Selection",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_6_child_0",
+        "label": "Natural Selection",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_6_child_0_child_0",
+            "label": "two case studies",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_6_child_0_child_0_child_0",
+                "label": "Australian rabbits population",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_0_child_0_child_0",
+                    "label": "environmental factors",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_6_child_0_child_0_child_0_child_0_child_0",
+                        "label": "biotic factors",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_6_child_0_child_0_child_0_child_0_child_0_child_0",
+                            "label": "predators",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_6_child_0_child_0_child_0_child_0_child_0_child_1",
+                            "label": "infectious disease",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_6_child_0_child_0_child_0_child_0_child_0_child_2",
+                            "label": "competition for food",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_6_child_0_child_0_child_0_child_0_child_1",
+                        "label": "abiotic factor",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_6_child_0_child_0_child_0_child_0_child_1_child_0",
+                            "label": "availability of water",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_6_child_0_child_0_child_0_child_0_child_1_child_1",
+                            "label": "light",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_6_child_0_child_0_child_0_child_0_child_1_child_2",
+                            "label": "soil nutrient level",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_6_child_0_child_0_child_0_child_1",
+                    "label": "selection pressure and survival",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_6_child_0_child_0_child_0_child_1_child_0",
+                        "label": "white background color will select for the albino rabbits and select against the agouti rabbits",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_0_child_0_child_0_child_1_child_1",
+                        "label": "albino rabbits can survive, reproduce and pass the white fur allele to the offspring",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_0_child_0_child_0_child_1_child_2",
+                        "label": "agouti rabbits are less likely to survive or reproduce",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_0_child_0_child_0_child_1_child_3",
+                        "label": "result in the allele frequency of albino fur increase and agouti fur decrease",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_6_child_0_child_0_child_1",
+                "label": "industrial melansim",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_0_child_1_child_0",
+                    "label": "selection pressure",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_6_child_0_child_0_child_1_child_0_child_0",
+                        "label": "blacken tree trunic",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_6_child_0_child_0_child_1_child_1",
+                    "label": "variation",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_6_child_0_child_0_child_1_child_1_child_0",
+                        "label": "dark-winged moth",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_0_child_0_child_1_child_1_child_1",
+                        "label": "light-winged moth",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_6_child_0_child_0_child_1_child_2",
+                    "label": "the selection pressure selects for the dark-winged moth, because the dark-winged moth can be camonflaged",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_6_child_0_child_0_child_2",
+                "label": "antibiotic resistance in bacteria",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_0_child_2_child_0",
+                    "label": "bacteria indergo spontaneous mutation to give rise to antibiotic resistant gene",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_0_child_2_child_1",
+                    "label": "the selection pressure will select the antibiotic resistant bacteria.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_0_child_2_child_2",
+                    "label": "this type of bacteria can survive to produce generation by vertical transmission",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_0_child_2_child_3",
+                    "label": "the allele frequency of antibiotic resistant will increase",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_6_child_0_child_1",
+            "label": "types",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_6_child_0_child_1_child_0",
+                "label": "directional selection",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_1_child_0_child_0",
+                    "label": "one extreme end is favored",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_6_child_0_child_1_child_1",
+                "label": "disruptive selection",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_1_child_1_child_0",
+                    "label": "two extreme ends is favored",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_6_child_0_child_1_child_2",
+                "label": "stabilizing selection",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_1_child_2_child_0",
+                    "label": "median is favored",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_6_child_0_child_2",
+            "label": "change in allele fequency",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_6_child_0_child_2_child_0",
+                "label": "genetic drift",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_2_child_0_child_0",
+                    "label": "the change in allele frequency in a small population by chance",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_6_child_0_child_2_child_1",
+                "label": "founder effect",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_2_child_1_child_0",
+                    "label": "a small population separete from the main population and habitat",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_2_child_1_child_1",
+                    "label": "the allele frequency in population is up to chance",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_6_child_0_child_2_child_2",
+                "label": "bottleneck effect",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_2_child_2_child_0",
+                    "label": "similar to founder effect",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_2_child_2_child_1",
+                    "label": "when a catastrophic event occurs, which drastically reduce the number of the population, genetic diversity decrease",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_6_child_0_child_3",
+            "label": "Hardy-Weinberg principle",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_6_child_0_child_3_child_0",
+                "label": "state that of certain conditions are met that allele frequency of gene within a population will not change over time",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_6_child_0_child_3_child_1",
+                "label": "conditions",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_6_child_0_child_3_child_1_child_0",
+                    "label": "organism are diploid",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_3_child_1_child_1",
+                    "label": "organism reproduced by sexual reproduction only",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_3_child_1_child_2",
+                    "label": "no overlap between generations",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_3_child_1_child_3",
+                    "label": "mating is random",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_3_child_1_child_4",
+                    "label": "population is infinitely large",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_3_child_1_child_5",
+                    "label": "no migration, mutation or selection",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_0_child_3_child_1_child_6",
+                    "label": "allele frequency are equal for both sexes",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_6_child_1",
+        "label": "artifical selection",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_6_child_1_child_0",
+            "label": "selective breeding, which means the selection pressure is human",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_6_child_1_child_1",
+            "label": "principle of selective breeding",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_6_child_1_child_1_child_0",
+                "label": "breeder selects an individual with a desired phenotype",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_6_child_1_child_1_child_1",
+                "label": "another individual with desired phenotype is selected. They are not closely related",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_6_child_1_child_1_child_2",
+                "label": "the two individuals breed",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_6_child_1_child_1_child_3",
+                "label": "the offsprings produced are tested for desired traits. the individuals with phenotype to the grestest degree is selected",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_6_child_1_child_1_child_4",
+                "label": "the process continues for many generations until all offsprings display the desired traits",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_6_child_1_child_2",
+            "label": "examples",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_6_child_1_child_2_child_0",
+                "label": "milk yield",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_6_child_1_child_2_child_0_child_0",
+                    "label": "resistance",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_1_child_2_child_0_child_1",
+                    "label": "docility",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_1_child_2_child_0_child_2",
+                    "label": "long mammary period",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_1_child_2_child_0_child_3",
+                    "label": "high milk yield",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_6_child_1_child_2_child_1",
+                "label": "maize",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_6_child_1_child_2_child_1_child_0",
+                    "label": "uniformity",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_6_child_1_child_2_child_1_child_1",
+                    "label": "hybridization",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_6_child_1_child_2_child_1_child_1_child_0",
+                        "label": "two homozygous",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_1_child_2_child_1_child_1_child_1",
+                        "label": "maize plants are crossed and produce heterozygous individuals",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_6_child_1_child_2_child_1_child_2",
+                    "label": "avoid inbreeding depression",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_6_child_1_child_2_child_1_child_2_child_0",
+                        "label": "the reproduction between closely related individuals or individual with similar genotype",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_1_child_2_child_1_child_2_child_1",
+                        "label": "purpose",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_6_child_1_child_2_child_1_child_2_child_1_child_0",
+                            "label": "increase in the chance of harmful alleles coming together and being expressed in the phenotype",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_6_child_1_child_2_child_1_child_2_child_1_child_1",
+                            "label": "increase homozygosity",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_6_child_1_child_2_child_1_child_2_child_1_child_1_child_0",
+                                "label": "weaker, decrease in survive",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_6_child_1_child_2_child_1_child_2_child_1_child_2",
+                            "label": "decrease in hybrid vigor",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_6_child_1_child_2_child_2",
+                "label": "rice and wheat",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_6_child_1_child_2_child_2_child_0",
+                    "label": "wheat",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_6_child_1_child_2_child_2_child_0_child_0",
+                        "label": "gluten",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_1_child_2_child_2_child_0_child_1",
+                        "label": "high gluten: noodles and flout",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_1_child_2_child_2_child_0_child_2",
+                        "label": "low gluten: pastry",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_6_child_1_child_2_child_2_child_1",
+                    "label": "rice",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_6_child_1_child_2_child_2_child_1_child_0",
+                        "label": "fungal disease resistance",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_6_child_1_child_2_child_2_child_1_child_1",
+                        "label": "create varieties of rice plants that are resistant to bacterial and fungal disease",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

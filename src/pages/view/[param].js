@@ -57,14 +57,26 @@ export default function ViewPage() {
         // 判断是否为mindmap
         if (decodedParam.toLowerCase().includes('mindmap')) {
             const level = decodedParam.toLowerCase().includes('a2') ? 'a2' : 'as';
-            // 提取章节号 - 支持多种格式：Chapter 1, Chapter1, chapter 1 等
+            
+            // 定义有效章节范围
+            const validChapters = level === 'a2' 
+                ? ['12', '13', '14', '15', '16', '17', '18', '19']
+                : ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
+            
+            // 提取章节号 - 优先匹配 "Chapter X" 格式
             const chapterMatch = decodedParam.match(/chapter[\s]*(\d+)/i);
-            // 如果没找到，尝试直接找数字（可能是章节号）
             let chapter = chapterMatch ? chapterMatch[1] : null;
-            if (!chapter) {
-                const numberMatch = decodedParam.match(/(?:^|\s)(\d+)(?:\s|$)/);
-                chapter = numberMatch ? numberMatch[1] : '1'; // 默认为 Chapter 1
+            
+            // 验证章节号是否在有效范围内
+            if (chapter && !validChapters.includes(chapter)) {
+                chapter = null; // 无效章节号，使用默认值
             }
+            
+            // 如果没有找到或无效，使用默认章节
+            if (!chapter) {
+                chapter = level === 'a2' ? '12' : '1';
+            }
+            
             console.log('✅ 识别为mindmap:', level, '章节:', chapter);
             return { type: 'mindmap', level, chapter, hasViewContent: true };
         }
@@ -254,7 +266,10 @@ export default function ViewPage() {
             }
             
             // 加载 mindmap JSON 数据
-            const apiUrl = `/api/getMindmapData?level=${encodeURIComponent(level)}&chapter=${encodeURIComponent(chapter || '1')}`;
+            // 根据级别设置默认章节：AS 从 1 开始，A2 从 12 开始
+            const defaultChapter = level === 'a2' ? '12' : '1';
+            const chapterToUse = chapter || defaultChapter;
+            const apiUrl = `/api/getMindmapData?level=${encodeURIComponent(level)}&chapter=${encodeURIComponent(chapterToUse)}`;
             console.log('Fetching mindmap data from:', apiUrl);
             
             const response = await fetch(apiUrl, {
@@ -290,7 +305,9 @@ export default function ViewPage() {
     const handleUnitChange = useCallback((unit) => {
         // 如果是 mindmap 类型，切换章节时重新加载 mindmap 数据
         if (resourceInfo.type === 'mindmap') {
-            const chapterId = typeof unit === 'string' ? unit : (unit?.id || '1');
+            // 根据级别设置默认章节：AS 从 1 开始，A2 从 12 开始
+            const defaultChapter = resourceInfo.level === 'a2' ? '12' : '1';
+            const chapterId = typeof unit === 'string' ? unit : (unit?.id || defaultChapter);
             const foundUnit = availableFiles.find(u => u.id === chapterId);
             if (foundUnit) {
                 setSelectedFile(foundUnit);
@@ -338,7 +355,9 @@ export default function ViewPage() {
     // 当识别为 mindmap 类型时，自动加载数据
     useEffect(() => {
         if (router.isReady && resourceInfo.type === 'mindmap' && resourceInfo.level) {
-            const chapter = resourceInfo.chapter || '1';
+            // 根据级别设置默认章节：AS 从 1 开始，A2 从 12 开始
+            const defaultChapter = resourceInfo.level === 'a2' ? '12' : '1';
+            const chapter = resourceInfo.chapter || defaultChapter;
             loadMindmapData(resourceInfo.level, chapter);
             // 设置默认选中的章节
             if (availableFiles.length > 0) {
@@ -346,6 +365,14 @@ export default function ViewPage() {
                 if (chapterFile) {
                     setSelectedFile(chapterFile);
                     setSelectedUnitId(chapterFile.id);
+                } else {
+                    // 如果找不到指定章节，使用第一个可用章节
+                    const firstFile = availableFiles[0];
+                    if (firstFile) {
+                        setSelectedFile(firstFile);
+                        setSelectedUnitId(firstFile.id);
+                        loadMindmapData(resourceInfo.level, firstFile.id);
+                    }
                 }
             }
         }

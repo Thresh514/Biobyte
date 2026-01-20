@@ -1,0 +1,444 @@
+[
+  {
+    "id": "root_0",
+    "label": "Photosynthesis",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "light-dependent reaction",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "photolysis",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "occurs in photosystem II",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "catalyzed by a water- splitting enzyme",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "photophosphorylation",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "non- cyclic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_0",
+                    "label": "occurs in PSII and PSI",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_1",
+                    "label": "Light energy is absorbed by both photosystems, exciting electrons in primary pigment",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_2",
+                    "label": "Electrons from photosystem II are transferred to an electron acceptor and pass through a chain of carriers down the energy potential gradient, leading to ATP synthesis via chemiosmosis",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_3",
+                    "label": "Electrons from photosystem I are transferred to another acceptor, ultimately reducing NADP+ to NADPH",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_4",
+                    "label": "The electrons lost from the photosystems are replaced by electrons derived from the splitting of water molecules, a process called photolysis, which splits water molecules into oxygen, protons (H+), and electrons (e-).",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_5",
+                    "label": "Protons (H+) from water splitting combine with electrons from photosystem I and NADP+ to form NADPH",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "cyclic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_0",
+                    "label": "occurs in PSI",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_1",
+                    "label": "Light energy is absorbed by photosystem I and passed to the primary pigment, exciting an electron in the chlorophyll a molecule to a higher energy level.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_2",
+                    "label": "The high-energy electron is emitted from the chlorophyll molecule, a process known as photoactivation",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_3",
+                    "label": "The excited electrons are captured by an electron acceptor in the thylakoid membrane and passed along a chain of electron carriers.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_4",
+                    "label": "The energy released is used to actively transport protons from the stroma, across the thylakoid membrane, into the thylakoid space, creating a proton gradient.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_5",
+                    "label": "Protons move down their concentration gradient, through ATP synthase molecules, by facilitated diffusion",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_6",
+                    "label": "ATP is synthesized by adding a phosphate group to ADP, a process known as chemiosmosis.",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "production of NADPH",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_2_child_0",
+                "label": "hydrogen carrier",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "light-independent reaction (Calvin cycle)",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "Carbon Fixation",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "Carbon dioxide combines with a five-carbon compound, ribulose bisphosphate (RuBP), catalyzed by the enzyme rubisco, producing two molecules of Glycerate 3-phosphate (GP)",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "ATP and NADPH from the light-dependent reactions are used to convert GP into triose phosphate (TP), a three-carbon sugar.",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "Most of the TP molecules are used to regenerate RuBP, a process that requires ATP.",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_3",
+            "label": "Some TP molecules are used to synthesize glucose and other carbohydrates needed by the plant.",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_4",
+            "label": "TP can also be used to produce starch, sucrose, cellulose, lipids, and amino acids required by the plant for various purposes.",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "structure of chloroplast",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "thylakoid",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "granum",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "stroma",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "70s ribosome, cDNA",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_3",
+            "label": "photosynthetic pigments",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_3_child_0",
+                "label": "primary pigments",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_3_child_0_child_0",
+                    "label": "chlorophyll a",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_3_child_1",
+                "label": "accessory pigment",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_3_child_1_child_0",
+                    "label": "chlorophyll b",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_3_child_1_child_1",
+                    "label": "beta-carotene",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_3_child_1_child_2",
+                    "label": "xanthophyll",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_3_child_2",
+                "label": "chromatography of pigements",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_3_child_2_child_0",
+                    "label": "Rf value (retardation factor)",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_3_child_2_child_0_child_0",
+                        "label": "the ratio of distance travelled by pigments and distance travelled by solvent",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_3_child_2_child_0_child_1",
+                        "label": "greater Rf value, more soluble and smaller size of the pigment",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_3_child_2_child_1",
+                    "label": "action spectrum",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_3_child_2_child_1_child_0",
+                        "label": "a graph of rate of photosynthesis at different wavelength of light",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_3_child_2_child_2",
+                    "label": "absoption spectrum",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_3_child_2_child_2_child_0",
+                        "label": "a absorbance of different wavelength of light by a pigment",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "rate of photosynthesis",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "variable change method",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_0_child_0",
+                "label": "light intensity",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_0_child_0",
+                    "label": "change the distance between the light source and plant",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_1",
+                "label": "light wavelength",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_0",
+                    "label": "use different colors of filter paper",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_2",
+                "label": "concentration of CO2",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_2_child_0",
+                    "label": "use different concentration of NaHCO3 solution",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_3",
+                "label": "temperature",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_3_child_0",
+                    "label": "use waterbath",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "measure method",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_1_child_0",
+                "label": "make chloroplast isolation",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_0",
+                    "label": "liquidize the leaves in ice-cold buffer",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_0_child_0",
+                        "label": "isolation buffer",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_0_child_0_child_0",
+                            "label": "cold: reduce enzyme activity to avoid digestion of chloroplast",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_0_child_0_child_1",
+                            "label": "optimum pH: prevent denaturation of enzymes in chloroplast",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_0_child_0_child_2",
+                            "label": "optimum osmostic pressure: prevent chloroplast from bursting",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_1",
+                    "label": "filter or centrifuge the suspension",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_2",
+                    "label": "add DCPIP/ methylene blue solution",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

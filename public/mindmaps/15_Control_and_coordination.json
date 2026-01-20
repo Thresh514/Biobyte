@@ -1,0 +1,1150 @@
+[
+  {
+    "id": "root_0",
+    "label": "Nervous System",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "central nervous system",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "brain",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "spinal cord",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "peripheral nervous system",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "all of the other neurones",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "neurones",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "types",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "motor neurone",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_1",
+                "label": "sensory neurones",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_0_child_2",
+                "label": "relay neurone",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_2_child_0",
+                    "label": "only found in spinal cord",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "electrical impulse",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "resting potential",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_0",
+                    "label": "65mV",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_1",
+                    "label": "the difference in electrical potential between the outside and inside of the cell surface membrane of an axon.",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "action potential",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_0",
+                    "label": "membrane potential",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_0_child_0",
+                        "label": "voltage across the membrane",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_1",
+                    "label": "the importance of refactroy period",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_1_child_0",
+                        "label": "Refractory period prevent the merging of electrical impulse.",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_1_child_1",
+                        "label": "Electrical impulses are transmitted discretely.",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_1_child_2",
+                        "label": "Determine the minimum time between action potentials occurring anyone place on a neurons.",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_1_child_3",
+                        "label": "The length of the refractory period determine the maximum frequency at which impulse transmitted along neurons.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_2",
+                    "label": "how action potential transmit information",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_2_child_0",
+                        "label": "The nature of the action potential is determined by the location of the sensory neurons that carry the information.",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_2_child_1",
+                        "label": "The speed of action potential transmission is always the same.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_3",
+                    "label": "how strength of the signals",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_3_child_0",
+                        "label": "The frequency of action potential determines the strength of the stimulus",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_4",
+                    "label": "speed of conduction of impulses",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_4_child_0",
+                        "label": "myelination can speed up the transmission of electrical impulses",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_4_child_0_child_0",
+                            "label": "myelin sheath acts as insulator that prevents differences in potential across the membrane surrounded by myelin sheath",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_4_child_0_child_1",
+                            "label": "Schwann cell can produce myelin sheath",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_4_child_1",
+                        "label": "the greater the diameter of axon is, the faster the transmission",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_4_child_2",
+                        "label": "saltatory conduction",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_4_child_2_child_0",
+                            "label": "100 m/s",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_4_child_2_child_1",
+                            "label": "the electrical impulse are jumping from one node of Ranvier to another in one direction.",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_1_child_4_child_3",
+                        "label": "local circuit",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_4_child_3_child_0",
+                            "label": "0.5 m/s",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_1_child_1_child_4_child_3_child_1",
+                            "label": "the result of Na+ diffusion between depolarized region and region that is not yet depolarized.",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_2",
+                "label": "types of channel proteins",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_2_child_0",
+                    "label": "voltage-gated ion channel",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_2_child_0_child_0",
+                        "label": "When the membrane potential reaches certain value, the channel opens.",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_2_child_0_child_1",
+                        "label": "the voltaged-gated ion channel is deactivated after a period of time of opening",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_2_child_0_child_2",
+                        "label": "voltage-gated Na+ channel",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_2_child_0_child_3",
+                        "label": "voltage-gated K+ channel",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_2_child_1",
+                    "label": "ligand-gated ion channel",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_2_child_1_child_0",
+                        "label": "When a ligand binds to the ion channel, the channel opens.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "reflex",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "stimulus",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_0_child_0",
+                "label": "smell; light; sound; taste; touch; pain; temperature",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "receptor cells",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_1_child_0",
+                "label": "the transducer that convert energy in one form into electrical impulses",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_1_child_1",
+                "label": "taste buds of papillae",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_0",
+                    "label": "Na+ diffuse into the receptor cell in the sensory zone.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_1",
+                    "label": "Depolarization occurs.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_2",
+                    "label": "If the receptor potential reaches the threshold receptor potential, voltage-gated Ca ion channel open. Ca ions diffuse into chemoreceptors.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_3",
+                    "label": "Ca ions stimulate the exocytosis of the vesicles containing neurotransmitters at the basal membrane.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_4",
+                    "label": "The neurotransmitters stimulate the membrane of a sensory neuron. If the stimulus above the threshold, electrical impulse travel to the brain.",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_2",
+            "label": "all or nothing law",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_2_child_0",
+                "label": "If the stimulus is very weak and below the threshold, the receptor cells are not depolarized and the sennsory neurone cannot generate an action potential.",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_3",
+            "label": "synapse",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_3_child_0",
+                "label": "cholinergic synapse",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_3_child_1",
+                "label": "recycling of neurotransmitter: in pre-synaptic membrane",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_3_child_2",
+                "label": "mechanism",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_3_child_2_child_0",
+                    "label": "Action potential arrives at nerve ending.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_3_child_2_child_1",
+                    "label": "It stimulate the opening of the Ca ion channel.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_3_child_2_child_2",
+                    "label": "Ca ion influx stimulate vesicle containing acetylcholine to move and fuse with presynaptic membrane. Ach is released into the synaptic cleft by exocytosis.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_3_child_2_child_3",
+                    "label": "Ach binds to Ach receptor on the postsynaptic membrane. Ach receptor is a ligand-gated Na ion channel.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_3_child_2_child_4",
+                    "label": "Binding causes its opening and allows a sodium influx, depolarizing the membrane",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_3_child_2_child_5",
+                    "label": "If the membrane potential reaches threshold, then action potential forms.",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_3_child_3",
+                "label": "role of synpase",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_3_child_3_child_0",
+                    "label": "Synapse ensures one-way transmission of signals",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_3_child_3_child_0_child_0",
+                        "label": "Because the vesicle containing neurotransmitters are only found in the presynaptic neurons. The neurotransmitter receptor are found on the postsynaptic membrane.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_3_child_3_child_1",
+                    "label": "Synapse allows integration of electrical impulses",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_3_child_3_child_1_child_0",
+                        "label": "This prevents the overcrowding of sensory information in our brain.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "root_1",
+    "label": "Each sensory neuron have synapses with multiple sensory neurons.",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_1_child_0",
+        "label": "Interconnection of nerve pathways",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_1_child_0_child_0",
+            "label": "Individual sensory neuron and relay neuron have axons that branch out to form synapse with many different neurons.",
+            "side": "left",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "root_2",
+    "label": "This allows neurons to integrate information from different parts of the body, which is essential for decision making.",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_2_child_0",
+        "label": "Memory and learning",
+        "side": "left",
+        "children": []
+      },
+      {
+        "id": "root_2_child_1",
+        "label": "effector",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_2_child_1_child_0",
+            "label": "ultrastructure",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_2_child_1_child_0_child_0",
+                "label": "muscle type",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_2_child_1_child_0_child_0_child_0",
+                    "label": "skeletal muscle",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_2_child_1_child_0_child_0_child_0_child_0",
+                        "label": "single cylindrical multinucleated with striation",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_0_child_0_child_1",
+                        "label": "neurogenic",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_2_child_1_child_0_child_0_child_1",
+                    "label": "cardiac muscle",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_2_child_1_child_0_child_0_child_1_child_0",
+                        "label": "branching chains of cells",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_0_child_1_child_1",
+                        "label": "uni or bi nucleated with striation",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_0_child_1_child_2",
+                        "label": "myogentic",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_2_child_1_child_0_child_0_child_2",
+                    "label": "smooth muscle",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_2_child_1_child_0_child_0_child_2_child_0",
+                        "label": "single uninucleated cell without striation with trapped end",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_0_child_2_child_1",
+                        "label": "neurogenic",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_2_child_1_child_0_child_1",
+                "label": "muscle structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_2_child_1_child_0_child_1_child_0",
+                    "label": "muscle fiber",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_0_child_0",
+                        "label": "sacroplasmic reticulum = ER: store of Ca2+",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_0_child_1",
+                        "label": "sarcolemma = cell membrane",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_0_child_2",
+                        "label": "sarcoplasm = cytoplasm",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_0_child_3",
+                        "label": "contain many mitochondria",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_0_child_4",
+                        "label": "sarcomere: the part of a myofibril between two Z discs",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_0_child_5",
+                        "label": "myosin filament",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_2_child_1_child_0_child_1_child_0_child_5_child_0",
+                            "label": "myosin head",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_2_child_1_child_0_child_1_child_0_child_5_child_0_child_0",
+                                "label": "contains ATPase that hydrolyze ATP to release energy",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_2_child_1_child_0_child_1_child_0_child_5_child_0_child_1",
+                                "label": "globular protein",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_2_child_1_child_0_child_1_child_0_child_5_child_0_child_2",
+                                "label": "fibrous protein",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_0_child_6",
+                        "label": "actin filament",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_2_child_1_child_0_child_1_child_0_child_6_child_0",
+                            "label": "made up of actins",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_2_child_1_child_0_child_1_child_0_child_6_child_1",
+                            "label": "chain of globular proteins",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_2_child_1_child_0_child_1_child_0_child_6_child_2",
+                            "label": "When muscle is relaxed, tropomyosin cover the binding site of an actin",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_2_child_1_child_0_child_1_child_1",
+                    "label": "sliding filament theory",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_1_child_0",
+                        "label": "When the muscle is relax, the tropomyosin blocks the binding sites of action filament.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_1_child_1",
+                        "label": "When muscle contracts upon the stimulation of a motor neurons. Ca ion are released from SR and bind to troponin, changing its conformation. This removes the tropomyosin from the binding site.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_1_child_2",
+                        "label": "The myosin head then binds with the binding site of an actin, forming a cross bridge.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_1_child_3",
+                        "label": "The myosin head tilts and pulls the actin filaments towards the M-line. The action is called a power stroke. ADP is released from the myosin head. Sacromere shortens.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_1_child_4",
+                        "label": "A new ATP binds to the myosin head causing the myosin head to detachment from the actin filament.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_1_child_5",
+                        "label": "ATPase on the myosin head hydrolyzes the ATP, causing the myosin head to spring back to its previous position. If Ca ion still present, myosin head will reattach to the actin filaments. Muscle contraction continues.",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_2_child_1_child_0_child_1_child_2",
+                    "label": "Stimulating Muscle to Contract",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_0",
+                        "label": "Action potential arrives at nerve ending.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_1",
+                        "label": "It stimulate the opening of the Ca ion channel.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_2",
+                        "label": "Ca ion influx stimulate vesicle containing acetylcholine to move and fuse with presynaptic membrane. Ach is released into the synaptic cleft by exocytosis.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_3",
+                        "label": "Ach binds to Ach receptor on the sacrolemma. Ach receptor is a ligand-gated Na ion channel.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_4",
+                        "label": "Binding causes its opening and allows a sodium influx, depolarizing the membrane",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_5",
+                        "label": "If the membrane potential reaches threshold, then action potential forms.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_6",
+                        "label": "The action potential transmit along sacrolemma and down into the T-tubule.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_7",
+                        "label": "The action potential will stimulate SR to release Ca ions.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_1_child_0_child_1_child_2_child_8",
+                        "label": "Ca ions stimulate muscle contraction.",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_2_child_2",
+        "label": "coordination in plants",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_2_child_2_child_0",
+            "label": "electrical communication",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_2_child_2_child_1",
+            "label": "venus fly trap",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_2_child_2_child_1_child_0",
+                "label": "structure",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_2_child_2_child_1_child_0_child_0",
+                    "label": "the specialized leaf is divided into two lobes either side of a midrib",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_0_child_1",
+                    "label": "the inside of the lobe and its outer edge contains nectar-secreting glands to attract insects",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_0_child_2",
+                    "label": "the surface of each lobe has many glands that secrete enzymes for the digestion of trapped insects",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_0_child_3",
+                    "label": "each lobe has three stiff sensory hairs that respond to deflection",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_2_child_2_child_1_child_1",
+                "label": "The closure of a Venus fly trap",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_2_child_2_child_1_child_1_child_0",
+                    "label": "Deflection of sensory hair activates Ca ion channel in cells at the base of the hair.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_1_child_1",
+                    "label": "The Ca ion influx generate a receptor potential (depolarization)",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_1_child_2",
+                    "label": "Within 20-35 seconds, if two hairs are stimulated or one hair is stimulated twice. An action potential will travel across the trap.",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_2_child_2_child_1_child_2",
+                "label": "Trap closes",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_2_child_2_child_1_child_2_child_0",
+                    "label": "Protons are pumped out of the cells and into the cell walls",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_2_child_1",
+                    "label": "lower pH cause cell wall loosening (acid cell wall theory)",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_2_child_2",
+                    "label": "Outflux of proton leads to influx of Ca ion",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_2_child_3",
+                    "label": "Water follows osmotically, and the cells swell.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_2_child_4",
+                    "label": "The leave change from convex to concave.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_2_child_5",
+                    "label": "The elastic pressure is released at midrib.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_2_child_6",
+                    "label": "The trap snaps close.",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_2_child_2_child_1_child_3",
+                "label": "To completely close the trap",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_2_child_2_child_1_child_3_child_0",
+                    "label": "Continuous activation of the sensory hairs by the trapped insects is required.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_3_child_1",
+                    "label": "Further stimulation of sensory hairs stimulate Ca ion to enter gland cells where they stimulate the exocytosis of vesicles containing digestive enzymes.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_1_child_3_child_2",
+                    "label": "The trap then stays shut for up to a week to allow the prey to be digested and nutrients from it to be absorbed by the plants.",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_2_child_2_child_2",
+            "label": "hormone in plant",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_2_child_2_child_2_child_0",
+                "label": "auxin in stem elongation",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_2_child_2_child_2_child_0_child_0",
+                    "label": "Auxin binds to the auxin receptor on the cell surface membrane of a plant cell.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_2_child_0_child_1",
+                    "label": "The binding activates proton pumps which move protons into the cell wall.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_2_child_0_child_2",
+                    "label": "The cell wall is acidified. Lower pH activates an enzyme called expansin. Expansin can break down the cross links between cellulose microfibrils thus loosening the cell wall.",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_2_child_2_child_2_child_0_child_3",
+                    "label": "The binding also activates a K ion channel to open.",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_2_child_2_child_2_child_0_child_3_child_0",
+                        "label": "K ion influx lower the water potential inside the cell.",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_2_child_2_child_0_child_3_child_1",
+                        "label": "Water diffuse into the cell by facilitated diffusion through aquaporin.",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_2_child_2_child_0_child_3_child_2",
+                        "label": "The increase in the turgor pressure of the cell causes the cell wall to stretch. The cell elongates.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_2_child_2_child_2_child_1",
+                "label": "gibberellin",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_2_child_2_child_2_child_1_child_0",
+                    "label": "Le allels codes for enzyme activates gibberellin",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_2_child_2_child_2_child_1_child_0_child_0",
+                        "label": "phenotype: tall",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_2_child_2_child_2_child_1_child_1",
+                    "label": "Le allele codes for a non-functional enzyme that cannot activate gibberellin",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_2_child_2_child_2_child_1_child_1_child_0",
+                        "label": "phenotype: dwarf",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_2_child_2_child_2_child_1_child_2",
+                    "label": "function",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_2_child_2_child_2_child_1_child_2_child_0",
+                        "label": "stem elongation",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_2_child_2_child_2_child_1_child_2_child_1",
+                        "label": "seed germination",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_0",
+                            "label": "Water is absorbed by the seeds.",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_1",
+                            "label": "This stimulates the embryo to synthesize gibberellin.",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_2",
+                            "label": "Gibberellin diffuses into the aleurone layer and stimulate the synthesis of amylase.",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_3",
+                            "label": "Amylase hydrolyzes starch in the endosperm into maltose.",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_4",
+                            "label": "Maltose is converted into glucose and transported into the embryo.",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_5",
+                            "label": "Glucose is then respired to provided energy for embryo to grow.",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_6",
+                            "label": "Without gibberellin:",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_6_child_0",
+                                "label": "DELLA protein bind to a transcription factor called PIF, so PIF cannot bind to the promoter of the amylase gene, transcription does not occur.",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_7",
+                            "label": "With gibberellin:",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_7_child_0",
+                                "label": "Binding of gibberellin activates the enzyme that breaks down the DELLA protein.",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_7_child_1",
+                                "label": "The PIF can bind to the promoter.",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_7_child_2",
+                                "label": "The transcription of amylase can initiated.",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_2_child_2_child_2_child_1_child_2_child_1_child_7_child_3",
+                                "label": "Amylase enzyme is synthesized.",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

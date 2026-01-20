@@ -1,0 +1,673 @@
+[
+  {
+    "id": "root_0",
+    "label": "Energy and Respiration",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "Energy",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "The use of energy",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "anabolic reaction",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_0",
+                    "label": "DNA replication",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_1",
+                    "label": "protein synthesis",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "muscle contraction/ contraction of spindle fibers",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_2",
+                "label": "active transport",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_2_child_0",
+                    "label": "Na+ - K+ pump",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_3",
+                "label": "bulk transport",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_3_child_0",
+                    "label": "exocytosis",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_3_child_1",
+                    "label": "endosytosis (phagocytosis)",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_4",
+                "label": "movement of flagella and cilia (cliliated epithelium)",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_5",
+                "label": "maintenance of body temperature",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_6",
+                "label": "electrical discharge",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_6_child_0",
+                    "label": "eleectrir eel",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_7",
+                "label": "bioluminescene",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_7_child_0",
+                    "label": "bioluminescent",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "Adenosine Triphosphate",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "reasons for universal energy currency (in living organism)",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_0",
+                    "label": "small, soluble and easily transferred within cells",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_1",
+                    "label": "ATP is synthesized and consumed simutaneously",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_2",
+                    "label": "An option quantity of energy is released from the hydrolysis of one ATP molecule. It allows the cell to have better control ove the protein and reduce waste",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_3",
+                    "label": "ATP links energy-requiring and energy-yielding reactions",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_4",
+                    "label": "A short-term store of chemical energy",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_0",
+                    "label": "ATP is made up of one adenine base, one ribose sugar and three phosphate group.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_1",
+                    "label": "ATP: 30.5 kJ/ mol",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "synthesis of ATP molecule",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_0",
+                    "label": "substrated-linked phosphorylation",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_0",
+                        "label": "ATP is formed by transferring a phosphate group directly from a substrate",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_1",
+                        "label": "phosphorylation",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_0_child_1_child_0",
+                            "label": "introduction of a phosphate group to a molecule",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_0_child_2",
+                        "label": "kinase",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_2_child_0_child_2_child_0",
+                            "label": "An enzyme that phosphorylate molecules",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_1",
+                    "label": "chemiosmosis",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_1_child_0",
+                        "label": "the synthesis of ATP by the diffusion of protons through ATP synthase",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "Respriation",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "Aerobic Respriation",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "Glycolysis",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_0_child_0",
+                    "label": "occurs in the cytoplasm of a cell",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_0_child_1",
+                    "label": "splitting of a glucose molecule",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_0_child_2",
+                    "label": "Net Production: 2 ATP + 2 NADH + 2 Pyruvate",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_1",
+                "label": "Link reaction",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_1_child_0",
+                    "label": "pyruvate molecules are transferred pyruvate from cytoplasm to the matrix by active transport",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_1_child_1",
+                    "label": "occurrs in the matrix",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_1_child_2",
+                    "label": "production: 2NADH, 2Acetyl CoA",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_2",
+                "label": "Krebs cycle/ Citric acid cycle",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_2_child_0",
+                    "label": "occurs in the matrix",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_2_child_1",
+                    "label": "production: 3NADH, 1FADH, 1ATP",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_2_child_2",
+                    "label": "enzyme-controlled reactions",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_2_child_3",
+                    "label": "Steps:",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_0_child_2_child_3_child_0",
+                        "label": "Acetyl coenzyme A (2C) combines with oxaloacetate (4C) to form citrate (6C).",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_0_child_2_child_3_child_1",
+                        "label": "Citrate is decarboxylated and dehydrogenated in a series of steps. This process releases carbon dioxide as a waste gas and hydrogens, which are accepted by the carriers NAD and FAD.",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_0_child_2_child_3_child_2",
+                        "label": "Oxaloacetate is regenerated to combine with another acetyl coenzyme A, restarting the cycle.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_3",
+                "label": "Oxidative phosphorylation",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_3_child_0",
+                    "label": "NADH and FADH2 are transferred to the electron transport chain (ETC) and donate H atoms to the repiratory complex on the inner membrane of mitochondria",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_3_child_1",
+                    "label": "The H atoms are split into protons and electrons. The energetic electrons are passed down the ETC down the energy gradient. The energy released is used to pump protons into the intermembrane space. This generates a proton concentration gradient across the inner membrane",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_3_child_2",
+                    "label": "Protons didduse back into the matrix through ATP synthase, driving the synthrsis of  ATP using ADP and inorganic phosphate (Pi). This process is called chemiosmosis",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_3_child_3",
+                    "label": "Oxygen acts as the final electron acceptor and react with H+ annd e- from ETC to form water",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_4",
+                "label": "respiratory substrate",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_4_child_0",
+                    "label": "kinds of substrate",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_0_child_0",
+                        "label": "glucose",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_0_child_1",
+                        "label": "amino acid",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_0_child_2",
+                        "label": "lipid",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_4_child_1",
+                    "label": "energy value of respiratory substrate",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_1_child_0",
+                        "label": "carbohydrate: 15.8 kJ/ g",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_1_child_1",
+                        "label": "lipid: 39.4 kJ/ g",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_1_child_2",
+                        "label": "protein: 17.0 kJ/ g",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_1_child_3",
+                        "label": "The energy produced in aerobic repiration derive from oxidation of hydrogen atoms to water when NADH and FADH2 are transferred to ETC",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_1_child_4",
+                        "label": "reasons for substrate that contains more C-H bonds has greater energy value",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_1_child_0_child_4_child_1_child_4_child_0",
+                            "label": "more NADH and FADH2 production",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_1_child_0_child_4_child_1_child_4_child_1",
+                            "label": "greater protom concentration gradient",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_1_child_0_child_4_child_1_child_4_child_2",
+                            "label": "more cheiosmosis occurs",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_1_child_0_child_4_child_1_child_4_child_3",
+                            "label": "more ATP production",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_4_child_2",
+                    "label": "respiratory quotient (RQ value)",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_0_child_4_child_2_child_0",
+                        "label": "the ratio of oxygen uptake and carbon dioxide production in unit time",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "anaerobic respiration",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "alcoholic fermentation",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_0_child_0",
+                    "label": "in plant and yeast",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_1_child_0_child_0_child_0",
+                        "label": "enthanol cannnot be reversed. The remaining chemical energy is lost",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_1_child_0_child_0_child_1",
+                        "label": "adaptation of rice paddies",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_1_child_1_child_0_child_0_child_1_child_0",
+                            "label": "rapid upward growth away from the water line",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_1_child_1_child_0_child_0_child_1_child_0_child_0",
+                                "label": "leaves is above water so there is access to oxygen annd carbon dioxide through stomata",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_1_child_1_child_0_child_0_child_1_child_1",
+                            "label": "Aerenchyma tissue in stems and roots",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_1_child_1_child_0_child_0_child_1_child_1_child_0",
+                                "label": "air spaces allow gases to diffuse down to part of plants that are under water",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_1_child_1_child_0_child_0_child_1_child_2",
+                            "label": "rice plants have higher tolerance to ethanol compared to the other plants",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_1_child_1_child_0_child_0_child_1_child_3",
+                            "label": "rice plants produce more ethanol dehydrogenase to break down ethanol",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_1_child_1_child_0_child_0_child_1_child_4",
+                            "label": "Hydrophic layer on the surface of leaves under water",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_1_child_1_child_0_child_1",
+                    "label": "in human body",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_1_child_0_child_1_child_0",
+                        "label": "occurs in smooth ER",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "lactic fermentation",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_1_child_0",
+                    "label": "occurs in animals",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_1_child_1_child_1",
+                    "label": "NAD is regenerated",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_1_child_1_child_1_child_0",
+                        "label": "glycolysis can continue",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_1_child_1_child_1_child_1",
+                        "label": "produce 2ATP per glucose",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_1_child_1_child_1_child_2",
+                        "label": "lactate will be transferred to liver through bloodstream can converted to pyruvate",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "Coenzyme",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "NAD",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_0",
+                    "label": "nicotinamide adenine dinucleotide",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_1",
+                    "label": "hydrogen carrier",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_2_child_0_child_1_child_0",
+                        "label": "transfer hydrogen atoms to the electron transport chain",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_2_child_1",
+                "label": "FAD",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_2",
+                "label": "Coenzyme A",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_2_child_2_child_0",
+                    "label": "fatty acid may also be used to produce Acrtyl CoA by broken down into (2C) acetyl units. 2-C acetyl units react with CoA to form acetyl CoA",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

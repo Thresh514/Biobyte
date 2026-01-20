@@ -1,0 +1,970 @@
+[
+  {
+    "id": "root_0",
+    "label": "Homeostasis",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "definition",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "the regulation of internal conditions of a cell or organism to maintain optimal condition for function, in response to external and internal stimuli",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "optimal condition",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_0",
+                    "label": "blood sugar concentration: 4.4-6.7 mmol/L",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_1",
+                    "label": "temperature: 36.6",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_2",
+                    "label": "pH value: 7-8",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_3",
+                    "label": "osmotic pressure",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_4",
+                    "label": "concentration of respiratory gases",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_5",
+                    "label": "metabolic waste",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "set point",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_1_child_0",
+                    "label": "a range of the internal factors",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "homeostatic cotrol",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "negative feedback",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "ways to transmitted signals",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_0_child_0",
+                    "label": "nervous system",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_0_child_0_child_0_child_0",
+                        "label": "information is transmitted as electrical impulses that travel along neurones",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_1_child_0_child_0_child_1",
+                    "label": "endocrine system",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_0_child_0_child_1_child_0",
+                        "label": "information is transmitted as chemical messenger (hormone) that travel in blood",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_1",
+                "label": "extra example",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_1_child_0",
+                    "label": "body temperature control (seen figure)",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "Excretion system",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "removal of toxic substances or nurient molecules in excess of requirment",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "nitrogen waste",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "removal of excess amino acid",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_0",
+                    "label": "deamination",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_0_child_0_child_0",
+                        "label": "occurs in liver",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_1",
+                    "label": "urea cycle",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "urea, uric acid (purine), creatinine (break down of muscle)",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_1_child_2",
+                "label": "urea is produced in liver and diffuse into blood stream",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "excretory organs",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "kidney, skin (urea)",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_0_child_0",
+                    "label": "kidney",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_0_child_0",
+                        "label": "structure",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_0_child_0",
+                            "label": "seen figure",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_0_child_1",
+                        "label": "ultrafiltration",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_1_child_0",
+                            "label": "The diameter of afferent ateriole ios greater than that of efferent artories, so the pressure is raised at the glomerulus",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_1_child_1",
+                            "label": "small molecule dissolve in plasma can diffuser into Bowman's capsule through gaps between endothelial cell, podocytes, basement membrane",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_1_child_2",
+                            "label": "plasma protein cannot pass through basement membrane and remains in the plasma, so the water potential in filtrate is greater than the water potential in the plasma. Water diffuses back into plasma",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_1_child_3",
+                            "label": "overall, the effect if the pressure outweight the effect of solvent gradient, so small molecules move from blood to filtrate",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_0_child_2",
+                        "label": "selective reabsorption",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_0",
+                            "label": "selective: water, glucose, amino acid, vitamin, salts",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_1",
+                            "label": "steps",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_1_child_0",
+                                "label": "Na+-K+ pump in the basal membrane transport Na+ out of the epithelial cells of PCT by active transport",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_1_child_1",
+                                "label": "Na+ concentration gradient is generated across the mambrane between PCT cells and glomerulus filtrate. Na+ diffuse into the PCT cell from glomerular, filtrated by facilitated diffusion.",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_1_child_2",
+                                "label": "Glucose moleculer are transported along with Na+ through Na+-glucose cotransporter against the concentration gradient",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_1_child_3",
+                                "label": "Glucose diffuse into blood plasma through GLUT protein",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_1_child_4",
+                                "label": "water also enter the cell by osmosis",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_2",
+                            "label": "structure adaptions for the functions",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_2_child_0",
+                                "label": "microvilli increase surface area for more transport protein to anchor",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_2_child_1",
+                                "label": "tight junctions of epithelial cells can prevent leakage of ions",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_2_child_2",
+                                "label": "many mitochondria are found in PCT cells for aerobic respiration to produce ATP, which is used for active transport",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_2_child_2_child_3",
+                                "label": "cotransport protein(Na+/ glucose coptransporter, Na+/ amino acid, Na+/ vitamin) in the membrane reabsorb glucose, amino acid and vitamin",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_0_child_0_child_3",
+                        "label": "osmoregulation",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_0_child_0_child_3_child_0",
+                            "label": "reabsorption of water at collecting duct",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_3_child_0_child_0",
+                                "label": "ADH released from posterior pituitary travels to collecting duct through blood stream",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_3_child_0_child_1",
+                                "label": "ADH bind to ADH receptor on the epitheial cell of collecting duct. The binding activates a series of enzyme controled reaction and a phosphorylase enzyme",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_3_child_0_child_2",
+                                "label": "the enzyme stimulate vesicle containing aquaporin to move to annd fuse with luminal membranes of the collecting duct cells",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_3_child_0_child_3",
+                                "label": "It increase the permeability of luminal membrane to water",
+                                "side": "left",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_0_child_0_child_3_child_0_child_4",
+                                "label": "water in collecting duct diffuse into the cells by osmosis",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_1",
+                "label": "lungs (CO2)",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_2",
+                "label": "liver",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "blood glucose regulation",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "normal blood glucose concentration",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_0_child_0",
+                "label": "4.4-6.7 mmol/ L",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_0_child_1",
+                "label": "hypocermia",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_0",
+                    "label": "fatigue, headache, dizzy, coma",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_2",
+                "label": "hypercermia",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_2_child_0",
+                    "label": "thirsty, ketone",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "blood glucose concentration",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_1_child_0",
+                "label": "insulin can decrease the blood suger concentration",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_0",
+                    "label": "protein hormone",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_1",
+                    "label": "insulin are secretted by beta cells in response to increase in blood glucose concentration",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_2",
+                    "label": "insulin travel to liver cell by blood and bind to the receptors on their cell surface membrane",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_3",
+                    "label": "the binding activates a seris of enzyme-controlled reactions and a glucokinase",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_4",
+                    "label": "glucokinase stimulates vesicles containing GLUT4 proteins to move to and fuse withe the cell surface membrane",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_5",
+                    "label": "this increases the permeability of liver cells to glucose, increase the uptake of glucose",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_6",
+                    "label": "insulins also activates fructokinase that phosphorylate glucose",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_7",
+                    "label": "insulin activates glycogen synthase that convert glucose into glycogen (glycogensis)",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_8",
+                    "label": "insulin can increase the use of the glucose in respiration",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_1_child_1",
+                "label": "glucagon can increase the blood glucose concentration",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_0",
+                    "label": "protein hormone secreted by alpha-cell when blood glucose concentration is below the normal value",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_1",
+                    "label": "glucagon are secreted by alpha cells in response to decrease blood glucose concentration",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_2",
+                    "label": "glucagon travel to the liver cell by blood and bind complementarily to the cell surface membrane receptors",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_3",
+                    "label": "the binding chage the shape of receptor, activate a G-protein",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_4",
+                    "label": "G-protein furthernactivates adenylyl cyclase",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_5",
+                    "label": "adenylyl cyclase converts ATP to cAMP",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_6",
+                    "label": "cAMP acts as a second messenger and trigger an enzyme cascade",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_7",
+                    "label": "cAMP activates protein kinase A which further activates a phosphorylase kinase",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_1_child_8",
+                    "label": "phosphorylase kinase activates glycogen phosphorylase to break down glycogen into glucose (glycogenolysis)",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_1_child_2",
+                "label": "diabetes",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_2_child_0",
+                    "label": "type-I diabetes",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_1_child_2_child_0_child_0",
+                        "label": "genetically inherited cannot produce enough insulin",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_2_child_1",
+                    "label": "tyoe-II diabetes",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_1_child_2_child_1_child_0",
+                        "label": "liver and muscle cells do not respond to insulin",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_2_child_2",
+                    "label": "symptoms",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_1_child_2_child_2_child_0",
+                        "label": "glucose found in urine, blood glucose concentration exceed the capacity of reabsorption of glucose at PCT",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_2_child_2_child_1",
+                        "label": "feel thirsty due to low osmotic pressure",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_2_child_2_child_2",
+                        "label": "hungry due to the decrease uptake of glucose in cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_2_child_2_child_3",
+                        "label": "increase the marbolism of protein and fat to obtain glucose",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_2_child_3",
+                    "label": "test measure",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_1_child_2_child_3_child_0",
+                        "label": "dip stick",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_3_child_1_child_2_child_3_child_0_child_0",
+                            "label": "test urine",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_2_child_3_child_0_child_1",
+                            "label": "the color of pad is compared to color chart to estimate the concentration of glucose in urine",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_2_child_3_child_1",
+                        "label": "biosensor",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_0",
+                            "label": "test blood",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_1",
+                            "label": "the current is proportional to the glucose concentration",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_2",
+                            "label": "advantage",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_2_child_0",
+                                "label": "fast and convinent",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_2_child_1",
+                                "label": "more accurate",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_2_child_2",
+                                "label": "quantitative results",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_3",
+                            "label": "disadvantage",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_3_child_0",
+                                "label": "risk of infection",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_3_child_1_child_2_child_3_child_1_child_3_child_1",
+                                "label": "liitle expensive",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_4",
+        "label": "homeostasis in plant",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_4_child_0",
+            "label": "physiological factor",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_0_child_0",
+                "label": "water",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_0_child_1",
+                "label": "CO2",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_4_child_1",
+            "label": "stomata regulate water and CO2",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_1_child_0",
+                "label": "stomota open",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_0",
+                    "label": "CO2 diffuse into air space",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_1",
+                    "label": "reasons",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_4_child_1_child_0_child_1_child_0",
+                        "label": "low CO2 concentration in airspace within leaves",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_0_child_1_child_1",
+                        "label": "light intensity increase",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_2",
+                    "label": "uptake of CO2",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_3",
+                    "label": "excretion of O2",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_4",
+                    "label": "transpiration occurs (water and inorganic salts are transported)",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_5",
+                    "label": "mechanism",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_4_child_1_child_0_child_5_child_0",
+                        "label": "proton pump on the cell surface membrane move H+ out of the guard cell by active transport",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_0_child_5_child_1",
+                        "label": "decrease of H+ concenntration cames the cytoplasm to be negatively charged. the negative charge stimulate k+ channel to open. K+ diffuses into the cell down an electrochemical gradient",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_0_child_5_child_2",
+                        "label": "entry of K+ decrease water potential in the cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_0_child_5_child_3",
+                        "label": "water enters the cell by osmosis",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_0_child_5_child_4",
+                        "label": "the guard cell become turgid. As the thin layer cell wall bends more. The cell becomes curved, stomata open.",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_1_child_1",
+                "label": "stomata close",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_1_child_1_child_0",
+                    "label": "response to:",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_0_child_0",
+                        "label": "low light intensity",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_0_child_1",
+                        "label": "high CO2 concentration in airspace",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_0_child_2",
+                        "label": "low environment humidity",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_0_child_3",
+                        "label": "high temperature",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_0_child_4",
+                        "label": "water stress from roots",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_1_child_1",
+                    "label": "reduce rate of transcription",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_1_child_2",
+                    "label": "reduce water loss",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_1_child_3",
+                    "label": "stimulate by plant hormone abscisic acid (ABA)",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_1_child_4",
+                    "label": "mechanism",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_0",
+                        "label": "ABA binds to ABA receptoron the cell surface membrane of guard cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_1",
+                        "label": "binding inhibits proton pump and therefore stop the transport of H+ out of the guard cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_2",
+                        "label": "the binding stimulate Ca2+ ion channel to open and Ca2+ enters cytoplasm",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_3",
+                        "label": "Ca2+ acts as a second messenger",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_4",
+                        "label": "Ca2+ ion activates channel protein to allow negatively charged ions to leave the guard cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_5",
+                        "label": "this stimulates the closure of K+ channels that allows K+ to enter the cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_6",
+                        "label": "It also stimulate opening of more channel protein that allow K+ to leave the guard cell",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_7",
+                        "label": "The loss of ions increase the water potential inside guard cell. water leaves the cell by osmosis",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_1_child_1_child_4_child_8",
+                        "label": "the guard cell becomes flaccid and stomata close",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

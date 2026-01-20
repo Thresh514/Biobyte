@@ -1,0 +1,1075 @@
+[
+  {
+    "id": "root_0",
+    "label": "Inheritance",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "sexual reproduction",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "reproduction involving the fusion of gametes(fertilisation) to produce a zygote",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "production of gametes(specialized haploid cells)",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "meiosis",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_0",
+                    "label": "meiosis I",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_0_child_0",
+                        "label": "division of homologous chromosomes, which is called reduction division",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_0_child_1",
+                        "label": "prophase I",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_0_child_1_child_0",
+                            "label": "homologous chromosomes pair up and form bivalents",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_0_child_1_child_1",
+                            "label": "nonsister chromatids overlap to form chiasmata",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_0_child_1_child_2",
+                            "label": "nonsister chromatids exchange alleles, this process is called crossing-over",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_0_child_2",
+                        "label": "metaphase I",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_0_child_2_child_0",
+                            "label": "homologous chromosomes are lined up at the equator of the cell, and there is an independent assortment",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_0_child_3",
+                        "label": "anaphase I",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_0_child_3_child_0",
+                            "label": "homologous chromosomes separate and pulled towards opposite sides",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_0_child_4",
+                        "label": "telophase I",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_0_child_4_child_0",
+                            "label": "chromosomes reach the poles, and the cell divides into two haploid daughter cells.",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_0_child_1",
+                    "label": "meiosis II",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_0",
+                        "label": "divison of sister chromatids, similar to mitosis, which is called equational division:",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_1",
+                        "label": "prophase II",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_1_child_1_child_0",
+                            "label": "chromosomes re-condense, and spindle fibers form.",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_2",
+                        "label": "metaphase II",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_1_child_2_child_0",
+                            "label": "sister chromatids are lined up at the equator of the cell",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_3",
+                        "label": "anaphase II",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_1_child_3_child_0",
+                            "label": "sister chromatids separate and pulled towards opposite sides",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_0_child_1_child_4",
+                        "label": "telophase II",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_0_child_1_child_4_child_0",
+                            "label": "The cells divide again, resulting in four haploid cells. Each cell has one set of chromosomes,",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "genetic variation",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_2_child_0",
+                "label": "chromosome structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_2_child_0_child_0",
+                    "label": "gene: a segment of DNA nucleotuiude that code for protein",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_0_child_1",
+                    "label": "allele: a version of a gene",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_0_child_2",
+                    "label": "locus: position of the gene",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_2_child_1",
+                "label": "genetic variation increased by:",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_2_child_1_child_0",
+                    "label": "crossing over",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_1_child_1",
+                    "label": "independent assortment",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_1_child_2",
+                    "label": "random fertilization",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_1_child_3",
+                    "label": "random mating",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_1_child_4",
+                    "label": "mutation",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_2_child_1_child_4_child_0",
+                        "label": "have chance to generate new alleles",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_3",
+            "label": "genetics",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_3_child_0",
+                "label": "a fundamental role in determining the characteristics of offspring produced through sexual reproduction",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_3_child_1",
+                "label": "Terminology",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_0",
+                    "label": "genotype",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_1",
+                    "label": "the alleles possessed by an organism",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_2",
+                    "label": "phenotype",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_2_child_0",
+                        "label": "the observable features of an organism",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_3_child_1_child_2_child_0_child_0",
+                            "label": "affected by genes and environment",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_3",
+                    "label": "homozygous",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_3_child_0",
+                        "label": "have two identical alleles of a gene",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_4",
+                    "label": "heterozygous",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_4_child_0",
+                        "label": "have two different alleles of a gene",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_5",
+                    "label": "dominant (A)",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_5_child_0",
+                        "label": "as long as a dominant allele presents, the dominant trait will appear",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_6",
+                    "label": "recessive (a)",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_6_child_0",
+                        "label": "appear only when recessive alleles presents",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_2",
+                "label": "Mendellian inheritance",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_3_child_3",
+                "label": "Codominance",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_3_child_0",
+                    "label": "alleles are both dominant and contribute equally to the phenotype",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_4",
+                "label": "Mutiple alleles",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_3_child_5",
+                "label": "X-linked inheritance",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_5_child_0",
+                    "label": "alleles locate on the X-chromosomes",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_6",
+                "label": "Epistasis",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_6_child_0",
+                    "label": "two different genes on different chromosomes affect the same feature. The allele of one gene affect the expression of the other",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_7",
+                "label": "Autosomal linkage",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_7_child_0",
+                    "label": "When two or more gene are positioned on the same chromosome",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_7_child_1",
+                    "label": "recombinant: The crossing-over rate depends on the distance of two genes. The further away two genes are, the higher the crossimng over rate",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "x2 chi-square test",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "test the difference between expected results and observed results and see whether they are statistically different",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "criteria",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "chi-square test is commonly used to compare catagorized data",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "steps",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "Null hypothesis: Assumes no association/independence.",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_1",
+                "label": "Calculate Expected Frequencies",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_2",
+                "label": "Compute the Chi-Square Statistic",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_3",
+                "label": "Determine Degrees of Freedom",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_2_child_3_child_0",
+                    "label": "degree of freedom",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_2_child_3_child_0_child_0",
+                        "label": "phenotype - 1",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_2_child_4",
+                "label": "Compare with Critical Value",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_3",
+            "label": "Genetic Disease",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_4",
+            "label": "sickle cell anemia",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_4_child_0",
+                "label": "autosomal recessive disorder",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_4_child_1",
+                "label": "mutation on HBB gene on chromosome 11, which is coded for beta globin",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_4_child_1_child_0",
+                    "label": "substitution mutation",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_4_child_1_child_0_child_0",
+                        "label": "change from CTT to CAT",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_4_child_1_child_0_child_1",
+                        "label": "results in the substitution of the amino acid valine for glutamic acid",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_4_child_2",
+                "label": "beta globin is less soluble and stick together to form long fibers",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_4_child_2_child_0",
+                    "label": "red blood cell become sickle shape",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_4_child_3",
+                "label": "codominance",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_4_child_3_child_0",
+                    "label": "HbA/HbA (Normal Hemoglobin): Individuals have normal red blood cells.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_4_child_3_child_1",
+                    "label": "HbA/HbS (Sickle Cell Trait): Individuals are carriers and usually have both normal hemoglobin (HbA) and sickle hemoglobin (HbS). This is where codominance is observed.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_4_child_3_child_2",
+                    "label": "HbS/HbS (Sickle Cell Disease): Individuals have sickle cell anemia and primarily produce hemoglobin S, leading to sickle-shaped red blood cells.",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_5",
+            "label": "albinism",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_5_child_0",
+                "label": "autosomal recessive inheritance",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_5_child_1",
+                "label": "symptom",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_5_child_1_child_0",
+                    "label": "pale skin and hair",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_5_child_1_child_1",
+                    "label": "avoid light",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_5_child_1_child_2",
+                    "label": "pink iris",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_5_child_2",
+                "label": "Albinism patient people lack melanin",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_5_child_3",
+                "label": "TYR gene codes for an enzyme called tyrosinase",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_5_child_4",
+                "label": "a mutated TYR gene codes for dysfunctional tyrosinase, which results in no production in melanin",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_6",
+            "label": "hemophilia",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_6_child_0",
+                "label": "X-linked recessive inheritance",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_6_child_1",
+                "label": "F8 gene on X chromosome",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_6_child_1_child_0",
+                    "label": "codes for a protein called factor 8/VIII",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_1_child_1",
+                    "label": "abnormal F8 gene results in",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_6_child_1_child_1_child_0",
+                        "label": "abnormal factor 8 protein",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_6_child_1_child_1_child_1",
+                        "label": "less production of factor 8 protein",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_6_child_1_child_1_child_2",
+                        "label": "no production of factor 8 protein",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_7",
+            "label": "huntington's disease",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_7_child_0",
+                "label": "neural degenerative disease",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_7_child_1",
+                "label": "autosomal dominant disease",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_7_child_2",
+                "label": "Disease Progression",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_7_child_2_child_0",
+                    "label": "onset: 30-40 years old",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_7_child_2_child_1",
+                    "label": "loss of motor control including walk, think and talk",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_7_child_2_child_2",
+                    "label": "death follows after 15-20 years after onset",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_7_child_3",
+                "label": "HTT gene on chromosome 4",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_7_child_3_child_0",
+                    "label": "codes for protein called huntingtin",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_7_child_3_child_1",
+                    "label": "huntington's disease patients carries abnormal HTT gene that has a large number of CAG repeats",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_7_child_3_child_1_child_0",
+                        "label": "number of CAG repeats greater than 40 will develop disease",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_7_child_3_child_1_child_1",
+                        "label": "number of CAG repeats between 36 and 39 will have chance to develop disease",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "gibberellin and stem elongation",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "Le gene regulate the production of produces and active form of gibberellin",
+            "side": "right",
+            "children": []
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "Le is recessive allele",
+            "side": "right",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "control of gene expression",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "gene control in prokaryotes",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_0_child_0",
+                "label": "structural gene",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_0_child_0",
+                    "label": "code for a protein that functioning in the cell",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_1",
+                "label": "regulatory gene",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_0",
+                    "label": "code for a protein that controls the expression of other genes",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_2",
+                "label": "inducible enzyme",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_2_child_0",
+                    "label": "synthesize when its substrate presents",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_3",
+                "label": "repressible enzyme",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_3_child_0",
+                    "label": "is normally synthesized and the synthesis can be inhibited by the presence of certain effector",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_3_child_0_child_4",
+                "label": "lac operon",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_4_child_0",
+                    "label": "without lactose",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_4_child_0_child_0",
+                        "label": "repressor protein is produced as the regulatory gene expresses",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_4_child_0_child_1",
+                        "label": "repressor binds to the operator and block the binding of RNA polymerase to the promoter region",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_4_child_0_child_2",
+                        "label": "lac Z, lac Y, lac A genes are not transcibed",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_4_child_1",
+                    "label": "present of lactose",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_4_child_1_child_0",
+                        "label": "lactose binds to the repressor protein, distorting its shape so that it cannot bind to the operator",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_4_child_1_child_1",
+                        "label": "RNA polymaerase binds to the promoter of the structural gene, and transciption occurs",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_4_child_1_child_2",
+                        "label": "The mRNA  from all the structural genes are translated",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_4_child_1_child_3",
+                        "label": "Enzyme including beta-galactosidase, permease and transacetylase are syntheized and used to metabolized lactose",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_3_child_1",
+            "label": "gene control in eukaryotes",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_1_child_0",
+                "label": "transcription factor (protein) regualte eukayote gene expression",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_0",
+                    "label": "10% of genes in human genome codes for transcription factor",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_1",
+                    "label": "activate or inhibit gene expression, enhance or decrease the rate of transcription",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_2",
+                    "label": "it acts by binding to the promoter of a gene",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_3",
+                    "label": "roles",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_3_child_0",
+                        "label": "transcription factors are required to allow transcription to occur. They form protein complex that bind to promoter region",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_3_child_1",
+                        "label": "transcription factors ensure the correct sequence of gene expression in different cells during embryonic and fetal development",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_3_child_2",
+                        "label": "transcription factors are involved in the determination of sex in mammals",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_3_child_3",
+                        "label": "transcription factors can respond to external stimuli",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_3_child_4",
+                        "label": "some transciptional factors, including the products of proto-oncogen and tumer suppressor genes, regulate the cell cycle, mitosis (growth) and apoptosis (cell death)",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_3_child_5",
+                        "label": "hormones have effect on transcription factors",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_1_child_0_child_4",
+                    "label": "role of gibberellins in seed germination and amylase production",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_4_child_0",
+                        "label": "without gibberellin",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_0_child_0",
+                            "label": "DELLA protein is bound to PIF and prevent PIF from binding to the promoter of the amylase gene",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_0_child_1",
+                            "label": "RNA polymerase cannot bind ti the promoter",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_0_child_2",
+                            "label": "No transcription of amylase gene occurs",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_0_child_3",
+                            "label": "No amylase enzymes are synthesized",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_3_child_1_child_0_child_4_child_1",
+                        "label": "with gibberellin",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_1_child_0",
+                            "label": "gibberellin binds to gibberellin receptor on the cell surface membrane",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_1_child_1",
+                            "label": "the binding activates an enzyme that breakdown DELLA",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_1_child_2",
+                            "label": "without DELLA bound to PIF, PIF can bind to the promoter of the amylase gene",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_1_child_3",
+                            "label": "RNA polyermase can bind to the promoter",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_1_child_4",
+                            "label": "transcription of amylose gene occurs",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_3_child_1_child_0_child_4_child_1_child_5",
+                            "label": "amylase is synthesized",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1668 @@
+[
+  {
+    "id": "root_0",
+    "label": "Genetic Technology",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "application",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "in medicine: recomnbinant human protein",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "the synthesis of human proteins in other species trhat contains recombinant DNA",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "human insulin",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_1_child_0",
+                    "label": "cow insulin problem",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_0_child_1_child_0_child_0",
+                        "label": "not identical to human insulin",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_0_child_1_child_0_child_0_child_0",
+                            "label": "side effect or allergic reaction",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_0_child_1_child_0_child_0_child_1",
+                            "label": "rejection problems",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_0_child_1_child_0_child_0_child_2",
+                            "label": "not as efficient as human insulin",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_1_child_0_child_1",
+                        "label": "moral and ethical issues",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_0_child_1_child_0_child_1_child_0",
+                            "label": "religious problems",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_1_child_0_child_2",
+                        "label": "unreliable supply",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_1_child_1",
+                    "label": "produced by bacteria",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_0_child_1_child_1_child_0",
+                        "label": "produce identical human insulin",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_0_child_1_child_1_child_0_child_0",
+                            "label": "avoid rejection, allergic or side effect problems",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_1_child_1_child_1",
+                        "label": "effective for people who have cow insulin tolerance",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_1_child_1_child_2",
+                        "label": "mass production",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_1_child_1_child_3",
+                        "label": "cheaper to produce in large quantity; cheaper to purchase for patients",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_1_child_1_child_4",
+                        "label": "no moral and ethical issues",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_2",
+                "label": "factor VIII",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_2_child_0",
+                    "label": "is a blood clotting protein that haemophilia patients cannot produce",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_2_child_1",
+                    "label": "hamster kidney and ovary cell to produce F8",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_2_child_2",
+                    "label": "advantages",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_0_child_2_child_2_child_0",
+                        "label": "no moral and ehtical issue",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_2_child_2_child_1",
+                        "label": "mass production",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_2_child_2_child_2",
+                        "label": "less risk of transmitting blood-borne disease (HIV,malaria)",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_3",
+                "label": "adenosine deaminase (ADA)",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_3_child_0",
+                    "label": "servere combined immuno deficiency (SCID): caused by lack of ADA",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_3_child_1",
+                    "label": "genetically modified organism: larva of cabbage looper moth (using viral vectors)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_3_child_2",
+                    "label": "advantages",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_0_child_3_child_2_child_0",
+                        "label": "no moral and ethical issurs",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_3_child_2_child_1",
+                        "label": "mass production",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_3_child_2_child_2",
+                        "label": "less risk of transmitting diseases",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_0_child_3_child_2_child_3",
+                        "label": "more efficient to produce ADA",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "genetic screening",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "the identification of a allele at a gene for a particular disorder",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "test target",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_0",
+                    "label": "embryo: tissue sample",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_1",
+                    "label": "fetus: chorionic villus sampling",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_1_child_2",
+                    "label": "adult: tissue sample",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "breast cancer",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_0",
+                    "label": "BRCA1 and BRCA2 are tumor suppressor gene",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_1",
+                    "label": "faulty alleles of these two genes increase the risk of breast and ovarian cancer",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_2",
+                    "label": "after genetic screening",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_2_child_0",
+                        "label": "decide whether to take preventative measures",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_2_child_1",
+                        "label": "ealier and more frequent checks",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_2_child_2",
+                        "label": "participate in research and clinical trials",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_2_child_3",
+                    "label": "disadvantages",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_3_child_0",
+                        "label": "anxiety",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_3_child_1",
+                        "label": "affect the decisions on having babies",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_3_child_2",
+                        "label": "the individuals may be discriminated",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_2_child_3_child_3",
+                        "label": "no treatment available",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_3",
+                "label": "Huntington's disease",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_0",
+                    "label": "HTT gene codes for huntingtin",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_1",
+                    "label": "extra copies of CAG repeats",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_1_child_0",
+                        "label": "leads to protein aggregation",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_2",
+                    "label": "symptoms",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_2_child_0",
+                        "label": "uncontrolled movement",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_1_child_3_child_2_child_0_child_0",
+                            "label": "lose motor control",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_2_child_1",
+                        "label": "lower cognitive activity",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_2_child_2",
+                        "label": "lose ability to speak",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_2_child_3",
+                        "label": "neurodegenerative disease",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_2_child_4",
+                        "label": "onset: middle age",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_3",
+                    "label": "autosomal dominant inheritance",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_3_child_4",
+                    "label": "advantage",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_4_child_0",
+                        "label": "people diagnosed can make future plan",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_4_child_1",
+                        "label": "peopla can participate in research and clinical trials (gene therapy)",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_1_child_3_child_4_child_2",
+                        "label": "make informed reproductive decisions",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_1_child_4",
+                "label": "cystic fibrosis",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_1_child_4_child_0",
+                    "label": "a gene code for a protein called CFTR (transport proteins)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_4_child_1",
+                    "label": "a progessive disease",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_4_child_2",
+                    "label": "autosomal recessive inheritance",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_4_child_3",
+                    "label": "fatal",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_1_child_4_child_4",
+                    "label": "faulty CFTR can transport Cl ion out of the goblet cell, so water does not leave the cell by osmosis. mucus becomes thick and sticky. The patients are unable to breathe. more infections occur",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "gene therapy",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_2_child_0",
+                "label": "alter the patient's genetic material to treat or cure a disease using genetic technology",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_1",
+                "label": "change are only allowed on somatic cells (differentiated) but not germline cells or gametes (sperm, embryo, zygote)",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_2",
+                "label": "it is illegal to change genetic material of germline cells and gametes as the changes are permanent and may be inherited by the offsprings",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_3",
+                "label": "ex vivo gene therapy",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_2_child_3_child_0",
+                    "label": "stem cells are removed from the patient, usually from blood or tissue",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_3_child_1",
+                    "label": "adenovirus with normal alleles can infect and alter the genes in adult stem cell",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_3_child_2",
+                    "label": "inject the transgenic cells into the patient's body",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_2_child_4",
+                "label": "in vivo gene therapy",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_2_child_4_child_0",
+                    "label": "inject adenovirus and liposome containg a recombinant plasmid into patient's body",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_2_child_5",
+                "label": "example",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_2_child_5_child_0",
+                    "label": "gene therapy for SCID",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_2_child_5_child_0_child_0",
+                        "label": "ex vivo",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_0_child_0_child_0",
+                            "label": "create an adenovirus containing a normal allele for the production of ADA",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_0_child_0_child_1",
+                            "label": "isolate some T-lymphocytes from the patient",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_0_child_0_child_2",
+                            "label": "insert the normal allele into the T-lymphocytes esing adenovirus",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_0_child_0_child_3",
+                            "label": "place transgenic T-lymphocytes back to the patient's body",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_0_child_0_child_4",
+                            "label": "it is not a permanent cure",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_5_child_1",
+                    "label": "gene therapy for leber congenitial amaurosis (LCA)",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_2_child_5_child_1_child_0",
+                        "label": "symptom",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_1_child_0_child_0",
+                            "label": "become blind at 20s or 30s",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_1_child_0_child_1",
+                            "label": "damage to lighr receptor cell on the retina",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_1_child_0_child_2",
+                            "label": "no cure",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_2_child_5_child_1_child_1",
+                        "label": "in vivo somatic gene therapy",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_1_child_1_child_0",
+                            "label": "inject adenovirus containing normal alleles to the retina of the patient",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_2_child_5_child_1_child_1_child_1",
+                            "label": "can improve the eyesight of the patient",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_2_child_6",
+                "label": "advantage and disadvantage",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_2_child_6_child_0",
+                    "label": "pros: can treat certain disease and alleviate pain without social and ethical considerations",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_2_child_6_child_1",
+                    "label": "disadvantage",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_2_child_6_child_1_child_0",
+                        "label": "expensive treatment",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_2_child_6_child_1_child_1",
+                        "label": "gene doping in sport",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_2_child_6_child_1_child_2",
+                        "label": "which genes can be altered, unfair advantage over other people",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_2_child_6_child_1_child_3",
+                        "label": "potential side effect",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_2_child_6_child_1_child_3_child_0",
+                            "label": "detachment of retina after gene therapy for LCA",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_2_child_6_child_1_child_3_child_1",
+                            "label": "allergic reaction from vectors (adenovirus)",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_2_child_6_child_1_child_4",
+                        "label": "commerical viability for pharmaceutical companies",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_2_child_6_child_1_child_4_child_0",
+                            "label": "the companies may not develop gene therapy for rare diseases",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_2_child_6_child_1_child_5",
+                        "label": "less accepting for disabilities",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_3",
+            "label": "genetically modified organism in agriculture",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_3_child_0",
+                "label": "genetically modified organism",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_0_child_0",
+                    "label": "organism that have genes transferred from other organisms or genes removed by genetic technology",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_1",
+                "label": "crop plant improved yield by",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_0",
+                    "label": "resistance to herbicides",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_1",
+                    "label": "resistance to pests",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_1_child_0",
+                        "label": "Bt toxin is activated in alkaline condition in the guts of insects",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_1_child_1",
+                        "label": "Bt toxin is harmless to human, and can kill insects",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_1_child_2",
+                    "label": "enriched in vitamins",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_1_child_2_child_0",
+                        "label": "can produce beta-carotene to provide vitamin A",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_2",
+                "label": "GM salmon",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_2_child_0",
+                    "label": "regular salmon produces growth hormone in spring and summer",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_2_child_0_child_0",
+                        "label": "growth hormone from chinrok salomon and promoter (expressed in cold water) from ocean pout",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_2_child_1",
+                    "label": "GM salmon can produce GH all year round",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_3_child_3",
+                "label": "ethical and social considerations of GMO",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_3_child_3_child_0",
+                    "label": "ethical implications",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_3_child_0_child_0",
+                        "label": "used more long-term research to uncover the potential side effects of GMO (allerguic effects)",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_3_child_3_child_0_child_1",
+                        "label": "making choices for others",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_0_child_1_child_0",
+                            "label": "selling GM products without proper label",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_0_child_1_child_1",
+                            "label": "pollens from GM crops can contaminate non-GM crops",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_0_child_1_child_2",
+                            "label": "reducing biodiversity of the population",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_0_child_3_child_3_child_1",
+                    "label": "social implications",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_3_child_3_child_1_child_0",
+                        "label": "discuss the safety of the GM crops to human and environment",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_0_child_3_child_3_child_1_child_1",
+                        "label": "human aspect",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_1_child_0",
+                            "label": "farmer purchase GM crop seeds from companies every year",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_1_child_1",
+                            "label": "GM crops came allergic effects",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_1_child_2",
+                            "label": "golden rice improve the nutrition level in people living in malnutrition",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_3_child_3_child_1_child_2",
+                        "label": "environmental aspect",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_2_child_0",
+                            "label": "GM crops may become weeds and invade natural habitat",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_2_child_1",
+                            "label": "GM crops introduce resistant genes to wild crops",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_2_child_2",
+                            "label": "Bt toxin also harms monarch butterflies which is not targeted ecological side effect",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_2_child_3",
+                            "label": "less pestiside is used",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_2_child_4",
+                            "label": "reduction in biodiveristy which affect food web",
+                            "side": "left",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_0_child_3_child_3_child_1_child_2_child_5",
+                            "label": "the herbicides used in GM crops could leave toxic residues",
+                            "side": "left",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "overview",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "introducing a gene from another organism to a species",
+            "side": "left",
+            "children": []
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "it is different from selective breeding",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "relatively moral and ethical",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "no introduction of DNA from other species",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "general idea",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "remove a desired gene from an organism",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_1",
+                "label": "transfer the gene into another organism via a vector",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_2_child_2",
+                "label": "test for the expression of the desired gene",
+                "side": "left",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "identify and extract a target gene",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "restriction digest",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "restriction endonuclease",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_0",
+                    "label": "found in bacteria",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_1",
+                    "label": "can recognize specific restriction site",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_2",
+                    "label": "cut the sugar-phosphate backbone",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_2_child_0",
+                        "label": "form sticky ends: The enzyme cuts in a staggered manner, creating overhanging ends. These sticky ends can easily pair with complementary sequences of DNA.",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_0_child_2_child_1",
+                        "label": "form blunt ends: The enzyme cuts straight across the DNA, leaving no overhanging nucleotides.",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "CRISPR Cas9",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "gene editing: inserting, deleting, replacing DNA",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "CRISPR: database for immunity against bacteriophage",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_1_child_2",
+                "label": "Cas 9: an enzyme attached to a guide RNA",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "reverse transcription",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "from mRNA to cDNA (only contains coding sequence)",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_1",
+                "label": "mRNA is used as a template to build a sscDNA by using reverse transcriptase",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_2_child_2_child_2",
+                "label": "sscDNA can be converted into daDNA using DNA polymerase",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_3",
+            "label": "nucleotide synthesis",
+            "side": "left",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_3",
+        "label": "target DNA/ gene are amplified by PCR",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_3_child_0",
+            "label": "Polymerization Chain Reaction",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_3_child_0_child_0",
+                "label": "n cycle can produce 2n DNA molecules",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_3_child_0_child_1",
+                "label": "PCR cocktail",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_0",
+                    "label": "target DNA or RNA",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_1",
+                    "label": "primers",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_1_child_0",
+                        "label": "forward primers and reverse primers",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_1_child_1",
+                        "label": "a short sequence of ssDNA that is complementary to the 3' end of DNA or RNA",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_2",
+                    "label": "Taq polymerase",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_2_child_0",
+                        "label": "a type of DNA polymerase that is used to build new DNA/RNA strands using free nucleotides",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_3",
+                    "label": "free nucleotides (dNTP)",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_0",
+                        "label": "to build new DNA/Rna strands",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_3_child_1",
+                        "label": "N = A, T, G, C (U)",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_3_child_0_child_1_child_4",
+                    "label": "buffer solution",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_3_child_0_child_1_child_4_child_0",
+                        "label": "provide an optimum pH value",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_4",
+        "label": "the gene is delivered into the cells of target organisms through vectors",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_4_child_0",
+            "label": "plasmids",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_0_child_0",
+                "label": "2kbp, small circular DNA",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_0_child_1",
+                "label": "properties",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_0_child_1_child_0",
+                    "label": "contains a origin of replication which allows self-replication",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_0_child_1_child_1",
+                    "label": "contains a multiple restriction site for different restriction endonucleases",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_0_child_1_child_2",
+                    "label": "contains at least one marker gene for identification and screening",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_0_child_1_child_3",
+                    "label": "has a low molecular weight so it is more readily to be taken up by a bacterial cell",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_0_child_2",
+                "label": "process to produce recombinant plasmid",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_0_child_2_child_0",
+                    "label": "Isolation of the desired gene",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_4_child_0_child_2_child_0_child_0",
+                        "label": "Using an enzyme called reverse transcriptase to convert a desired length of mRNA back into DNA; DNA produced in this way is known as complementary DNA, or cDNA",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_0_child_2_child_0_child_1",
+                        "label": "Cutting the gene from its location on a chromosome using enzymes called restriction endonucleases",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_4_child_0_child_2_child_1",
+                    "label": "Multiplication of the gene, using the polymerase chain reaction (PCR)",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_0_child_2_child_2",
+                    "label": "Inserting the desired gene into a plasmid using DNA ligase",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_4_child_0_child_2_child_2_child_0",
+                        "label": "The DNA of the plasmid will be cut using the same restriction endonuclease as the desired gene, leaving complementary sticky ends",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_4_child_0_child_2_child_2_child_1",
+                        "label": "DNA ligase links the plasmid and the target gene",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_4_child_1",
+            "label": "viruses",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_1_child_0",
+                "label": "types",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_0",
+                    "label": "retrovirus",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_1",
+                    "label": "adenovirus",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_4_child_1_child_0_child_2",
+                    "label": "lentivirus",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_4_child_1_child_1",
+                "label": "the virus are genetically modified to carry target genes into the host genome",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_1_child_2",
+                "label": "application: gene therapy",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_4_child_2",
+            "label": "liposomes",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_4_child_2_child_0",
+                "label": "liposome is a vesicle made up of phos[holipids",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_2_child_1",
+                "label": "liposome as a vector can fuse with the cell surface membrane",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_4_child_2_child_2",
+                "label": "the transgentic cell contains the target gene and can produce the desired protein",
+                "side": "right",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_5",
+        "label": "test/ identify the cells containing new genes and clone the cells",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_5_child_0",
+            "label": "marker gene",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_5_child_0_child_0",
+                "label": "is transferred with the target gene to enable identification of successfully transformed cells",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_0_child_1",
+                "label": "example: antibiotic resistance gene; GFP gene",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_5_child_1",
+            "label": "role of promoter",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_5_child_1_child_0",
+                "label": "it is a binding site for RNA polymerase",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_1_child_1",
+                "label": "it determine that the 3' to 5' template DNA is copied by RNA polymerase",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_1_child_2",
+                "label": "promoter is involved in regulating the expression of genes downstream",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_5_child_2",
+            "label": "Gel electrophoresis",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_5_child_2_child_0",
+                "label": "a technique used to separate DNA, RNA and protein based on their size/ mass and their net charge",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_5_child_2_child_0_child_0",
+                    "label": "DNA is negatively charged due to the phosphate group",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_2_child_0_child_1",
+                    "label": "DNA size is evaluated in base pairs",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_2_child_0_child_2",
+                    "label": "medium-gel contains pores",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_5_child_2_child_1",
+                "label": "steps",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_5_child_2_child_1_child_0",
+                    "label": "create an agarose gel plate with separate wells. place it in a tank",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_2_child_1_child_1",
+                    "label": "submerge the gel by adding buffer solution",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_2_child_1_child_2",
+                    "label": "load DNA sample into the individual wells with micropipette. wells are close to cathode",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_2_child_1_child_3",
+                    "label": "apply the electricity. DNA sample migrate toward anode",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_2_child_1_child_4",
+                    "label": "the smaller the DNA fragments, the further they travel on the gel",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_2_child_1_child_5",
+                    "label": "fragments are viewed under UV light",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_5_child_3",
+            "label": "microarray",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_5_child_3_child_0",
+                "label": "application",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_5_child_3_child_0_child_0",
+                    "label": "compare genomes of different species",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_0_child_1",
+                    "label": "compare gene expression of two different cells",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_5_child_3_child_1",
+                "label": "compare genome of two species",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_5_child_3_child_1_child_0",
+                    "label": "collect DNA from the species being compared",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_1_child_1",
+                    "label": "cut the DNA into fragments by restriction enzyme",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_1_child_2",
+                    "label": "create ssDNA by denaturation",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_1_child_3",
+                    "label": "label the ssDNA with fluorescent tags to create DNA probe",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_5_child_3_child_1_child_3_child_0",
+                        "label": "probe: short length of ssDNA or RNA synthesized to hybridize with a specific sequence",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_5_child_3_child_1_child_3_child_1",
+                        "label": "preparation of DNA probe",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_1_child_4",
+                    "label": "flush the DNA probes through the microarray chips",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_1_child_5",
+                    "label": "DNA hybridizes the probes remains in tbhe gne spot (well); DNA that does not hybridize is washed off",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_1_child_6",
+                    "label": "microarray chip is examined under UV light",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_1_child_7",
+                    "label": "the presence of fliorescent indicates hybridization",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_5_child_3_child_2",
+                "label": "compare the expression of two cells",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_5_child_3_child_2_child_0",
+                    "label": "extract mRNA from the two cells and convert mRNA into cDNA using reverse transcriptase",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_2_child_1",
+                    "label": "amlify the number of cDNA with PCR",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_2_child_2",
+                    "label": "denature the ds cDNA to produce ssDNA and label them with fluorescent tags",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_2_child_3",
+                    "label": "flush the DNA probes through the micro array chips and allow them to hybridize with the probes on the microarry",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_2_child_4",
+                    "label": "shine UV light onto the microarray",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_3_child_2_child_5",
+                    "label": "the light intensity of the gene spots indicate the quantity of mRNA produced as well as the level of gene expression",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_5_child_4",
+            "label": "bioinformatics",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_5_child_4_child_0",
+                "label": "to collect, organize, manipulate, analyze and store biological data",
+                "side": "right",
+                "children": []
+              },
+              {
+                "id": "root_0_child_5_child_4_child_1",
+                "label": "BLAST",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_5_child_4_child_1_child_0",
+                    "label": "basic local assignment search tool",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_4_child_1_child_1",
+                    "label": "use database containg genome of Plasmodium subtypes to develop a vaccine for malaria",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_5_child_4_child_1_child_2",
+                    "label": "use bioinformatic to study gene expression",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

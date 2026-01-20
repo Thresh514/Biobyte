@@ -1,0 +1,1560 @@
+[
+  {
+    "id": "root_0",
+    "label": "Classification, Biodiversity and Conservation",
+    "side": "center",
+    "children": [
+      {
+        "id": "root_0_child_0",
+        "label": "Classification",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_0_child_0",
+            "label": "species",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_0_child_0",
+                "label": "a group of organisms with similar",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_0",
+                    "label": "morphological features",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_1",
+                    "label": "physiological features",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_2",
+                    "label": "biochemical features",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_0_child_0_child_3",
+                    "label": "behavioral features",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_0_child_0_child_1",
+                "label": "can interbreed and produce fertile offsprings",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_0_child_2",
+                "label": "are reproductively isolated from other species",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_1",
+            "label": "three domains",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_1_child_0",
+                "label": "eukarya",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_1",
+                "label": "bacteria",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_1_child_2",
+                "label": "archea",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_2",
+            "label": "taxonomic hierarchy",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_2_child_0",
+                "label": "domain",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_1",
+                "label": "kingdom",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_2",
+                "label": "phylum",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_3",
+                "label": "class",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_4",
+                "label": "order",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_5",
+                "label": "family",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_6",
+                "label": "genus",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_2_child_7",
+                "label": "species",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_3",
+            "label": "four kingdoms",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_3_child_0",
+                "label": "animalia",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_3_child_1",
+                "label": "plantae",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_3_child_2",
+                "label": "fungi",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_0_child_3_child_3",
+                "label": "protoctista",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_0_child_4",
+            "label": "viruses",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_0_child_4_child_0",
+                "label": "structure",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_0_child_4_child_0_child_0",
+                    "label": "capsid (protein musk)",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_0_child_4_child_0_child_1",
+                    "label": "genetic material",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_0_child_4_child_0_child_1_child_0",
+                        "label": "DNA",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_4_child_0_child_1_child_0_child_0",
+                            "label": "dsDNA",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_0_child_4_child_0_child_1_child_0_child_0_child_0",
+                                "label": "T4 bacteriophage",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_0_child_4_child_0_child_1_child_0_child_1",
+                            "label": "ssDNA",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_0_child_4_child_0_child_1_child_0_child_1_child_0",
+                                "label": "canine parro virus type II",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_0_child_4_child_0_child_1_child_1",
+                        "label": "RNA",
+                        "side": "left",
+                        "children": [
+                          {
+                            "id": "root_0_child_0_child_4_child_0_child_1_child_1_child_0",
+                            "label": "dsRNA",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_0_child_4_child_0_child_1_child_1_child_0_child_0",
+                                "label": "morbillivirus: measles",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_0_child_4_child_0_child_1_child_1_child_1",
+                            "label": "ssRNA",
+                            "side": "left",
+                            "children": [
+                              {
+                                "id": "root_0_child_0_child_4_child_0_child_1_child_1_child_1_child_0",
+                                "label": "HIV",
+                                "side": "left",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_1",
+        "label": "Biodiversity",
+        "side": "left",
+        "children": [
+          {
+            "id": "root_0_child_1_child_0",
+            "label": "ecosystem",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_0_child_0",
+                "label": "a relatively self-contained interacting community of organisms, and the environment in which they live and with which they interact",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_0_child_1",
+                "label": "biosphere",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_1_child_0",
+                    "label": "an ecosystem in a global perspective",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_2",
+                "label": "habitat",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_2_child_0",
+                    "label": "the location where the organisms live within the ecosystem",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_3",
+                "label": "niche",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_3_child_0",
+                    "label": "the role of an organism in an ecosystem",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_4",
+                "label": "population",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_4_child_0",
+                    "label": "all of the organisms of the same species present in the same place and same time",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_0_child_5",
+                "label": "community",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_0_child_5_child_0",
+                    "label": "all of the organisms of different species living in an ecosystem",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_1",
+            "label": "the variation of organisms which can be assessed at level",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_1_child_0",
+                "label": "species diversity",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_0_child_0",
+                    "label": "the number of different species in the ecosystem and their relative abundance",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_1_child_0_child_1",
+                    "label": "the ecosystem with higher species diversity are more stable than those with lower species diversity as they are more resillient to environmental changes",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_1_child_0_child_1_child_0",
+                        "label": "rainforest",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_1_child_0_child_1_child_1",
+                        "label": "coral reef",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_1_child_1",
+                "label": "habitat diversity",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_1_child_0",
+                    "label": "the number and range of ecosystem and habitats",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_1_child_2",
+                "label": "genetic diversity",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_1_child_2_child_0",
+                    "label": "the genetic variation within each species",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_2",
+            "label": "random sampling",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_2_child_0",
+                "label": "using quadrats",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_0",
+                    "label": "Mark the Study Area: Define and mark the boundaries of the area you want to study.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_1",
+                    "label": "Choose Quadrat Size: Select an appropriate size for the quadrat frame",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_2",
+                    "label": "Randomly Select Quadrat Locations: Use a random number generator to pick coordinates within the study area where quadrats will be placed.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_3",
+                    "label": "Place Quadrats: Place the quadrat frame at each selected location.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_4",
+                    "label": "Count Organisms: Within each quadrat, count the number of each species of interest and record the data.",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_2_child_0_child_5",
+                    "label": "Analyze Data: Calculate the species diversity, percentage cover and species frequency of each species per quadrat to estimate their abundance in the entire area.",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_3",
+            "label": "mark-release-recapture method",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_3_child_0",
+                "label": "target: mobile organisms",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_3_child_1",
+                "label": "steps",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_3_child_1_child_0",
+                    "label": "develop a method to cature the organisms without harming them",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_3_child_1_child_1",
+                    "label": "mark the captured organism",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_3_child_1_child_2",
+                    "label": "release the captured organisms",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_3_child_1_child_3",
+                    "label": "wait for long time toallow the individuals to mingle with the population",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_3_child_1_child_4",
+                    "label": "set up the trap to capture the species again",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_3_child_1_child_5",
+                    "label": "estimate the number of species in the area",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_4",
+            "label": "line/ belt transect",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_4_child_0",
+                "label": "line transect",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_4_child_0_child_0",
+                    "label": "line transect help to show how species distribution changes with physical condition in the area",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_4_child_0_child_1",
+                    "label": "steps",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_4_child_0_child_1_child_0",
+                        "label": "layout a measuring tape in a straight line across the sample area",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_4_child_0_child_1_child_1",
+                        "label": "record the identity of the organism at equal distance along the tape",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_4_child_1",
+                "label": "belt transect",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_4_child_1_child_0",
+                    "label": "given that species density in different attitude",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_4_child_1_child_1",
+                    "label": "place quadrats ar regular interval along the tape and record abundance of each species within each quadrats",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_5",
+            "label": "Simpson's index of diversity",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_5_child_0",
+                "label": "measure number of different species in an area but also the evenness of abundance across the different species",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_5_child_1",
+                "label": "used to quantify the biodiversity of an area",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_5_child_2",
+                "label": "if D1>D2, then the species diversity in habitat I is greater than species diversity in habitant II",
+                "side": "left",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_1_child_6",
+            "label": "correlation",
+            "side": "left",
+            "children": [
+              {
+                "id": "root_0_child_1_child_6_child_0",
+                "label": "there is a relationship between two variables",
+                "side": "left",
+                "children": []
+              },
+              {
+                "id": "root_0_child_1_child_6_child_1",
+                "label": "scatter graph",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_6_child_1_child_0",
+                    "label": "best fitted line",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_1_child_1",
+                    "label": "correlation coefficent (r)",
+                    "side": "left",
+                    "children": [
+                      {
+                        "id": "root_0_child_1_child_6_child_1_child_1_child_0",
+                        "label": "the gradient of the best fitted line",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_6_child_1_child_1_child_1",
+                        "label": "1<r<0: negatively correlated",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_6_child_1_child_1_child_2",
+                        "label": "r=0: no correlation",
+                        "side": "left",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_1_child_6_child_1_child_1_child_3",
+                        "label": "0<r<1: positively correlated",
+                        "side": "left",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_6_child_2",
+                "label": "Pearson's linear correlation",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_6_child_2_child_0",
+                    "label": "determines whether there is a linear correlation between two variables",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_2_child_1",
+                    "label": "citeria: quantitative data; normal distribution",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_2_child_2",
+                    "label": "if r is close to 1, then the two variables are positively correlated",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_2_child_3",
+                    "label": "if r is close to -1, then the two variables are negatively correlated",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_2_child_4",
+                    "label": "if r is equal to 0, then there is no correlation",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_1_child_6_child_3",
+                "label": "Spearman's rank correlation",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "root_0_child_1_child_6_child_3_child_0",
+                    "label": "determine whether two variables are correlated",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_3_child_1",
+                    "label": "citeria: the data does not follow normal distribution",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_3_child_2",
+                    "label": "null hypothesis: there is no correlation betweeen the two variables",
+                    "side": "left",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_1_child_6_child_3_child_3",
+                    "label": "if rs>critical value, there is a correlation between the two variables,then the null hypothesis can be rejected, meaning there is a correlation between two variables",
+                    "side": "left",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_0_child_2",
+        "label": "Conservation",
+        "side": "right",
+        "children": [
+          {
+            "id": "root_0_child_2_child_0",
+            "label": "extinction",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_0_child_0",
+                "label": "climate change",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_0",
+                    "label": "organisms migrate to cooler latitude or high attitude",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_1",
+                    "label": "rise of sea level leads to higher competition between species",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_2",
+                    "label": "temperature of sea rises",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_0_child_3",
+                    "label": "the frequency of natural catastrophes increase",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_1",
+                "label": "loss of habitat",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_0",
+                    "label": "deforestation",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_1_child_1",
+                    "label": "conversion of wetland for agriculture",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_2",
+                "label": "waste products of houses",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_2_child_0",
+                    "label": "industrial pollution",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_0_child_2_child_0_child_0",
+                        "label": "SO2",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_0_child_2_child_0_child_0_child_0",
+                            "label": "combustion of fossil fuels",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_0_child_2_child_0_child_0_child_1",
+                            "label": "change pH of soil",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_0_child_2_child_0_child_0_child_2",
+                            "label": "few animals can survive and reproduce in acidic environment",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_2_child_0_child_1",
+                        "label": "plastic",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_2_child_0_child_2",
+                        "label": "detergent containing P and N",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_2_child_0_child_3",
+                        "label": "air conditioner and fridge: CCl2F2",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_2_child_0_child_4",
+                        "label": "printing",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_0_child_2_child_0_child_5",
+                        "label": "dye",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_3",
+                "label": "overexploitation of resources",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_0_child_3_child_0",
+                    "label": "sea otters are hunted for their furs",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_3_child_1",
+                    "label": "decrease in number of sea otter lead to explosive increase in sea urchius",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_3_child_2",
+                    "label": "sea urchins eat through storms of help forest",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_0_child_3_child_3",
+                    "label": "keystone species: species that play a central role in a ecosystem",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_0_child_4",
+                "label": "invasive alien species",
+                "side": "right",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_1",
+            "label": "reasons to maintain biodiversity",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_1_child_0",
+                "label": "moral and ethical reasons",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_0_child_0",
+                    "label": "human have no right to drive other species to extinction",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_1",
+                "label": "ecological reasons",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_0",
+                    "label": "the higher biodiversity is, the less likely",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_1_child_1",
+                    "label": "the ecosystem becomes unbalanced by changes in environment",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_2",
+                "label": "economical reasons",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_2_child_0",
+                    "label": "eco-tourism",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_3",
+                "label": "aesthetic reasons",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_3_child_0",
+                    "label": "poems, photographs and paintings",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_4",
+                "label": "agricultural reasons",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_4_child_0",
+                    "label": "uniform genotypes",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_4_child_0_child_0",
+                        "label": "low genetic diversity",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_4_child_0_child_1",
+                        "label": "maintain the biodiversity to keep potential useful alleles from the wild plant",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_1_child_4_child_0_child_2",
+                        "label": "seed banks",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_1_child_5",
+                "label": "environmental reasons",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_1_child_5_child_0",
+                    "label": "plant absorb CO2",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_5_child_0_child_0",
+                        "label": "reduce the effect of increasing CO2 in the atomsphere",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_1_child_5_child_1",
+                    "label": "bacteria/ fungi decompose",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_1_child_5_child_1_child_0",
+                        "label": "break down organic substances into inorganic substance and maintain carbon cycle, nitrogen cycle and phosphate cycle",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root_0_child_2_child_2",
+            "label": "methods of conservation",
+            "side": "right",
+            "children": [
+              {
+                "id": "root_0_child_2_child_2_child_0",
+                "label": "endanger species",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_0_child_0",
+                    "label": "a species that is close to extinction",
+                    "side": "right",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_1",
+                "label": "general rule",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_1_child_0",
+                    "label": "keep in nature habitat",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_1_child_0_child_0",
+                        "label": "if the ecosystem is still available",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_1_child_1",
+                    "label": "captured and placed in captivity",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_1_child_1_child_0",
+                        "label": "the habitat is lost or extremely dangered",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_2",
+                "label": "conserved areas",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_2_child_0",
+                    "label": "natural park/ reserve",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_2_child_0_child_0",
+                        "label": "without human access, industrial activity, hunting",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_2_child_1",
+                    "label": "marine parks",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_2_child_1_child_0",
+                        "label": "prevent overfishing and pollution",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_3",
+                "label": "zoos and botanic gardens",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_3_child_0",
+                    "label": "zoos",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_3_child_0_child_0",
+                        "label": "functions",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_0",
+                            "label": "provide invaluable resources for research",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_0_child_0",
+                                "label": "study behaviors, gentic and habitat",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1",
+                            "label": "assisted reproduction",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_0",
+                                "label": "In vitro fertilization (IVF)",
+                                "side": "right",
+                                "children": [
+                                  {
+                                    "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_0_child_0",
+                                    "label": "fertilization of eggs occurs outside of the female egg",
+                                    "side": "right",
+                                    "children": []
+                                  },
+                                  {
+                                    "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_0_child_1",
+                                    "label": "steps",
+                                    "side": "right",
+                                    "children": [
+                                      {
+                                        "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_0_child_1_child_0",
+                                        "label": "extract eggs from the ovaries using a needle and collect sperms from the males",
+                                        "side": "right",
+                                        "children": []
+                                      },
+                                      {
+                                        "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_0_child_1_child_1",
+                                        "label": "the semen is mixed with the eggs in a petri dish",
+                                        "side": "right",
+                                        "children": []
+                                      },
+                                      {
+                                        "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_0_child_1_child_2",
+                                        "label": "fertilization occurs zygotes form and develop into embryos",
+                                        "side": "right",
+                                        "children": []
+                                      },
+                                      {
+                                        "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_0_child_1_child_3",
+                                        "label": "embryos are cultured for a couple days",
+                                        "side": "right",
+                                        "children": []
+                                      },
+                                      {
+                                        "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_0_child_1_child_4",
+                                        "label": "the embryos are then transferred to the mother or a surrogate mother",
+                                        "side": "right",
+                                        "children": []
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_1",
+                                "label": "artificial insemination",
+                                "side": "right",
+                                "children": [
+                                  {
+                                    "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_1_child_1_child_0",
+                                    "label": "inject semen into the uterus of a female",
+                                    "side": "right",
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_2",
+                            "label": "educate the publics about endangered species",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_3",
+                            "label": "fundraise for endangered species",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_0_child_0_child_4",
+                            "label": "reintroduce the endangered species into the habitats",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_3_child_0_child_1",
+                        "label": "problem with zoo",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_0_child_1_child_0",
+                            "label": "animals become habituated to the zoo environment",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_0_child_1_child_1",
+                            "label": "captive breeding reduces genetic diversity",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_3_child_0_child_1_child_1_child_0",
+                                "label": "cause inbreeding depression",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_0_child_1_child_2",
+                            "label": "some animals do not breed in capativity",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_3_child_1",
+                    "label": "botanic gardens",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_3_child_1_child_0",
+                        "label": "establish a population of the endangered plant species collected from the wild",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_3_child_1_child_1",
+                        "label": "function",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_1_child_1_child_0",
+                            "label": "research reproduction and growth in different plant species research on the restoration of the habitats for the species",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_1_child_1_child_1",
+                            "label": "educate the public, raise awareness of the endangered species",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_3_child_2",
+                    "label": "frozen zoos and seed bank",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_3_child_2_child_0",
+                        "label": "function of frozen zoos",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_2_child_0_child_0",
+                            "label": "store eggs, sperm or embryos at very low temperature (-196 degree celsius)",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_2_child_0_child_1",
+                            "label": "store material can be used for IVF and genetic engineering",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_3_child_2_child_1",
+                        "label": "function of seed bank",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_2_child_1_child_0",
+                            "label": "store the plant species in dry and low temperature environment",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_2_child_1_child_1",
+                            "label": "maintain gene pool",
+                            "side": "right",
+                            "children": []
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_3_child_2_child_1_child_2",
+                            "label": "to conserve endangered species",
+                            "side": "right",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_4",
+                "label": "invasive alien species",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_4_child_0",
+                    "label": "a species that has moved to an ecosystem where it was previously unknown",
+                    "side": "right",
+                    "children": []
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_4_child_1",
+                    "label": "impact on ecosystem",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_4_child_1_child_0",
+                        "label": "decline in predators",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_4_child_1_child_1",
+                        "label": "decline in preys",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_4_child_1_child_2",
+                        "label": "competition between invasive species and native species that occupy a similar niche",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_4_child_1_child_3",
+                        "label": "decrease in biodiversity",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_4_child_2",
+                    "label": "impact on human",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_4_child_2_child_0",
+                        "label": "on economy",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_4_child_2_child_1",
+                        "label": "carry pathogens and infect humans",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "root_0_child_2_child_2_child_5",
+                "label": "conservation organization",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "root_0_child_2_child_2_child_5_child_0",
+                    "label": "CITES",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_0_child_0",
+                        "label": "the convention on international trade in endangered species of wild flora and fauna",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_0_child_1",
+                        "label": "a global agreement signed by 150 countries",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_0_child_2",
+                        "label": "to control the trade of endangered species and their products",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_0_child_3",
+                        "label": "there are three appendices",
+                        "side": "right",
+                        "children": [
+                          {
+                            "id": "root_0_child_2_child_2_child_5_child_0_child_3_child_0",
+                            "label": "appendix I",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_5_child_0_child_3_child_0_child_0",
+                                "label": "speices that are endangered or facing extinction",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_5_child_0_child_3_child_0_child_1",
+                                "label": "regulation: all trades in the species or its products are prohibited",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_5_child_0_child_3_child_1",
+                            "label": "appendix II",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_5_child_0_child_3_child_1_child_0",
+                                "label": "species are not currently endangered, but will be unless trade is regulated",
+                                "side": "right",
+                                "children": []
+                              },
+                              {
+                                "id": "root_0_child_2_child_2_child_5_child_0_child_3_child_1_child_1",
+                                "label": "regulation: only granted if an export permits",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "id": "root_0_child_2_child_2_child_5_child_0_child_3_child_2",
+                            "label": "appendix III",
+                            "side": "right",
+                            "children": [
+                              {
+                                "id": "root_0_child_2_child_2_child_5_child_0_child_3_child_2_child_0",
+                                "label": "permits are required for regulate trade",
+                                "side": "right",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_5_child_1",
+                    "label": "IUCN",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_1_child_0",
+                        "label": "the international union of the conservation of nature",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_1_child_1",
+                        "label": "assess the conservation status of animals and plants",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_1_child_2",
+                        "label": "red list: endangered species",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root_0_child_2_child_2_child_5_child_2",
+                    "label": "purpose of them",
+                    "side": "right",
+                    "children": [
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_2_child_0",
+                        "label": "raise awareness to the public",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_2_child_1",
+                        "label": "fundraising for research of endangered species",
+                        "side": "right",
+                        "children": []
+                      },
+                      {
+                        "id": "root_0_child_2_child_2_child_5_child_2_child_2",
+                        "label": "ban illegal hunting and trading of endangered species",
+                        "side": "right",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
