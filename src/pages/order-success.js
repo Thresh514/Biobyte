@@ -146,16 +146,10 @@ export default function OrderSuccess() {
                     };
                     
                     // 调用已有的checkout API处理邮件发送等
-                    const token = localStorage.getItem("token");
-                    const headers = { "Content-Type": "application/json" };
-                    
-                    if (token) {
-                        headers["Authorization"] = `Bearer ${token}`;
-                    }
-                    
                     await fetch("/api/checkout", {
                         method: "POST",
-                        headers: headers,
+                        credentials: "include",
+                        headers: { "Content-Type": "application/json" },
                         body: JSON.stringify(orderData)
                     });
                     

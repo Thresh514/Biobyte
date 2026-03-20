@@ -1,6 +1,6 @@
 import { getUserPurchaseRecords } from "../../lib/db-helpers";
-import jwt from "jsonwebtoken";
 import { sendOrderEmail } from "./sendOrderEmail";
+import { getUserFromRequest } from "../../lib/auth";
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -14,27 +14,13 @@ export default async function handler(req, res) {
             return res.status(400).json({ message: "Study resource ID is required" });
         }
 
-        // 获取用户邮箱
-        const token = req.headers.authorization?.split(" ")[1];
-
-        if (!token) {
+        const user = getUserFromRequest(req);
+        if (!user) {
             return res.status(401).json({ message: "Unauthorized" });
         }
 
-        let userEmail;
-        let userId;
-
-        try {
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
-            userEmail = decoded.email;
-            userId = decoded.id;
-        } catch (error) {
-            console.error("JWT验证失败:", error);
-            return res.status(401).json({ message: "Invalid token" });
-        }
-
         // 查询用户的资源购买记录
-        const purchaseRecords = await getUserPurchaseRecords(userId, study_resource_id);
+        const purchaseRecords = await getUserPurchaseRecords(user.id, study_resource_id);
 
         if (purchaseRecords.length === 0) {
             return res.status(404).json({ message: "Resource purchase record not found" });
@@ -56,7 +42,7 @@ export default async function handler(req, res) {
         console.log("📦 构造的购物车数据:", JSON.stringify(cart, null, 2));
 
         // 调用 sendOrderEmail 重发邮件，不传递订单ID
-        await sendOrderEmail("Customer", userEmail, cart, parseFloat(resource.price));
+        await sendOrderEmail("Customer", user.email, cart, parseFloat(resource.price));
         console.log("✅ 邮件重发成功");
 
         return res.status(200).json({ message: "Order email resent successfully" });

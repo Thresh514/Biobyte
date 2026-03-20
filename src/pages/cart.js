@@ -27,8 +27,21 @@
         }, []);
 
         useEffect(() => {
-            const token = localStorage.getItem("token"); // 读取 JWT 令牌
-            setIsLoggedIn(!!token); // 如果有 token，设置 isLoggedIn 为 true
+            const checkAuth = async () => {
+                try {
+                    const response = await fetch("/api/auth/check", {
+                        method: "GET",
+                        credentials: "include",
+                    });
+                    const data = await response.json();
+                    setIsLoggedIn(!!data?.isAuthenticated);
+                } catch (error) {
+                    console.error("Auth check error:", error);
+                    setIsLoggedIn(false);
+                }
+            };
+
+            checkAuth();
         }, []);
 
         useEffect(() => {

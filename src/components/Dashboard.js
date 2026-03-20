@@ -122,18 +122,11 @@ const DashboardComponent = () => {
     };
 
     const handleResendEmail = async (study_resource_id) => {
-        const token = localStorage.getItem("token");
-
-        if (!token) {
-            alert("You are not logged in!");
-            return;
-        }
-
         try {
             const response = await fetch("/api/resend-order-email", {
                 method: "POST",
+                credentials: "include",
                 headers: {
-                    "Authorization": `Bearer ${token}`,
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ study_resource_id }),

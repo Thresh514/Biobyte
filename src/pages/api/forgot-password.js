@@ -73,16 +73,10 @@ const forgotPassword = async (req, res) => {
         
       };
 
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.log(error);
-          return res.status(500).json({ message: "Error sending email." });
-        } else {
-          console.log("Email sent: " + info.response);
-          return res.status(200).json({
-            message: "A reset link has been sent to your email.",
-          });
-        }
+      const info = await transporter.sendMail(mailOptions);
+      console.log("Email sent: " + info.response);
+      return res.status(200).json({
+        message: "A reset link has been sent to your email.",
       });
     } catch (error) {
       console.error(error);

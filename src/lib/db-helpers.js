@@ -467,16 +467,17 @@ export async function getUserById(userId) {
  * 创建新用户
  * @param {Object} userData - 用户数据
  * @param {string} userData.email - 邮箱
- * @param {string} userData.password_hash - 密码哈希
+ * @param {string|null} userData.password_hash - 密码哈希（OAuth用户可为null）
+ * @param {string|null} userData.name - 显示名（可选）
  * @param {string} userData.role - 角色，默认为 'member'
  * @returns {Promise<Object>} - 创建的用户信息
  */
 export async function createUser(userData) {
   try {
-    const { email, password_hash, role = 'member' } = userData;
+    const { email, password_hash = null, name = null, role = 'member' } = userData;
     const [result] = await pool.query(
-      'INSERT INTO users (email, password_hash, role) VALUES ($1, $2, $3) RETURNING *',
-      [email, password_hash, role]
+      'INSERT INTO users (email, password_hash, name, role) VALUES ($1, $2, $3, $4) RETURNING *',
+      [email, password_hash, name, role]
     );
     return result[0];
   } catch (error) {

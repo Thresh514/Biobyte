@@ -19,52 +19,49 @@ function MyApp({ Component, pageProps }) {
     const fetchUserData = async () => {
         // 确保所有数据获取都在客户端进行
         if (typeof window === 'undefined') return;
-        
-        const token = localStorage.getItem("token");
-        if (!token) {
-            setCurrentUser(null);
-            setUserOrders([]);
-            return;
-        }
 
         try {
-            // 获取用户信息
-            const userResponse = await fetch("/api/user", {
-                headers: {
-                    "Authorization": `Bearer ${token}`,
-                },
+            // 使用cookie的auth check来获取登录态与用户信息
+            const authResponse = await fetch("/api/auth/check", {
+                method: "GET",
+                credentials: "include",
             });
-            
-            if (userResponse.ok) {
-                const userData = await userResponse.json();
-                console.log("User data fetched:", userData);
-                setCurrentUser(userData);
 
-                // 获取订单历史
-                const ordersResponse = await fetch("/api/orders", {
-                    headers: {
-                        "Authorization": `Bearer ${token}`,
-                    },
-                });
-                
-                if (ordersResponse.ok) {
-                    const ordersData = await ordersResponse.json();
-                    console.log("Orders data fetched:", ordersData);
-                    
-                    // 格式化订单数据
-                    const formattedOrders = ordersData.map(order => ({
-                        id: order.study_resource_id,
-                        date: order.purchase_date,
-                        products: [order.title],
+            const authData = await authResponse.json();
+
+            if (!authData?.isAuthenticated || !authData?.user) {
+                setCurrentUser(null);
+                setUserOrders([]);
+                return;
+            }
+
+            setCurrentUser(authData.user);
+
+            // 获取订单历史（cookie会自动携带token）
+            const ordersResponse = await fetch("/api/orders", {
+                method: "GET",
+                credentials: "include",
+            });
+
+            if (ordersResponse.ok) {
+                const ordersData = await ordersResponse.json();
+
+                // 格式化订单数据（兼容不同字段命名）
+                const formattedOrders = Array.isArray(ordersData)
+                    ? ordersData.map((order) => ({
+                        id: order.study_resource_id ?? order.studyResourceId ?? order.id,
+                        date: order.purchase_date ?? order.purchaseDate ?? order.created_at ?? order.createdAt,
+                        products: order.title ? [order.title] : (order.products ?? []),
                         type: order.type,
                         level: order.level,
                         chapter: order.chapter,
-                        price: order.price
-                    }));
-                    
-                    console.log("Formatted orders:", formattedOrders);
-                    setUserOrders(formattedOrders);
-                }
+                        price: order.price,
+                    }))
+                    : [];
+
+                setUserOrders(formattedOrders);
+            } else {
+                setUserOrders([]);
             }
         } catch (error) {
             console.error('Error fetching user data:', error);
@@ -76,22 +73,11 @@ function MyApp({ Component, pageProps }) {
     useEffect(() => {
         // 初始化时获取数据
         fetchUserData();
-
-        // 监听登录状态变化
-        const handleStorageChange = (e) => {
-            if (e.key === 'token') {
-                console.log("Token changed, refreshing user data");
-                fetchUserData();
-            }
-        };
-
-        window.addEventListener('storage', handleStorageChange);
         
         // 定期刷新数据（每5分钟）
         const refreshInterval = setInterval(fetchUserData, 300000);
 
         return () => {
-            window.removeEventListener('storage', handleStorageChange);
             clearInterval(refreshInterval);
         };
     }, []);

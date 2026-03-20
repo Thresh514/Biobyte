@@ -13,6 +13,12 @@ const Login = () => {
         router.push("/forgot-password");
     };
 
+    const handleGoogleLogin = () => {
+        const redirectParam = typeof router.query.redirect === "string" ? router.query.redirect : "/";
+        const redirect = redirectParam.startsWith("/") && !redirectParam.startsWith("//") ? redirectParam : "/";
+        window.location.href = `/api/auth/google/start?redirect=${encodeURIComponent(redirect)}`;
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(""); // 清除之前的错误
@@ -70,43 +76,20 @@ const Login = () => {
         };
     }, []);
 
-    useEffect(() => {
-        // 检查 token 是否过期
-        const checkTokenExpiration = () => {
-            const tokenExp = localStorage.getItem("token_exp");
-            if (tokenExp && Date.now() > parseInt(tokenExp, 10)) {
-                logout();
-            } else {
-                // 设置定时器，在 token 过期时登出
-                const timeout = parseInt(tokenExp, 10) - Date.now();
-                if (timeout > 0) {
-                    setTimeout(logout, timeout);
-                }
-            }
-        };
-
-        checkTokenExpiration();
-    }, []);
-
-    const logout = async () => {
-        // 调用logout API清除cookie
-        try {
-            await fetch("/api/auth/logout", {
-                method: "POST",
-                credentials: 'include'
-            });
-        } catch (error) {
-            console.error("Logout error:", error);
-        }
-        localStorage.removeItem("email");
-        router.push("/login");
-    };
-
     return (
         <div className="flex items-center justify-center min-h-screen bg-lightest">
             {/* 登录框 */}
             <div className="flex flex-col justify-center items-center max-w-lg p-12 bg-white">
                 <h2 className="text-center text-3xl font-light mb-8">LOG IN</h2>
+
+                <button
+                    type="button"
+                    onClick={handleGoogleLogin}
+                    disabled={isLoading}
+                    className={`w-full px-6 py-3 mb-6 text-black bg-white text-xs tracking-widest font-light border border-black hover:bg-gray-50 transition duration-200 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                >
+                    CONTINUE WITH GOOGLE
+                </button>
                 
                 {/* 错误信息显示 */}
                 {error && (

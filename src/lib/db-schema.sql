@@ -13,7 +13,7 @@ CREATE TYPE payment_method AS ENUM ('paypal', 'wechat', 'alipay', 'free');
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     email VARCHAR(100) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255),
     name VARCHAR(100),
     role user_role DEFAULT 'member',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

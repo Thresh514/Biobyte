@@ -20,6 +20,13 @@ export default async function handler(req, res) {
             return res.status(404).json({ message: "User doesn't exist" });
         }
 
+        // OAuth 用户没有密码，password_hash 为 null，bcrypt.compare 会抛错
+        if (!user.password_hash || typeof user.password_hash !== "string") {
+            return res.status(400).json({
+                message: "您是通过 Google 登录，当前没有设置密码。如需使用密码登录，请返回登录页面，点击「忘记密码」功能设置。",
+            });
+        }
+
         // 2️⃣ 验证旧密码
         const isPasswordValid = await bcrypt.compare(oldPassword, user.password_hash);
         if (!isPasswordValid) {

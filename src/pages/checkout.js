@@ -5,7 +5,6 @@ import { getCart, clearCart } from "../lib/cart";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
 import SimpleHeader from "../components/SimpleHeader";
-import { jwtDecode } from "jwt-decode";
 
 
 export default function Checkout() {
@@ -19,20 +18,26 @@ export default function Checkout() {
     // 读取购物车数据
     useEffect(() => {
         setCart(getCart());
-
-        // 检查localStorage里是否有JWT
-        const token = localStorage.getItem("token");
-        if (token) {
+        const checkAuth = async () => {
             try {
-                const decoded = jwtDecode(token);
-                setEmail(decoded.email);
-                setIsLoggedIn(true);
+                const response = await fetch("/api/auth/check", {
+                    method: "GET",
+                    credentials: "include",
+                });
+                const data = await response.json();
+                if (data?.isAuthenticated && data?.user?.email) {
+                    setEmail(data.user.email);
+                    setIsLoggedIn(true);
+                } else {
+                    setIsLoggedIn(false);
+                }
             } catch (error) {
-                console.error("无效的token:", error);
-                localStorage.removeItem("token");
+                console.error("Auth check error:", error);
                 setIsLoggedIn(false);
             }
-        }
+        };
+
+        checkAuth();
     }, []);
 
     // 计算总价

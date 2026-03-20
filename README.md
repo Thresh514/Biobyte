@@ -35,8 +35,8 @@ BioByte is committed to making biology learning simpler, more efficient, and mor
 
 - **Frontend Framework**: Next.js 15 + React 19
 - **Styling System**: Tailwind CSS
-- **Database**: MySQL
-- **Authentication**: JWT + bcrypt
+- **Database**: PostgreSQL (via `pg`)
+- **Authentication**: JWT (HttpOnly cookie) + bcrypt / Google OAuth
 - **Payment Integration**: PayPal API
 - **AI Integration**: OpenAI API
 - **Deployment**: Support for multiple deployment methods
@@ -67,12 +67,14 @@ BioByte is committed to making biology learning simpler, more efficient, and mor
 1. Copy and configure environment variables:
 
 ```env
-# Database configuration
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=biobyte
+# Database configuration (PostgreSQL)
+# Prefer DATABASE_URL; db.js will fall back to the individual DB_* fields.
+DATABASE_URL=postgres://USER:PASSWORD@HOST:5432/DBNAME
+# DB_HOST=localhost
+# DB_PORT=5432
+# DB_USER=postgres
+# DB_PASSWORD=yourpassword
+# DB_NAME=biobyte
 
 # JWT secret
 JWT_SECRET=your-jwt-secret
@@ -85,7 +87,13 @@ PAYPAL_SECRET=your-paypal-secret
 OPENAI_API_KEY=your-openai-api-key
 
 # Application URL configuration
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+# Used by forgot-password reset link generation (must be HTTP for local dev unless you configured HTTPS)
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+# Google OAuth (optional, for Google login)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=http://localhost:3000/api/auth/google/callback
 
 # Email configuration (optional)
 EMAIL_USER=your-email@example.com
@@ -100,7 +108,9 @@ npm install
 
 3. Initialize database:
 
-Visit the `/api/create-tables` endpoint to automatically create the required database tables.
+Apply the schema in `src/lib/db-schema.sql` to your Postgres database.
+
+If you are enabling Google OAuth auto-provisioning, run the migration in `migrations/20260228_users_password_hash_nullable.sql` to allow OAuth users without passwords.
 
 4. Start development server:
 

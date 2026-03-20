@@ -11,30 +11,25 @@ const TopRightHeader = () => {
     // 检查用户登录状态
     useEffect(() => {
         const checkUserStatus = async () => {
-            const token = localStorage.getItem("token");
-            const tokenExp = localStorage.getItem("token_exp");
-            
-            if (!token || Date.now() > tokenExp) {
-                setIsLoggedIn(false);
-                setUserInfo(null);
-                return;
-            }
-            
-            setIsLoggedIn(true);
-            
             try {
-                const response = await fetch("/api/user", {
-                    headers: {
-                        "Authorization": `Bearer ${token}`,
-                    },
+                const response = await fetch("/api/auth/check", {
+                    method: "GET",
+                    credentials: "include",
                 });
                 
-                if (response.ok) {
-                    const userData = await response.json();
-                    setUserInfo(userData);
+                const data = await response.json();
+                if (data?.isAuthenticated && data?.user) {
+                    setIsLoggedIn(true);
+                    setUserInfo(data.user);
+                    localStorage.setItem("email", data.user.email);
+                } else {
+                    setIsLoggedIn(false);
+                    setUserInfo(null);
                 }
             } catch (error) {
                 console.error("获取用户信息失败:", error);
+                setIsLoggedIn(false);
+                setUserInfo(null);
             }
         };
         
@@ -47,9 +42,15 @@ const TopRightHeader = () => {
         setTimeout(() => setCopied(false), 2000);
     };
 
-    const handleLogout = () => {
-        localStorage.removeItem("token");
-        localStorage.removeItem("token_exp");
+    const handleLogout = async () => {
+        try {
+            await fetch("/api/auth/logout", {
+                method: "POST",
+                credentials: "include",
+            });
+        } catch (error) {
+            console.error("Logout error:", error);
+        }
         localStorage.removeItem("email");
         setIsLoggedIn(false);
         setUserInfo(null);
